@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/login_page.css">
+    </head>
+    <body>
+        <div class="login">
+            <div class="login-form">
+                <form>               
+                    <img src="../images/mem.png" width="100px" height="100px">
+                    <h3>Username:</h3>
+                    <input type="text" placeholder="Username"><br>
+                    <h3>Password:</h3>
+                    <input type="password" placeholder="Password">
+                    <br /><br />
+                    <input type="button" value="Login" class="login-button">
+                    <br />
+                    <a class="sign-up">Don't You Have An Account?</a>
+                    <br />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
