@@ -1,0 +1,110 @@
+body {
+    background:url('../images/back17.jpg');
+    margin:0px;
+    font-family: 'Arial';
+  }
+  
+  h2, h3, a {
+    margin:0; 
+    padding:10px; 
+  }
+  
+  h2{
+    color : black;
+    text-align:center;
+    font-size:300%;
+  }
+
+  .para{
+    font-size: 30px; 
+    font-weight: bold;
+  }
+  
+  .login {
+    /*background-image: repeating-linear-gradient(to top, dodgerblue, navy ,dodgerblue);*/
+    margin:5px auto;
+    max-width:400px;
+    padding: 10px;
+  }
+  
+  .login-form {
+    border-radius:20px;
+    box-shadow:0px 0px 20px #000;
+    top: 10px;
+    padding: 20px 0px;
+    border:2px solid black;
+  }
+  
+  .login-form h3 {
+    text-align:left;
+    margin-left:40px;
+    color : black;
+  }
+  
+  .login-form {
+    box-sizing:border-box;
+    padding-top:1px;
+    margin:5% auto;
+    text-align:center;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"],
+  .login input[type="tel"], 
+  .login input[type="email"]{
+    max-width:400px;
+    width: 80%;
+    line-height:3em;
+    margin:1em 2em;
+    border-radius:5px;
+    border:2px solid #f2f2f2;
+    outline:none;
+    padding-left:10px;
+    background-color: rgb(201, 196, 196);
+    color:black;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .login-form input[type="button"] {
+    background-color: aquamarine;
+    border-radius:20px;
+    color: black;
+    padding: 8px;
+    text-transform:uppercase;
+    cursor:pointer;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    border:2px solid indigo;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  .login-form input[type="button"]:hover {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border:2px solid indigo;
+    background-color: rgb(77, 79, 80);
+  }
+  
+  
+  
+  /*Media Querie*/
+  @media only screen and (min-width : 150px) and (max-width : 530px){
+    .login-form h3 {
+      text-align:center;
+      margin:0;
+    }
+    .login-button {
+      margin-bottom:10px;
+    }
+    .login-form{
+      background-image: url(../images/backmobile6.png);
+    }
+    body{
+      background-image: url(../images/backmobile2.jpg);
+    }
+    
+  }

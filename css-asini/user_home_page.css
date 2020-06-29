@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial;
+    margin-top: 0px;
+  }
+  
+  .title{
+    background-color: rgb(90, 88, 88);
+    text-align: center;
+    height: 60px;
+    margin-top: 0px;
+  }
+
+  .title h2{
+    padding: 15px;
+    color: white;
+  }
+  
+  /* Container */
+    .container{
+        margin-top: 0px;
+    }
+
+  /*pakages*/
+    .pack{
+      width:100%;
+      margin-top: 0px;
+      background-color: chartreuse;
+      padding: 20px 50px;
+    }
+
+  /*comment*/
+    .comment{
+      width:100%;
+    }
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; 
+
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+
+  /*Slide*/
+  .slideshow{
+    margin-top: 40px;
+  }
+
+  .view{
+    background-color:cyan;
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .view:hover{
+    background-color: crimson;
+  }
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+    .row {   
+      flex-direction: column;
+    }
+    .fakeimg {
+        width: 100%;
+    }
+    .slideshow{
+        padding: 10px;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .container{
+        margin-top: 5px;
+    }
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+    .fakeimg {
+        width: 100%;
+    }
+    .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        height: 300px; 
+    }
+    body{
+      background-image: url(../images/backmobile2.jpg);
+    } 
+  }

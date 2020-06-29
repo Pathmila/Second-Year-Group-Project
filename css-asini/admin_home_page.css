@@ -1,0 +1,23 @@
+body{
+    background-color: #262626;
+    border-style: solid;
+    border-color: #07A3B2;
+    border-width: 10px;
+}
+
+.container{
+    width: 100%;
+}
+
+.wallpaper{
+    width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        width: 100%;
+    }
+    .wallpaper{
+        display: none;
+    }
+}

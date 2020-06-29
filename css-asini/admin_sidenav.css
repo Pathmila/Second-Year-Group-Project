@@ -1,0 +1,40 @@
+
+.sidenav {
+    margin-top: 140px;
+    margin-left: 0px;
+    width: 300px;
+    height: 600px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#262626;
+    overflow-x: hidden;
+    padding-top: 5px;
+    border-style: solid;
+    border-color: #07A3B2;
+    border-width: 10px;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 4.7px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width:250px;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .dropdown-btn:hover {
+    border-style: solid;
+    border-color: #07A3B2;
+  }
+  
+  

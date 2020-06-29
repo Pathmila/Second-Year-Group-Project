@@ -1,0 +1,98 @@
+.container{
+    color: black;
+}
+
+.container td{
+    width: 33.33%;
+}
+
+input[type="text"]{
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px grey;
+}
+
+td{
+    text-align: center;
+    font-size: 1vw;;
+}
+
+.table{
+    padding: 5px 5px;
+    background-color: #262626;
+    color: white;
+}
+
+.table th[colspan='3']{
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+
+}
+
+.table td[colspan='3']{
+    width: 100%;
+}
+
+.table td{
+    width: 33.333%;
+}
+
+.btnsearch{
+    justify-items: center;
+    background-color: #45a000;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.btnsearch:hover{
+    background-color: #54a057;
+}
+
+select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+@media screen and (max-width: 768px) {
+    td{
+        text-align: center;
+        font-size:4vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .table td{
+        width: 33.333%;
+    }
+    .image{
+        width: 80%;
+        height: 50%;
+    }
+    table{
+        padding: 0;
+    }
+    td{
+        text-align: center;
+        font-size:4vw;
+    }
+    body{
+        background-image: url(../images/backmobile2.jpg);
+    } 
+    .container td{
+        width: 33.33%;
+    }
+    input[type="text"]{
+        width: 80px;
+    }
+}

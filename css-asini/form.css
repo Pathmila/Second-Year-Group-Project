@@ -1,0 +1,41 @@
+form{
+    border-radius: 5px;
+	background-color: #f2f2f2;
+	border: 2px solid black;
+	padding: 10px 10px;
+	
+}
+
+input[type=text], select, textarea {
+	width: 75%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+	font-size: 16px;
+}
+
+label{
+	width: 25%;
+}
+
+input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+  
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+	input[type=text], input[type=submit] {
+	  width: 100%;
+	  margin-top: 0;
+	}
+  }
