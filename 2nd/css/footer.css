@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: rgba(1, 1, 1, 0.8);
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .col {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  .row1{
+    background-color:rgba(1, 1, 1, 0.8);
+  }
+
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  a{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(221, 217, 217);
+    font-weight: bold;
+  }
+
+  a:hover{
+    background-color: rgba(1, 1, 1, 0.8);
+  }
+  
+  img{
+    padding: 10px;
+  }
+
+  .tit{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 800px) {
+    .img{
+      width: 80%;
+    }
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .col {
+      width: 100%;
+      text-align: center;
+    }
+  }

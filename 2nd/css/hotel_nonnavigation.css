@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: open-sans;
+  margin-top: 0;
+}
+
+
+/* Header/logo Title */  
+.header {
+  text-align: center;
+  background-color: #262626;
+  color: white;
+  text-transform: uppercase;
+  margin-top:10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 10px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  padding: 0px;
+  background-color: rgba(1,1,1,0.8);
+}
+
+button{
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 10px;
+  color: rgb(255, 255, 255);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.fakeimg{
+  width: 300px;
+  border-radius: 20px;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  color: #ffffff;
+}
+
+.navbar button:hover{
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 3px;
+  color :rgb(255, 255, 255);
+}
+
+.fakeimg{
+    padding: 10px;
+}
+
+.txt{
+  padding-top: 35px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+  .navbar a {
+      float: none;
+      width: 100%;
+  }
+  .logo{
+      width:100%;
+  }
+  .txt{
+    padding-top: 10px;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  .logo{
+      width:100%;
+  }
+  .txt{
+    padding-top: 10px;
+  }
+}

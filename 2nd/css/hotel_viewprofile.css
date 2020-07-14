@@ -1,0 +1,238 @@
+body{
+  background:url('../images/sunset.jpg');	
+  min-height: 100vh;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+display:block;
+margin-left: auto;
+margin-right:auto;
+justify-content: center;
+padding: 10px 0px;
+text-align:center; 
+width: 60%;
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+form {
+background-color: rgba(69, 179, 179, 0.8);
+padding: 10px;
+margin: 20px auto;
+border-radius: 20px;
+box-sizing:border-box;
+box-shadow: 0 15px 25px rgba(19, 35, 47, 0.3);  
+box-shadow: 0px 0px 40px 16px rgba(18,18,18,1.00);
+}
+.lbl{
+position: absolute;
+font-weight: bolder;
+}
+.lblstyle{
+position: absolute;
+padding:1rem;
+}
+
+h2{
+width: 100%;
+font-size: 1.7rem;
+text-transform:uppercase;
+text-align: center; 
+color: #030303;
+}
+
+.inlineinput{
+
+position: relative;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.inputbox{
+position: relative;
+display: grid;
+grid-template-columns: 7% 90%;
+margin: 10px 0;
+height: 40px;
+width: 100%;
+padding: 0 10px;
+margin: 30 px 0 10px;
+transition: 0.5s;
+} 
+
+.inputbox.focus div h3{
+bottom: 30px;
+font-size: 12px;
+color:#c1e9eb ;
+}
+
+.inputbox.focus:after, .inputbox.focus:before{
+content:'';
+position: absolute;
+bottom: -2px;
+height: 2px;
+}
+
+.inputbox.focus:after{
+right: 50%;
+}
+
+.inputbox.focus:before{
+left: 50%;
+}
+
+
+.i{
+display: grid;
+justify-content: center;
+align-items: flex-end;   
+color:#000000;
+}
+
+.inputbox> div{
+position: relative;
+height: 40px;
+}
+
+.inputbox> div h3{
+position: absolute;
+left: 10px;
+top: -45%;
+transform: translateY(100%);
+color: #000000;
+font-size: 16px;
+transition: .3s;
+}
+
+
+.line{  
+position: absolute;
+bottom: 0;
+display: block;
+width: 100%;
+height: 2px;
+background: #000000;
+transition: 0.5s;
+border-radius: 2px;
+pointer-events: none;
+margin:0% auto;
+}
+
+.arealine{  
+position: absolute;
+bottom: 0;
+display: block;
+width: 100%;
+height: 2px;
+background: #000000;
+transition: 0.5s;
+border-radius: 2px;
+pointer-events: none;
+margin:-3% auto;
+}
+
+.input,
+.inputimg,
+textarea{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10%;
+  left: 0;
+  border: none;
+  outline: none;
+  background:none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+
+.textarea h3{
+position: absolute;
+left: 10px;
+top:40%;
+transform: translateY(0%);
+color: #000000;
+font-size: 16px;
+transition: .3s;
+}
+
+.inputimg{
+position: absolute;
+left: 10px;
+top:40%;
+
+transform: translateY(0%);
+color: #000000;
+font-size: 16px;
+transition: .3s;
+}
+.tablestyle{
+margin-top: 2rem;
+width:70%;
+}
+
+.btn{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  margin: 4rem 0;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  background-color:rgba(6, 97, 100, 0.9);
+  cursor: pointer;
+  color: #000000;
+  text-transform: uppercase;
+  font-family:'Open Sans', sans-serif;
+  background-size: 200%;
+  transition: .5s;
+}
+
+@media screen and (max-width: 550px) and (min-width: 150px){
+.container {
+    text-align: center;
+    width: 80%;
+}
+.line{
+  width: 80%;
+  margin: auto;
+}
+.arealine{
+  width:80%;
+  margin: auto;
+}
+
+.btn{
+    margin-bottom: 10px;
+}
+form{
+  margin: auto;
+  background-image: url(../hotelimg/limg.jpg);	
+}
+.tablestyle{
+  margin-top: 1rem;
+  width:95%;
+}
+.inputbox> div h3,
+.textarea h3,
+.inputimg,
+.tablestyle,
+.lblstyle{
+  font-size:13px;
+}
+.input,
+.inputimg,
+textarea{
+font-size: 0.8rem;
+}
+
+}
+
+
+
