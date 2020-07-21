@@ -1,5 +1,5 @@
 body {
-    background:url('../images/back14.jpg');
+    /*background:url('../images/back14.jpg');*/
     margin:0px;
     font-family: 'Arial';
   }
@@ -93,6 +93,18 @@ body {
   
   .packbtn:hover {
       background-color: red;
+  }
+
+  .sign-up{
+    color:white;
+    margin-left:0%;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .sign-up:hover{
+    color:lawngreen;
   }
   
   
