@@ -42,6 +42,10 @@
                         </div>
 					</div>
                     <div class='row'>
+                        <input type="checkbox" id="check" name="check">
+                        <label for="check" ><a href="#" class="sign-up">I Agree To The Terms And Conditions</a></label><br>
+                    </div>
+                    <div class='row'>
                         <input type="button" value="SIGN IN" class="packbtn">
                     </div>
                 </form>
