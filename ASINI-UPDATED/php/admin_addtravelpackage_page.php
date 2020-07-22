@@ -1,5 +1,6 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
+<?php require_once('connect.php') ?>
 <html>
     <head>
         <title>EasyTravels.com</title>    
@@ -15,10 +16,14 @@
                 <label for="fname">Category Name</label>
             </div>
             <div class="col-75">
-                <select name="category" id="category">
-                    <option>A</option>
-                    <option>A</option>
-                    <option>A</option>
+                <select name="cat" id="cat">
+                    <?php
+                        $sql2="select * from category";
+                        $result2=$connection->query($sql2);
+                        while($row=$result2->fetch_assoc()){
+                            echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+                        }
+                    ?>
                 </select>
             </div>
             </div>
@@ -28,10 +33,14 @@
                 <label for="fname">Subcategory Name</label>
             </div>
             <div class="col-75">
-                <select name="subcategory" id="subcategory">
-                    <option>A</option>
-                    <option>A</option>
-                    <option>A</option>
+                <select name="subcat" id="subcat">
+                    <?php
+                    $sql3="select * from subcategory";
+                    $result2=$connection->query($sql3);
+                    while($row=$result2->fetch_assoc()){
+                        echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+                    }
+                    ?>
                 </select>
             </div>
             </div>
@@ -50,11 +59,15 @@
                 <label for="fname">Destination 1</label>
             </div>
             <div class="col-75">
-                <select name="destination1" id="destination1">
-                    <option>A</option>
-                    <option>A</option>
-                    <option>A</option>
-                </select>
+            <select name="destination" id="destination">
+					<?php
+					    $sql2="select * from destination";
+					    $result2=$connection->query($sql2);
+						while($row=$result2->fetch_assoc()){
+							echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+						}
+					?>
+				</select>
             </div>
             </div>   
 
@@ -63,11 +76,15 @@
                 <label for="fname">Destination 2</label>
             </div>
             <div class="col-75">
-                <select name="destination2" id="destination2">
-                    <option>A</option>
-                    <option>A</option>
-                    <option>A</option>
-                </select>
+            <select name="destination" id="destination">
+					<?php
+					    $sql2="select * from destination";
+					    $result2=$connection->query($sql2);
+						while($row=$result2->fetch_assoc()){
+							echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+						}
+					?>
+				</select>
             </div>
             </div> 
  
@@ -76,11 +93,15 @@
                 <label for="fname">Destination 3</label>
             </div>
             <div class="col-75">
-                <select name="destination3" id="destination3">
-                    <option>A</option>
-                    <option>A</option>
-                    <option>A</option>
-                </select>
+            <select name="destination" id="destination">
+					<?php
+					    $sql2="select * from destination";
+					    $result2=$connection->query($sql2);
+						while($row=$result2->fetch_assoc()){
+							echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+						}
+					?>
+				</select>
             </div>
             </div>
             
@@ -90,11 +111,15 @@
                 <label for="fname">Destination 4</label>
             </div>
             <div class="col-75">
-                <select name="destination4" id="destination4">
-                    <option>A</option>
-                    <option>A</option>
-                    <option>A</option>
-                </select>
+            <select name="destination" id="destination">
+					<?php
+					    $sql2="select * from destination";
+					    $result2=$connection->query($sql2);
+						while($row=$result2->fetch_assoc()){
+							echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+						}
+					?>
+				</select>
             </div>
             </div>
             
@@ -103,11 +128,15 @@
                 <label for="fname">Destination 5</label>
             </div>
             <div class="col-75">
-                <select name="destination5" id="destination5">
-                    <option>A</option>
-                    <option>A</option>
-                    <option>A</option>
-                </select>
+            <select name="destination" id="destination">
+					<?php
+					    $sql2="select * from destination";
+					    $result2=$connection->query($sql2);
+						while($row=$result2->fetch_assoc()){
+							echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+						}
+					?>
+				</select>
             </div>
             </div>
 

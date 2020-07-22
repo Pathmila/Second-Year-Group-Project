@@ -20,7 +20,7 @@
 			
     	<?php	
 
-			$path='../images/';
+			$path='../images/package/';
 			$ex='.jpg';
 			$sql1="select * from package p, destination d, packdestination pd 
 			where p.packid=pd.packid AND d.destid=pd.destid AND d.name='".$dname."' ";

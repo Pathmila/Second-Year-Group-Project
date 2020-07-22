@@ -12,7 +12,7 @@
     
 
     if($_SESSION['loggedin']==1){
-        $sql="SELECT * FROM user u, account a WHERE u.aid=a.aid AND username='$uname'";
+        $sql="SELECT * FROM user u, account a WHERE u.uid=a.uid AND a.username='$uname'";
         //echo $sql;
         $result=mysqli_query($connection,$sql);
 

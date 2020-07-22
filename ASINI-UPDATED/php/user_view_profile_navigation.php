@@ -7,9 +7,9 @@
     </head>
     <body>
         <div class="topnav" id="myTopnav">
-            <a href="user_add_comment">Add Comment</a>
+            <a href="user_addcomment_page.php">Add Comment</a>
             <a href="user_update_profile.php">Update Profile</a>
-            <a href="user_change_password">Change Password</a>
+            <a href="user_change_password.php">Change Password</a>
             <a href="user_delete_profile.php">Delete Profile</a>
             
 

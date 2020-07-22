@@ -1,4 +1,13 @@
+<?php require_once('connect.php');
+    session_start();
+    if($_SESSION['loggedin']!=1){
+        header('Location: login.php');
+    }
+?> 
 <?php require_once('user_navigation.php')?> 
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,7 +18,7 @@
     <body>
         <img src="../images/banner.jpg" class="banner">
         <div class="container">
-            <form>
+            <form mthod=GET action="user_contact_page.php">
                 <label style="font-size:30px" align="center">Plan Your Trip Our Travel Experts Can Help You.</label>
                 <div class="line">
                 <div class="col-25">
@@ -44,11 +53,35 @@
                 </div>
                 </div>
                 <div class="line">
-                    <input type="submit" value="Submit">
+                    <input type="submit" name="Msubmit" value="Submit">
                 </div>
             </form>
         </div>
+        <?php	
+            if(isset($_GET['Msubmit'])){
+                //$id=1;
+                $name=$_GET['name'];
+                $email=$_GET['email'];
+                $telephone=$_GET['telephone'];
+                $details=$_GET['details'];
+                
+                $insertmessage = "INSERT INTO messages (name,email,telephone,details) values ('".$name."','".$email."','".$telephone."','".$details."')";
+
+                //echo $insertmessage;
+
+                $result=$connection->query($insertmessage);
+                print_r($result);
+                if($result){
+                    echo "<script> alert('Submition is Sucessfull') </script>";
+                }else{
+                    echo "failed";
+                }
+            }
+        ?>
+
     </body>
 </html>
+
+
 <?php require_once('footer.php')?>
 

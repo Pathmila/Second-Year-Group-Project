@@ -1,5 +1,8 @@
 <?php require_once('user_nonnavigation.php')?>    
-<?php require_once('connect.php');?>
+<?php 
+    require_once('connect.php');
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,7 +30,7 @@
                     <h2>Book Your Package</h2>
                 </div>             
                 <?php
-                    $path='../images/';
+                    $path='../images/category/';
                     $ex='.jpg';
 
                     $sql1="select * from category";
@@ -48,8 +51,8 @@
                         echo "</div>";                    
 			        }
 		        ?>			
-                <form method='GET' class='table' align='center'>
-                    <a href="category_page.php"><button>Select Your Package</button></a></table>
+                <form method='GET' action="category_page.php" class='table' align='center'>
+                    <input type="submit" name="catbtn" value="Select Your Package" class="catbtn">
                 </form>
             </div>
             <div class="comment">

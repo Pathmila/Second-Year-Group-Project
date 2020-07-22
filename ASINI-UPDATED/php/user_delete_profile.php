@@ -6,24 +6,6 @@
 ?>
 <?php require_once('user_navigation.php')?> 
 
-<?php 
-    $uname=$_SESSION['username'];
-    $password=$_SESSION['pwd'];
-    
-
-    if($_SESSION['loggedin']==1){
-        $sql="SELECT * FROM user u, account a WHERE u.aid=a.aid AND username='$uname'";
-        //echo $sql;
-        $result=mysqli_query($connection,$sql);
-
-		while($row=$result->fetch_assoc()){
-            $name=$row['name'];
-            $address=$row['address'];
-            $email=$row['email'];
-            $telephone=$row['telephone'];
-        }
-    }
-?>
 
 
 <!DOCTYPE html>
@@ -51,7 +33,7 @@
             </div>
             
             <div class="row">
-				<input type="submit" name="submit" value="Delete"><br />
+				<input type="submit" name="submit" value="Delete" class="formbtn"><br />
             </div>
             </form>
         </div>

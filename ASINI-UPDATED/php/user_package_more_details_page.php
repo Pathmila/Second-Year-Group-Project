@@ -1,6 +1,9 @@
 <?php require_once('connect.php');
-	session_start();
-    ?>
+    session_start();
+    if($_SESSION['loggedin']!=1){
+        header('Location: login_page.php');
+    }
+?>
 <?php require_once('user_navigation.php')?> 
 
 <html>
@@ -13,7 +16,7 @@
         <?php
 			$id=$_SESSION['packid'];
 			
-			$path='../images/';
+			$path='../images/package/';
 			$ex='.jpg';
 
             $sql1="select * from package where packid='".$id."'";

@@ -1,6 +1,9 @@
 <?php require_once('connect.php');
     session_start();
-    ?>
+    if($_SESSION['loggedin']!=1){
+        header('Location: login_page.php');
+    }
+?>
 <?php require_once('user_navigation.php')?> 
 
 <?php
@@ -20,7 +23,7 @@
 			
     	<?php	
 
-			$path='../images/';
+			$path='../images/package/';
 			$ex='.jpg';
 			$sql1="select * from package p, destination d, packdestination pd 
 			where p.packid=pd.packid AND d.destid=pd.destid AND d.name='".$dname."' ";

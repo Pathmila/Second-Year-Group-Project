@@ -1,6 +1,9 @@
 <?php require_once('connect.php');
-	session_start();
-    ?>
+    session_start();
+    if($_SESSION['loggedin']!=1){
+        header('Location: login_page.php');
+    }
+?>
 <?php require_once('user_navigation.php')?> 
 <!DOCTYPE html>
 <html>
@@ -15,7 +18,7 @@
     	<?php	
 			$cat=$_SESSION['cate'];
 			$subcat=$_SESSION['subcate'];
-			$path='../images/';
+			$path='../images/package/';
 			$ex='.jpg';
 
             $sql1="select * from package where catname='".$cat."' AND subcatname='".$subcat."'";

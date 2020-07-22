@@ -16,11 +16,12 @@
     	<?php	
 			$cat=$_SESSION['category'];
 			$subcat=$_SESSION['subcategory'];
-			$path='../images/';
+			$path='../images/package/';
 			$ex='.jpg';
 
             $sql1="select * from package where catname='".$cat."' AND subcatname='".$subcat."'";
             $result2=$connection->query($sql1);
+			//echo $sql1;
             
             while($row=$result2->fetch_assoc()){
 				$id=(string)$row['packid'];
@@ -63,7 +64,7 @@
 		<?php
             if(isset($_GET['submit'])){
 				$_SESSION['packid']=$_GET['pack_id'];
-				echo $_SESSION['packid'];
+				//echo $_SESSION['packid'];
                 header("Location: package_more_details_page.php");
             }
 		?>

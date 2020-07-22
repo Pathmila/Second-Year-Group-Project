@@ -13,7 +13,7 @@
         <?php
 			$id=$_SESSION['packid'];
 			
-			$path='../images/';
+			$path='../images/package/';
 			$ex='.jpg';
 
             $sql1="select * from package where packid='".$id."'";

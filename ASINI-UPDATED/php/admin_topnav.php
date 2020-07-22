@@ -9,7 +9,7 @@
             <a><img src="../images/logo-web.jpg" class="fakeimg"></a>
             <a href="admin_home_page.php"><div class="txt"><Button class="btn active">Home</button></div></a>
             <a href="user_nonhome_page.php"><div class="txt"><Button class="btn">Preview Website</button></div></a>
-            <a href="destination_page.php" class="right"><div class="txt"><Button class="btn">LOG OUT</button></div></a>
+            <a href="login_page.php" class="right"><div class="txt"><Button class="btn">LOG OUT</button></div></a>
         </div>
     </body>
 </html>

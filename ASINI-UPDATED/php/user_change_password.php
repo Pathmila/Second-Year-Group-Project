@@ -3,26 +3,33 @@
     if($_SESSION['loggedin']!=1){
         header('Location: login.php');
     }
+	//echo $_SESSION['username'];
+	$uname=$_SESSION['username'];
+	
+	$sql="SELECT * FROM user u, account a WHERE u.uid=a.uid AND username='$uname'";
+	$result = mysqli_query($connection,$sql);
+	while($row=$result->fetch_assoc()){
+		$uid=$row['uid'];
+		$pass=$row['password'];
+		//echo $uid;
+	}
 ?>
 <?php require_once('user_navigation.php')?> 
 
-<?php 
-    $uname=$_SESSION['username'];
-    $password=$_SESSION['pwd'];
-    
-
-    if($_SESSION['loggedin']==1){
-        $sql="SELECT * FROM user u, account a WHERE u.aid=a.aid AND username='$uname'";
-        //echo $sql;
-        $result=mysqli_query($connection,$sql);
-
-		while($row=$result->fetch_assoc()){
-            $name=$row['name'];
-            $address=$row['address'];
-            $email=$row['email'];
-            $telephone=$row['telephone'];
-        }
-    }
+<?php
+		
+    if(isset($_GET['submit'])){
+        $password=$_GET['password'];
+		$npassword=$_GET['newpassword'];
+		$ncpassword=$_GET['confirmpassword'];
+			
+		if(($npassword == $ncpassword)&&($pass == $password)){
+			//echo "ASINI";
+			echo "<script> alert('Password update is Sucessfull') </script>";
+		}else{
+			echo "Failed";
+		}
+	}
 ?>
 
 
@@ -44,7 +51,7 @@
                 <label>Password:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="password">
+                <input type="password" name="password" required>
             </div>
             </div>
 
@@ -53,7 +60,7 @@
                 <label>New Password:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="newpassword">
+                <input type="password" name="newpassword" required>
             </div>
             </div>
 
@@ -62,7 +69,7 @@
                 <label>Confirm Password:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="confirmpassword">
+                <input type="password" name="confirmpassword" required>
             </div>
             </div>
 

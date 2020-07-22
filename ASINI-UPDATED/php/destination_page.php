@@ -1,15 +1,36 @@
-<?php require_once('connect.php');?>
+<?php 
+	require_once('connect.php');
+	session_start();
+
+?>
 <?php require_once('user_nonnavigation.php')?> 
+
+<?php
+            if(isset($_GET['dropsubmit'])){
+				$_SESSION['dname']=$_GET['destination'];
+				//echo $_SESSION['dname'];
+                header("Location: search_destination_page.php");
+            }
+		?>
+
+<?php  
+            if(isset($_GET['viewsubmit'])){
+				$_SESSION['dname']=$_GET['destname'];
+                header("Location: search_destination_page.php");
+            }
+		?>
+
 <html>
 	<head>
 		<title>EasyTravels.php</title>
 		<link rel="stylesheet" type="text/css" href="../css/destination_page.css">
+		
 		<link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
 	</head>
 	<body>	
 		<br />
 		<div class="container">
-			<form method="get" action="search_destination_page.php">
+			<form name="select" method="get" action="destination_page.php">
 			<label style="font-size:30px" align="center">Select Your Destination</label>
 				<div class="row">
 				<table align="center">
@@ -26,7 +47,7 @@
 							?>
 							</select>
 						</td>
-						<td><input type="submit" name="submit" value="Search" class="searchbtn"><br /></td>
+						<td><input type="submit" name="dropsubmit" value="Search" class="searchbtn"><br /></td>
 					</tr>				
 				</table>
 				</div>
@@ -56,8 +77,13 @@
 		</table>
 		</div>
 						-->			
-        <?php
-			$path='../images/';
+
+		
+		<div class="container1">
+		<div class="row">
+			
+    	<?php
+			$path='../images/destination/';
 			$ex='.jpg';
             $sql1="select * from destination";
 			$result2=$connection->query($sql1);
@@ -67,21 +93,28 @@
 			while($row=$result2->fetch_assoc()){
 
 				$photo1=(string)$row['photo'];
-				echo "<br />";
-				echo "<table cellspacing='10px' class='table' align='center'>";
-					echo "<tr>";
-						echo "<th colspan='3'>".$row['name']."</th>"; 
-					echo "</tr>";
-					echo "<tr>";
-						echo "<td><img class='image'  width='350px' height='250px' src='".$path.$photo1.$ex."'></td>";	
-					echo "</tr>";
-					echo "<tr>";
-						echo "<td colspan='3'>".$row['description']."</td>";
-					echo "</tr>";
-				echo "</table>";
-				echo "<br /><br />";
+				$name=(string)$row['name'];
+				$id=(string)$row['destid'];
+
+				echo"
+				<form name='box' method='get' action='destination_page.php' class='table' align='center'>
+                <div class='column'>
+                <div class='content'>
+                <input type='text' name='destname' value='".$name."' style='font-size:25px; font-weight:bold; color:white; background-color:transparent; height:50px; text-align:center' readonly><br />
+                <img src='".$path.$photo1.$ex."' class='pack-img'>
+        		<br /><br /><a><input type='submit' name='viewsubmit' value='View More Details' class='viewbtn'></a><br />
+                </div>
+                </div>   
+				</form>
+            ";
 			}
-		?>			
+		?>
+		</div>
+		</div>
+
+
+		
+			
 	</body>
 </html>
 <?php require_once('footer.php')?>
