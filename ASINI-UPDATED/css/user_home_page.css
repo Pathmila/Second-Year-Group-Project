@@ -57,7 +57,7 @@
     margin-top: 40px;
   }
 
-  .table button{
+  .catbtn{
     border-radius: 4px;
     background-color: green;
     border: none;
@@ -72,7 +72,7 @@
     margin: 5px;
   }
 
-  .table button:hover{
+  .catbtn:hover{
     background-color: red;
   }
 

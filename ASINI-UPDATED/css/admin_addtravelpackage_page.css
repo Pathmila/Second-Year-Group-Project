@@ -31,7 +31,7 @@ body {
   .login {
     /*background-image: repeating-linear-gradient(to top, dodgerblue, navy ,dodgerblue);*/
     margin:5px auto;
-    max-width:800px;
+    max-width:1600px;
     padding: 10px;
   }
   
@@ -58,12 +58,13 @@ body {
     text-align:center;
   }
   
+  
   .login input[type="text"],
   .login input[type="password"],
   .login input[type="tel"], 
   .login input[type="email"]{
     max-width:400px;
-    width: 80%;
+    width: 60%;
     line-height:3em;
     margin:1em 2em;
     border-radius:5px;
@@ -72,8 +73,8 @@ body {
     padding-left:10px;
     background-color: transparent;
     color:white;
-    font-size: 14px;
     font-weight: bold;
+    font-size: 14px;
   }
   
   .packbtn {
@@ -93,18 +94,6 @@ body {
   
   .packbtn:hover {
       background-color: red;
-  }
-
-  .sign-up{
-    color:white;
-    margin-left:0%;
-    cursor:pointer;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .sign-up:hover{
-    color:lawngreen;
   }
   
   
