@@ -18,7 +18,7 @@
         <div class="container">
             <br />  
             <div class="video" >	
-                <video id="myVideo" width="60%" style="display:block; margin:0 auto;" controls="controls" autoplay>
+                <video id="myVideo" width="60%" style="display:block; margin:0 auto;" autoplay controls muted>
                     <source src="../images/web.mp4" type="video/mp4">
                 </video>
             </div>

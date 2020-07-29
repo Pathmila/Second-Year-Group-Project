@@ -21,9 +21,9 @@
             <div class="dropdown">
                 <button class="dropbtn">UPDATE</button>
                 <div class="dropdown-content">
-                    <a href="admin_updatecategory_page">Category</a>
-                    <a href="admin_updatesubcategory_page">Subcategory</a>
-                    <a href="admin_updatetravelpackage_page">Travel Packages</a>
+                    <a href="admin_updatecategory_page1">Category</a>
+                    <a href="admin_updatesubcategory_page1">Subcategory</a>
+                    <a href="admin_updatetravelpackage_page1">Travel Packages</a>
                 </div>
             </div> 
 
@@ -31,9 +31,9 @@
             <div class="dropdown">
                 <button class="dropbtn">DELETE</button>
                 <div class="dropdown-content">
-                    <a href="admin_deletecategory_page">Category</a>
-                    <a href="admin_deletesubcategory_page">Subcategory</a>
-                    <a href="admin_deletetravelpackage_page">Travel Packages</a>
+                    <a href="admin_deletecategory_page1">Category</a>
+                    <a href="admin_deletesubcategory_page1">Subcategory</a>
+                    <a href="admin_deletetravelpackage_page1">Travel Packages</a>
                 </div>
             </div> 
 

@@ -83,7 +83,7 @@
 				<input type="radio" id="star2" name="rate" value="2" required>
 				<label for="star2" title="text">Bad</label>
 				<input type="radio" id="star1" name="rate" value="1" required>
-				<label for="star1" title="text">Worse</label>
+				<label for="star1" title="text">Worst</label>
             </div>
             </div>
 
@@ -113,7 +113,7 @@
 				<input type="radio" id="star2" name="rate2" value="2" required>
 				<label for="star2" title="text">Bad</label>
 				<input type="radio" id="star1" name="rate2" value="1" required>
-				<label for="star1" title="text">Worse</label>
+				<label for="star1" title="text">Worst</label>
             </div>
             </div>
 
@@ -143,7 +143,7 @@
 				<input type="radio" id="star2" name="rate3" value="2" required>
 				<label for="star2" title="text">Bad</label>
 				<input type="radio" id="star1" name="rate3" value="1" required>
-				<label for="star1" title="text">Worse</label>
+				<label for="star1" title="text">Worst</label>
             </div>
             </div>
 
