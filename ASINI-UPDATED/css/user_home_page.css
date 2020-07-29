@@ -6,6 +6,7 @@
   body {
     font-family: Arial;
     margin-top: 0px;
+	background-image: url(../images/backmobile6.png);
   }
   
   .title{
@@ -27,21 +28,26 @@
   /*pakages*/
     .pack{
       width:100%;
+	  height:auto;
       margin-top: 0px;
-      background-color:cornsilk;
+      background-color:white;
+	  opacity: 0.9;
       padding: 20px 50px;
+	  border-radius:20px;
+	  box-shadow:0px 0px 20px #000;
     }
 
-  /*comment*/
-    .comment{
-      width:100%;
-    }
+	
+	.packimg{
+		width:250px;
+		height:150px;
+	}
 
   .column {
     float: left;
     width: 25%;
     padding: 10px;
-    height: 300px; 
+    height: auto; 
 
   }
 
@@ -55,6 +61,15 @@
   /*Slide*/
   .slideshow{
     margin-top: 40px;
+  }
+  
+  .text{
+	  font-size:20px;
+	  font-weight:bold;
+	  color:white;
+	  background-color:transparent;
+	  height:50px;
+	  text-align:center;
   }
 
   .catbtn{
@@ -109,9 +124,19 @@
         float: left;
         width: 100%;
         padding: 10px;
-        height: 300px; 
+        height: 200px; 
     }
-    body{
-      background-image: url(../images/backmobile2.jpg);
-    } 
+    .packimg{
+        width: 150px;
+        height: 100px;
+     } 
+	.text{
+	  font-size:10px;
+	  height:30px;
+	}
+	.catbtn{
+		width:100%;
+		margin-top: 0;
+		font-size:15px;
+	}
   }

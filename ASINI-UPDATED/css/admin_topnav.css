@@ -65,7 +65,9 @@
     transition: .5s;
   }
   
-  
+  .btn.active{
+	border:1px solid white;  
+  }
   
   .fakeimg{
       padding: 10px;

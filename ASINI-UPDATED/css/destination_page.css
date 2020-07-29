@@ -1,7 +1,7 @@
+
 body{
-    /*background-image: url(../images/backmobile6.png);*/
-  }
-  
+	background-image: url(../images/backmobile6.png);
+}
   .searchbtn{
     border-radius: 4px;
     background-color: green;
