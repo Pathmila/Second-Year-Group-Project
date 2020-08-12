@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 22, 2020 at 10:30 PM
--- Server version: 10.4.10-MariaDB
+-- Generation Time: Aug 12, 2020 at 09:26 PM
+-- Server version: 5.7.11-log
 -- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -36,14 +36,13 @@ CREATE TABLE IF NOT EXISTS `account` (
   `password` varchar(20) NOT NULL,
   `admin` int(11) NOT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `account`
 --
 
 INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
-(1, 1, 'asi', 'asini', 0),
 (2, 0, 'admin', 'admin', 1),
 (3, 3, 'hotel', 'hotel', 0),
 (4, 4, 'vehicle', 'vehicle', 0),
@@ -61,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `name` varchar(20) NOT NULL,
   `photo` int(20) NOT NULL,
   PRIMARY KEY (`catid`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `category`
@@ -71,7 +70,8 @@ INSERT INTO `category` (`catid`, `name`, `photo`) VALUES
 (1, 'Family Tours', 1),
 (2, 'Religious Tours', 2),
 (3, 'Adventure Tours', 3),
-(4, 'National Parks ', 4);
+(4, 'National Parks ', 4),
+(7, 'Pathmila', 7);
 
 -- --------------------------------------------------------
 
@@ -189,7 +189,6 @@ INSERT INTO `destination` (`destid`, `name`, `description`, `photo`) VALUES
 DROP TABLE IF EXISTS `guide`;
 CREATE TABLE IF NOT EXISTS `guide` (
   `gid` int(11) NOT NULL AUTO_INCREMENT,
-  `aid` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `birthday` date NOT NULL,
   `address` varchar(50) NOT NULL,
@@ -199,13 +198,6 @@ CREATE TABLE IF NOT EXISTS `guide` (
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`gid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `guide`
---
-
-INSERT INTO `guide` (`gid`, `aid`, `name`, `birthday`, `address`, `telephone`, `email`, `description`, `photo`) VALUES
-(1, 4, 'G', '2019-06-10', 'GGG', 772345678, 'g.@g.g', 'GGGGG', 6);
 
 -- --------------------------------------------------------
 
@@ -230,7 +222,6 @@ CREATE TABLE IF NOT EXISTS `guideavailability` (
 DROP TABLE IF EXISTS `hotel`;
 CREATE TABLE IF NOT EXISTS `hotel` (
   `hid` int(11) NOT NULL AUTO_INCREMENT,
-  `aid` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `telephone` int(11) NOT NULL,
@@ -245,13 +236,6 @@ CREATE TABLE IF NOT EXISTS `hotel` (
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`hid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `hotel`
---
-
-INSERT INTO `hotel` (`hid`, `aid`, `name`, `address`, `telephone`, `email`, `singleroomprice`, `doubleroomprice`, `familyroomprice`, `singlerooms`, `doublerooms`, `familyrooms`, `description`, `photo`) VALUES
-(1, 3, 'H', 'H', 772345678, 'h.h@h.com', 1000, 2500, 3500, 12, 10, 4, 'HHHHHH', 1);
 
 -- --------------------------------------------------------
 
@@ -318,11 +302,11 @@ CREATE TABLE IF NOT EXISTS `package` (
 --
 
 INSERT INTO `package` (`packid`, `catname`, `subcatname`, `name`, `days`, `price`, `details`, `photo1`, `photo2`, `photo3`) VALUES
-(1, 'Family Tours', 'Two Days Packages', 'Package 1', 2, 2000, 'This 2 days Sri Lanka tour package will cover Kandy and Colombo. The city of Kandy in Sri Lanka is renowned as the social and cultural capital of the country. This breathtaking hill country is the perfect place for relaxing and reflecting. This city is well known for housing many ancient temples, and among them, the most renowned is the temple of \'Dalada Maligawa\'(The Temple of the Tooth). Here, the tooth relic of Lord Buddha is reserved. It attracts thousands of visitors including the devotees to this city per year. Apart from that, this city has the largest and beautiful botanical garden in the island, known as Peradeniya Botanical Garden.\r\n<br /><br />\r\nActivity Covered<br /><br />\r\nVisit the Temple of Tooth Relic<br />\r\nEnjoy a Kandy City Tour<br />\r\nEnjoy a Cultural Dance<br />\r\nperadeniya botanical gardens<br />\r\nVisit the Pinnawala Elephant Orphanage<br />\r\n\r\n', 13, 15, 14),
-(2, 'Family Tours', 'Two Days Packages', 'Package 2', 2, 2500, 'Bentota and its breathtaking sandy beach pretty much transform your dreams and visions of a tropical paradise into an everyday reality. Located close to the Southern tip of the Island of Sri Lanka and only about 200 km from the Equator, this secluded crescent shaped beach is the perfect place to sit back, relax and forget about all the hustle and bustle of your other life that\'s a million miles away.<br />\r\nThe eye-catching Bentota city is situated 200 km away from the Equator as well as very close to the Southern tip of the Island of Sri Lanka. The eye-catching beauty of this golden sandy beach will turn your dreams and visions of a tropical heaven into a normal reality.<br />\r\n<br />\r\nActivities Covered<br /><br />\r\nSpend First day at Bentota<br />\r\nOn the way stop over at Stilt Fishermen in Sri Lanka<br />\r\nOvernight stay at the Hotel<br />\r\nTrip in Madu river<br />\r\nGalle City tour <br />\r\n', 17, 16, 18),
-(3, 'Family Tours', 'There Days Packages', 'Package 3', 3, 3500, 'The Yala National Park is a popular and world renowned wildlife reservation in the Sri Lanka. It is most notable renowned for being home to the attractive and elusive Sri Lankan leopard. Despite their elusive nature, almost all of the travelers will certainly identify a leopard in this stunning place because of the high attention of leopard residing in the park.<br />\r\nKataragama is a pilgrimage town sacred to Buddhist, Hindu and indigenous Vedda people of Sri Lanka. People from South India also go there to worship. The town has the Kataragama temple, a shrine dedicated to Skanda Kumara also known as Kataragama deviyo<br />\r\n<br />\r\n\r\nActivities Covered<br /><br />\r\nFirst day for Yala Safari<br />\r\nSecond day at Katharagama<br />\r\nThird day at Galle<br />\r\n', 20, 19, 18),
-(4, 'Family Tours', 'Three Days Packages', 'Package 4', 3, 3500, 'Nuwara Eliya is dubbed as the garden city of Asia for its marvelous valleys, hills and waterfalls. It is standing 6,182 feet above the sea level and it is to be found at the foot of Mount Pidurutalagala, Sri Lanka\'s highest peak. Apart from these, the Hakgala gardens grown tea plantations and the Worlds End at Horton Plains are also fantastic tourist attractions where visitors come in big numbers.\r\n<br /><br />\r\nActivities Covered<br /><br />\r\nProceed to Nuwara Eliya known as Little England<br />\r\nEn route, Tea Plantation & Tea Factory visit<br />\r\nVisit beautiful waterfalls in Hill Country<br />\r\nTake Nuwara Eliya city Tour (Strawberry farm visit, boat ride can be arranged)<br />\r\nVisit the Hakgala Botanical Gardens<br />\r\n', 22, 21, 23),
-(5, 'Religious Tour', 'Two Days Packages', 'Package 5', 2, 2500, 'Declared a World Heritage Site by UNESCO, the ancient city of Polonnaruwa is a melting pot of history. It is known to be one of the best planned archaeological relic cities in Sri Lanka, carried out by the self-sufficient King Parakramabahu; the last king of the city. Stroll through the ruins and discover the charms of the city as the famed monkeys swing on tree tops; Disney’s, Monkey Kingdom was based off the toque macaques of the city.\r\n<br />\r\nDambulla is to be found in the central province of the island and the city is home to a number of spectacular attractions. In addition, the city has the largest rose quartz mountain range in the entire Asia and the ironwood forest known as Namal Uyana. Now, the big quartz rose mountain is millions of years old and it encircled by the ancient ironwood forest trees. Also, the grand rock fortress of Sigiriya is another major attraction, which is worth checking.\r\n<br />\r\nActivities Covered<br /><br />\r\nFirst day at Polonnaruwa<br />\r\nVisit the Parakrama Samudraya<br />\r\nSecond day at Dambulla<br />\r\nDambulla City tour and Visit the Dambulla Cave Temple (Golden Temple & Golden Buddha Statue)<br />', 24, 25, 26);
+(1, 'Family Tours', 'Two Days Packages', 'Package 1', 2, 2000, 'This 2 days Sri Lanka tour package will cover Kandy and Colombo. The city of Kandy in Sri Lanka is renowned as the social and cultural capital of the country. This breathtaking hill country is the perfect place for relaxing and reflecting. This city is well known for housing many ancient temples, and among them, the most renowned is the temple of \'Dalada Maligawa\'(The Temple of the Tooth). Here, the tooth relic of Lord Buddha is reserved. It attracts thousands of visitors including the devotees to this city per year. Apart from that, this city has the largest and beautiful botanical garden in the island, known as Peradeniya Botanical Garden.\r\n\r\nVisit the Temple of Tooth Relic,\r\nEnjoy a Kandy City Tour,\r\nEnjoy a Cultural Dance,\r\nperadeniya botanical gardens, and\r\nVisit the Pinnawala Elephant Orphanage will be covered.\r\n\r\n\r\n', 13, 15, 14),
+(2, 'Family Tours', 'Two Days Packages', 'Package 2', 2, 2500, 'Bentota and its breathtaking sandy beach pretty much transform your dreams and visions of a tropical paradise into an everyday reality. Located close to the Southern tip of the Island of Sri Lanka and only about 200 km from the Equator, this secluded crescent shaped beach is the perfect place to sit back, relax and forget about all the hustle and bustle of your other life that\'s a million miles away.\r\nThe eye-catching Bentota city is situated 200 km away from the Equator as well as very close to the Southern tip of the Island of Sri Lanka. The eye-catching beauty of this golden sandy beach will turn your dreams and visions of a tropical heaven into a normal reality.\r\n\r\nSpend First day at Bentota,\r\nOn the way stop over at Stilt Fishermen in Sri Lanka,\r\nOvernight stay at the Hotel,\r\nTrip in Madu river, and\r\nGalle City tour \r\nwill be covered.\r\n', 17, 16, 18),
+(3, 'Family Tours', 'There Days Packages', 'Package 3', 3, 3500, 'The Yala National Park is a popular and world renowned wildlife reservation in the Sri Lanka. It is most notable renowned for being home to the attractive and elusive Sri Lankan leopard. Despite their elusive nature, almost all of the travelers will certainly identify a leopard in this stunning place because of the high attention of leopard residing in the park.\r\nKataragama is a pilgrimage town sacred to Buddhist, Hindu and indigenous Vedda people of Sri Lanka. People from South India also go there to worship. The town has the Kataragama temple, a shrine dedicated to Skanda Kumara also known as Kataragama deviyo.\r\n\r\nFirst day for Yala Safari,\r\nSecond day at Katharagama, and\r\nThird day at Galle will be covered\r\n', 20, 19, 18),
+(4, 'Family Tours', 'Three Days Packages', 'Package 4', 3, 3500, 'Nuwara Eliya is dubbed as the garden city of Asia for its marvelous valleys, hills and waterfalls. It is standing 6,182 feet above the sea level and it is to be found at the foot of Mount Pidurutalagala, Sri Lanka\'s highest peak. Apart from these, the Hakgala gardens grown tea plantations and the Worlds End at Horton Plains are also fantastic tourist attractions where visitors come in big numbers.\r\n\r\n\r\nProceed to Nuwara Eliya known as Little England,\r\nEn route, Tea Plantation & Tea Factory visit,\r\nVisit beautiful waterfalls in Hill Country,\r\nTake Nuwara Eliya city Tour (Strawberry farm visit, boat ride can be arranged), and\r\nVisit the Hakgala Botanical Gardens will be covered.\r\n', 22, 21, 23),
+(5, 'Religious Tour', 'Two Days Packages', 'Package 5', 2, 2500, 'Declared a World Heritage Site by UNESCO, the ancient city of Polonnaruwa is a melting pot of history. It is known to be one of the best planned archaeological relic cities in Sri Lanka, carried out by the self-sufficient King Parakramabahu; the last king of the city. Stroll through the ruins and discover the charms of the city as the famed monkeys swing on tree tops; Disney’s, Monkey Kingdom was based off the toque macaques of the city.\r\nDambulla is to be found in the central province of the island and the city is home to a number of spectacular attractions. In addition, the city has the largest rose quartz mountain range in the entire Asia and the ironwood forest known as Namal Uyana. Now, the big quartz rose mountain is millions of years old and it encircled by the ancient ironwood forest trees. Also, the grand rock fortress of Sigiriya is another major attraction, which is worth checking.\r\n\r\nFirst day at Polonnaruwa,\r\nVisit the Parakrama Samudraya,\r\nSecond day at Dambulla, and\r\nDambulla City tour and Visit the Dambulla Cave Temple (Golden Temple & Golden Buddha Statue)\r\nwill be covered.\r\n', 24, 25, 26);
 
 -- --------------------------------------------------------
 
@@ -336,7 +320,7 @@ CREATE TABLE IF NOT EXISTS `packdestination` (
   `packid` int(11) NOT NULL,
   `destid` int(11) NOT NULL,
   PRIMARY KEY (`packdesid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `packdestination`
@@ -397,21 +381,20 @@ CREATE TABLE IF NOT EXISTS `subcategory` (
   `subcatid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `description` text NOT NULL,
-  `photo` int(11) NOT NULL,
   PRIMARY KEY (`subcatid`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `subcategory`
 --
 
-INSERT INTO `subcategory` (`subcatid`, `name`, `description`, `photo`) VALUES
-(1, 'One Day Packages', 'This is one day tour package. To find the packages please Click here!!', 62),
-(2, 'Two Days Packages', 'This is two days tour package. To find the travel packages please Click here!!', 63),
-(3, 'Three Days Packages', 'This is three days tour package. To find the packages please Click here!!', 64),
-(4, 'Four Days Packages', 'This is four days tour package. To find the packages please Click here!!', 65),
-(5, 'Five Days Packages', 'This is five days tour package. To find the packages please Click here!!', 66),
-(6, 'Seven Days Packages', 'This is seven days tour package. To find the packages please Click here!!', 67);
+INSERT INTO `subcategory` (`subcatid`, `name`, `description`) VALUES
+(1, 'One Day Packages', 'This is one day tour package. To find the packages please Click here!!'),
+(2, 'Two Days Packages', 'This is two days tour package. To find the travel packages please Click here!!'),
+(3, 'Three Days Packages', 'This is three days tour package. To find the packages please Click here!!'),
+(4, 'Four Days Packages', 'This is four days tour package. To find the packages please Click here!!'),
+(5, 'Five Days Packages', 'This is five days tour package. To find the packages please Click here!!'),
+(6, 'Seven Days Packages', 'This is seven days tour package. To find the packages please Click here!!');
 
 -- --------------------------------------------------------
 
@@ -434,7 +417,6 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`uid`, `name`, `address`, `email`, `telephone`) VALUES
-(1, 'Asini Pathmila Silva', 'Ambalangoda', 'asini@gmail.com', 773153130),
 (4, 'pathmila', 'ambalangoda', 'asinipathmila@gmail.com', 776543451),
 (5, 'pathmila', 'ambalangoda', 'asinipathmila@gmail.com', 776543451);
 
@@ -446,8 +428,7 @@ INSERT INTO `user` (`uid`, `name`, `address`, `email`, `telephone`) VALUES
 
 DROP TABLE IF EXISTS `vehicle`;
 CREATE TABLE IF NOT EXISTS `vehicle` (
-  `vid` varchar(11) NOT NULL,
-  `aid` int(11) NOT NULL,
+  `vid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `email` varchar(20) NOT NULL,
   `address` varchar(50) NOT NULL,
@@ -457,13 +438,6 @@ CREATE TABLE IF NOT EXISTS `vehicle` (
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`vid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `vehicle`
---
-
-INSERT INTO `vehicle` (`vid`, `aid`, `name`, `email`, `address`, `telephone`, `type`, `details`, `photo`) VALUES
-('VVV1111', 5, 'V', 'v@v.v', 'V', 772345678, 'V', 'VVVVVVVVVVV', 2);
 
 -- --------------------------------------------------------
 
