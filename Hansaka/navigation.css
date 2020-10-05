@@ -1,0 +1,103 @@
+ /* Style the body */
+ body {
+    font-family: Arial;
+    margin-top: 0;
+  }
+
+
+  /* Header/logo Title */  
+  .header {
+    text-align: center;
+    background-color: #262626;
+    color: white;
+    text-transform: uppercase;
+    margin-top:10px;
+    border-style: solid;
+    border-color: #07A3B2;
+    border-width: 10px;
+  }
+
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    
+    padding: 0px;
+    /*background-color: #42b7c2;*/
+    background-color: rgba(1,1,1,0.8);
+  }
+
+  button{
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 10px;
+    color: white;
+  }
+
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .fakeimg{
+    width: 300px;
+    border-radius: 20px;
+  }
+
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+
+  button:hover{
+    border:1px solid white;
+    transition: .5s;
+  }
+    
+  .fakeimg{
+      padding: 10px;
+      
+  }
+
+  .txt{
+    padding-top: 35px;
+  }
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+    .logo{
+        width:100%;
+    }
+    .txt{
+      padding-top: 10px;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+    .logo{
+        width:100%;
+    }
+    .txt{
+      padding-top: 10px;
+    }
+  }
