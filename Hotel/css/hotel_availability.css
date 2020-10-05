@@ -1,0 +1,137 @@
+body{
+  background-image: url(../images/back10.jpg);
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+display:block;
+margin-left: auto;
+margin-right:auto;
+text-align:center; 
+width: 50%;
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+form {
+background-color: rgba(0, 0, 0, 0.9);
+padding: 10px;
+margin: 20px auto;
+border-radius: 20px;
+box-sizing:border-box;
+
+}
+
+.lbl{
+position: absolute;
+font-weight: bolder;
+}
+
+.lblstyle{
+position: absolute;
+padding:1rem;
+color:  #e0dfdf;
+}
+
+h2{
+width: 100%;
+font-size: 1.7rem;
+text-transform:uppercase;
+text-align: center; 
+color: #e0dfdf;
+}
+
+.inlineinput{
+position: relative;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.inputbox{
+	background-color: transparent;
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 90%;
+  margin: 10px 0;
+  height: 20px;
+  width: 60%;
+  padding: 0 10px;
+  margin: 30 px 0 10px;
+  transition: 0.5s;
+} 
+
+.input{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top:-20%;
+  left: 0;
+  border-color: rgb(223, 220, 220);
+  outline-width: thick;
+  background:none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #e0dfdf;
+}
+
+.tablestyle{
+  margin-top: 3rem;
+  padding-left: 2rem;
+  width:100%;
+  color: #e0dfdf;
+}
+
+.btn{
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 4rem 0;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  background-color:rgba(6, 97, 100, 0.9);
+  cursor: pointer;
+  color: #000000;
+  text-transform: uppercase;
+  font-family:'Open Sans', sans-serif;
+  background-size: 200%;
+  transition: .5s;
+}
+.btn:hover{
+  background-color: red;
+}
+
+@media screen and (max-width: 550px) and (min-width: 150px){
+.container {
+    text-align: center;
+    width: 90%;
+   border: 1rem;
+}
+.btn{
+    margin-bottom: 10px;
+}
+form{
+  margin-top: 10px;
+  margin: 20px auto;
+  background-image: url(../hotelimg/limg.jpg);	
+}
+.tablestyle{
+  margin-top: 1rem;
+  width:95%;
+}
+.inputbox> div h3,
+.tablestyle,
+.lblstyle{
+  font-size:13px;
+}
+.input{
+font-size: 0.8rem;
+}
+
+}
+
+
+

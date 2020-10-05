@@ -1,0 +1,164 @@
+body{	
+    background-image: url(../images/back.jpg);
+      min-height: 100vh;
+      justify-content: center;
+      font-family: 'Open Sans', sans-serif;
+  }
+  
+  .container{
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    justify-content: center;
+    padding: 20px 0px;
+    text-align:center; 
+    width: 60%;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+  
+  form {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-sizing:border-box;
+    justify-content: center;
+  }
+  
+  h2{
+    width: 100%;
+    font-size: 1.7rem;
+    text-transform:uppercase;
+    text-align: center; 
+    color: #e0dfdf;
+  }
+  
+  .inlineinput{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+  
+  .inputbox{ 
+    position: relative;
+    margin: 30px ;
+    height: 25px;
+    width: 75%;
+    padding: 0 10px;
+    margin: 50px 0 10px;
+    transition: 0.5s;
+    
+  } 
+  
+  .inputbox h3{
+    left: 5px;
+    transform: translateY(-120%);
+    float: left;
+    color: #e0dfdf;
+    font-size: 16px;
+    padding:10px;
+    transition: .3s; 
+  }
+  
+  .input,
+  textarea{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 15%;
+      left: 5%;
+      border-color: rgb(165, 164, 164);
+      border-style: ridge;
+      background:none;
+      padding: 0.5rem 0.7rem;
+      font-size: 1rem;
+      font-family: 'Open Sans', sans-serif;
+      color: #e0dfdf;
+  }
+  
+  .btn{
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 4rem 0;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    background-color:rgba(6, 97, 100, 0.9);
+    cursor: pointer;
+    color: #000000;
+    text-transform: uppercase;
+    font-family:'Open Sans', sans-serif;
+    background-size: 200%;
+    transition: .5s;
+  }
+  .btn:hover{
+    background-color: red;
+  }
+  
+  
+  @media screen and (max-width: 550px) and (min-width: 150px){
+    .container {
+        text-align: center;
+        width: 90%;
+    }
+    
+    .btn{
+      font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    form{
+      margin: auto;
+    }
+    .tablestyle::placeholder{
+      font-size: 10px;
+    }
+    .tablestyle{
+      margin-top: 1rem;
+      width:95%;
+      font-size: 10px;
+    }
+    
+    .inputbox h3,
+    .textarea h3{
+      left: 0%;
+      font-size:13px;
+    }
+  
+  .input,
+  textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    font-size: 0.8rem;
+  }
+  .inputbox{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2% 95%;
+    margin: 30px;
+    margin-left: 30px;
+    height: 20px;
+    width: 75%;
+    padding: 0 10px;
+    transition: 0.5s;
+  } 
+  .inputbox h3{
+    left: 5px;
+    transform: translateY(-100%);
+    float: center;
+    color: #e0dfdf;
+    font-size: 12px;
+    padding:10px;
+    transition: .3s;
+    padding-top: 0.5rem;
+  }
+  
+  }
+  
+    
+    
+  

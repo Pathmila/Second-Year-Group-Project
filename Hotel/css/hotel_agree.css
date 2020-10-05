@@ -1,0 +1,55 @@
+body{
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+img{
+    position:fixed;
+    height:110%;
+    left:5%;
+    bottom:5%;
+    z-index:-2;
+
+}
+
+form {  
+    width:25vw;
+    height:90vh;
+    display:grid;
+    padding:0 3rem;
+    text-align:left; 
+    float:right;
+    background-color: rgb(0, 0, 0);
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+  
+  h2{
+    width: 100%;
+    font-size: 1.7rem;
+    text-transform:uppercase;
+    text-align: center; 
+    color: #e0dfdf;
+  }
+ h3{
+    left: 10px;
+    color: #e0dfdf;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 550px) and (min-width: 150px){
+    body{
+        background-image: url(../images/flat-hotel.jpg);
+      }
+
+    form {
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: left;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h3{
+        font-size: 13px;
+    }  
+}
