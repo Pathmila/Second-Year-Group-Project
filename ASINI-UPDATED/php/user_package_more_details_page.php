@@ -9,10 +9,12 @@
 <html>
 	<head>
 		<title>EasyTravels.php</title>
-		<link rel="stylesheet" type="text/css" href="../css/package_more_details_page.css">
 		<link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/package_more_details_page.css">
+		
 	</head>
-	<body>			
+	<body>		
+		<br /><br />
         <?php
 			$id=$_SESSION['packid'];
 			

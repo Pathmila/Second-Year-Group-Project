@@ -12,15 +12,7 @@
     $nextid=$maxid+1;
 ?>
 
-<html>
-    <head>
-        <title>EasyTravels.com</title>    
-        <meata name="viewport" content="width=device-width, initial-scale=1">
-        <!-- LINKS TO CSS AND JS --->
-        <link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
-    </head>
-	
-	<?php
+<?php
         if(isset($_POST['submit'])){
 			$targetdir = '../images/destination/';   
 			$name=$nextid;
@@ -55,6 +47,16 @@
             }  
         }        
     ?>
+	
+
+<html>
+    <head>
+        <title>EasyTravels.com</title>    
+        <meata name="viewport" content="width=device-width, initial-scale=1">
+        <!-- LINKS TO CSS AND JS --->
+        <link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
+    </head>
+	
 	
     <body>
         <div class="container">

@@ -94,6 +94,11 @@
             </div>
             </div> 
 			
+			<div class="row">
+				<h2><label for="fname">Enter New Details To Update</label></h2>
+			</div>
+			
+			
             <div class="row">
             <div class="col-25">
                 <label for="fname">New Subcategory Name</label>
@@ -111,12 +116,14 @@
 				<input type="text" id="name" name="name"  required>
             </div>
             </div> 
+			<br />
 			
             <div class="row">
                 <input type="submit" name="formsubmit" value="Update" class="formbtn">        
             </div>
         </form>
-    
+		<a href="admin_deletesubcategory_page"><input type="button" name="formdelete" class="formbtn" value="Delete"></a>
+		<br /><br />
     </div>
 
     

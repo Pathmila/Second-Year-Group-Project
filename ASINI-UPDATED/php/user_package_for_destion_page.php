@@ -10,6 +10,14 @@
     $dname=$_GET['name'];
 ?>
 
+<?php
+    if(isset($_GET['submit'])){
+		$_SESSION['packid']=$_GET['pack_id'];
+		echo $_SESSION['packid'];
+        header("Location: user_package_more_details_page.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -67,13 +75,7 @@
 		</div>
 
 
-		<?php
-            if(isset($_GET['submit'])){
-				$_SESSION['packid']=$_GET['pack_id'];
-				echo $_SESSION['packid'];
-                header("Location: user_package_more_details_page.php");
-            }
-		?>
+		
 	</body>
 </html>
 <?php require_once('footer.php')?>

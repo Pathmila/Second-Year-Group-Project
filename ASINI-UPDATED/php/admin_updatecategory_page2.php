@@ -92,6 +92,12 @@
 				<?php echo "<img class='image' width='150px' src='".$path.$photo.$ex."'>";?>
             </div>
             </div>  
+			
+			<div class="row">
+				<h2><label for="fname">Enter New Details To Update</label></h2>
+			</div>
+			
+			
             <div class="row">
             <div class="col-25">
                 <label for="fname">New Category Name</label>
@@ -109,10 +115,11 @@
             </div>
             </div>
             <div class="row">
-                <input type="submit" name="formsubmit" value="Update" class="formbtn">        
+				<input type="submit" name="formsubmit" value="Update" class="formbtn">  
             </div>
         </form>
-    
+		<a href="admin_deletecategory_page"><input type="button" name="formdelete" class="formbtn" value="Delete"></a>
+		<br /><br />
     </div>
 
 

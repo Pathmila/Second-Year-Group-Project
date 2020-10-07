@@ -22,7 +22,7 @@
 
 			$path='../images/package/';
 			$ex='.jpg';
-			$sql1="select * from package p, destination d, packdestination pd 
+			$sql1="select * from destination d, packdestination pd, package p 
 			where p.packid=pd.packid AND d.destid=pd.destid AND d.name='".$dname."' ";
             $result2=$connection->query($sql1);
             
@@ -36,7 +36,6 @@
 
                 $sql2="select * from packdestination pd, destination d where pd.packid='".$id."' AND pd.destid=d.destid " ;
                 $result3=$connection->query($sql2);
-
 
 				echo"
 				<form method='GET' action='packages_for_destination_page.php' class='table' align='center'>

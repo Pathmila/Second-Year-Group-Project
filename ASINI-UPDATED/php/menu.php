@@ -10,10 +10,10 @@
             <div class="dropdown">
                 <button class="dropbtn">ADD</button>
                 <div class="dropdown-content">
-                    <a href="admin_addcategory_page">Category</a>
-                    <a href="admin_addsubcategory_page">Subcategory</a>
-                    <a href="admin_addtravelpackage_page">Travel Packages</a>
-                    <a href="admin_adddestination_page">Destinations</a>
+                    <a href="admin_addcategory_page.php">Category</a>
+                    <a href="admin_addsubcategory_page.php">Subcategory</a>
+                    <a href="admin_addtravelpackage_page.php">Travel Packages</a>
+                    <a href="admin_adddestination_page.php">Destinations</a>
                 </div>
             </div> 
 
@@ -21,28 +21,17 @@
             <div class="dropdown">
                 <button class="dropbtn">UPDATE</button>
                 <div class="dropdown-content">
-                    <a href="admin_updatecategory_page1">Category</a>
-                    <a href="admin_updatesubcategory_page1">Subcategory</a>
-                    <a href="admin_updatetravelpackage_page1">Travel Packages</a>
+                    <a href="admin_updatecategory_page1.php">Category</a>
+                    <a href="admin_updatesubcategory_page1.php">Subcategory</a>
+                    <a href="admin_updatetravelpackage_page1.php">Travel Packages</a>
                 </div>
             </div> 
-
-
-            <div class="dropdown">
-                <button class="dropbtn">DELETE</button>
-                <div class="dropdown-content">
-                    <a href="admin_deletecategory_page1">Category</a>
-                    <a href="admin_deletesubcategory_page1">Subcategory</a>
-                    <a href="admin_deletetravelpackage_page1">Travel Packages</a>
-                </div>
-            </div> 
-
 
             <div class="dropdown">
                 <button class="dropbtn">VIEW</button>
                 <div class="dropdown-content">
                     <a href="#">Bookings</a>
-                    <a href="#">Accounts</a>
+                    <a href="admin_viewaccount.php">Accounts</a>
                     <a href="#">Reports</a>
                 </div>
             </div> 

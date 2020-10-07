@@ -14,9 +14,11 @@
         <title>EasyTravels.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/contact_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
     </head>
     <body>
-        <img src="../images/banner.jpg" class="banner">
+		<br />
+        <img src="../images/banner.jpg" class="ban">
         <div class="container">
             <form mthod=GET action="user_contact_page.php">
                 <label style="font-size:30px" align="center">Plan Your Trip Our Travel Experts Can Help You.</label>

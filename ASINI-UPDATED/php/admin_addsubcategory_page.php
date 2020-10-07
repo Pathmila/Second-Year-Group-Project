@@ -5,7 +5,7 @@
 ?>
 
 <?php
-		if(isset($_POST['submit'])){	
+		if(isset($_POST['addsbucat'])){	
 			//echo "Asini";
             $subcatname=$_POST['name'];
 			$description=$_POST['description'];
@@ -16,10 +16,10 @@
 			$result2 = mysqli_query($connection,$sql);
             if($result2){
 				echo "<script> alert('Insert is Sucessfull') </script>";				
-				header("Location: admin_home_page.php");
+				//header("Location: admin_home_page.php");
             }else{
 				//echo "failed";
-				header("Location: admin_home_page.php");
+				//header("Location: admin_home_page.php");
             }  
         }        
     ?>
@@ -54,7 +54,7 @@
             </div>
             </div>
             <div class="row">
-                <br /><input type="submit" name="submit" value="Add" class="formbtn">
+                <br /><input type="submit" name="addsbucat" value="Add" class="formbtn">
             </div>
         </form>
         </div>   

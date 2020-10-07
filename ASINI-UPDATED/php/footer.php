@@ -8,24 +8,24 @@
     </head>
     <body>
         <div class="row1">
-            <div class="col">
+            <div class="col1">
                 <img src="../images/logo-web.jpg" width="300px" class="img"><br /><br />
                 <a href="#">About</a>|
                 <a href="#">Contact</a>
             </div>
-            <div class="col">
+            <div class="col1">
                 <p  class="tit">Address</p>
                 <p>Easy Travels Limited</p>
                 <p>No.34, Main road,</p>
                 <p>Colombo 4</p>
                 <p>Sri Lanka</p>
             </div>
-            <div class="col">
+            <div class="col1">
                 <p class="tit">Contact</p>
                 <p>Office # +94779038475</p>
                 <p>Mobile # +94779034567</p>
             </div>
-            <div class="col">
+            <div class="col1">
                 <p class="tit">Email</p>
                 <p>CEO : ceo@easytravels.com</p>
                 <p>HR : hr@easytravels.com</p>

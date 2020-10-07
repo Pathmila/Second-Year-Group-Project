@@ -9,12 +9,15 @@
 		<link rel="stylesheet" type="text/css" href="../css/package_more_details_page.css">
 		<link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
 	</head>
-	<body>			
+	<body>	
+		<br /><br />
         <?php
 			$id=$_SESSION['packid'];
+			//echo $id;
 			
 			$path='../images/package/';
 			$ex='.jpg';
+		
 
             $sql1="select * from package where packid='".$id."'";
 			$result2=$connection->query($sql1);
@@ -71,6 +74,10 @@
 						</div>
 						<div class='row'>
 							<br />$details
+            			</div><br />
+						<div class='row'>
+							
+							
             			</div><br />
 						<div class='row'>
 							$button<br /><br />
