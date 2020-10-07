@@ -23,7 +23,8 @@ td{
 
 .table{
     padding: 5px 5px;
-    background-color: rgb(85, 30, 4);
+    background-color: black;
+	opacity: 0.9;
     color: white;
 }
 
@@ -140,7 +141,7 @@ select{
         font-size:4vw;
     }
     body{
-        background-image: url(../images/backmobile2.jpg);
+        background-image: url(../images/gradient-green-blue-hd-wallpaper.jpg);
     } 
     .container td{
         width: 33.33%;

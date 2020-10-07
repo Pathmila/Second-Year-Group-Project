@@ -4,7 +4,7 @@
 
 
   /* Create three equal columns that floats next to each other */
-  .col {
+  .col1 {
     float: left;
     width: 25%;
     padding: 10px;
@@ -55,7 +55,7 @@
   
 
   @media screen and (max-width: 600px) {
-    .col {
+    .col1 {
       width: 100%;
       text-align: center;
     }

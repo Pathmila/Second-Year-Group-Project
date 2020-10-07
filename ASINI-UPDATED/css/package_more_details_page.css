@@ -14,10 +14,17 @@ td{
     font-size: 1vw;
 }
 
+input[type="text"]{
+	color: white;
+	background: black;
+	opacity: 0.8;
+}
+
 .table{
     padding: 5px 5px;
-    background-color:  oldlace;
-    color: black;
+    background-color:  black;
+    color: white;
+	opacity: 0.8;
 }
 
 .table td[colspan='3']{
@@ -89,6 +96,6 @@ input[type='text']{
         font-size:4vw;
     }
     body{
-        background-image: url(../images/backmobile2.jpg);
+        background-image: url(../images/gradient-green-blue-hd-wallpaper.jpg);
     } 
 }
