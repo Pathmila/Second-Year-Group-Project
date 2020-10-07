@@ -1,0 +1,43 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+body{
+	font-family: Arial;
+    margin-top: 0px;
+	background-image: url(../images/backmobile6.png);
+} 
+
+
+.welcome{
+    width: 100%;
+    height: auto;
+    position:absolute;
+}
+
+
+@media screen and (max-width: 768px) {	
+    .welcome{
+		height: auto;
+		width: 100%;
+    
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+	body {
+		background-image: url(..images/home.png);
+		height :auto;
+		width: 100%;
+	}
+	
+    .welcome{
+    height: auto;
+	width: 100%;
+    
+    }
+}
+
+
