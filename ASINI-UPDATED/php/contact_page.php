@@ -1,5 +1,8 @@
+<?php require_once('connect.php');
+    session_start();
+?>
 <?php require_once('user_nonnavigation.php')?> 
-<?php require_once('connect.php')?> 
+
 
 <!DOCTYPE html>
 <html>
@@ -10,11 +13,11 @@
 		<link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
     </head>
     <body>
-		<br />
-        <img src="../images/banner.jpg" class="ban">
+		
+        <p align="center"><img class="ban" src="../images/banner.jpg" width="90%"></p>
         <div class="container">
-            <form mthod=GET action="contact_page.php"> 
-				<label style="font-size:30px" align="center">Plan Your Trip Our Travel Experts Can Help You.</label>
+            <form mthod=GET action="contact_page.php"> 				
+				<h2 class="title"><label>Plan Your Trip Our Travel Experts Can Help You.</label></h2>		
 				<div class="row">
 				<div class="col-25">
 					<label for="fname">Name:</label>

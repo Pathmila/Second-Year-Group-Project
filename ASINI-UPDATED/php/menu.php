@@ -30,13 +30,13 @@
             <div class="dropdown">
                 <button class="dropbtn">VIEW</button>
                 <div class="dropdown-content">
-                    <a href="#">Bookings</a>
+                    <a href="admin_view_booking_page.php">Bookings</a>
                     <a href="admin_viewaccount.php">Accounts</a>
-                    <a href="#">Reports</a>
+                    <a href="admin_view_report1.php">Reports</a>
                 </div>
             </div> 
 
-            <a href="#home">CHECK AVAILABILITY</a>
+            <a href="admin_check_availability.php">CHECK AVAILABILITY</a>
 
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>

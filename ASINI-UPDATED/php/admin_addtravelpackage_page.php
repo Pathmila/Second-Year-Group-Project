@@ -18,9 +18,6 @@
 	$nextpack=$packid+1;
 	//echo $nextpack;
 ?>
-
-
-
 <?php
 		
         if(isset($_POST['submit'])){
@@ -143,7 +140,7 @@
     </head>
     <div class="container">
         <form method="post" action="admin_addtravelpackage_page.php" enctype="multipart/form-data">
-            <label style="font-size:30px" align="center">Add Travel Package</label>
+			<h2 class="title"><label>Add Travel Package</label></h2>
             <div class="row">
             <div class="col-25">
                 <label for="fname">Category Name</label>
@@ -183,7 +180,7 @@
                 <label for="fname">Package Name</label>
             </div>
             <div class="col-75">
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" placeholder="Enter the package name.." id="name" required>
             </div>
             </div>
    
@@ -193,7 +190,7 @@
                 <label for="fname">No of Days</label>
             </div>
             <div class="col-75">
-                <input type="number" name="number" id="number" min="1" max="50" required>
+                <input type="number" name="number" placeholder="Enter the no of days.." id="number" min="1" max="50" required>
             </div>
             </div>
 			
@@ -294,7 +291,7 @@
                 <label for="fname">Package Price</label>
             </div>
             <div class="col-75">
-                <input type="text" name="price" id="price" required>
+                <input type="text" name="price" placeholder="Enter the price of the package.." id="price" required>
             </div>
             </div>    
   
@@ -312,7 +309,7 @@
                 <label for="lname">Upload a photo 1</label>
             </div>
             <div class="col-75">
-                <input type="file" name="image" id="file1" required>
+                <br /><input type="file" name="image" id="file1" required>
             </div>
             </div>
 
@@ -322,7 +319,7 @@
                 <label for="lname">Upload a photo 2</label>
             </div>
             <div class="col-75">
-                <input type="file" name="image1" id="file1" required>
+                <br /><input type="file" name="image1" id="file1" required>
             </div>
             </div>
 
@@ -331,7 +328,7 @@
                 <label for="lname">Upload a photo 3</label>
             </div>
             <div class="col-75">
-                <input type="file" name="file3" id="file3" required>
+                <br /><input type="file" name="file3" id="file3" required>
             </div>
             </div>
 
@@ -343,3 +340,4 @@
 
     </body>
 </html>
+<?php require_once('footer.php')?>

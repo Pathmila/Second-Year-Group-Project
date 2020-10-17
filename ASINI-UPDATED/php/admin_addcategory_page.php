@@ -58,8 +58,7 @@
     <body> 
         <div class="container">
         <form method="post" action="admin_addcategory_page.php" enctype="multipart/form-data">
-            <label style="font-size:30px" align="center">Add Category</label>
-            
+            <h2 class="title"><label>Add Category</label></h2>
 
             <div class="row">
             <div class="col-25">
@@ -75,7 +74,7 @@
                 <label for="lname">Upload a photo</label>
             </div>
             <div class="col-75">
-                <input type="file" name="image" id="image" required>
+                <br /><input type="file" name="image" id="image" required>
             </div>
             </div>
             
@@ -86,6 +85,7 @@
         </div>
     </body>
 </html>
+<?php require_once('footer.php')?>
 
 
 

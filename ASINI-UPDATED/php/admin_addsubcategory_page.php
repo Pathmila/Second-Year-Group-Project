@@ -16,7 +16,7 @@
 			$result2 = mysqli_query($connection,$sql);
             if($result2){
 				echo "<script> alert('Insert is Sucessfull') </script>";				
-				//header("Location: admin_home_page.php");
+				header("Location: admin_home_page.php");
             }else{
 				//echo "failed";
 				//header("Location: admin_home_page.php");
@@ -34,7 +34,7 @@
     <body>
     <div class="container">
         <form method='POST' action='admin_addsubcategory_page.php'>
-            <label style="font-size:30px" align="center">Add Subcategory</label>
+			<h2 class="title"><label>Add Subcategory</label></h2>
 
             <div class="row">
             <div class="col-25">
@@ -60,3 +60,4 @@
         </div>   
     </body>
 </html>
+<?php require_once('footer.php')?>

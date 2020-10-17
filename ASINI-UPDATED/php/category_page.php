@@ -13,7 +13,7 @@
         <img src="../images/package.jpg" class="banner"><img src="../images/package1.jpg" class="banner">
         <div class="container">
         <form method="GET" action="category_page.php">
-            <label style="font-size:30px" align="center">Select Your Package</label>
+			<h2 class="title"><label>Select Your Package</label></h2>
             <div class="row">
             <div class="col-25">
                 <label for="fname">Category Name</label>
@@ -56,8 +56,8 @@
 
         <?php 
             if(isset($_GET['submit'])){
-                $_SESSION['category']=$_GET['cat'];
-                $_SESSION['subcategory']=$_GET['subcat'];
+                $_SESSION['cate']=$_GET['cat'];
+                $_SESSION['subcate']=$_GET['subcat'];
                 header("Location: package_page.php");
             }
         ?>

@@ -31,6 +31,7 @@
 				$details=(string)$row['details'];
                 $photo1=(string)$row['photo1'];
 				$name=(string)$row['name'];
+				$price=(string)$row['price'];
 				$_SESSION['packid']=$id;
                 
 
@@ -42,9 +43,10 @@
 				<input type='hidden' name='pack_id' value='".$id."'>
                 <div class='column'>
                 <div class='content'>
-                <h3>$name</h3>
+                <h3 style='color:yellow';>$name</h3>
                 <img src='".$path.$photo1.$ex."' class='pack-img'>
-                <h3>Locations</h3>";
+				<h3 style='color:red';>Price per person ".$price."</h3>
+                <h3 style='color:brown';>Locations</h3>";
                 while($row1=$result3->fetch_assoc()){
                     $destname=(string)$row1['name'];
                     echo $destname.' ';

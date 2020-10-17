@@ -14,11 +14,11 @@
                     <br />
                     <a href="user_signup_page.php"><input type="button" value="USER" class="packbtn"></a>
                     <br />
-                    <input type="button" value="HOTEL" class="packbtn">
+                    <a href="hotel_signup.php"><input type="button" value="HOTEL" class="packbtn"></a>
                     <br />
-                    <input type="button" value="GUIDE" class="packbtn">
+                    <a href="guide_signup_page.php"><input type="button" value="GUIDE" class="packbtn"></a>
                     <br />
-                    <input type="button" value="VEHICLE" class="packbtn">
+                    <a href="vehicle_signup_page.php"><input type="button" value="VEHICLE" class="packbtn"></a>
                     <br />
                 </form>
             </div>

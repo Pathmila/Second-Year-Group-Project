@@ -3,13 +3,6 @@
 <?php 
     require_once('connect.php');
     session_start();
-    $sql4="select max(photo) from category";
-    $result4=mysqli_query($connection,$sql4);
-    $max=mysqli_fetch_assoc($result4);
-    //echo $max;
-    //print_r ($max);
-    $maxid=$max['max(photo)'];
-    $nextphoto=$maxid+1;
 ?>
 <?php
 	$path='../images/category/';
@@ -27,37 +20,21 @@
 
 <?php
         if(isset($_POST['formsubmit'])){
-			$targetdir = '../images/category/';   
-			$name=$nextphoto;
-			$ext=".jpg";
-			$targetfile = $targetdir.$name.$ext;
+			
+            $subcatname=$_POST['name'];
+			$ndetails=$_POST['ndetails'];
+			$_SESSION['subcatname']=$subcatname;
 
-			if (move_uploaded_file($_FILES['image']['tmp_name'], $targetfile)) {
-			
-				//echo "Done";
-			} else { 
-				//echo "Not uploaded";
-			
-			}
-			
-			//echo "Asini";
-            $catname=$_POST['name'];
-            //$file=$_POST['image'];
-            //echo $file;
-            //$cat=$_POST['cat'];
-			$_SESSION['category']=$_POST['catname'];
-			$cate=$_SESSION['category'];
-			$filename=$nextphoto;
 
-            $sql2 = "UPDATE category SET name ='".$catname."', photo ='".$filename."' where name='".$cate."'";  
-			//echo $sql2;
+            $sql2 = "UPDATE subcategory SET name ='".$subcatname."', description ='".$ndetails."' where name='".$subcatname."'";  
+			echo $sql2;
 			$result2 = mysqli_query($connection,$sql2);
             if($result2){
 				echo "<script> alert('Update is Sucessfull') </script>";				
-				header("Location: admin_home_page.php");
+				//header("Location: admin_home_page.php");
             }else{
 				//echo "failed";
-				header("Location: admin_home_page.php");
+				//header("Location: admin_home_page.php");
             }  
         }        
     ?>
@@ -73,9 +50,9 @@
     <body>
     
     <div class="container">
-        <form method="post" action="admin_updatecategory_page2.php" enctype="multipart/form-data">
-            <label style="font-size:30px" align="center">Update Subcategory</label><br />
-   
+        <form method="post" action="admin_deletesubcategory_page.php">
+			<h2 class="title"><label><?php echo $subcategory;?>&nbsp&nbsp-&nbsp&nbsp Update Subcategory</label></h2>
+             
             <div class="row">
             <div class="col-25">
                 <label for="fname">Subcategory Name</label>
@@ -90,15 +67,22 @@
                 <label for="fname">Description</label>
             </div>
             <div class="col-75">
-				<input type="text" id="catname" name="catname" value="<?php echo $description; ?>"  readonly>
+				<input type="text" id="details" name="details" value="<?php echo $description; ?>"  readonly>
             </div>
             </div> 
-			
 			<div class="row">
-				<h2><label for="fname">Enter New Details To Update</label></h2>
+				<br />
+				<input type="submit" name="formdelete" class="formbtn" value="Delete">
 			</div>
+		</form>
+	</div>
 			
-			
+	<div class="container">
+        <form method="post" action="admin_updatecategory_page2.php" enctype="multipart/form-data">
+			<div class="row">
+				<h2 class="title"><label>Enter New Details To Update</label></h2>
+			</div>
+					
             <div class="row">
             <div class="col-25">
                 <label for="fname">New Subcategory Name</label>
@@ -113,7 +97,7 @@
                 <label for="fname">New Description</label>
             </div>
             <div class="col-75">
-				<input type="text" id="name" name="name"  required>
+				<input type="text" id="ndetails" name="ndetails" placeholder="New Subcategory description.." required>
             </div>
             </div> 
 			<br />
@@ -122,14 +106,6 @@
                 <input type="submit" name="formsubmit" value="Update" class="formbtn">        
             </div>
         </form>
-		<a href="admin_deletesubcategory_page"><input type="button" name="formdelete" class="formbtn" value="Delete"></a>
-		<br /><br />
     </div>
-
-    
-	
-		
-
-
 </html>
-
+<?php require_once('footer.php')?>

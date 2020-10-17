@@ -31,13 +31,12 @@
     
     <div class="container">
         <form method="post" action="admin_updatecategory_page1.php" enctype="multipart/form-data">
-            <label style="font-size:30px" align="center">Update Category</label><br />
-            <label style="font-size:20px" align="center">First Select The Category</label>
+            <h2 align="center" class="title"><label>Update Category</label></h2>
             <div class="row">
             <div class="col-25">
-                <label for="fname">Category Name</label>
+                <label for="fname">Select the category name</label>
             </div>
-            <div class="col-75">
+            <div class="col-50">
                 <select name="cat" id="cat">
                     <?php
                         $sql2="select * from category";
@@ -47,14 +46,15 @@
                         }
                     ?>
                 </select>
-            </div>
             </div>  
-            <div class="row">
+            <div class="col-25">
+				&nbsp
                 <input type="submit" name="submit" value="Go" class="formbtn">        
             </div>
+			</div>
         </form>
     
     </div>
     </body>
 </html>
-
+<?php require_once('footer.php')?>

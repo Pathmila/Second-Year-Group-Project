@@ -22,13 +22,13 @@
     <body>
         <form method="post" action="admin_updatesubcategory_page1.php" enctype="multipart/form-data">
         <div class="container">
-            <label style="font-size:30px" align="center">Update Subcategory</label>
+			<h2 align="center" class="title"><label>Update Subcategory</label></h2>
 
             <div class="row">
             <div class="col-25">
                 <label for="fname">Subcategory Name</label>
             </div>
-            <div class="col-75">
+            <div class="col-50">
                 <select name="subcat" id="subcat">
                     <?php
                     $sql3="select * from subcategory";
@@ -39,13 +39,13 @@
                     ?>
                 </select>
             </div>
-            </div>
-
-            <div class="row">
+            <div class="col-25">
+				&nbsp
                 <input type="submit" name="submit" value="Go" class="formbtn">        
-            </div>
-
+			</div>
+			</div>
             </form>
         </div>    
     </body>
 </html>
+<?php require_once('footer.php')?>

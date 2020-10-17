@@ -34,13 +34,13 @@
     <body> 
         <div class="container">
         <form method="post" action="admin_viewaccount.php">
-            <label style="font-size:30px" align="center">View Accounts</label>
+			<h2 align="center" class="title"><label>View Accounts</label></h2>
 
             <div class="row">
             <div class="col-25">
                 <label for="fname">Select The Account Type</label>
             </div>
-            <div class="col-75">
+            <div class="col-50">
                 <select name="type" id="type">
 					<option>user</option>
 					<option>hotel</option>
@@ -48,17 +48,15 @@
 					<option>guide</option>
 				</select>
             </div>
-            </div>
-
-           
-            <br />
-            <div class="row">
+            <div class="col-25">
+                &nbsp
                 <input type="submit" name="submit" value="Go" class="formbtn">
             </div>
+			</div>
         </form>
         </div>
     </body>
 </html>
-
+<?php require_once('footer.php')?>
 
 

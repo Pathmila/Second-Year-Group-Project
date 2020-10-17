@@ -3,17 +3,13 @@
 <?php require_once('connect.php');
     session_start();
 ?>
-
 <?php
-	$type=$_SESSION['type'];
-	//echo $type;
+	if(isset($_POST['submit'])){
+		$_SESSION['gid']=$_POST['guide'];
+		//echo $_SESSION['uid'];
+		header("Location: admin_guide_moredetails_page.php");
+	}
 ?>
-
-
-	
-	
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,16 +18,42 @@
         <link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
     </head>
     <body> 
+		<div class="container">			
+			<form align="center" method="POST" action='admin_viewaccount4.php'>			
+			<h2 class="title"><label>Search More Guide Details</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label>Select the guide:</label>
+				</div>
+				<div class="col-50">
+					<select name="guide" id="guide" required>
+						<?php
+						$sql3="select * from guide";
+						$result2=$connection->query($sql3);
+						while($row=$result2->fetch_assoc()){
+							echo "<option value='". $row['gid'] ."'>".$row['gid']."&nbsp&nbsp--&nbsp&nbsp" .$row['name'] ."</option>" ;
+						}
+						?>
+					</select>    
+				</div>
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="submit" value="Search" class="formbtn">
+				</div>
+				</div>
+			</form>
+		</div>	
         <div class="container">
-			<h2 align="center" style="font-size:30px; color:Orange"><label>Vehicle Details</label></h2>
-			<table border=1 padding=50px align="center" style="color:white;border-color:gray">
-			<tr style="color:yellow; font-weight:bold">
+			<h2 class="title" align="center"><label>Guide Details</label></h2>
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="subtitle">
 				<td>ID</td>
 				<td>Name</td>
 				<td>Birthday</td>
 				<td>Address</td>
 				<td>Email</td>
-				<td>Telephone(+94)</td>
+				<td>Telephone</td>
 				<td>Details</td>
 				<td>Photo</td>
 				
@@ -39,7 +61,7 @@
 			<?php
 				$path='../images/guide/';
 				$ex='.jpg';
-				$sql="select * from ".$type."";
+				$sql="select * from guide";
 				//echo $sql;
 				$result=$connection->query($sql);
 				while($row=$result->fetch_assoc()){
@@ -49,7 +71,7 @@
 					echo "<td>".$row['birthday']."</td>";
 					echo "<td>".$row['address']."</td>";
 					echo "<td>".$row['email']."</td>";
-					echo "<td>".$row['telephone']."</td>";
+					echo "<td>0".$row['telephone']."</td>";
 					echo "<td>".$row['description']."</td>";
 					$photo=$row['photo'];
 					//echo $photo;
@@ -59,9 +81,10 @@
 				}
 			?>
             </table>
+			</div>
         </div>
     </body>
 </html>
-
+<?php require_once('footer.php')?>
 
 

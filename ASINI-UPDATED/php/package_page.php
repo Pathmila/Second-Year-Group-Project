@@ -28,7 +28,7 @@
 			$path='../images/package/';
 			$ex='.jpg';
 
-            $sql1="select * from package where catname='".$cat."' AND subcatname='".$subcat."'";
+            $sql1="select * from package where catname='".$cat."' AND subcatname='".$subcat."' ";
             $result2=$connection->query($sql1);
             
             while($row=$result2->fetch_assoc()){

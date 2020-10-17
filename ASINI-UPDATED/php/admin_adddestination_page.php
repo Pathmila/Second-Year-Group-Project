@@ -61,7 +61,7 @@
     <body>
         <div class="container">
         <form method='POST' action="admin_adddestination_page.php" enctype="multipart/form-data">
-            <label style="font-size:30px" align="center">Add Destination</label>
+			<h2 class="title"><label>Add Destination</label></h2>
             <div class="row">
             <div class="col-25">
                 <label for="fname">Destination Name</label>
@@ -85,7 +85,7 @@
                 <label for="lname">Upload a photo</label>
             </div>
             <div class="col-75">
-                <input type="file" name="image" id="image" required>
+                <br /><input type="file" name="image" id="image" required>
             </div>
             </div>
 
@@ -96,3 +96,4 @@
         </div>   
     </body>
 </html>
+<?php require_once('footer.php')?>
