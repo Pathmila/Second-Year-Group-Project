@@ -10,6 +10,7 @@ input[type=text], select, textarea {
 	width: 75%;
 	padding: 12px;
 	border: 1px solid #ccc;
+	border-color:aqua;
 	border-radius: 4px;
 	resize: vertical;
 	font-size: 16px;

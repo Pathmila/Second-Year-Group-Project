@@ -18,6 +18,17 @@ body{
     float: right;
 }
 
+.text{
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	background-color:transparent;
+	height:50px;
+	text-align:center;
+	border: 1px solid #ccc;
+	border-color:aqua;
+  }
+
 .searchbtn:hover {
     background-color: red;
   }

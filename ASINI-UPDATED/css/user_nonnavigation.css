@@ -59,9 +59,25 @@
     float: right;
   }
   
+   .rightdate{
+	float: right; 
+	color: white;
+	margin-right:-110px;
+	font-weight: bold;
+	margin-top:10px;
+	
+  }
+  
+  .rightdate1{
+	float: right; 
+	color: white;
+	margin-right:-200px;
+	font-weight: bold;
+	margin-top:10px;
+  }
 
   button:hover{
-    border:1px solid white;
+    border:1px solid aqua;
     transition: .5s;
   }
     
@@ -86,6 +102,12 @@
     .txt{
       padding-top: 10px;
     }
+	.rightdate{
+		margin:40px;
+	}
+	.rightdate1{
+		margin:40px;
+	}
   }
   
   /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -100,4 +122,10 @@
     .txt{
       padding-top: 10px;
     }
+	.rightdate{
+		margin:40px;
+	}
+	.rightdate1{
+		margin:40px;
+	}
   }

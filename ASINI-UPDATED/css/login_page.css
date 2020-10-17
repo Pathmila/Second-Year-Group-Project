@@ -52,12 +52,12 @@ h2{
 .login input[type="text"],
 .login input[type="password"] {
   max-width:400px;
-	width: 80%;
+  width: 80%;
   line-height:3em;
   margin:1em 2em;
   border-radius:5px;
   border:2px solid #f2f2f2;
-  outline:none;
+  border-color:aqua;
   padding-left:10px;
   background-color: transparent;
   color: white;
@@ -95,7 +95,7 @@ h2{
 
 
 .sign-up:hover{
-  color:lawngreen;
+  color:aqua;
 }
 
 

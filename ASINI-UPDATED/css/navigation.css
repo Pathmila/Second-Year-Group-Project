@@ -1,5 +1,5 @@
-  /* Style the body */
-  body {
+ /* Style the body */
+ body {
     font-family: Arial;
     margin-top: 0;
   }
@@ -64,11 +64,7 @@
     border:1px solid aqua;
     transition: .5s;
   }
-  
-  .btn.active{
-	border:1px solid aqua;  
-  }
-  
+    
   .fakeimg{
       padding: 10px;
       

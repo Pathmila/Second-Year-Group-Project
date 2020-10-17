@@ -65,7 +65,8 @@
     line-height:3em;
     margin:1em 2em;
     border-radius:5px;
-    border:2px solid #f2f2f2;
+    border:1px solid #f2f2f2;
+	border-color:aqua;
     outline:none;
     padding-left:10px;
     background-color: transparent;

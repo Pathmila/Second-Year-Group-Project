@@ -9,6 +9,7 @@ input[type=email] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
+  border-color:aqua;
   border-radius: 4px;
   resize: vertical;
 }
@@ -19,7 +20,8 @@ label {
 }
 
 .ban{
-  width: 100%;
+  width:40%;
+  height:40%;
 }
 
 .container{
@@ -80,5 +82,8 @@ input[type=submit]:hover {
   }
   .banner{
     width: 100%;
+  }
+  .ban{
+	display:none;
   }
 }
