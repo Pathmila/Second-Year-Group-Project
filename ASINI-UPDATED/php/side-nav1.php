@@ -70,9 +70,9 @@ div.content {
   <a href="admin_updatecategory_page1">Update Category</a>
   <a href="admin_updatesubcategory_page1">Update Subcategory</a>
   <a href="admin_updatetravelpackage_page1">Update Travel Packages</a>
-  <a href="#">View Bookings</a>
+  <a href="admin_view_booking_page.php">View Bookings</a>
   <a href="admin_viewaccount.php">View Accounts</a>
-  <a href="#">View Reports</a>
+  <a href="admin_view_report1.php">View Reports</a>
 </div>
 
 

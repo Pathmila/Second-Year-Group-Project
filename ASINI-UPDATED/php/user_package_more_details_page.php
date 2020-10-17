@@ -32,6 +32,8 @@
 				$photo1=(string)$row['photo1'];
 				$photo2=(string)$row['photo2'];
 				$photo3=(string)$row['photo3'];	
+				$_SESSION['name']=$row['name'];
+				$_SESSION['price']=$row['price'];
 				//$button="<a href='book_page.php?id=".$id."'><button>Book Now</button></a>";
 				$button="<button>Book Now</button>";
 

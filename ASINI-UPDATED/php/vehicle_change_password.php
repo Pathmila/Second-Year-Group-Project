@@ -4,7 +4,8 @@
         header('Location: login_page.php');
     }
 ?>
-<?php require_once('user_navigation.php')?> 
+<?php require_once('vehicle_navigation.php')?> 
+<?php require_once('vehicle_view_navigation.php')?>
 
 <?php 
 	$uname=$_SESSION['username'];
@@ -20,7 +21,6 @@
 		$uname=(string)$row['username'];
 	}
 ?>
-<?php require_once('user_navigation.php')?> 
 
 <?php
 		
@@ -38,7 +38,7 @@
             $result1 = mysqli_query($connection,$sql1);
 			if($result1){
 				echo "<script> alert('Password update is sucessfull') </script>";
-				header("Location: user_home_page.php");
+				header("Location: vehicle_home_page.php");
 			}else{
 				echo "<script> alert('Password update is failed') </script>";
 			}
@@ -58,9 +58,8 @@
         <link rel="stylesheet" type="text/css" href="../css/admin_addcategory_page.css">
     </head>
     <body>     
-        <?php require_once('user_view_profile_navigation.php')?>
 		<div class="container">
-        <form method="GET" action="user_change_password.php">
+        <form method="GET" action="vehicle_change_Password.php">
             
 			<h2 class="title"><label>Change Password</label></h2>
 
@@ -90,9 +89,6 @@
                 <input type="password" name="confirmpassword" required>
             </div>
             </div>
-
-            
-
             
             <div class="row">
 				<input type="submit" name="submit" value="Update" class="formbtn"><br />

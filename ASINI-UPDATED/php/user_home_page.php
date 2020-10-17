@@ -12,6 +12,7 @@
         <title>EasyTravels</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <link rel="stylesheet" type="text/css" href="../css/user_home_page.css">
 		<link rel="stylesheet" type="text/css" href="../css/destination_page.css">
     </head>
@@ -66,7 +67,7 @@
 				</div>
 
 				
-                <form method='GET' action="category_page.php" class='table' align='center'>
+                <form method='GET' action="user_category_page.php" class='table' align='center'>
                     <input type="submit" name="catbtn" value="Select Your Package" class="catbtn">
                 </form>
             </div>

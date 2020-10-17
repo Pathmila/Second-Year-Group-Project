@@ -6,12 +6,12 @@
         <link rel="stylesheet" type="text/css" href="../css/menu.css">
     </head>
     <body>
-        <div class="topnav" id="myTopnav">
-            <a href="user_addcomment_page.php">Add Comment</a>
-            <a href="user_update_profile.php">Update Profile</a>
-            <a href="user_change_password.php">Change Password</a>
-            <a href="user_delete_profile.php">Delete Profile</a>
+		<div class="topnav" id="myTopnav">
+            <a href="vehicle_update_profile.php">Update Profile</a>
+            <a href="vehicle_change_password.php">Change Password</a>
+            <a href="vehicle_delete_profile.php">Delete Profile</a>
             
+
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
 
@@ -29,3 +29,6 @@
 
     </body>
 </html>
+
+
+      

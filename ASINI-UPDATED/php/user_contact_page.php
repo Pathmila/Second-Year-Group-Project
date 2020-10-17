@@ -21,7 +21,8 @@
         <img src="../images/banner.jpg" class="ban">
         <div class="container">
             <form mthod=GET action="user_contact_page.php">
-                <label style="font-size:30px" align="center">Plan Your Trip Our Travel Experts Can Help You.</label>
+             
+				<h2 class="title"><label>Plan Your Trip Our Travel Experts Can Help You.</label></h2>
                 <div class="line">
                 <div class="col-25">
                     <label for="fname">Name:</label>

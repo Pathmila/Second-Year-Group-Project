@@ -1,10 +1,62 @@
-<?php require_once('connect.php');
+<?php
+    require_once('connect.php');
     session_start();
-    if($_SESSION['loggedin']!=1){
-        header('Location: login.php');
-    }
+    $sql4="select max(photo3) from comment";
+    $result4=mysqli_query($connection,$sql4);
+    $max=mysqli_fetch_assoc($result4);
+    $maxid=$max['max(photo3)'];
+    $nextid=$maxid+1;
 ?>
 <?php require_once('user_navigation.php')?> 
+
+<?php
+    if(isset($_POST['submit'])){
+		$targetdir = '../images/comment/';   
+		$name1=$nextid;
+		$name2=$nextid+1;
+		$name3=$nextid+2;
+		$ext=".jpg";
+		$targetfile1 = $targetdir.$name1.$ext;
+		$targetfile2 = $targetdir.$name2.$ext;
+		$targetfile3 = $targetdir.$name3.$ext;
+		if (move_uploaded_file($_FILES['file1']['tmp_name'], $targetfile1)) {
+		}
+		if (move_uploaded_file($_FILES['file2']['tmp_name'], $targetfile2)) {
+		}
+		if (move_uploaded_file($_FILES['file3']['tmp_name'], $targetfile3)) {
+		}
+    }        
+?>
+
+<?php
+	if(isset($_POST['submit'])){
+		$uid=$_SESSION['uid'];
+		$description=$_POST['description'];
+		$photo1=$nextid;
+		$photo2=$nextid+1;
+		$photo3=$nextid+2;
+		$hotel=$_POST['hotel'];
+		$rate=$_POST['rate'];
+		$guide=$_POST['guide'];
+		$rate2=$_POST['rate2'];
+		$vehicle=$_POST['vehicle'];
+		$rate3=$_POST['rate3'];
+		
+		$sql="insert into comment(uid,details,photo1,photo2,photo3,hotel,hotelrating,guide,guiderating,vehicle,vehiclerating)
+		values('".$uid."','".$description."','".$photo1."','".$photo2."','".$photo3."',
+		'".$hotel."','".$rate."','".$guide."','".$rate2."','".$vehicle."','".$rate3."')";
+		echo $sql;
+		$result=$connection->query($sql);
+		if($result){	
+            echo "<script> alert('Insert is Sucessfull') </script>";
+			header("Location: user_home_page.php");
+        }else{
+            //echo "failed";
+			echo "<script> alert('Insert is Failed') </script>";
+			//header("Location: login_page.php");
+        }
+	}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -17,8 +69,9 @@
     <body>     
         <?php require_once('user_view_profile_navigation.php')?>
 		<div class="container">
-        <form method="GET" action="user_addcomment_page.php">
-            <label style="font-size:30px" align="center">Add Your Comment</label>
+        <form method="POST" action="user_addcomment_page.php" enctype="multipart/form-data">
+          
+			<h2 class="title"><label>Add Your Comment</label></h2>
             <div class="row">
             <div class="col-25">
                 <label>Description:</label>
@@ -67,7 +120,7 @@
                     $sql3="select * from hotel";
                     $result2=$connection->query($sql3);
                     while($row=$result2->fetch_assoc()){
-                        echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+                        echo "<option value='". $row['hid'] ."'>". $row['hid'] ."&nbsp--&nbsp" .$row['name'] ."</option>" ;
                     }
                     ?>
                 </select>               
@@ -97,7 +150,7 @@
                     $sql3="select * from guide";
                     $result2=$connection->query($sql3);
                     while($row=$result2->fetch_assoc()){
-                        echo "<option value='". $row['name'] ."'>" .$row['name'] ."</option>" ;
+                        echo "<option value='". $row['gid'] ."'>". $row['gid'] ."&nbsp--&nbsp" .$row['name'] ."</option>" ;
                     }
                     ?>
                 </select>               

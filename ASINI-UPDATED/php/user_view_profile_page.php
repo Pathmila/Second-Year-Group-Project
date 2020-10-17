@@ -1,7 +1,7 @@
 <?php require_once('connect.php');
     session_start();
     if($_SESSION['loggedin']!=1){
-        header('Location: login_page.php');
+        header('Location: login.php');
     }
 ?>
 <?php require_once('user_navigation.php')?> 
@@ -16,7 +16,7 @@
 	$result=mysqli_query($connection,$sql);
 	while($row=$result->fetch_assoc()){
 		$id=(string)$row['uid'];
-		
+		//echo $id;	
 		$uname=(string)$row['username'];
 	}
 	
@@ -31,49 +31,6 @@
     }
 ?>
 
-<?php
-
-		$_GLOBAL['accountdone']=0;
-		$_GLOBAL['userdone']=0;
-		
-        if(isset($_GET['updatebtn'])){
-            $name=$_GET['name'];
-			$uname=$_GET['uname'];
-			$address=$_GET['address'];
-			$email=$_GET['email'];
-			$telephone=$_GET['telephone'];
-			$_SESSION['username']=$uname;
-            
-
-			//update account table
-			$sql1 = "UPDATE account SET username ='".$uname."' where uid='".$id."'"; 
-			//echo $sql1;
-            $result1 = mysqli_query($connection,$sql1);
-			if($result1){
-				$_GLOBAL['accountdone']=1;
-			}else{
-				$_GLOBAL['accountdone']=0;
-			}
-
-			//update user table
-            $sql2 = "UPDATE user SET name ='".$name."', address ='".$address."', email ='".$email."', telephone ='".$telephone."' where uid='".$id."'";   
-            //echo $sql2;
-			$result2 = mysqli_query($connection,$sql2);
-            if($result2){
-					$_GLOBAL['userdone']=1;
-				}else{
-					$_GLOBAL['userdone']=0;
-				}
-				
-                if(($_GLOBAL['accountdone']==1) && ($_GLOBAL['userdone']==1)){
-                    echo "<script> alert('Submition is Sucessfull') </script>";
-					header("Location: user_home_page.php");
-                }else{
-                    //echo "failed";
-                }          
-        }        
-    ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -85,16 +42,15 @@
     <body>     
         <?php require_once('user_view_profile_navigation.php')?>
 		<div class="container">
-        <form method="GET" action="user_update_profile.php">
-         
-			<h2 class="title"><label>Update Profile</label></h2>
-			
+        <form method="GET" action="view_profile_page.php">
+            
+			<h2 class="title"><label>View Profile</label></h2>
             <div class="row">
             <div class="col-25">
                 <label>Name:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="name" value="<?php echo $name?>" >
+                <input type="text" name="name" value="<?php echo $name?>" readonly>
             </div>
             </div>
 
@@ -103,7 +59,7 @@
                 <label>Username:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="uname" value="<?php echo $uname?>" >
+                <input type="text" name="uname" value="<?php echo $uname?>" readonly>
             </div>
             </div>
 
@@ -112,7 +68,7 @@
                 <label>Address:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="address" value="<?php echo $address?>" >
+                <input type="text" name="address" value="<?php echo $address?>" readonly>
             </div>
             </div>
 
@@ -121,7 +77,7 @@
                 <label>Email:</label>
             </div>
             <div class="col-75">
-                <input type="email" name="email" value="<?php echo $email?>" >
+                <input type="email" name="email" value="<?php echo $email?>" readonly>
             </div>
             </div>
 
@@ -130,11 +86,8 @@
                 <label>Telephone:</label>
             </div>
             <div class="col-75">
-                <input type="tel" name="telephone" value="0<?php echo $telephone?>" >
+                <input type="tel" name="telephone" value="0<?php echo $telephone?>" readonly>
             </div>
-            </div>
-            <div class="row">
-				<input type="submit" name="updatebtn" value="Update" class="formbtn"><br />
             </div>
             </form>
         </div>
