@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body> 
+		<div class="container">			
+			<form align="center" method="POST" action='../../src/php/admin_viewaccount2.php'>			
+			<h2 class="title"><label>Search More Hotel Details</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label>Select the hotel:</label>
+				</div>
+				<div class="col-50">
+					<select name="hotel" id="hotel" required>
+						<?php include('../../src/php/admin_viewaccount2-hotel_dropbox.php')?>
+					</select>    
+				</div>
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="submit" value="Search" class="formbtn">
+				</div>
+				</div>
+			</form>
+		</div>	
+        <div class="container">
+			<h2 align="center" class="title"><label>Hotel Details</label></h2>
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="subtitle">
+				<td>ID</td>
+				<td>Name</td>
+				<td>Address</td>
+				<td>Email</td>
+				<td>Telephone</td>
+				<td>No of Single Rooms</td>
+				<td>Price of Single Room</td>
+				<td>No of Double Rooms</td> 
+				<td>Price of Double Room</td>
+				<td>No of Family Rooms</td>
+				<td>Price of Family Room</td>
+				<td>Description</td>
+				<td>Photo</td>
+				
+			</tr>
+				<?php include('../../src/php/admin_viewaccount2-table.php')?>
+            </table>
+			</div>
+        </div>
+    </body>
+</html>

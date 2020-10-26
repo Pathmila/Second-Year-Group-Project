@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body> 
+		<div class="container">			
+			<form align="center" method="POST" action='admin_viewaccount1.php'>			
+			<h2 class="title"><label>Search More User Details</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label>Select the user:</label>
+				</div>
+				<div class="col-50">
+					<select name="user" id="user" required>
+						<?php include('../../src/php/admin_viewaccount1-user_dropdown.php')?>
+					</select>    
+				</div>
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="submit" value="Search" class="formbtn">
+				</div>
+				</div>
+			</form>
+		</div>	
+        <div class="container">
+			<h2 class="title" align="center"><label>User Details</label></h2>
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="subtitle">
+				<td>ID</td>
+				<td>Name</td>
+				<td>Address</td>
+				<td>Email</td>
+				<td>Telephone</td>
+			</tr>
+				<?php include('../../src/php/admin_viewaccount1-table.php')?>
+            </table>
+			</div>
+        </div>
+    </body>
+</html>

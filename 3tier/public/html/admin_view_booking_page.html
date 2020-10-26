@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body> 
+		<div class="container">			
+			<form align="center" method="POST" action='../../src/php/admin_view_booking_page.php'>			
+			<h2 class="title"><label>Search More Reservation Details</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label>Select the reservation:</label>
+				</div>
+				<div class="col-50">
+					<select name="reservation" id="reservation" required>
+						<?php include('../../src/php/admin_view_booking_page-resavation_dropdown.php')?>
+					</select>    
+				</div>
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="submit" value="Search" class="formbtn">
+				</div>
+				</div>
+			</form>
+		</div>	
+        <div class="container">
+			<h2 class="title" align="center"><label>Booking Details</label></h2>
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="subtitle">
+				<td>Reserved ID</td>
+				<td>Package ID</td>
+				<td>User ID</td>
+				<td>Date</td>
+				<td>Travelers</td>
+				<td>No of Singlerooms</td>
+				<td>No of Doublerooms</td>
+				<td>No of Familyrooms</td>
+			</tr>
+				<?php include('../../src/php/admin_view_booking_page-table.php')?>
+            </table>
+			</div>
+        </div>
+    </body>
+</html>

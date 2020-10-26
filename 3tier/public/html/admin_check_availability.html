@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body> 
+        <div class="container">
+		
+        <form method="post" action="../../src/php/admin_check_availability.php">
+			<h2 align="center" class="title"><label>Check Availability</label></h2>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Select The Account Type</label>
+            </div>
+            <div class="col-50">
+                <select name="type" id="type">
+					<option>guide</option>
+					<option>vehicle</option>
+					<option>hotel</option>
+				</select>
+            </div>            
+			<div class="col-25">
+                &nbsp
+				<input type="submit" name="submit" value="Go" class="formbtn">
+            </div>
+			</div>
+        </form>
+        </div>
+    </body>
+</html>

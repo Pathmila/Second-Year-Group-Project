@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+        <link rel="stylesheet" type="text/css" href="../../public/css/chart.css">  	
+	</head>
+	<body>
+		<div class="container">	
+			<form method="post" action="../../src/php/admin_view_report_financial2.php">
+				<h2 align="center" class="title"><label>Total Amount By Date</label></h2>
+				
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Select the Date</label>
+				</div>
+				<div class="col-50">
+					<input type="date" name="date1" required>
+				</div>  
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="submit1" value="Go" class="formbtn">        
+				</div>
+				</div>
+				<?php include('../../src/php/admin_view_report_financial2-form1.php')?>
+            </form>
+		</div>
+		<div class="container">	
+			<h2 class="title" align="center"><label>Payment Details</label></h2>
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="subtitle">
+				<td>Payment ID</td>
+				<td>Amount</td>
+				<td>Date</td>
+			</tr>
+				<?php include('../../src/php/admin_view_report_financial2-table.php')?>
+            </table>
+			</div>
+        </div>
+		</div>
+	</body>
+</html>
