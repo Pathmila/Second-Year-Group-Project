@@ -1,0 +1,1 @@
+<?php include('../../public/html/vehicle_view_navigation.html')?>
