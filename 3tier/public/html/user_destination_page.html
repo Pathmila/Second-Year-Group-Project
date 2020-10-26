@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>EasyTravels.php</title>
+		<link rel="stylesheet" type="text/css" href="../../public/css/destination_page.css">
+		
+		<link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+	</head>
+	<body>	
+		<br />
+		<div class="container">
+			<form name="select" method="get" action="../../src/php/user_destination_page.php">
+			
+			<h2 class="title"><label>Select Your Destination</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Destination:</label>
+				</div>	
+				<div class="col-50">
+					<select name="destination" id="destination">
+						<?php include('../../src/php/user_destination_page-destination_dropdown.php')?>
+					</select>
+				</div>
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="dropsubmit" value="Search" class="formbtn">				
+				</div>
+				</div>
+			</form>
+		</div>
+		
+		<div class="container1">
+		<div class="row">
+			<?php include('../../src/php/user_destination_page-table.php')?>
+		</div>
+		</div>			
+	</body>
+</html>

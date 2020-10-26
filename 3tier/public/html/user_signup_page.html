@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+		<script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <form method="get" action="../../src/php/user_signup_page.php">        
+			<h2 class="title"><label>User SignUp</label></h2>
+       
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Name:</label>
+            </div>
+            <div class="col-75">
+                <input name="name" id="name" placeholder="Enter Name" type="text" required >
+            </div>
+            </div>		
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Address:</label>
+            </div>
+            <div class="col-75">
+                <input name="address" id="address" placeholder="Address" type="text" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Email:</label>
+            </div>
+            <div class="col-75">
+                <input name="email" id="email" placeholder="Email" type="email" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Telephone No:</label>
+            </div>
+            <div class="col-75">
+                <input name="telephone" id="telephone" placeholder="Telephone" type="tel" pattern="[0-9]{10}" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">User Name:</label>
+            </div>
+            <div class="col-75">
+                <input name="uname" id="uname" placeholder="Username" type="text" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Password:</label>
+            </div>
+            <div class="col-75">
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Confirm Password:</label>
+            </div>
+            <div class="col-75">
+                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" onblur="cpassword_validation()" required>
+            </div>
+            </div>
+			
+			<div class="row">
+			<div class="middle">
+				<br />
+				<input type="checkbox" id="check" name="check" required>
+                <label for="check" ><a href="Easy Travels Terms & Conditions.pdf" class="sign-up">I Agree To The Terms And Conditions</a></label><br />
+			</div>
+			</div>
+			
+            <div class="row">
+                <input type="submit" name="formsubmit" value="SIGN UP" class="formbtn">
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

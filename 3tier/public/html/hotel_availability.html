@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+		
+    </head>
+    <body>
+	<div class="container">
+		<form  method="post"  action="../../src/php/hotel_availability.php">  
+			
+			<h2 class="title"><label>Change Your Hotel Rooms' Availability</label></h2>
+            <div class="row">
+            <div class="col-25">
+                <label>No of available single rooms</label>
+            </div>
+            <div class="col-75">
+                <input name="sarooms" id="sarooms" placeholder="Enter the no of available single rooms today" type="number" min="0" max="800" step="1" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of available double rooms</label>
+            </div>
+            <div class="col-75">
+                <input name="darooms" id="darooms" placeholder="Enter the no of available double rooms today" type="number" min="0" max="800" step="1" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of available family rooms</label>
+            </div>
+            <div class="col-75">
+                <input name="farooms" id="farooms" placeholder="Enter the no of available family rooms today" type="number" min="0" max="800" step="1" required >
+            </div>
+            </div>
+			
+			<div class="row">
+                <br /><input type="submit" name="formsubmit" value="Update" class="formbtn">
+            </div>
+		</form>		
+	</div>		
+</body>
+</html>
