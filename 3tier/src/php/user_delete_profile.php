@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     if($_SESSION['loggedin']!=1){
         header('Location: login.php');
@@ -23,8 +23,7 @@
 		$aid = $row['aid'];
 		//echo $uid;
 	}
-	
-	
+		
 	if(isset($_GET['submit'])){
 		$pass=$_GET['password'];
 		//echo $pass;

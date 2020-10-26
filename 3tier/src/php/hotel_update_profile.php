@@ -1,5 +1,5 @@
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
     $sql4="select max(hid) from hotel";
     $result4=mysqli_query($connection,$sql4);
@@ -10,7 +10,7 @@
 <?php require_once('hotel_navigation.php')?> 
 <?php require_once('hotel_view_navigation.php')?>
 <?php
-	$path='../../images/hotel/';
+	$path='../../public/images/hotel/';
 	$ex='.jpg';
 ?>
 <?php
@@ -48,7 +48,7 @@
 
 <?php
         if(isset($_POST['updatebtn'])){
-			$targetdir = '../../images/hotel/';   
+			$targetdir = '../../public/images/hotel/';   
 			$name=$nextid;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;
@@ -111,9 +111,6 @@
                 }
         }        
 ?>
-
-
-
 	
 <?php include('../../public/html/hotel_update_profile.html')?>
 <?php require_once('footer.php')?>

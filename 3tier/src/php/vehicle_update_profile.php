@@ -1,7 +1,7 @@
 <?php require_once('vehicle_navigation.php')?> 
 
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
     $sql4="select max(gid) from guide";
     $result4=mysqli_query($connection,$sql4);
@@ -10,7 +10,7 @@
     $nextid=$maxid+1;
 ?>
 <?php
-	$path='../../images/vehicle/';
+	$path='../../public/images/vehicle/';
 	$ex='.jpg';
 ?>
 <?php
@@ -49,7 +49,7 @@
 ?> 
 <?php
         if(isset($_POST['updatebtn'])){
-			$targetdir = '../images/vehicle/';   
+			$targetdir = '../../public/images/vehicle/';   
 			$name=$nextid;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;

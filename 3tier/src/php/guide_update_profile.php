@@ -1,8 +1,7 @@
-<?php require_once('connect.php');?>
 <?php require_once('guide_navigation.php')?> 
 <?php require_once('guide_view_navigation.php')?>
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
     $sql4="select max(gid) from guide";
     $result4=mysqli_query($connection,$sql4);
@@ -14,12 +13,10 @@
 	$aid=$_SESSION['aid'];
 ?>
 <?php
-	$path='../../images/guide/';
+	$path='../../public/images/guide/';
 	$ex='.jpg';
 ?>
-<?php
-	
-	
+<?php	
 	$sql="select * from account where aid='".$aid."' ";
 	//echo $sql;
 	$result=mysqli_query($connection,$sql);
@@ -45,7 +42,7 @@
 ?>
 <?php
         if(isset($_POST['updatebtn'])){
-			$targetdir = '../../images/guide/';   
+			$targetdir = '../../public/images/guide/';   
 			$name=$nextid;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;

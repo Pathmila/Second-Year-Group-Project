@@ -1,10 +1,10 @@
 <?php require_once('guide_navigation.php')?> 
 	
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 ?>
 <?php
-	$path='../../images/guide/';
+	$path='../../public/images/guide/';
 	$ex='.jpg';
 ?>
 

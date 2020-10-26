@@ -1,6 +1,6 @@
 <?php require_once('user_nonnavigation.php')?> 
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
     $sql4="select max(photo) from vehicle";
     $result4=mysqli_query($connection,$sql4);
@@ -11,7 +11,7 @@
 ?>
 <?php
     if(isset($_POST['formsubmit'])){
-		$targetdir = '../../images/vehicle/';   
+		$targetdir = '../../public/images/vehicle/';   
 		$name=$nextid;
 		$ext=".jpg";
 		$targetfile = $targetdir.$name.$ext;

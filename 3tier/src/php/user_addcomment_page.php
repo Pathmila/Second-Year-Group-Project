@@ -1,5 +1,5 @@
 <?php
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
     $sql4="select max(photo3) from comment";
     $result4=mysqli_query($connection,$sql4);
@@ -12,7 +12,7 @@
 
 <?php
     if(isset($_POST['submit'])){
-		$targetdir = '../../images/comment/';   
+		$targetdir = '../../public/images/comment/';   
 		$name1=$nextid;
 		$name2=$nextid+1;
 		$name3=$nextid+2;

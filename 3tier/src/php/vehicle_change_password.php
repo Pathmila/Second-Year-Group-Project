@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     if($_SESSION['loggedin']!=1){
         header('Location: login_page.php');
@@ -22,8 +22,7 @@
 	}
 ?>
 
-<?php
-		
+<?php		
     if(isset($_GET['submit'])){
         $password=$_GET['password'];
 		$npassword=$_GET['newpassword'];

@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     if($_SESSION['loggedin']!=1){
         header('Location: login.php');
@@ -6,7 +6,6 @@
 ?>
 <?php require_once('user_navigation.php')?> 
 <?php require_once('user_view_profile_navigation.php')?>
-
 <?php 
 	$uname=$_SESSION['username'];
 	$password=$_SESSION['pwd'];

@@ -1,6 +1,6 @@
 <?php require_once('user_navigation.php')?> 
 <?php
-	require_once('connect.php');
+	require_once('../../config/connect.php');
     session_start();
 	$sql4="select max(resvid) from payment";
     $result4=mysqli_query($connection,$sql4);

@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     if($_SESSION['loggedin']!=1){
         header('Location: login_page.php');
@@ -15,8 +15,7 @@
 	//echo $sql;
 	$result=mysqli_query($connection,$sql);
 	while($row=$result->fetch_assoc()){
-		$id=(string)$row['uid'];
-		
+		$id=(string)$row['uid'];	
 		$uname=(string)$row['username'];
 	}
 	
@@ -32,7 +31,6 @@
 ?>
 
 <?php
-
 		$_GLOBAL['accountdone']=0;
 		$_GLOBAL['userdone']=0;
 		

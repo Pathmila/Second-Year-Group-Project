@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 ?>
 <?php require_once('hotel_navigation.php')?> 

@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/destination/';
+	$path='../../public/images/destination/';
 	$ex='.jpg';
 	$name=$_SESSION['dname'];
     $sql1="select * from destination where name='$name'";

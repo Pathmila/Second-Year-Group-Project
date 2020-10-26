@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/destination/';
+	$path='../../public/images/destination/';
 	$ex='.jpg';
     $sql1="select * from destination";
 	$result2=$connection->query($sql1);

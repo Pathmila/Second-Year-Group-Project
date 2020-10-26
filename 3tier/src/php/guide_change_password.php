@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 	$uname=$_SESSION['username'];
 	$password=$_SESSION['pwd'];
@@ -7,9 +7,7 @@
 <?php require_once('guide_navigation.php')?> 
 <?php require_once('guide_view_navigation.php')?>
 
-<?php 
-
-	
+<?php 	
 	//echo $aid;	
 	$sql="select * from account where aid='".$aid."' ";
 	//echo $sql;
@@ -21,8 +19,7 @@
 	}
 ?>
 
-<?php
-		
+<?php		
     if(isset($_GET['submit'])){
         $password=$_GET['password'];
 		$npassword=$_GET['newpassword'];

@@ -1,9 +1,8 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 ?>
 <?php require_once('user_nonnavigation.php')?> 
 <?php 
-
 	//$_SESSION['loggedin']=1;
 	if(isset($_POST['submit'])){
         $uname=$_POST['username'];

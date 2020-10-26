@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 	$uname=$_SESSION['username'];
 	$aid=$_SESSION['aid'];
@@ -16,8 +16,7 @@
 		$password= $row['password'];
 		//echo $uid;
 	}
-	
-	
+		
 	if(isset($_GET['submit'])){
 		$pass=$_GET['password'];
 		//echo $pass;

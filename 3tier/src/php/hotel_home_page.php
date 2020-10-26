@@ -1,13 +1,13 @@
 <?php require_once('hotel_navigation.php')?> 
 	
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 	$username=$_SESSION['username'];
 	$password=$_SESSION['pwd'];
 	$aid=$_SESSION['aid'];
 ?>
 <?php
-	$path='../../images/hotel/';
+	$path='../../public/images/hotel/';
 	$ex='.jpg';
 ?>
 

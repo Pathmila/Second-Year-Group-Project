@@ -1,5 +1,5 @@
 <?php require_once('hotel_navigation.php')?> 
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     if($_SESSION['loggedin']!=1){
         header('Location: login.php');

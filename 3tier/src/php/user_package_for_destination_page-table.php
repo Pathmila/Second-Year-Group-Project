@@ -1,5 +1,5 @@
 <?php	
-	$path='../../images/package/';
+	$path='../../public/images/package/';
 	$ex='.jpg';
 	$sql1="select * from destination d, packdestination pd, package p 
 	where p.packid=pd.packid AND d.destid=pd.destid AND d.name='".$dname."' ";

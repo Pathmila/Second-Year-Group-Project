@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     if($_SESSION['loggedin']!=1){
         header('Location: login.php');
@@ -10,7 +10,6 @@
 	$uname=$_SESSION['username'];
 	$aid=$_SESSION['aid'];
 	
-	
 	$sql1 = "select * from account where aid = '".$aid."'";
 	//echo $sql1;
 	$result1=mysqli_query($connection,$sql1);
@@ -20,7 +19,6 @@
 		$password=$row['password'];
 		//echo $uid;
 	}
-	
 	
 	if(isset($_GET['submit'])){
 		$pass=$_GET['password'];

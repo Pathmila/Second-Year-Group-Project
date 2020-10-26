@@ -1,6 +1,6 @@
 <?php require_once('vehicle_navigation.php')?> 
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
 ?>
 <?php

@@ -1,6 +1,6 @@
 <?php require_once('user_nonnavigation.php')?> 
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
     $sql4="select max(uid) from user";
     $result4=mysqli_query($connection,$sql4);
@@ -10,7 +10,6 @@
     $maxid=$max['max(uid)'];
     $nextuid=$maxid+1;
 ?>
-
 <?php
 	$_GLOBAL['accountdone']=0;
 	$_GLOBAL['userdone']=0;

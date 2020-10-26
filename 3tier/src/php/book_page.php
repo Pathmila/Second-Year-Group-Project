@@ -1,4 +1,4 @@
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 	
 ?>
@@ -29,11 +29,7 @@
 		$_SESSION['double']=$_GET['double'];
 		$_SESSION['family']=$_GET['family'];
 		
-		
-		
-		header("Location: payhere_page.php");
-		
-		
+		header("Location: payhere_page.php");		
 	}
 ?>
 

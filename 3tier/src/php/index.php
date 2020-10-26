@@ -1,3 +1,6 @@
+<?php require_once('../../config/connect.php');
+    session_start();
+?>
 <html>
 	<head>
 		<title>EasyTravels.com</title>

@@ -2,7 +2,7 @@
 	$id=$_SESSION['packid'];
 	//echo $id;
 			
-	$path='../../images/package/';
+	$path='../../public/images/package/';
 	$ex='.jpg';
 		
     $sql1="select * from package where packid='".$id."'";
