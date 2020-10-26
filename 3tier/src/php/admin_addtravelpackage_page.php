@@ -1,6 +1,6 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start(); 
     $sql4="select max(photo3) from package";
     $result4=mysqli_query($connection,$sql4);
@@ -21,7 +21,7 @@
 <?php
 		
         if(isset($_POST['submit'])){
-			$targetdir = '../../images/package/';   
+			$targetdir = '../../public/images/package/';   
 			$name=$nextid;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;
@@ -34,7 +34,7 @@
 			
 			}
 			
-			$targetdir = '../../images/package/';   
+			$targetdir = '../../public/images/package/';   
 			$name=$nextid+1;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;
@@ -47,7 +47,7 @@
 			
 			}
 			
-			$targetdir = '../../images/package/';   
+			$targetdir = '../../public/images/package/';   
 			$name=$nextid+2;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;
@@ -63,6 +63,9 @@
 ?>
 
 <?php
+	$_GLOBAL['package']=0;
+	$_GLOBAL['categorysubcategory']=0;
+	
 	if(isset($_POST['submit'])){
 		$catname=$_POST['cat'];
 		$subcatname=$_POST['subcat'];
@@ -78,7 +81,32 @@
 			('".$nextpack."','".$catname."','".$subcatname."','".$name."','".$days."','".$price."','".$details."','".$image."','".$image2."','".$image3."')"; 
 		//echo $sql2;
 		$result2 = mysqli_query($connection,$sql2);
+		if($result2){
+			$_GLOBAL['package']=1;
+		}else{
+			$_GLOBAL['package']=0;
+		}
+			
+		$sql11="select * from category where name='".$catname."'"; 
+		//echo $sql;
+		$result11 = mysqli_query($connection,$sql11);
+		$row11=mysqli_fetch_assoc($result11);
+		$catid=$row11['catid'];
 		
+		$sql12="select * from subcategory where name='".$subcatname."'"; 
+		//echo $sql;
+		$result12 = mysqli_query($connection,$sql12);
+		$row12=mysqli_fetch_assoc($result12);
+		$subcatid=$row12['subcatid'];
+		
+		$sql10="insert into categorysubcategory(catid,subcatid) values ('".$catid."','".$subcatid."')";
+		$result10= mysqli_query($connection,$sql10);
+		//echo $sql10;
+		if($result10){
+			$_GLOBAL['categorysubcategory']=1;
+		}else{
+			$_GLOBAL['categorysubcategory']=0;
+		}
 		
 		if($_POST['destination1'] != 'null'){
 			$d1=$_POST['destination1'];
@@ -105,7 +133,7 @@
 			$d4=$_POST['destination4'];
 			$sql8="INSERT INTO packdestination(packid,destid) values('".$nextpack."','".$d4."')"; 
 			//echo $sql8;
-			$result38 = mysqli_query($connection,$sql8);
+			$result8 = mysqli_query($connection,$sql8);
 		}
 		
 		if($_POST['destination5'] != 'null'){
@@ -115,14 +143,13 @@
 			$result9 = mysqli_query($connection,$sql9);
 		}
 	
-		if($result2 && ( $result3 || $result6 || result7 || result8 || result9 )){
+		if(($_GLOBAL['package']==1) && ($_GLOBAL['categorysubcategory']==1) && ( $result3 || $result6 || result7 || result8 || result9 )){
 			echo "<script> alert('Insert is Sucessfull') </script>";				
 			header("Location: admin_home_page.php");
 		}else{
 			//echo "failed";
 			header("Location: admin_home_page.php");
 		} 
-	
 	}
 ?>
 <?php include('../../public/html/admin_addtravelpackage_page.html')?>

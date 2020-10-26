@@ -1,6 +1,6 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 ?>
 <?php

@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/comment/';
+	$path='../../public/images/comment/';
 	$ex='.jpg';	
 	$sql3="select * from comment order by cid desc";
 	//echo $sql3;

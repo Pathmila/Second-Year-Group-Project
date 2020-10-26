@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/guide/';
+	$path='../../public/images/guide/';
 	$ex='.jpg';
 	$sql="select * from guide g , guideavailability a where a.availability='1' and a.gid=g.gid";
 	//echo $sql;

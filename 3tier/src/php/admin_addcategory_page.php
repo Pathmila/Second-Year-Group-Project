@@ -1,6 +1,6 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     
     $sql4="select max(catid) from category";
@@ -13,7 +13,7 @@
 ?>
 <?php
         if(isset($_POST['submit'])){
-			$targetdir = '../../images/category/';   
+			$targetdir = '../../public/images/category/';   
 			$name=$nextid;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;

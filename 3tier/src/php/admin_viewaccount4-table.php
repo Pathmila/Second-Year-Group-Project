@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/guide/';
+	$path='../../public/images/guide/';
 	$ex='.jpg';
 	$sql="select * from guide";
 	//echo $sql;

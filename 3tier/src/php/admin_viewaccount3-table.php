@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/vehicle/';
+	$path='../../public/images/vehicle/';
 	$ex='.jpg';
 	$sql="select * from vehicle";
 	//echo $sql;

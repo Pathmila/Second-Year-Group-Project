@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/hotel/';
+	$path='../../public/images/hotel/';
 	$ex='.jpg';
 	$sql="select * from hotel";
 	//echo $sql;

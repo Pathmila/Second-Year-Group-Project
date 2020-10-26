@@ -1,5 +1,5 @@
 <?php
-	$path='../../images/hotel/';
+	$path='../../public/images/hotel/';
 	$ex='.jpg';
 	$sql="select DISTINCT h.hid, h.name, a.singlerooms, h.singleroomprice, a.doublerooms, h.doubleroomprice,
 	a.familyrooms, h.familyroomprice from hotel h, hotelavailability a where h.hid=a.hid and 

@@ -1,7 +1,7 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
     $sql4="select max(photo) from category";
     $result4=mysqli_query($connection,$sql4);

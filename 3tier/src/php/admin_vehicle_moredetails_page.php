@@ -1,11 +1,11 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
 	$vid=$_SESSION['vid'];
 ?>
 <?php
-	$path='../../images/vehicle/';
+	$path='../../public/images/vehicle/';
 	$ex='.jpg';
 ?>
 <?php

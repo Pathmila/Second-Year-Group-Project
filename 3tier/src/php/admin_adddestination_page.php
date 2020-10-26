@@ -1,6 +1,6 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
-<?php require_once('connect.php');
+<?php require_once('../../config/connect.php');
     session_start();
     
     $sql4="select max(photo) from destination";
@@ -14,7 +14,7 @@
 
 <?php
         if(isset($_POST['submit'])){
-			$targetdir = '../../images/destination/';   
+			$targetdir = '../../public/images/destination/';   
 			$name=$nextid;
 			$ext=".jpg";
 			$targetfile = $targetdir.$name.$ext;

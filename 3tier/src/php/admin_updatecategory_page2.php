@@ -1,9 +1,9 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
-	$path='../../images/category/';
+	$path='../../public/images/category/';
 	$ex='.jpg';
 	$category=$_SESSION['category'];
 	//echo $category;
@@ -19,7 +19,7 @@
 
 <?php
     if(isset($_POST['formsubmit'])){
-		$targetdir = '../../images/category/';   
+		$targetdir = '../../public/images/category/';   
 		$name=$catid;
 		$ext=".jpg";
 		$targetfile = $targetdir.$name.$ext;

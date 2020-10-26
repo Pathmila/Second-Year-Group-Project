@@ -1,7 +1,7 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
 	$sql4="select max(photo3) from package";
     $result4=mysqli_query($connection,$sql4);
@@ -29,12 +29,12 @@
 	}
 ?>
 <?php
-	$path='../../images/package/';
+	$path='../../public/images/package/';
 	$ex='.jpg';
 ?>
 <?php
         if(isset($_POST['btnupdate'])){
-			$targetdir = '../../images/package/';   
+			$targetdir = '../../public/images/package/';   
 			$name1=$nextphoto;
 			$name2=$nextphoto+1;
 			$name3=$nextphoto+2;

@@ -1,11 +1,11 @@
 <?php require_once('admin_topnav.php') ?>
 <?php require_once('menu.php') ?>
 <?php 
-    require_once('connect.php');
+    require_once('../../config/connect.php');
     session_start();
 ?>
 <?php
-	$path='../images/category/';
+	$path='../../public/images/category/';
 	$ex='.jpg';
 	$subcategory=$_SESSION['subcategory'];
 	//echo $category;
