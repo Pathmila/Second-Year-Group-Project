@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>EasyTravels.com</title>    
+        <meata name="viewport" content="width=device-width, initial-scale=1">
+        <!-- LINKS TO CSS AND JS --->
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+	<body>
+		<div class="container">
+			<form method="post" action="../../src/php/admin_deletetravelpackage_page.php" enctype="multipart/form-data">
+				<h2 class="title"><label><?php echo $pack;?>&nbsp&nbsp-&nbsp&nbsp Update Travel Package</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Category Name</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="cat" value="<?php echo $cat?>" readonly>
+				</div>
+				</div>
+				
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Subcategory Name</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="subcat" value="<?php echo $subcat?>" readonly>
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Package Name</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="name" value="<?php echo $pack?>" readonly>
+				</div>
+				</div>
+				
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">No of Days</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="days" value="<?php echo $days?>" readonly>
+				</div>
+				</div>
+						
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Package Price</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="price" id="price" value="<?php echo $price?>" readonly>
+				</div>
+				</div>    
+	  
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Details</label>
+				</div>
+				<div class="col-75">
+					<textarea id="subject" name="details"  style="height:200px" readonly><?php echo $details?></textarea>
+				</div>
+				</div> 
+				
+				<div class="row">
+				<div class="col-25">
+					<label for="lname">Photo</label>
+				</div>
+				<div class="col-75">
+					<?php echo "<img class='image' width='150px' src='".$path.$photo1.$ex."'>";?>
+
+					<?php echo "<img class='image' width='150px' src='".$path.$photo2.$ex."'>";?>
+
+					<?php echo "<img class='image' width='150px' src='".$path.$photo3.$ex."'>";?>
+				</div>
+				</div>
+				<div class="row">
+					<input type="submit" name="formdelete" class="formbtn" value="Delete">
+				</div>
+				
+			</form>
+		</div>
+				
+		<div class="container">
+			<form method="post" action="../../src/php/admin_updatetravelpackage_page.php" enctype="multipart/form-data">
+				<h2 class="title"><label>Enter New Details To Update</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">New Package Name</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="nname" id="nname" placeholder="Enter the new package name..">
+				</div>
+				</div>			   
+
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">No of Days</label>
+				</div>
+				<div class="col-75">
+					<input type="number" name="days" min="1" max="10" value="<?php echo $days?>">
+				</div>
+				</div>
+						
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Package Price(Rs.)</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="price" id="price" value="<?php echo $price?>">
+				</div>
+				</div>    
+	  
+				<div class="row">
+				<div class="col-25">
+					<label for="fname">Details</label>
+				</div>
+				<div class="col-75">
+					<textarea id="subject" name="details"  style="height:200px"><?php echo $details?></textarea>
+				</div>
+				</div> 
+
+				
+
+				<div class="row">
+				<div class="col-25">
+					<label for="lname">Upload a photo 1</label>
+				</div>
+				<div class="col-75">
+					<br /><input type="file" name="file1" id="file1" >
+				</div>
+				</div>
+
+
+				<div class="row">
+				<div class="col-25">
+					<label for="lname">Upload a photo 2</label>
+				</div>
+				<div class="col-75">
+					<br /><input type="file" name="file2" id="file2" >
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="col-25">
+					<label for="lname">Upload a photo 3</label>
+				</div>
+				<div class="col-75">
+					<br /><input type="file" name="file3" id="file3" >
+				</div>
+				</div>
+
+				<div class="row">
+					<br /><input type="submit" name="btnupdate" value="Update" class="formbtn">
+				</div>
+			</form>
+		</div>
+    </body>
+</html>

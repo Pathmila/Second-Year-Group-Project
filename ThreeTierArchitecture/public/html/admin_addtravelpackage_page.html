@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>EasyTravels.com</title>    
+        <meata name="viewport" content="width=device-width, initial-scale=1">
+        <!-- LINKS TO CSS AND JS --->
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <div class="container">
+        <form method="post" action="../../src/php/admin_addtravelpackage_page.php" enctype="multipart/form-data">
+			<h2 class="title"><label>Add Travel Package</label></h2>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Category Name</label>
+            </div>
+            <div class="col-75">
+                <select name="cat" id="cat">
+                    <?php include('../../src/php/admin_addtravelpackage_page-category_dropbox.php')?>
+                </select>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Subcategory Name</label>
+            </div>
+            <div class="col-75">
+                <select name="subcat" id="subcat">
+					<?php include('../../src/php/admin_addtravelpackage_page-subcategory_dropbox.php')?>
+                </select>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Package Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="name" placeholder="Enter the package name.." id="name" required>
+            </div>
+            </div>
+   
+			
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">No of Days</label>
+            </div>
+            <div class="col-75">
+                <input type="number" name="number" placeholder="Enter the no of days.." id="number" min="1" max="50" required>
+            </div>
+            </div>
+			
+			 <div class="row">
+            <div class="col-25">
+                <label for="fname">Destination 1</label>
+            </div>
+            <div class="col-75">
+            <select name="destination1" id="destination1">
+					<?php include('../../src/php/admin_addtravelpackage_page-destination_dropbox.php')?>
+				</select>
+            </div>
+            </div>   
+
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Destination 2</label>
+            </div>
+            <div class="col-75">
+            <select name="destination2" id="destination2">
+					<?php include('../../src/php/admin_addtravelpackage_page-destination_dropbox.php')?>
+				</select>
+            </div>
+            </div> 
+ 
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Destination 3</label>
+            </div>
+            <div class="col-75">
+            <select name="destination3" id="destination3">
+					<?php include('../../src/php/admin_addtravelpackage_page-destination_dropbox.php')?>
+				</select>
+            </div>
+            </div>
+            
+            
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Destination 4</label>
+            </div>
+            <div class="col-75">
+            <select name="destination4" id="destination4">
+					<?php include('../../src/php/admin_addtravelpackage_page-destination_dropbox.php')?>
+				</select>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Destination 5</label>
+            </div>
+            <div class="col-75">
+            <select name="destination5" id="destination5">
+					<?php include('../../src/php/admin_addtravelpackage_page-destination_dropbox.php')?>
+				</select>
+            </div>
+            </div>
+                    
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Package Price</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="price" placeholder="Enter the price of the package.." id="price" required>
+            </div>
+            </div>    
+  
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Details</label>
+            </div>
+            <div class="col-75">
+                <textarea id="details" name="details" placeholder="Write the details.." style="height:200px"></textarea>
+            </div>
+            </div> 
+
+            <div class="row">
+            <div class="col-25">
+                <label for="lname">Upload a photo 1</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="image" id="file1" required>
+            </div>
+            </div>
+
+
+			<div class="row">
+            <div class="col-25">
+                <label for="lname">Upload a photo 2</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="image1" id="file1" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label for="lname">Upload a photo 3</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="file3" id="file3" required>
+            </div>
+            </div>
+
+            <div class="row">
+                <br /><input type="submit" value="Submit" name="submit" class="formbtn">
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body>
+		<div class="container">
+        <form method="post" action="../../src/php/hotel_update_profile.php" enctype="multipart/form-data">
+            
+			<h2 class="title"><label>Update Profile</label></h2>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Name:</label>
+            </div>
+            <div class="col-75">
+                <input name="name" id="name" type="text" value="<?php echo $name?>">
+            </div>
+            </div>		
+			
+			<div class="row">
+            <div class="col-25">
+                <label>User Name:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="uname" value="<?php echo $uname?>">
+            </div>
+            </div>	
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Address:</label>
+            </div>
+            <div class="col-75">
+                <input name="address" id="address" type="text" value="<?php echo $address?>">
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Email:</label>
+            </div>
+            <div class="col-75">             
+				<input name="email" id="email" placeholder="Enter Email" type="email" value="<?php echo $email?>" >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Telephone No:</label>
+            </div>
+            <div class="col-75">
+				<input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" value="0<?php echo $telephone?>">
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Details:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="description" value="<?php echo $description?>">
+            </div>
+            </div>				
+			
+			<div class="row">
+                <label style="font-weight:bold; font-size:20px;">Single Room Details</label>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of single rooms</label>
+            </div>
+            <div class="col-75"> 
+				<input name="srooms" id="srooms" type="number" min="0" max="800" step="1" value="<?php echo $singlerooms?>" >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Price of a single room</label>
+            </div>
+            <div class="col-75">
+                <input name="sprice" id="sprice" type="text" value="<?php echo $singleroomprice?>" >
+            </div>
+            </div>
+			
+			<div class="row">
+                <label style="font-weight:bold; font-size:20px;">Double Room Details</label>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of double rooms</label>
+            </div>
+            <div class="col-75">              
+				<input name="drooms" id="drooms" type="number" min="0" max="800" step="1" value="<?php echo $doublerooms?>" >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Price of a double room</label>
+            </div>
+            <div class="col-75">
+                <input name="dprice" id="dprice" type="text" value="<?php echo $doubleroomprice?>" >
+            </div>
+            </div>
+
+			
+			<div class="row">
+                <label style="font-weight:bold; font-size:20px;">Family Room Details</label>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of family rooms</label>
+            </div>
+            <div class="col-75">         
+				<input name="frooms" id="frooms" type="number" min="0" max="800" step="1" value="<?php echo $familyrooms?>" >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Price of a family room</label>
+            </div>
+            <div class="col-75">
+                <input name="fprice" id="fprice" type="text" value="<?php echo $familyroomprice?>" >
+            </div>
+            </div>
+				
+			<div class="row">
+            <div class="col-25">
+                <label for="lname">Photo</label>
+            </div>
+            <div class="col-75">
+                <?php echo "<img class='image' width='150px'  src='".$path.$photo.$ex."'>";?>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="lname">Upload a photo</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="image" id="image" required>
+            </div>
+            </div>
+			
+			 <div class="row">
+				<br /><input type="submit" name="updatebtn" value="Update" class="formbtn">
+            </div>
+			
+			<div class="row">
+				<a href="../../src/php/hotel_delete.php"><input type="button" name="updatebtn" value="Delete Account" class="formbtn"><br />
+			</div>
+			
+        </form>
+        </div>		
+	</body>
+</html>

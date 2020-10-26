@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>EasyTravels.com</title>    
+        <meata name="viewport" content="width=device-width, initial-scale=1">
+        <!-- LINKS TO CSS AND JS --->
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body>
+        <div class="container">
+        <form method="post" action="../../src/php/admin_deletecategory_page.php">
+			<h2 align="center" class="title"><label>Delete Category&nbsp&nbsp-&nbsp&nbsp<?php include('../../src/php/admin_deletecategory_page-catname.php')?></label></h2>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Category Name</label>
+            </div>
+            <div class="col-50">
+                <input type="text" name="cat" value="<?php include('../../src/php/admin_deletecategory_page-catname.php')?>" readonly>
+            </div>
+			<div class="col-25">
+				&nbsp
+				<input type="submit" name="submit" value="Delete" class="formbtn">
+            </div>
+			</div>
+        </form>
+        </div>
+    </body>
+</html>

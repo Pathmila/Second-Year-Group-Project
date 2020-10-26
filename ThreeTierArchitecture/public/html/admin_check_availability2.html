@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body> 
+		<div class="container">			
+			<form align="center" method="POST" action='../../src/php/admin_check_availability2.php'>			
+			<h2 class="title"><label>Search More Vehicle Details</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label>Select the Vehicle:</label>
+				</div>
+				<div class="col-50">
+					<select name="vehicle" id="vehicle" required>
+						<?php include('../../src/php/admin_check_availability2-vehicle_dropbox.php')?>
+					</select>    
+				</div>
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="submit" value="Search" class="formbtn">
+				</div>
+				</div>
+			</form>
+		</div>	
+		
+        <div class="container">
+			<h2 align="center" class="title"><label>Available Vehicles</label></h2>
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="subtitle">
+				<td>ID</td>
+				<td>Name</td>
+				<td>Address</td>
+				<td>Email</td>
+				<td>Telephone</td>
+				<td>Type</td>
+				<td>Details</td>
+				<td>Photo</td>
+				
+			</tr>
+				<?php include('../../src/php/admin_check_availability2-table.php')?>
+            </table>
+        </div>
+    </body>
+</html>
