@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+    </head>
+    <body>     
+        
+		<div class="container">
+        <form method="post" action="../../src/php/vehicle_change_availability.php">
+            
+			<h2 class="title"><label>Change Your Availability</label></h2>
+
+            <div class="row">
+            <div class="col-25">
+                
+            </div>
+            <div class="col-75">				
+            <?php
+				if($av=="1"){
+					echo "<h3><INPUT type='radio' name='availability' Value='1' checked>&nbsp Yes</h3>";
+					echo "<h3><INPUT type='radio' name='availability' Value='0'>&nbsp No</h3>";
+				}else{
+					echo "<h3><INPUT type='radio' name='availability' Value='1'>&nbsp Yes</h3>";
+					echo "<h3><INPUT type='radio' name='availability' Value='0' checked>&nbsp No</h3>";
+				}
+			?>
+                
+            </div>
+            </div>
+			
+			<div class="row">
+                <input type="submit" name="formsubmit" value="Update" class="formbtn">
+            </div>
+
+            </form>
+        </div>
+    </body>
+</html>

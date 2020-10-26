@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/ico" href="../../src/php/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="../../public/css/user_home_page.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/destination_page.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <br />  
+            <div class="video" >	
+                <video id="myVideo" width="60%" style="display:block; margin:0 auto;" autoplay controls muted>
+                    <source src="../../public/images/web.mp4" type="video/mp4">
+                </video>
+            </div>
+            <br /><br /> 
+            
+            <div class="pack">
+                <div class="title">
+                    <h2>Book Your Package</h2>
+                </div>             
+                
+				<div class="container1">
+					<div class="row">
+						<?php include('../../src/php/user_home_page-cateform.php')?>
+					</div>
+				</div>				
+                <form method='GET' action="../../src/php/user_category_page.php" class='table' align='center'>
+                    <input type="submit" name="catbtn" value="Select Your Package" class="catbtn">
+                </form>
+            </div>
+		</div>
+    </body>
+</html>
