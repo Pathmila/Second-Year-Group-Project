@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+	background-image: url(../../images/gradient-green-blue-hd-wallpaper.jpg);
+}
+
+/* -------------bar chart-------------*/
+
+.container2 {
+	width: 100%;
+	background-color: #ddd;
+}
+
+.skills {
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;	
+}
+
+/*--------------------------------------*/
+
+/*----------------Pie chart-------------*/
+
+.pieContainer {
+    height: 150px;
+    position: relative;
+}
+    
+.pieBackground {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+} 
+    
+.pie {
+    transition: all 1s;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    clip: rect(0px, 75px, 150px, 0px);
+}
+    
+.hold {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    clip: rect(0px, 150px, 150px, 75px);
+}
+   
+.innerCircle {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #444;
+    border-radius: 100%;
+    top: 15px;
+    left: 15px; 
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.5) inset;
+    color: white;
+}
+.innerCircle .content {
+    position: absolute;
+    display: block;
+    width: 120px;
+    top: 30px;
+    left: 0;
+    text-align: center;
+    font-size: 14px;
+}   
+
+/*--------------------------------------*/
+
+input[type=text],input[type=number], textarea,input[type=date],input[type=tel],input[type=email],input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-color:aqua;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: white;
+  background-color: transparent;
+  color: black;
+  color: white;
+  font-weight: bold;
+}
+
+select, option{
+	color: black;
+}
+
+select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-color:aqua;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+.title{
+	font-size:30px; 
+	color:white;
+	font-weight:bold;
+}
+
+.subtitle{
+	font-size:20px; 
+	font-weight:bold
+}
+
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.pieword{
+	color:black;
+	font-weight:bold;
+}
+
+.container {
+  border-radius: 10px;
+  background-color:black;
+  padding: 40px;
+  width:75%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  box-shadow:0px 0px 20px #000;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.middle{
+	float: right;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, .col-50, input[type=submit] {
+	width: 100%;
+	margin-top: 0;
+	font-size:15px;
+  }
+  .container{
+	width: 100%;  
+  }
+}

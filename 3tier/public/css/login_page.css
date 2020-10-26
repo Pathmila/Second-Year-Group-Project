@@ -1,0 +1,115 @@
+body {
+  background-image: url(../../images/gradient-green-blue-hd-wallpaper.jpg);
+  margin:0px;
+  font-family: 'Arial';
+}
+
+h2, h3, a {
+  margin:0; 
+  padding:10px; 
+}
+
+h2{
+  color :white;
+  text-align:center;
+  font-size:300%;
+}
+
+.login {
+  /*background-image: repeating-linear-gradient(to top, dodgerblue, navy ,dodgerblue);*/
+  margin:50px auto;
+  max-width:400px;
+  padding: 10px;
+}
+
+.login-form {
+  border-radius:20px;
+  box-shadow:0px 0px 20px #000;
+  top: 40px;
+  padding: 20px 0px;
+  border:2px solid black;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.login-form h3 {
+  text-align:left;
+  margin-left:40px;
+  color : white;
+}
+
+.login-form {
+  box-sizing:border-box;
+  padding-top:15px;
+  margin:5% auto;
+  text-align:center;
+}
+
+.image{
+  border-radius: 50%;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  max-width:400px;
+  width: 80%;
+  line-height:3em;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  border-color:aqua;
+  padding-left:10px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.packbtn {
+  border-radius: 4px;
+  background-color: green;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.packbtn:hover {
+    background-color: red;
+}
+
+.sign-up{
+  color:white;
+  margin-left:0%;
+  cursor:pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+.sign-up:hover{
+  color:aqua;
+}
+
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 530px){
+  .login-form h3 {
+    text-align:center;
+    margin:0;
+  }
+  .sign-up, .no-access {
+    margin:10px 0;
+  }
+  body{
+    background-image: url(../../images/backmobile2.jpg);
+  }
+  
+}

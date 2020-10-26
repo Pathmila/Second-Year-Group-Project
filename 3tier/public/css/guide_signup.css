@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+	background-image: url(../../images/gradient-green-blue-hd-wallpaper.jpg);
+}
+
+
+input[type=text],input[type=number], textarea,input[type=date],input[type=tel],input[type=email],input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-color:aqua;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: white;
+  background-color: transparent;
+  color: black;
+  color: white;
+  font-weight: bold;
+}
+
+select, option{
+	color: black;
+}
+
+select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-color:aqua;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+.banner{
+  width: 750px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  
+}
+
+.formbtn {
+	border-radius: 4px;
+    background-color: green;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    float: right;
+	text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+  background-color: red;
+}
+
+input[type=button] {
+	border-radius: 4px;
+    background-color: green;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input[type=button]:hover {
+  background-color: red;
+}
+
+.container {
+  border-radius: 10px;
+  background-color:black;
+  padding: 20px;
+  opacity:0.8;
+  width:50%;
+  display:b;block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  box-shadow:0px 0px 20px #000;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.middle{
+	float: right;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+	width: 100%;
+	margin-top: 0;
+	font-size:15px;
+  }
+  .banner{
+	width: 100%;
+  }
+  .container{
+	width: 100%;  
+  }
+}
