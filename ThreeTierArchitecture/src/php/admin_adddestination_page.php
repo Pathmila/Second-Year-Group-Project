@@ -14,6 +14,7 @@
 
 <?php
         if(isset($_POST['submit'])){
+			//insert the image of the destination
 			$targetdir = '../../public/images/destination/';   
 			$name=$nextid;
 			$ext=".jpg";
@@ -35,6 +36,7 @@
 			$destination=$_POST['subject'];
 			$filename=$nextid;
 
+			//inserting destination details to the destination table
             $sql2="INSERT INTO destination(name,description,photo) values ('".$dname."','".$destination."','".$filename."')"; 
 			echo $sql2;
 			$result2 = mysqli_query($connection,$sql2);

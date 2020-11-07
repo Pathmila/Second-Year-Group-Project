@@ -1,4 +1,5 @@
 <?php
+	// Retrieve destination names to the combo box
 	$sql2="select * from destination";
 	$result2=$connection->query($sql2);
 			

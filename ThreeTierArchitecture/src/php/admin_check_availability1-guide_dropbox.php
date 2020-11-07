@@ -1,4 +1,5 @@
 <?php
+	//Retrieve gid to the dropdown
 	$sql3="select * from guide";
 	$result2=$connection->query($sql3);
 	while($row=$result2->fetch_assoc()){

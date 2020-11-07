@@ -10,7 +10,7 @@
             $subcatname=$_POST['name'];
 			$description=$_POST['description'];
    
-
+			//insert subcategory details to the subcategory table
             $sql="INSERT INTO subcategory(name,description) values ('".$subcatname."','".$description."')"; 
 			//echo $sql2;
 			$result2 = mysqli_query($connection,$sql);

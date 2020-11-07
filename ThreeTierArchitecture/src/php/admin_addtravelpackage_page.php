@@ -8,8 +8,7 @@
     //echo $max;
     //print_r ($max);
     $maxid=$max['max(photo3)'];
-    $nextid=$maxid+1;
-	
+    $nextid=$maxid+1;	
 	
 	$sql5="select max(packid) from package";
     $result5=mysqli_query($connection,$sql5);
@@ -77,6 +76,7 @@
 		$image2=$nextid+1;
 		$image3=$nextid+2;
 
+		//The travel package inserting part
 		$sql2="INSERT INTO package(packid,catname,subcatname,name,days,price,details,photo1,photo2,photo3) values 
 			('".$nextpack."','".$catname."','".$subcatname."','".$name."','".$days."','".$price."','".$details."','".$image."','".$image2."','".$image3."')"; 
 		//echo $sql2;
@@ -86,19 +86,22 @@
 		}else{
 			$_GLOBAL['package']=0;
 		}
-			
+		
+		//selecting the category id		
 		$sql11="select * from category where name='".$catname."'"; 
 		//echo $sql;
 		$result11 = mysqli_query($connection,$sql11);
 		$row11=mysqli_fetch_assoc($result11);
 		$catid=$row11['catid'];
 		
+		//selecting the subcategory id
 		$sql12="select * from subcategory where name='".$subcatname."'"; 
 		//echo $sql;
 		$result12 = mysqli_query($connection,$sql12);
 		$row12=mysqli_fetch_assoc($result12);
 		$subcatid=$row12['subcatid'];
 		
+		//Inserting categorysubcategory table.
 		$sql10="insert into categorysubcategory(catid,subcatid) values ('".$catid."','".$subcatid."')";
 		$result10= mysqli_query($connection,$sql10);
 		//echo $sql10;

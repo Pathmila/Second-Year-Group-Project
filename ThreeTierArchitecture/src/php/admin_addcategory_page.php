@@ -13,6 +13,7 @@
 ?>
 <?php
         if(isset($_POST['submit'])){
+			//inserting category image 
 			$targetdir = '../../public/images/category/';   
 			$name=$nextid;
 			$ext=".jpg";
@@ -34,6 +35,7 @@
 
 			$filename=$nextid;
 
+			//insert category deatails to the category table
             $sql2="INSERT INTO category(name,photo) values ('".$catname."','".$filename."')"; 
 			//echo $sql2;
 			$result2 = mysqli_query($connection,$sql2);

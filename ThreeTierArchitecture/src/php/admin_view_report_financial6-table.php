@@ -24,14 +24,14 @@
 							
 			//echo "skills ".$vehicle."";
 			echo "<tr>";
-			echo "<div class='container1'>";
-			echo "Vehicle ID - $vehicle<div class=' skills ".$vehicle." '>".$point."%</div>";
+			echo "Vehicle ID - $vehicle<div class='container1'>";
+			echo "<div class=' skills h".$vehicle." '>".$point."%</div>";
 						
 			echo "</div>";
 						
 			//echo " <style>.$vehicle{width: $point %; background-color: red;} </style>";
-						
-			echo " <style>.$vehicle{width: $point%; background-color: #0a0;} </style>";
+									
+			echo " <style>.h$vehicle{width: $point%; background-color: #0a0;} </style>";
 			echo "<br /></tr>";
 		}
 	}

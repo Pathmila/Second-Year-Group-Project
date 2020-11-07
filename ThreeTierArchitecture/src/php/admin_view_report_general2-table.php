@@ -1,5 +1,15 @@
 <?php
 	if(isset($_POST['submit'])){
+		echo "
+		<h2 class='title' align='center'><label>User Details</label></h2>
+		<div style='overflow-x:auto;'>
+		<table border=1 padding=50px align='center' class='viewtable'>
+		<tr class='subtitle'>
+			<td>ID</td>
+			<td>Name</td>
+			<td>No of Packages</td>				
+		</tr>";
+		
 		$destid = $_POST['destination'];
 				
 		$sql1="select * from destination where destid='$destid'";
@@ -19,4 +29,6 @@
 			echo "<tr>";
 		}				
 	}
+	
+	echo "</table>";
 ?>
