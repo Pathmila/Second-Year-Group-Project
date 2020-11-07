@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
 		<script type="text/javascript" src="../../public/js/script.js"></script>
     </head>
     <body>
         <div class="container">
-        <form method="get" action="../../src/php/user_signup_page.php">        
+        <form method="post" action="../../src/php/user_signup_page.php">        
 			<h2 class="title"><label>User SignUp</label></h2>
        
 			<div class="row">
@@ -16,7 +17,7 @@
                 <label for="fname">Name:</label>
             </div>
             <div class="col-75">
-                <input name="name" id="name" placeholder="Enter Name" type="text" required >
+                <input name="name" id="name" placeholder="Enter Name" value="<?=(isset($name) ? $name : "")?>" type="text" required >
             </div>
             </div>		
 			
@@ -25,7 +26,7 @@
                 <label for="fname">Address:</label>
             </div>
             <div class="col-75">
-                <input name="address" id="address" placeholder="Address" type="text" required >
+                <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : "")?>" required >
             </div>
             </div>
 			
@@ -34,7 +35,7 @@
                 <label for="fname">Email:</label>
             </div>
             <div class="col-75">
-                <input name="email" id="email" placeholder="Email" type="email" required >
+                <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($email) ? $email : "")?>" required >
             </div>
             </div>
 			
@@ -43,7 +44,7 @@
                 <label for="fname">Telephone No:</label>
             </div>
             <div class="col-75">
-                <input name="telephone" id="telephone" placeholder="Telephone" type="tel" pattern="[0-9]{10}" required >
+                <input name="telephone" id="telephone" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : "")?>" required >
             </div>
             </div>
 			
@@ -52,7 +53,7 @@
                 <label for="fname">User Name:</label>
             </div>
             <div class="col-75">
-                <input name="uname" id="uname" placeholder="Username" type="text" required >
+                <input name="uname" id="uname" placeholder="Username" type="text" value="<?=(isset($uname) ? $uname : "")?>" required >
             </div>
             </div>
 			
@@ -61,7 +62,7 @@
                 <label for="fname">Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <input type="password" id="password" name="password" placeholder="Enter Password" value="<?=(isset($pass) ? $pass : "")?>" required>
             </div>
             </div>
 			
@@ -70,7 +71,7 @@
                 <label for="fname">Confirm Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" onblur="cpassword_validation()" required>
+                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
             </div>
             </div>
 			
