@@ -2,8 +2,10 @@
 <html>
     <head>
         <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+		<script type="text/javascript" src="../../public/js/script.js"></script>
     </head>
     <body>
         <div class="container">
@@ -15,7 +17,7 @@
                 <label>Name:</label>
             </div>
             <div class="col-75">
-                <input name="name" id="name" placeholder="Enter Name" type="text" required >
+                <input name="name" id="name" placeholder="Enter Name" value="<?=(isset($name) ? $name : "")?>" type="text" required >
             </div>
             </div>		
 			
@@ -24,7 +26,7 @@
                 <label>Address:</label>
             </div>
             <div class="col-75">
-                <input name="address" id="address" placeholder="Enter Address" type="text" required >
+                <input name="address" id="address" placeholder="Enter Address" type="text" value="<?=(isset($address) ? $address : "")?>" required >
             </div>
             </div>
 			
@@ -33,7 +35,7 @@
                 <label>Email:</label>
             </div>
             <div class="col-75">
-                <input name="email" id="email" placeholder="Enter Email" type="email" required >
+                <input name="email" id="email" placeholder="Enter Email" type="email" value="<?=(isset($email) ? $email : "")?>" required >
             </div>
             </div>
 			
@@ -42,7 +44,7 @@
                 <label>Telephone No:</label>
             </div>
             <div class="col-75">
-                <input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" required >
+                <input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : "")?>" required >
             </div>
             </div>
 			
@@ -51,7 +53,7 @@
                 <label>Details:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="description" placeholder="Enter details use less than 25 words" required>
+                <input type="text" name="description" placeholder="Enter details use less than 25 words" value="<?=(isset($description) ? $description : "")?>" required>
             </div>
             </div>
 			
@@ -60,7 +62,7 @@
                 <label>User Name:</label>
             </div>
             <div class="col-75">
-                <input name="uname" id="uname" placeholder="Enter User Name" type="text" required >
+                <input name="uname" id="uname" placeholder="Enter User Name" value="<?=(isset($uname) ? $uname : "")?>" type="text" required >
             </div>
             </div>
 			
@@ -69,7 +71,7 @@
                 <label>Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" name="password" placeholder="Enter Password" required>
+                <input type="password" name="password" id="password" value="<?=(isset($pass) ? $pass : "")?>" placeholder="Enter Password" required>
             </div>
             </div>
 			
@@ -78,7 +80,7 @@
                 <label>Confirm Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" name="cpassword" placeholder="Confirm Password" onblur="cpassword_validation()" required>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
             </div>
             </div>
 			
@@ -92,7 +94,7 @@
                 <label>No of single rooms</label>
             </div>
             <div class="col-75">
-                <input name="srooms" id="srooms" placeholder="Enter the no of single rooms in your hotel" type="number" min="0" max="800" step="1" required >
+                <input name="srooms" id="srooms" placeholder="Enter the no of single rooms in your hotel" type="number" min="0" max="800" step="1" value="<?=(isset($singlerooms) ? $singlerooms : "")?>" required >
             </div>
             </div>
 			
@@ -101,7 +103,7 @@
                 <label>Price of a single room</label>
             </div>
             <div class="col-75">
-                <input name="sprice" id="sprice" placeholder="Enter the price of a single room in your hotel" type="text" required >
+                <input name="sprice" id="sprice" placeholder="Enter the price of a single room in your hotel" type="text" value="<?=(isset($singleroomprice) ? $singleroomprice : "")?>" required >
             </div>
             </div>
 			
@@ -110,7 +112,7 @@
                 <label>No of available single rooms</label>
             </div>
             <div class="col-75">
-                <input name="sarooms" id="sarooms" placeholder="Enter the no of available single rooms today" type="number" min="0" max="800" step="1" required >
+                <input name="sarooms" id="sarooms" placeholder="Enter the no of available single rooms today" type="number" min="0" max="800" step="1" value="<?=(isset($saroomno) ? $saroomno : "")?>" required >
             </div>
             </div>
 			
@@ -123,7 +125,7 @@
                 <label>No of double rooms</label>
             </div>
             <div class="col-75">
-                <input name="drooms" id="drooms" placeholder="Enter the no of double rooms in your hotel" type="number" min="0" max="800" step="1" required >
+                <input name="drooms" id="drooms" placeholder="Enter the no of double rooms in your hotel" type="number" min="0" max="800" step="1" value="<?=(isset($doublerooms) ? $doublerooms : "")?>" required >
             </div>
             </div>
 			
@@ -132,7 +134,7 @@
                 <label>Price of a double room</label>
             </div>
             <div class="col-75">
-                <input name="dprice" id="dprice" placeholder="Enter the price of a double room in your hotel" type="text" required >
+                <input name="dprice" id="dprice" placeholder="Enter the price of a double room in your hotel" type="text" value="<?=(isset($doubleroomprice) ? $doubleroomprice : "")?>" required >
             </div>
             </div>
 			
@@ -141,7 +143,7 @@
                 <label>No of available double rooms</label>
             </div>
             <div class="col-75">
-                <input name="darooms" id="darooms" placeholder="Enter the no of available double rooms today" type="number" min="0" max="800" step="1" required >
+                <input name="darooms" id="darooms" placeholder="Enter the no of available double rooms today" type="number" min="0" max="800" step="1" value="<?=(isset($daroomno) ? $daroomno : "")?>" required >
             </div>
             </div>
 			
@@ -154,7 +156,7 @@
                 <label>No of family rooms</label>
             </div>
             <div class="col-75">
-                <input name="frooms" id="frooms" placeholder="Enter the no of family rooms in your hotel" type="number" min="0" max="800" step="1" required >
+                <input name="frooms" id="frooms" placeholder="Enter the no of family rooms in your hotel" type="number" min="0" max="800" step="1" value="<?=(isset($familyrooms) ? $familyrooms : "")?>" required >
             </div>
             </div>
 			
@@ -163,7 +165,7 @@
                 <label>Price of a family room</label>
             </div>
             <div class="col-75">
-                <input name="fprice" id="fprice" placeholder="Enter the price of a family room in your hotel" type="text" required >
+                <input name="fprice" id="fprice" placeholder="Enter the price of a family room in your hotel" type="text" value="<?=(isset($familyroomprice) ? $familyroomprice : "")?>" required >
             </div>
             </div>
 			
@@ -172,7 +174,7 @@
                 <label>No of available family rooms</label>
             </div>
             <div class="col-75">
-                <input name="farooms" id="farooms" placeholder="Enter the no of available family rooms today" type="number" min="0" max="800" step="1" required >
+                <input name="farooms" id="farooms" placeholder="Enter the no of available family rooms today" type="number" min="0" max="800" step="1" value="<?=(isset($faroomno) ? $faroomno : "")?>" required >
             </div>
             </div>
 			

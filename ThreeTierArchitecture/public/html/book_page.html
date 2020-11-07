@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
     </head>
@@ -31,7 +32,7 @@
                 <label for="fname">Select The Date:</label>
             </div>
             <div class="col-75">
-                <input type="date" name="date" required>
+                <input type="date" name="date" value="<?=(isset($selectday) ? $selectday : "")?>" required>
             </div>
             </div>
             <div class="row">
@@ -39,31 +40,31 @@
                 <label for="fname">Select No Of Travellers:</label>
             </div>
             <div class="col-75">
-                <input type="number" name="no" min="1" max="100" step="1" required>
+                <input type="number" name="no" min="1" max="100" step="1" value="<?=(isset($no) ? $no : "")?>" required>
             </div>
             </div>
             <div class="row">
             <div class="col-25">
-                <label for="fname">Select No Of Single Rooms:</label>
+                <label for="fname">Select No Of Single Rooms:<br />(Maximum one person)</label>
             </div>
             <div class="col-75">
-                <input type="number" name="single" min="0" max="10" step="1" required>
+                <input type="number" name="single" min="0" max="10" step="1" value="<?=(isset($single) ? $single : "")?>" required>
             </div>
             </div>
             <div class="row">
             <div class="col-25">
-                <label for="fname">Select No Of Double Rooms:</label>
+                <label for="fname">Select No Of Double Rooms:<br />(Maximum two persons)</label>
             </div>
             <div class="col-75">
-                <input type="number" name="double" min="0" max="10" step="1" required>
+                <input type="number" name="double" min="0" max="10" step="1" value="<?=(isset($double) ? $double : "")?>" required>
             </div>
             </div>
             <div class="row">
             <div class="col-25">
-                <label for="fname">Select No Of Family Rooms:</label>
+                <label for="fname">Select No Of Family Rooms:<br />(Maximum five persons)</label>
             </div>
             <div class="col-75">
-                <input type="number" name="family" min="0" max="10" step="1" required>
+                <input type="number" name="family" min="0" max="10" step="1" value="<?=(isset($family) ? $family : "")?>" required>
             </div>
             </div>
 			
@@ -77,7 +78,7 @@
                 <label for="fname">Name:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="cname" placeholder="Enter Your Name.." required>
+                <input type="text" name="cname" placeholder="Enter Your Name.." value="<?=(isset($cname) ? $cname : "")?>" required>
             </div>
             </div>
 			
@@ -86,7 +87,7 @@
                 <label for="fname">Email:</label>
             </div>
             <div class="col-75">
-                <input type="email" name="email" placeholder="Enter Your Email.." required>
+                <input type="email" name="email" placeholder="Enter Your Email.." value="<?=(isset($email) ? $email : "")?>" required>
             </div>
             </div>
 			
@@ -95,7 +96,7 @@
                 <label for="fname">Telephone:</label>
             </div>
             <div class="col-75">
-                <input type="tel" name="phone" placeholder="Enter Your Telephone No.." required>
+                <input type="tel" name="phone" placeholder="Enter Your Telephone No.." value="<?=(isset($phone) ? $phone : "")?>" required>
             </div>
             </div>
 			
@@ -104,7 +105,7 @@
                 <label for="fname">Address:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="address" placeholder="Enter Your Address.." required>
+                <input type="text" name="address" placeholder="Enter Your Address.." value="<?=(isset($address) ? $address : "")?>" required>
             </div>
             </div>
 			

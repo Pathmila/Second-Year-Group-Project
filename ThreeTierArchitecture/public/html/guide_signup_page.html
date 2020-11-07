@@ -2,8 +2,10 @@
 <html>
     <head>
         <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+		<script type="text/javascript" src="../../public/js/script.js"></script>
     </head>
     <body>
         <div class="container">
@@ -16,7 +18,7 @@
                 <label for="fname">Name:</label>
             </div>
             <div class="col-75">
-                <input name="name" id="name" placeholder="Enter Name" type="text" required >
+                <input name="name" id="name" placeholder="Enter Name" type="text" value="<?=(isset($name) ? $name : "")?>" required >
             </div>
             </div>		
 			
@@ -25,7 +27,7 @@
                 <label for="fname">Address:</label>
             </div>
             <div class="col-75">
-                <input name="address" id="address" placeholder="Enter Address" type="text" required >
+                <input name="address" id="address" placeholder="Enter Address" type="text" value="<?=(isset($address) ? $address : "")?>" required >
             </div>
             </div>
 			
@@ -34,7 +36,7 @@
                 <label for="fname">Email:</label>
             </div>
             <div class="col-75">
-                <input name="email" id="email" placeholder="Enter Email" type="email" required >
+                <input name="email" id="email" placeholder="Enter Email" type="email" value="<?=(isset($email) ? $email : "")?>" required >
             </div>
             </div>
 			
@@ -43,7 +45,7 @@
                 <label for="fname">Telephone No:</label>
             </div>
             <div class="col-75">
-                <input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" required >
+                <input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : "")?>" required >
             </div>
             </div>
 			
@@ -52,7 +54,7 @@
                 <label for="fname">Birthday:</label>
             </div>
             <div class="col-75">
-                <input name="birthday" id="birthday" type="date" required >
+                <input name="birthday" id="birthday" type="date" value="<?=(isset($birthday) ? $birthday : "")?>" required >
             </div>
             </div>
 			
@@ -61,7 +63,7 @@
                 <label for="fname">Details:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="description" placeholder="Enter details use less than 25 words" required>
+                <input type="text" name="description" placeholder="Enter details use less than 25 words" value="<?=(isset($description) ? $description : "")?>" required>
             </div>
             </div>
 			
@@ -70,7 +72,7 @@
                 <label for="fname">User Name:</label>
             </div>
             <div class="col-75">
-                <input name="uname" id="uname" placeholder="Enter User Name" type="text" required >
+                <input name="uname" id="uname" placeholder="Enter User Name" type="text" value="<?=(isset($uname) ? $uname : "")?>" required >
             </div>
             </div>
 			
@@ -79,7 +81,7 @@
                 <label for="fname">Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" name="password" placeholder="Enter Password" required>
+                <input type="password" name="password" id="password" placeholder="Enter Password" value="<?=(isset($pass) ? $pass : "")?>" required>
             </div>
             </div>
 			
@@ -88,7 +90,7 @@
                 <label for="fname">Confirm Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" name="cpassword" placeholder="Confirm Password" onblur="cpassword_validation()" required>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
             </div>
             </div>
 			
@@ -98,8 +100,8 @@
             </div>
             <div class="col-75">
 				<br />
-                <INPUT type="radio" name="availability" Value="1">Yes
-				<INPUT type="radio" name="availability" Value="0">No
+                <INPUT type="radio" name="availability" Value="1" required>Yes
+				<INPUT type="radio" name="availability" Value="0" required>No
             </div>
             </div>
 			
