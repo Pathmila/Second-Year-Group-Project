@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 26, 2020 at 08:44 PM
+-- Generation Time: Nov 07, 2020 at 07:43 PM
 -- Server version: 5.7.11-log
 -- PHP Version: 7.3.12
 
@@ -33,23 +33,28 @@ CREATE TABLE IF NOT EXISTS `account` (
   `aid` int(11) NOT NULL AUTO_INCREMENT,
   `uid` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(500) NOT NULL,
   `admin` int(11) NOT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `account`
 --
 
 INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
-(1, '0', 'admin', 'admin', 1),
-(2, '1', 'hotel', 'hotel', 3),
-(3, '1', 'guide', 'guide', 2),
-(4, 'PE 7108', 'vehicle ', 'vehicle ', 4),
-(5, '1', 'user', 'user', 0),
-(6, '2', 'user1', 'user1', 0),
-(7, '2', 'guide1', 'guide1', 2);
+(1, '0', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1),
+(2, '1', 'asini', '8e4ad8be5b37252e4b9d5bb47b647382', 0),
+(3, '2', 'ruwanthi', 'b5e174fc0ed2e20e7fc238f76d043164', 0),
+(4, '3', 'sachini', '21220f324537cc5af6d8b9fcb8ab5c7c', 0),
+(5, '4', 'hansaka', '437659a8f9d6d091e74342e67c542079', 0),
+(6, '1', 'devon', 'e50da88aa796637e5e634006d6db525e', 3),
+(7, '1', 'guide', 'a0c391dc49c440fc9962168353cedde3', 2),
+(8, '2', 'guide1', 'f510e23d073d307697b845e84f4398f1', 2),
+(9, '3', 'guide2', 'f6ea0da319e7c2192998a8b48edc5024', 2),
+(10, '2', 'hotel', 'e919c49d5f0cd737285367810a3394d0', 3),
+(11, 'PE7108', 'vehicle', '5a76e813d6a0a40548b91acc11557bd2', 4),
+(12, 'CAB1234', 'vehicle1 ', '1be1fc3ef6f0d8596e31fee95bdb8a0e', 4);
 
 -- --------------------------------------------------------
 
@@ -125,14 +130,19 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `vehicle` varchar(200) NOT NULL,
   `vehiclerating` int(11) NOT NULL,
   PRIMARY KEY (`cid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `comment`
 --
 
 INSERT INTO `comment` (`cid`, `uid`, `details`, `photo1`, `photo2`, `photo3`, `hotel`, `hotelrating`, `guide`, `guiderating`, `vehicle`, `vehiclerating`) VALUES
-(1, 1, 'Best journey.', 1, 2, 3, '1', 4, '2', 4, 'PE 7108', 3);
+(1, 1, 'Best journey.', 1, 2, 3, '1', 4, '2', 4, 'PE7108', 3),
+(2, 1, 'The best trip ever.', 4, 5, 6, '2', 4, '2', 3, 'PE7108', 4),
+(3, 2, 'Well experienced.', 7, 8, 9, '1', 5, '3', 4, 'PE7108', 3),
+(4, 4, 'Joyfull weekend with easytravels.', 10, 11, 12, '1', 4, '1', 4, 'CAB1234', 4),
+(5, 3, 'Greate work easytravels!!', 13, 14, 15, '2', 3, '2', 4, 'CAB1234', 3),
+(6, 3, 'good.', 16, 17, 18, '1', 3, '1', 4, 'PE7108', 4);
 
 -- --------------------------------------------------------
 
@@ -207,15 +217,16 @@ CREATE TABLE IF NOT EXISTS `guide` (
   `description` text NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`gid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guide`
 --
 
 INSERT INTO `guide` (`gid`, `name`, `birthday`, `address`, `telephone`, `email`, `description`, `photo`) VALUES
-(1, 'K. S. Sumedha De Silva', '1992-11-18', 'No. 45, main road, Kalaniya', 774567823, 'guidesumedha@gmail.com', 'Best experiences in this field.', 1),
-(2, 'S. L. Perera', '1998-05-13', 'No. 45, main road, Colombo', 774567890, 'slperera@gmail.com', 'Best experiences in this field.', 2);
+(1, 'K. S. Sumedha De Silva', '1985-11-21', 'No. 45, main road, Kalaniya', 774567823, 'guidesumedha@gmail.com', 'Best experiences in this field.', 1),
+(2, 'S. L. Perera', '1995-07-07', 'No. 45, main road, Colombo', 774567890, 'slperera@gmail.com', 'Best experiences in this field.', 2),
+(3, 'K.T. Priyasad', '1992-03-07', 'No. 45, main road, Kaluthara', 774567823, 'pryasad@gmail.com', 'Best experiences in this field.', 3);
 
 -- --------------------------------------------------------
 
@@ -229,15 +240,16 @@ CREATE TABLE IF NOT EXISTS `guideavailability` (
   `gid` int(11) NOT NULL,
   `availability` int(11) NOT NULL,
   PRIMARY KEY (`gaid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guideavailability`
 --
 
 INSERT INTO `guideavailability` (`gaid`, `gid`, `availability`) VALUES
-(1, 1, 0),
-(2, 2, 1);
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -261,14 +273,15 @@ CREATE TABLE IF NOT EXISTS `hotel` (
   `description` varchar(500) NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`hid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hotel`
 --
 
 INSERT INTO `hotel` (`hid`, `name`, `address`, `telephone`, `email`, `singleroomprice`, `doubleroomprice`, `familyroomprice`, `singlerooms`, `doublerooms`, `familyrooms`, `description`, `photo`) VALUES
-(1, 'Devon Hotel', '51 Ampitiya Rd, Kandy 20160', 812235164, 'hoteldevon@gmail.com', 3500, 5000, 7000, 10, 10, 10, 'Located in Kandy. Best conditions with best facilities.  ', 1);
+(1, 'Devon Hotel', '51 Ampitiya Rd, Kandy 20160', 812235164, 'hoteldevon@gmail.com', 1500, 2500, 3500, 5, 5, 5, 'Located in Kandy. Best conditions with best facilities.', 1),
+(2, 'Amari', 'No. 45, main road, Galle', 774567823, 'amari@gmail.com', 2000, 4000, 6000, 15, 15, 15, 'Best experiences with good Conditions.', 2);
 
 -- --------------------------------------------------------
 
@@ -284,14 +297,15 @@ CREATE TABLE IF NOT EXISTS `hotelavailability` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`haid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hotelavailability`
 --
 
 INSERT INTO `hotelavailability` (`haid`, `hid`, `singlerooms`, `doublerooms`, `familyrooms`) VALUES
-(1, 1, 8, 9, 10);
+(1, 1, 4, 4, 5),
+(2, 2, 12, 13, 14);
 
 -- --------------------------------------------------------
 
@@ -401,7 +415,19 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `telephone` int(11) NOT NULL,
   `address` varchar(500) NOT NULL,
   PRIMARY KEY (`pid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payment`
+--
+
+INSERT INTO `payment` (`pid`, `resvid`, `amount`, `date`, `name`, `email`, `telephone`, `address`) VALUES
+(1, 1, 16000, '08/08/2020', 'Asini', 'asinipathmila@gmail.com', 773123456, 'No. 45, main road, Ambalangoda'),
+(2, 2, 5000, '08/10/2020', 'Sumith', 'sumith@gmail.com', 773123456, 'No. 45, main road, Ambalangoda'),
+(3, 3, 12000, '08/10/2020', 'Lekha', 'lekha@gmail.com', 773123456, 'No. 45, main road, Ambalangoda'),
+(4, 4, 12000, '08/11/2020', 'Ruwanthi', 'ruwanthi@gmail.com', 773123456, 'Rathnapura'),
+(5, 5, 18000, '08/11/2020', 'Sachini', 'sachini@gmail.com', 773123456, 'Matara'),
+(6, 6, 24000, '08/11/2020', 'Hansaka', 'hansaka@gmail.com', 773123456, 'No. 45, main road, Kaluthara');
 
 -- --------------------------------------------------------
 
@@ -420,7 +446,19 @@ CREATE TABLE IF NOT EXISTS `resavation` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`resvid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resavation`
+--
+
+INSERT INTO `resavation` (`resvid`, `packid`, `uid`, `date`, `travelers`, `singlerooms`, `doublerooms`, `familyrooms`) VALUES
+(1, 2, 1, '2020-11-18', 4, 0, 0, 1),
+(2, 6, 1, '2020-11-28', 5, 1, 2, 0),
+(3, 8, 1, '2020-12-11', 4, 0, 0, 1),
+(4, 4, 2, '2020-11-11', 4, 4, 0, 0),
+(5, 4, 3, '2020-12-03', 6, 2, 2, 0),
+(6, 4, 4, '2020-12-09', 8, 0, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -461,15 +499,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(200) NOT NULL,
   `telephone` int(11) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`uid`, `name`, `address`, `email`, `telephone`) VALUES
-(1, 'E. A. P Silva', 'No. 45, main road, Ambalangoda', 'user1@gmail.com', 774567890),
-(2, 'S. L. Kavini Perera', 'No. 45, main road, Kaluthara', 'kavini@gamail.com', 774567823);
+(1, 'Asini Pathmila Silva', 'No.73, Maha Ambalangoda, Ambalangoda', 'asinipathmila@gmail.com', 774567823),
+(2, 'Ruwan Hemachandra', 'No. 45, main road, Rathnapura', 'ruwanthi@gmail.com', 774567823),
+(3, 'Sachini Maneesha', 'No. 35, main road, Matara', 'sachini@gmail.com', 774567823),
+(4, 'Hansaka Sadaruwan ', 'No. 25, main road, Kaluthara', 'hansaka@gmail.com', 774567823);
 
 -- --------------------------------------------------------
 
@@ -495,7 +535,8 @@ CREATE TABLE IF NOT EXISTS `vehicle` (
 --
 
 INSERT INTO `vehicle` (`vid`, `name`, `email`, `address`, `telephone`, `type`, `details`, `photo`) VALUES
-('PE 7108', 'W. S. Silva', 'vehicle1@gmail.com', 'No. 45, main road, Galle', 774567823, 'van - 10 seats', 'Best experiences with good Conditions.', '1');
+('CAB1234', 'W. S. Silva', 'wssilva@gmial.com', 'No. 45, main road, Colombo', 774567890, 'car - 04 seats', 'With good conditions and best service.', '2'),
+('PE7108', 'F. G. Perera', 'fgperera@gmail.com', 'No. 45, main road, Matara', 774567823, 'van - 10 seats', 'With good conditions and best service.', '1');
 
 -- --------------------------------------------------------
 
@@ -509,14 +550,15 @@ CREATE TABLE IF NOT EXISTS `vehicleavailability` (
   `vid` varchar(20) NOT NULL,
   `availability` varchar(20) NOT NULL,
   PRIMARY KEY (`vaid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `vehicleavailability`
 --
 
 INSERT INTO `vehicleavailability` (`vaid`, `vid`, `availability`) VALUES
-(1, 'PE 7108', '1');
+(1, 'PE7108', '1'),
+(2, 'CAB1234', '0');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
