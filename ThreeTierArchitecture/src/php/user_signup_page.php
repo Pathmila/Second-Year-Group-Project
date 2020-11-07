@@ -10,22 +10,30 @@
     $maxid=$max['max(uid)'];
     $nextuid=$maxid+1;
 ?>
+
 <?php
 	$_GLOBAL['accountdone']=0;
 	$_GLOBAL['userdone']=0;
+	
 		
-    if(isset($_GET['formsubmit'])){
-		$name=$_GET['name'];
-		$email=$_GET['email'];
-		$address=$_GET['address'];
-		$telephone=$_GET['telephone'];
-		$username=$_GET['uname'];
-		$password=$_GET['cpassword'];
+    if(isset($_POST['formsubmit'])){
+		$name=$_POST['name'];
+		$email=$_POST['email'];
+		$address=$_POST['address'];
+		$telephone=$_POST['telephone'];
+		$uname=$_POST['uname'];
+		$pass=$_POST['password'];
+		$cpassword=(string)$_POST['cpassword'];
 		//echo $username;
+		
+		$hash = md5($cpassword);
+		
+		$checked = checkusername($uname,$connection);
 				
-				
-			$_SESSION['username']=$username;
-			$_SESSION['pwd']=$password;
+		if($checked==1){
+			//echo 'done';
+			//$_SESSION['username']=$username;
+			//$_SESSION['pwd']=$cpassword;
 				
 			//insert in to user table
 			$insertuser = "INSERT INTO user(name,address,email,telephone) values ('".$name."','".$address."','".$email."','".$telephone."')";
@@ -37,13 +45,14 @@
 				$_GLOBAL['userdone']=0;
 			} 
 				
+			//selecting the maximum uid from the user table	
 			$sql8="select max(uid) from user";
 			$result8=mysqli_query($connection,$sql8);
 			$max=mysqli_fetch_assoc($result8);
 			$maxuid=$max['max(uid)'];
 				
 			//insert in to account table
-			$insertaccount = "INSERT INTO account(uid,username,password,admin) values ('".$maxuid."','".$username."','".$password."',0)";
+			$insertaccount = "INSERT INTO account(uid,username,password,admin) values ('".$maxuid."','".$uname."','".$hash."',0)";
 			//echo $insertaccount;
 			$result=$connection->query($insertaccount);
 			if($result){
@@ -63,8 +72,25 @@
 				echo "<script> alert('Registration is Failed') </script>";
 				//header("Location: login_page.php");
             }
-		
+		}else{
+			//echo 'failed';
+			//header("Location: account_page.php");
+			$uname="";
+			echo "<script> alert('User name already used..') </script>";
+		}
     }        		
+?>
+<?php
+	function checkusername($uname,$connection){
+		$sql10="select * from account where username='".$uname."'";
+		//echo $sql10;
+		$result10=mysqli_query($connection,$sql10);
+		if($row10=$result10->fetch_assoc()){
+			return 0;
+		}else{
+			return 1;
+		} 
+	}
 ?>
 
 <?php include('../../public/html/user_signup_page.html')?>

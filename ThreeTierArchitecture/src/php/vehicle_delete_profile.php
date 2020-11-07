@@ -9,6 +9,7 @@
 <?php
 	$uname=$_SESSION['username'];
 	$aid=$_SESSION['aid'];
+	$password=$_SESSION['pwd'];
 	
 	$sql1 = "select * from account where aid = '".$aid."'";
 	//echo $sql1;
@@ -16,7 +17,6 @@
 	while($row=$result1->fetch_assoc()){
 		$uid = $row['uid'];
 		$aid = $row['aid'];
-		$password=$row['password'];
 		//echo $uid;
 	}
 	

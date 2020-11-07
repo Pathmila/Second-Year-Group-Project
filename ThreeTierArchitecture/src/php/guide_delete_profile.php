@@ -7,20 +7,21 @@
 <?php require_once('guide_view_navigation.php')?>
 
 <?php	
+	$password= $_SESSION['pwd'];
 	$sql1 = "select * from account where aid = '".$aid."'";
 	//echo $sql1;
 	$result1=mysqli_query($connection,$sql1);
 	while($row=$result1->fetch_assoc()){
 		$uid = $row['uid'];
 		$aid = $row['aid'];
-		$password= $row['password'];
-		//echo $uid;
+		//echo $password;
 	}
 		
 	if(isset($_GET['submit'])){
 		$pass=$_GET['password'];
-		//echo $pass;
-		//echo $password;
+			
+		echo $pass;
+		echo $password;
 		if($password == $pass){
 			$sql1 = "delete from guide where gid = '$uid'";
 			$result1=mysqli_query($connection,$sql1);

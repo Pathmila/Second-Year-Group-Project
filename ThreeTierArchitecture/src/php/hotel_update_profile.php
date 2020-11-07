@@ -59,7 +59,6 @@
 	<?php
 		$_GLOBAL['accountdone']=0;
         $_GLOBAL['guidedone']=0;
-        $_GLOBAL['guideavailability']=0;
 
         if(isset($_POST['updatebtn'])){
 			$name=$_POST['name'];

@@ -53,7 +53,6 @@
 	<?php
 		$_GLOBAL['accountdone']=0;
         $_GLOBAL['guidedone']=0;
-        $_GLOBAL['guideavailability']=0;
 
         if(isset($_POST['updatebtn'])){
 			$name=$_POST['name'];
@@ -78,20 +77,20 @@
             }
 
 //update in to account table
-				$insertaccount = "update account set username='".$username."' where aid='".$aid."' ";
-				$result=$connection->query($insertaccount);
-				//echo $insertaccount;
-				if($result){
-					$_GLOBAL['accountdone']=1;
-				}else{
-					$_GLOBAL['accountdone']=0;
-				}
+			$insertaccount = "update account set username='".$username."' where aid='".$aid."' ";
+			$result=$connection->query($insertaccount);
+			//echo $insertaccount;
+			if($result){
+				$_GLOBAL['accountdone']=1;
+			}else{
+				$_GLOBAL['accountdone']=0;
+			}
                        
 
-               if(($_GLOBAL['accountdone']==1) && ($_GLOBAL['guidedone']==1) ){
-                   echo "<script> alert('Update is Sucessfull') </script>";
-					header("Location: guide_view_profile.php");
-                }else{
+            if(($_GLOBAL['accountdone']==1) && ($_GLOBAL['guidedone']==1)){
+                echo "<script> alert('Update is Sucessfull') </script>";
+				header("Location: guide_view_profile.php");
+			}else{
                     //echo "failed";
 					echo "<script> alert('Update is Failed') </script>";
 					

@@ -27,8 +27,9 @@
     if(isset($_POST['formsubmit'])){
 		$vid=$_POST['vid'];
 		$owner=$_POST['owner'];
-		$username=$_POST['uname'];
-        $password=$_POST['cpassword'];
+		$uname=$_POST['uname'];
+		$pass=$_POST['password'];
+        $cpassword=$_POST['cpassword'];
         $address=$_POST['address'];
         $type=$_POST['type'];
         $description = $_POST['description'];
@@ -36,50 +37,72 @@
         $telephone =$_POST['telephone'];
         $availability=$_POST['availability'];
 		$photo=$nextid;
+		
+		$hash = md5($cpassword);
+			
+		$checked = checkusername($uname,$connection);
 				
+		if($checked==1){
+			
+			//insert data to guide  table
 
-//insert data to guide  table
+			$insertguide = "INSERT INTO vehicle(vid,name,email,address,telephone,type,details,photo) values ('".$vid."','".$owner."','".$email."','".$address."','".$telephone."','".$type."','".$description."','".$photo."')";
+			$result2=$connection->query($insertguide);
+					
+			if($result2){
+				$_GLOBAL['guidedone']=1;
+			}else{
+				$_GLOBAL['guidedone']=0;
+			}
+					
 
-		$insertguide = "INSERT INTO vehicle(vid,name,email,address,telephone,type,details,photo) values ('".$vid."','".$owner."','".$email."','".$address."','".$telephone."','".$type."','".$description."','".$photo."')";
-        $result2=$connection->query($insertguide);
-		    	
-		if($result2){
-		    $_GLOBAL['guidedone']=1;
+			//insert in to account table
+			$insertaccount = "INSERT INTO account(uid,username,password,admin) values ('".$vid."','".$uname."','".$hash."',4)";
+			//echo $insertaccount;
+			$result=$connection->query($insertaccount);
+			if($result){
+				$_GLOBAL['accountdone']=1;
+			}else{
+				$_GLOBAL['accountdone']=0;
+			}
+			  
+
+					
+			//insert in to account availabilty table
+			$insertguideavailability = "INSERT INTO vehicleavailability(vid,availability) values ('".$vid."','".$availability."')";
+			$result=$connection->query($insertguideavailability);
+			if($result){
+				$_GLOBAL['guideavailability']=1;
+			}else{
+				$_GLOBAL['guideavailability']=0;
+			}
+			if(($_GLOBAL['accountdone']==1) && ($_GLOBAL['guidedone']==1) && ($_GLOBAL['guideavailability']==1)){
+				echo "<script> alert('Registration is Sucessfull') </script>";
+				header("Location: login_page.php");
+			}else{
+				//echo "failed";
+				echo "<script> alert('Registration is Failed') </script>";
+			}
 		}else{
-		    $_GLOBAL['guidedone']=0;
-        }
-				
-
-//insert in to account table
-		$insertaccount = "INSERT INTO account(uid,username,password,admin) values ('".$vid."','".$username."','".$password."',4)";
-		//echo $insertaccount;
-		$result=$connection->query($insertaccount);
-		if($result){
-			$_GLOBAL['accountdone']=1;
-		}else{
-			$_GLOBAL['accountdone']=0;
+			//echo 'failed';
+			//header("Location: account_page.php");
+			$uname="";
+			echo "<script> alert('User name already used..') </script>";
 		}
-          
-
-                
- //insert in to account availabilty table
-		$insertguideavailability = "INSERT INTO vehicleavailability(vid,availability) values ('".$vid."','".$availability."')";
-		$result=$connection->query($insertguideavailability);
-		if($result){
-			$_GLOBAL['guideavailability']=1;
-		}else{
-			$_GLOBAL['guideavailability']=0;
-		}
-        if(($_GLOBAL['accountdone']==1) && ($_GLOBAL['guidedone']==1) && ($_GLOBAL['guideavailability']==1)){
-			echo "<script> alert('Registration is Sucessfull') </script>";
-			header("Location: login_page.php");
-        }else{
-            //echo "failed";
-			echo "<script> alert('Registration is Failed') </script>";
-        }
     }        
 ?>
-
+<?php
+	function checkusername($uname,$connection){
+		$sql10="select * from account where username='".$uname."'";
+		//echo $sql10;
+		$result10=mysqli_query($connection,$sql10);
+		if($row10=$result10->fetch_assoc()){
+			return 0;
+		}else{
+			return 1;
+		} 
+	}
+?>
 
 <?php include('../../public/html/vehicle_signup_page.html')?>
 <?php require_once('footer.php')?>

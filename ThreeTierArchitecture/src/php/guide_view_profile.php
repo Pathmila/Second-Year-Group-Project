@@ -1,9 +1,6 @@
 <?php require_once('guide_navigation.php')?> 
 <?php require_once('../../config/connect.php');
     session_start();
-    if($_SESSION['loggedin']!=1){
-        header('Location: login_page.php');
-    }
 ?>
 <?php require_once('guide_view_navigation.php')?>
 <?php

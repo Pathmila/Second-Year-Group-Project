@@ -22,18 +22,24 @@
 		$_GLOBAL['accountdone']=0;
         $_GLOBAL['guidedone']=0;
         $_GLOBAL['guideavailability']=0;
-
-            if(isset($_POST['formsubmit'])){
-				$name=$_POST['name'];
-				$username=$_POST['uname'];
-                $password=$_POST['cpassword'];
-                $address=$_POST['address'];
-                $birthday=$_POST['birthday'];
-                $description = $_POST['description'];
-                $email= $_POST['email'];
-                $telephone =$_POST['telephone'];
-                $availability=$_POST['availability'];
-				$photo=$nextid;
+		
+        if(isset($_POST['formsubmit'])){
+			$name=$_POST['name'];
+			$uname=$_POST['uname'];
+            $pass=$_POST['password'];
+			$cpassword=$_POST['cpassword'];
+            $address=$_POST['address'];
+            $birthday=$_POST['birthday'];
+            $description = $_POST['description'];
+            $email= $_POST['email'];
+            $telephone =$_POST['telephone'];
+            $availability=$_POST['availability'];
+			$photo=$nextid;
+			
+			$hash = md5($cpassword);
+			$checked = checkusername($uname,$connection);
+				
+			if($checked==1){
 
 //insert data to guide  table
 
@@ -52,7 +58,7 @@
 				$maxgid=$max['max(gid)'];
 
 //insert in to account table
-				$insertaccount = "INSERT INTO account(uid,username,password,admin) values ('".$maxgid."','".$username."','".$password."',2)";
+				$insertaccount = "INSERT INTO account(uid,username,password,admin) values ('".$maxgid."','".$uname."','".$hash."',2)";
 				$result=$connection->query($insertaccount);
 				if($result){
 					$_GLOBAL['accountdone']=1;
@@ -76,9 +82,26 @@
                     //echo "failed";
 					echo "<script> alert('Registration is Failed') </script>";
                 }
+			}else{
+				//echo 'failed';
+				//header("Location: account_page.php");
+				$uname="";
+				echo "<script> alert('User name already used..') </script>";
+			}
         }        
 ?>
-
+<?php
+	function checkusername($uname,$connection){
+		$sql10="select * from account where username='".$uname."'";
+		//echo $sql10;
+		$result10=mysqli_query($connection,$sql10);
+		if($row10=$result10->fetch_assoc()){
+			return 0;
+		}else{
+			return 1;
+		} 
+	}
+?>
 
 <?php include('../../public/html/guide_signup_page.html')?>
 <?php require_once('footer.php')?>

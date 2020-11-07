@@ -22,18 +22,17 @@
 	}
 ?>
 
-<?php
-		
+<?php		
     if(isset($_POST['submit'])){
-        $password=$_POST['password'];
-		$npassword=$_POST['newpassword'];
-		$ncpassword=$_POST['confirmpassword'];
-		//echo $password;
-		//echo $pw;
-		//echo $npassword;
+        $getpassword=$_POST['password'];
+		$npassword=(string)$_POST['newpassword'];
+		$ncpassword=(string)$_POST['confirmpassword'];
 		//echo $ncpassword;
-		if(($npassword == $ncpassword)&&($pw == $password)){
-			$sql1 = "UPDATE account SET password ='".$ncpassword."' where aid='".$aid."'"; 
+		$hash = md5($getpassword);
+		$hashnew= md5($ncpassword);
+		//echo $hashnew;
+		if(($npassword == $ncpassword)&&($pw == $hash)){
+			$sql1 = "UPDATE account SET password ='".$hashnew."' where aid='".$aid."'"; 
 			//echo $sql1;
             $result1 = mysqli_query($connection,$sql1);
 			if($result1){
@@ -46,6 +45,7 @@
 			//echo "Failed";
 			echo "<script> alert('Password update is failed') </script>";
 		}
+		$_SESSION['pwd']=$ncpassword;
 	}
 ?>
 
