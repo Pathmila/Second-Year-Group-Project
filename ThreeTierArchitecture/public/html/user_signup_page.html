@@ -14,7 +14,7 @@
        
 			<div class="row">
             <div class="col-25">
-                <label for="fname">Name:</label>
+                <label>Name:</label>
             </div>
             <div class="col-75">
                 <input name="name" id="name" placeholder="Enter Name" value="<?=(isset($name) ? $name : "")?>" type="text" required >
@@ -23,7 +23,7 @@
 			
 			<div class="row">
             <div class="col-25">
-                <label for="fname">Address:</label>
+                <label>Address:</label>
             </div>
             <div class="col-75">
                 <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : "")?>" required >
@@ -32,7 +32,7 @@
 			
 			<div class="row">
             <div class="col-25">
-                <label for="fname">Email:</label>
+                <label>Email:</label>
             </div>
             <div class="col-75">
                 <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($email) ? $email : "")?>" required >
@@ -41,7 +41,7 @@
 			
 			<div class="row">
             <div class="col-25">
-                <label for="fname">Telephone No:</label>
+                <label>Telephone No:</label>
             </div>
             <div class="col-75">
                 <input name="telephone" id="telephone" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : "")?>" required >
@@ -50,28 +50,28 @@
 			
 			<div class="row">
             <div class="col-25">
-                <label for="fname">User Name:</label>
+                <label>User Name:</label>
             </div>
             <div class="col-75">
                 <input name="uname" id="uname" placeholder="Username" type="text" value="<?=(isset($uname) ? $uname : "")?>" required >
             </div>
             </div>
+	
+			<div class="row">
+            <div class="col-25">
+                <label>Password:</label>
+            </div>
+            <div class="col-75">
+                <input type="password" id="password" name="password" placeholder="Use at least 1 lowercase,uppercase & digit. Required length at least 6 characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" value="<?=(isset($pass) ? $pass : "")?>" required>
+            </div>
+            </div>
 			
 			<div class="row">
             <div class="col-25">
-                <label for="fname">Password:</label>
+                <label>Confirm Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" id="password" name="password" placeholder="Enter Password" value="<?=(isset($pass) ? $pass : "")?>" required>
-            </div>
-            </div>
-			
-			<div class="row">
-            <div class="col-25">
-                <label for="fname">Confirm Password:</label>
-            </div>
-            <div class="col-75">
-                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
+                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm The Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
             </div>
             </div>
 			

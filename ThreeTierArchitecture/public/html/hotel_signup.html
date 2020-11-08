@@ -71,7 +71,7 @@
                 <label>Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" name="password" id="password" value="<?=(isset($pass) ? $pass : "")?>" placeholder="Enter Password" required>
+                <input type="password" name="password" id="password" value="<?=(isset($pass) ? $pass : "")?>" placeholder="Use at least 1 lowercase,uppercase & digit. Required length at least 6 characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
             </div>
             </div>
 			
@@ -80,7 +80,7 @@
                 <label>Confirm Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm The Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
             </div>
             </div>
 			
