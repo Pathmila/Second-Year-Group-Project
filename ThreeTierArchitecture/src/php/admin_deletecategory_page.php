@@ -61,7 +61,8 @@
 			}			
 		}
 		
-		if(($_GLOBAL['category']==1) && ($_GLOBAL['categorysubcategory']==1) && ($_GLOBAL['package']==1) && ($_GLOBAL['packdestination']==1)){
+		if( (($_GLOBAL['category']==1) && ($_GLOBAL['categorysubcategory']==1) && ($_GLOBAL['package']==1) && ($_GLOBAL['packdestination']==1)) ||
+		(($_GLOBAL['category']==1)) ){
 			//echo "<script> confirm() </script>";				
 			echo "<script> alert('Delete is Sucessfull') </script>";				
 			header("Location: admin_home_page.php");
