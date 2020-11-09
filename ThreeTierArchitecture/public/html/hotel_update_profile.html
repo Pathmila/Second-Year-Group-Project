@@ -17,7 +17,7 @@
                 <label>Name:</label>
             </div>
             <div class="col-75">
-                <input name="name" id="name" type="text" value="<?php echo $name?>">
+                <input name="name" id="name" type="text" value="<?php echo $name?>" required>
             </div>
             </div>		
 			
@@ -26,7 +26,7 @@
                 <label>User Name:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="uname" value="<?php echo $uname?>">
+                <input type="text" name="uname" value="<?php echo $uname?>" required>
             </div>
             </div>	
 			
@@ -35,7 +35,7 @@
                 <label>Address:</label>
             </div>
             <div class="col-75">
-                <input name="address" id="address" type="text" value="<?php echo $address?>">
+                <input name="address" id="address" type="text" value="<?php echo $address?>" required>
             </div>
             </div>
 			
@@ -44,7 +44,7 @@
                 <label>Email:</label>
             </div>
             <div class="col-75">             
-				<input name="email" id="email" placeholder="Enter Email" type="email" value="<?php echo $email?>" >
+				<input name="email" id="email" placeholder="Enter Email" type="email" value="<?php echo $email?>" required>
             </div>
             </div>
 			
@@ -53,7 +53,7 @@
                 <label>Telephone No:</label>
             </div>
             <div class="col-75">
-				<input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" value="0<?php echo $telephone?>">
+				<input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" value="0<?php echo $telephone?>" required>
             </div>
             </div>
 			
@@ -62,7 +62,7 @@
                 <label>Details:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="description" value="<?php echo $description?>">
+                <input type="text" name="description" value="<?php echo $description?>" required>
             </div>
             </div>				
 			
@@ -75,7 +75,7 @@
                 <label>No of single rooms</label>
             </div>
             <div class="col-75"> 
-				<input name="srooms" id="srooms" type="number" min="0" max="800" step="1" value="<?php echo $singlerooms?>" >
+				<input name="srooms" id="srooms" type="number" min="0" max="800" step="1" value="<?php echo $singlerooms?>" required>
             </div>
             </div>
 			
@@ -84,7 +84,7 @@
                 <label>Price of a single room</label>
             </div>
             <div class="col-75">
-                <input name="sprice" id="sprice" type="text" value="<?php echo $singleroomprice?>" >
+                <input name="sprice" id="sprice" type="text" value="<?php echo $singleroomprice?>" required>
             </div>
             </div>
 			
@@ -97,7 +97,7 @@
                 <label>No of double rooms</label>
             </div>
             <div class="col-75">              
-				<input name="drooms" id="drooms" type="number" min="0" max="800" step="1" value="<?php echo $doublerooms?>" >
+				<input name="drooms" id="drooms" type="number" min="0" max="800" step="1" value="<?php echo $doublerooms?>" required>
             </div>
             </div>
 			
@@ -106,7 +106,7 @@
                 <label>Price of a double room</label>
             </div>
             <div class="col-75">
-                <input name="dprice" id="dprice" type="text" value="<?php echo $doubleroomprice?>" >
+                <input name="dprice" id="dprice" type="text" value="<?php echo $doubleroomprice?>" required>
             </div>
             </div>
 
@@ -120,7 +120,7 @@
                 <label>No of family rooms</label>
             </div>
             <div class="col-75">         
-				<input name="frooms" id="frooms" type="number" min="0" max="800" step="1" value="<?php echo $familyrooms?>" >
+				<input name="frooms" id="frooms" type="number" min="0" max="800" step="1" value="<?php echo $familyrooms?>" required>
             </div>
             </div>
 			
@@ -129,7 +129,7 @@
                 <label>Price of a family room</label>
             </div>
             <div class="col-75">
-                <input name="fprice" id="fprice" type="text" value="<?php echo $familyroomprice?>" >
+                <input name="fprice" id="fprice" type="text" value="<?php echo $familyroomprice?>" required>
             </div>
             </div>
 				
