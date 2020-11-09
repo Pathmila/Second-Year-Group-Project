@@ -38,7 +38,7 @@
 
 			//inserting destination details to the destination table
             $sql2="INSERT INTO destination(name,description,photo) values ('".$dname."','".$destination."','".$filename."')"; 
-			echo $sql2;
+			//echo $sql2;
 			$result2 = mysqli_query($connection,$sql2);
             if($result2){
 				echo "<script> alert('Insert is Sucessfull') </script>";				
