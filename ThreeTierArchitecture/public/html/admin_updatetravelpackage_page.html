@@ -91,7 +91,7 @@
 					<label for="fname">New Package Name</label>
 				</div>
 				<div class="col-75">
-					<input type="text" name="nname" id="nname" placeholder="Enter the new package name..">
+					<input type="text" name="nname" id="nname" placeholder="Enter the new package name.." required>
 				</div>
 				</div>			   
 
@@ -100,7 +100,7 @@
 					<label for="fname">No of Days</label>
 				</div>
 				<div class="col-75">
-					<input type="number" name="days" min="1" max="10" value="<?php echo $days?>">
+					<input type="number" name="days" min="1" max="10" value="<?php echo $days?>" required>
 				</div>
 				</div>
 						
@@ -109,7 +109,7 @@
 					<label for="fname">Package Price(Rs.)</label>
 				</div>
 				<div class="col-75">
-					<input type="text" name="price" id="price" value="<?php echo $price?>">
+					<input type="text" name="price" id="price" value="<?php echo $price?>" required>
 				</div>
 				</div>    
 	  
@@ -118,7 +118,7 @@
 					<label for="fname">Details</label>
 				</div>
 				<div class="col-75">
-					<textarea id="subject" name="details"  style="height:200px"><?php echo $details?></textarea>
+					<textarea id="subject" name="details"  style="height:200px" required><?php echo $details?></textarea>
 				</div>
 				</div> 
 
@@ -129,7 +129,7 @@
 					<label for="lname">Upload a photo 1</label>
 				</div>
 				<div class="col-75">
-					<br /><input type="file" name="file1" id="file1" >
+					<br /><input type="file" name="file1" id="file1" required>
 				</div>
 				</div>
 
@@ -139,7 +139,7 @@
 					<label for="lname">Upload a photo 2</label>
 				</div>
 				<div class="col-75">
-					<br /><input type="file" name="file2" id="file2" >
+					<br /><input type="file" name="file2" id="file2" required>
 				</div>
 				</div>
 
@@ -148,7 +148,7 @@
 					<label for="lname">Upload a photo 3</label>
 				</div>
 				<div class="col-75">
-					<br /><input type="file" name="file3" id="file3" >
+					<br /><input type="file" name="file3" id="file3" required>
 				</div>
 				</div>
 
