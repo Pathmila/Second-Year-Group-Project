@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <div class="dropdown">
+                <button class="dropbtn">ADD</button>
+                <div class="dropdown-content">
+                    <a href="../../src/php/admin_addcategory_page.php">Category</a>
+                    <a href="../../src/php/admin_addsubcategory_page.php">Subcategory</a>
+                    <a href="../../src/php/admin_addtravelpackage_page.php">Travel Packages</a>
+                    <a href="../../src/php/admin_adddestination_page.php">Destinations</a>
+                </div>
+            </div> 
+
+        
+            <div class="dropdown">
+                <button class="dropbtn">UPDATE</button>
+                <div class="dropdown-content">
+                    <a href="../../src/php/admin_updatecategory_page1.php">Category</a>
+                    <a href="../../src/php/admin_updatesubcategory_page1.php">Subcategory</a>
+                    <a href="../../src/php/admin_updatetravelpackage_page1.php">Travel Packages</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">VIEW</button>
+                <div class="dropdown-content">
+                    <a href="../../src/php/admin_view_booking_page.php">Bookings</a>
+                    <a href="../../src/php/admin_viewaccount.php">Accounts</a>
+                    <a href="../../src/php/admin_view_report1.php">Reports</a>
+                </div>
+            </div> 
+
+            <a href="../../src/php/admin_check_availability.php">CHECK AVAILABILITY</a>
+
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+		
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    </body>
+</html>
