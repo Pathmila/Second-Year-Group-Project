@@ -1,0 +1,21 @@
+body{
+    background-color: #262626;
+    
+}
+
+.container{
+    width: 100%;
+}
+
+.wallpaper{
+    width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        width: 100%;
+    }
+    .wallpaper{
+        display: none;
+    }
+}
