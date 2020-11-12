@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 07, 2020 at 07:43 PM
+-- Generation Time: Nov 12, 2020 at 07:59 PM
 -- Server version: 5.7.11-log
 -- PHP Version: 7.3.12
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `account` (
   `password` varchar(500) NOT NULL,
   `admin` int(11) NOT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `account`
@@ -53,8 +53,12 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
 (8, '2', 'guide1', 'f510e23d073d307697b845e84f4398f1', 2),
 (9, '3', 'guide2', 'f6ea0da319e7c2192998a8b48edc5024', 2),
 (10, '2', 'hotel', 'e919c49d5f0cd737285367810a3394d0', 3),
-(11, 'PE7108', 'vehicle', '5a76e813d6a0a40548b91acc11557bd2', 4),
-(12, 'CAB1234', 'vehicle1 ', '1be1fc3ef6f0d8596e31fee95bdb8a0e', 4);
+(11, 'PE-7108', 'vehicle', '5a76e813d6a0a40548b91acc11557bd2', 4),
+(12, 'CAB-1234', 'vehicle1 ', '1be1fc3ef6f0d8596e31fee95bdb8a0e', 4),
+(13, '4', 'guide3', '59d0828e70d1b042a3828dc380a9f756', 2),
+(14, 'CAB-5555', 'vehicle2', '59d0828e70d1b042a3828dc380a9f756', 4),
+(15, '3', 'hotel2', '59d0828e70d1b042a3828dc380a9f756', 3),
+(16, '5', 'user1', '2b04927a48b1a3a928f843c0696109b8', 0);
 
 -- --------------------------------------------------------
 
@@ -68,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `name` varchar(20) NOT NULL,
   `photo` int(20) NOT NULL,
   PRIMARY KEY (`catid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `category`
@@ -92,22 +96,19 @@ CREATE TABLE IF NOT EXISTS `categorysubcategory` (
   `catid` int(11) NOT NULL,
   `subcatid` int(11) NOT NULL,
   PRIMARY KEY (`cat-subcatid`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `categorysubcategory`
 --
 
 INSERT INTO `categorysubcategory` (`cat-subcatid`, `catid`, `subcatid`) VALUES
-(1, 1, 1),
-(2, 1, 1),
-(3, 1, 1),
 (4, 1, 2),
 (5, 1, 2),
 (6, 1, 2),
-(7, 2, 1),
-(8, 2, 1),
-(9, 2, 1);
+(12, 1, 3),
+(11, 1, 3),
+(10, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -137,12 +138,12 @@ CREATE TABLE IF NOT EXISTS `comment` (
 --
 
 INSERT INTO `comment` (`cid`, `uid`, `details`, `photo1`, `photo2`, `photo3`, `hotel`, `hotelrating`, `guide`, `guiderating`, `vehicle`, `vehiclerating`) VALUES
-(1, 1, 'Best journey.', 1, 2, 3, '1', 4, '2', 4, 'PE7108', 3),
-(2, 1, 'The best trip ever.', 4, 5, 6, '2', 4, '2', 3, 'PE7108', 4),
-(3, 2, 'Well experienced.', 7, 8, 9, '1', 5, '3', 4, 'PE7108', 3),
-(4, 4, 'Joyfull weekend with easytravels.', 10, 11, 12, '1', 4, '1', 4, 'CAB1234', 4),
-(5, 3, 'Greate work easytravels!!', 13, 14, 15, '2', 3, '2', 4, 'CAB1234', 3),
-(6, 3, 'good.', 16, 17, 18, '1', 3, '1', 4, 'PE7108', 4);
+(1, 1, 'Best journey.', 1, 2, 3, '1', 4, '2', 4, 'PE-7108', 3),
+(2, 1, 'The best trip ever.', 4, 5, 6, '2', 4, '2', 3, 'PE-7108', 4),
+(3, 2, 'Well experienced.', 7, 8, 9, '1', 5, '3', 4, 'PE-7108', 3),
+(4, 4, 'Joyfull weekend with easytravels.', 10, 11, 12, '1', 4, '1', 4, 'CAB-1234', 4),
+(5, 3, 'Greate work easytravels!!', 13, 14, 15, '2', 3, '2', 4, 'CAB-1234', 3),
+(6, 3, 'good.', 16, 17, 18, '1', 3, '1', 4, 'PE-7108', 4);
 
 -- --------------------------------------------------------
 
@@ -157,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `destination` (
   `description` text NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`destid`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `destination`
@@ -217,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `guide` (
   `description` text NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`gid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guide`
@@ -226,7 +227,8 @@ CREATE TABLE IF NOT EXISTS `guide` (
 INSERT INTO `guide` (`gid`, `name`, `birthday`, `address`, `telephone`, `email`, `description`, `photo`) VALUES
 (1, 'K. S. Sumedha De Silva', '1985-11-21', 'No. 45, main road, Kalaniya', 774567823, 'guidesumedha@gmail.com', 'Best experiences in this field.', 1),
 (2, 'S. L. Perera', '1995-07-07', 'No. 45, main road, Colombo', 774567890, 'slperera@gmail.com', 'Best experiences in this field.', 2),
-(3, 'K.T. Priyasad', '1992-03-07', 'No. 45, main road, Kaluthara', 774567823, 'pryasad@gmail.com', 'Best experiences in this field.', 3);
+(3, 'K.T. Priyasad', '1992-03-07', 'No. 45, main road, Kaluthara', 774567823, 'pryasad@gmail.com', 'Best experiences in this field.', 3),
+(4, 'guide3', '1997-06-12', 'guide3', 774567823, 'guide3@v.v', 'guide3', 4);
 
 -- --------------------------------------------------------
 
@@ -238,18 +240,20 @@ DROP TABLE IF EXISTS `guideavailability`;
 CREATE TABLE IF NOT EXISTS `guideavailability` (
   `gaid` int(11) NOT NULL AUTO_INCREMENT,
   `gid` int(11) NOT NULL,
-  `availability` int(11) NOT NULL,
+  `availability_date` varchar(50) NOT NULL,
   PRIMARY KEY (`gaid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guideavailability`
 --
 
-INSERT INTO `guideavailability` (`gaid`, `gid`, `availability`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 3, 1);
+INSERT INTO `guideavailability` (`gaid`, `gid`, `availability_date`) VALUES
+(7, 1, '2020-11-25'),
+(8, 1, '2020-11-28'),
+(10, 2, '2020-11-26'),
+(11, 2, '2020-11-28'),
+(13, 1, '2020-11-24');
 
 -- --------------------------------------------------------
 
@@ -273,7 +277,7 @@ CREATE TABLE IF NOT EXISTS `hotel` (
   `description` varchar(500) NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`hid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hotel`
@@ -281,7 +285,8 @@ CREATE TABLE IF NOT EXISTS `hotel` (
 
 INSERT INTO `hotel` (`hid`, `name`, `address`, `telephone`, `email`, `singleroomprice`, `doubleroomprice`, `familyroomprice`, `singlerooms`, `doublerooms`, `familyrooms`, `description`, `photo`) VALUES
 (1, 'Devon Hotel', '51 Ampitiya Rd, Kandy 20160', 812235164, 'hoteldevon@gmail.com', 1500, 2500, 3500, 5, 5, 5, 'Located in Kandy. Best conditions with best facilities.', 1),
-(2, 'Amari', 'No. 45, main road, Galle', 774567823, 'amari@gmail.com', 2000, 4000, 6000, 15, 15, 15, 'Best experiences with good Conditions.', 2);
+(2, 'Amari', 'No. 45, main road, Galle', 774567823, 'amari@gmail.com', 2000, 4000, 6000, 15, 15, 15, 'Best experiences with good Conditions.', 2),
+(3, 'Hotel2', 'Hotel2', 774567823, 'Hotel2@v.v', 2000, 4000, 6000, 10, 5, 6, 'Hotel2', 3);
 
 -- --------------------------------------------------------
 
@@ -293,19 +298,23 @@ DROP TABLE IF EXISTS `hotelavailability`;
 CREATE TABLE IF NOT EXISTS `hotelavailability` (
   `haid` int(11) NOT NULL AUTO_INCREMENT,
   `hid` int(11) NOT NULL,
+  `availability_date` varchar(50) NOT NULL,
   `singlerooms` int(11) NOT NULL,
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`haid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hotelavailability`
 --
 
-INSERT INTO `hotelavailability` (`haid`, `hid`, `singlerooms`, `doublerooms`, `familyrooms`) VALUES
-(1, 1, 4, 4, 5),
-(2, 2, 12, 13, 14);
+INSERT INTO `hotelavailability` (`haid`, `hid`, `availability_date`, `singlerooms`, `doublerooms`, `familyrooms`) VALUES
+(3, 2, '2020-11-25', 4, 8, 8),
+(13, 2, '2020-11-20', 2, 0, 0),
+(10, 2, '2020-11-18', 7, 7, 7),
+(11, 2, '2020-11-28', 7, 7, 7),
+(12, 1, '2020-11-27', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -356,15 +365,12 @@ CREATE TABLE IF NOT EXISTS `package` (
 --
 
 INSERT INTO `package` (`packid`, `catname`, `subcatname`, `name`, `days`, `price`, `details`, `photo1`, `photo2`, `photo3`) VALUES
-(1, 'Family Tours', 'One Day Packages', 'Package 1 (Gold)', 1, 5000, 'Package 1 (Gold) will cover Kandy city with high facilities.', 1, 2, 3),
-(2, 'Family Tours', 'One Day Packages', 'Package 1 (Silver)', 1, 4000, 'Package 1 (Silver) will cover Kandy city with moderate facilities.', 4, 5, 6),
-(3, 'Family Tours', 'One Day Packages', 'Package 1 (Bronze)', 1, 2000, 'Package 1 (Bronze) will cover Kandy city with average facilities.', 7, 8, 9),
+(9, 'Family Tours', 'Three Days Packages', 'Package 1 (Bronze)', 3, 1500, 'This is the three days (Bronze) travel package which covers Nuwara Eliya, Haputale and Colombo.\r\n', 25, 26, 27),
 (4, 'Family Tours', 'Two Days Packages', 'Package 2 (Gold)', 2, 3000, 'Package 2 (Gold) will cover Galle and Hikkaduwa cities with high facilities.', 10, 11, 12),
 (5, 'Family Tours', 'Two Days Packages', 'Package 2 (Silver)', 2, 2000, 'Package 2 (Silver) will cover Galle and Hikkaduwa cities with moderate facilities.', 13, 14, 15),
 (6, 'Family Tours', 'Two Days Packages', 'Package 2 (Bronze)', 2, 1000, 'Package 2 (Bronze) will cover Galle and Hikkaduwa cities with average facilities.', 16, 17, 18),
-(7, 'Religious Tours', 'One Day Packages', 'Package 3 (Gold)', 1, 4000, 'Package 3 (Gold) will cover Sigiriya with high facilities.', 19, 20, 21),
-(8, 'Religious Tours', 'One Day Packages', 'Package 3 (Silver)', 1, 3000, 'Package 3 (Silver) will cover Sigiriya with moderate facilities.', 22, 23, 24),
-(9, 'Religious Tours', 'One Day Packages', 'Package 3 (Bronze)', 1, 1000, 'Package 3 (Bronze) will cover Sigiriya with average facilities.', 25, 26, 27);
+(8, 'Family Tours', 'Three Days Packages', 'Package 1 (Silver)', 3, 2500, 'This is the three days (Silver) travel package which covers Nuwara Eliya, Haputale and Colombo.\r\n', 22, 23, 24),
+(7, 'Family Tours', 'Three Days Packages', 'Package 1 (Gold)', 3, 3500, 'This is the three days (Gold) travel package which covers Nuwara Eliya, Haputale and Colombo.\r\n', 19, 20, 21);
 
 -- --------------------------------------------------------
 
@@ -378,25 +384,28 @@ CREATE TABLE IF NOT EXISTS `packdestination` (
   `packid` int(11) NOT NULL,
   `destid` int(11) NOT NULL,
   PRIMARY KEY (`packdesid`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `packdestination`
 --
 
 INSERT INTO `packdestination` (`packdesid`, `packid`, `destid`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 3, 1),
+(18, 8, 30),
+(17, 8, 35),
+(16, 8, 25),
 (4, 4, 16),
 (5, 4, 10),
 (6, 5, 16),
 (7, 5, 10),
 (8, 6, 16),
 (9, 6, 10),
-(10, 7, 26),
-(11, 8, 26),
-(12, 9, 26);
+(15, 7, 30),
+(14, 7, 35),
+(13, 7, 25),
+(19, 9, 25),
+(20, 9, 35),
+(21, 9, 30);
 
 -- --------------------------------------------------------
 
@@ -415,7 +424,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `telephone` int(11) NOT NULL,
   `address` varchar(500) NOT NULL,
   PRIMARY KEY (`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payment`
@@ -427,7 +436,9 @@ INSERT INTO `payment` (`pid`, `resvid`, `amount`, `date`, `name`, `email`, `tele
 (3, 3, 12000, '08/10/2020', 'Lekha', 'lekha@gmail.com', 773123456, 'No. 45, main road, Ambalangoda'),
 (4, 4, 12000, '08/11/2020', 'Ruwanthi', 'ruwanthi@gmail.com', 773123456, 'Rathnapura'),
 (5, 5, 18000, '08/11/2020', 'Sachini', 'sachini@gmail.com', 773123456, 'Matara'),
-(6, 6, 24000, '08/11/2020', 'Hansaka', 'hansaka@gmail.com', 773123456, 'No. 45, main road, Kaluthara');
+(6, 6, 24000, '08/11/2020', 'Hansaka', 'hansaka@gmail.com', 773123456, 'No. 45, main road, Kaluthara'),
+(7, 7, 6000, '10/11/2020', 'Asini', 'asinipathmila@gmail.com', 773123456, 'Ambalangoda'),
+(8, 8, 15000, '10/11/2020', 'Asini', 'asinipathmila@gmail.com', 773123456, 'Ambalangoda');
 
 -- --------------------------------------------------------
 
@@ -446,7 +457,7 @@ CREATE TABLE IF NOT EXISTS `resavation` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`resvid`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `resavation`
@@ -458,7 +469,9 @@ INSERT INTO `resavation` (`resvid`, `packid`, `uid`, `date`, `travelers`, `singl
 (3, 8, 1, '2020-12-11', 4, 0, 0, 1),
 (4, 4, 2, '2020-11-11', 4, 4, 0, 0),
 (5, 4, 3, '2020-12-03', 6, 2, 2, 0),
-(6, 4, 4, '2020-12-09', 8, 0, 4, 0);
+(6, 4, 4, '2020-12-09', 8, 0, 4, 0),
+(7, 5, 1, '2020-11-27', 3, 1, 1, 0),
+(8, 4, 1, '2020-11-26', 5, 2, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -472,14 +485,13 @@ CREATE TABLE IF NOT EXISTS `subcategory` (
   `name` varchar(20) NOT NULL,
   `description` text NOT NULL,
   PRIMARY KEY (`subcatid`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `subcategory`
 --
 
 INSERT INTO `subcategory` (`subcatid`, `name`, `description`) VALUES
-(1, 'One Day Packages', 'This is one day tour package. To find the packages please Click here!!'),
 (2, 'Two Days Packages', 'This is two days tour package. To find the travel packages please Click here!!'),
 (3, 'Three Days Packages', 'This is three days tour package. To find the packages please Click here!!'),
 (4, 'Four Days Packages', 'This is four days tour package. To find the packages please Click here!!'),
@@ -499,7 +511,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(200) NOT NULL,
   `telephone` int(11) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -509,7 +521,8 @@ INSERT INTO `user` (`uid`, `name`, `address`, `email`, `telephone`) VALUES
 (1, 'Asini Pathmila Silva', 'No.73, Maha Ambalangoda, Ambalangoda', 'asinipathmila@gmail.com', 774567823),
 (2, 'Ruwan Hemachandra', 'No. 45, main road, Rathnapura', 'ruwanthi@gmail.com', 774567823),
 (3, 'Sachini Maneesha', 'No. 35, main road, Matara', 'sachini@gmail.com', 774567823),
-(4, 'Hansaka Sadaruwan ', 'No. 25, main road, Kaluthara', 'hansaka@gmail.com', 774567823);
+(4, 'Hansaka Sadaruwan ', 'No. 25, main road, Kaluthara', 'hansaka@gmail.com', 774567823),
+(5, 'user1', 'user1', 'user1@d.c', 774567823);
 
 -- --------------------------------------------------------
 
@@ -535,8 +548,9 @@ CREATE TABLE IF NOT EXISTS `vehicle` (
 --
 
 INSERT INTO `vehicle` (`vid`, `name`, `email`, `address`, `telephone`, `type`, `details`, `photo`) VALUES
-('CAB1234', 'W. S. Silva', 'wssilva@gmial.com', 'No. 45, main road, Colombo', 774567890, 'car - 04 seats', 'With good conditions and best service.', '2'),
-('PE7108', 'F. G. Perera', 'fgperera@gmail.com', 'No. 45, main road, Matara', 774567823, 'van - 10 seats', 'With good conditions and best service.', '1');
+('CAB-1234', 'W. S. Silva', 'wssilva@gmial.com', 'No. 45, main road, Colombo', 774567890, 'car - 04 seats', 'With good conditions and best service.', '2'),
+('PE-7108', 'F. G. Perera', 'fgperera@gmail.com', 'No. 45, main road, Matara', 774567823, 'van - 10 seats', 'With good conditions and best service.', '1'),
+('CAB-5555', 'Kamal Silva', 'kavini@gamail.com', 'Polonnaruwa', 774567823, 'car - 04 seats', 'CAB-5555', '3');
 
 -- --------------------------------------------------------
 
@@ -548,17 +562,18 @@ DROP TABLE IF EXISTS `vehicleavailability`;
 CREATE TABLE IF NOT EXISTS `vehicleavailability` (
   `vaid` int(11) NOT NULL AUTO_INCREMENT,
   `vid` varchar(20) NOT NULL,
-  `availability` varchar(20) NOT NULL,
+  `availability_date` varchar(50) NOT NULL,
   PRIMARY KEY (`vaid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `vehicleavailability`
 --
 
-INSERT INTO `vehicleavailability` (`vaid`, `vid`, `availability`) VALUES
-(1, 'PE7108', '1'),
-(2, 'CAB1234', '0');
+INSERT INTO `vehicleavailability` (`vaid`, `vid`, `availability_date`) VALUES
+(3, 'CAB-5555', '2020-11-14'),
+(4, 'PE-7108', '2020-11-28'),
+(6, 'PE-7108', '2020-11-24');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
