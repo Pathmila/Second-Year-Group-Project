@@ -1,7 +1,7 @@
 <?php			
 	if(isset($_POST['submit'])){
 		$year=(String)$_POST['year'];	
-		echo "<h2 class='title' align='center'><label>Payment Details For $year</label></h2>";
+		echo "<h2 class='title' align='center'><label>Highest Revenue For $year</label></h2>";
 		$sql3="select sum(amount),date from payment where date like '%/$year'";
 		$result3=$connection->query($sql3);
 		while($row3=$result3->fetch_assoc()){
@@ -60,13 +60,13 @@
 						//echo "skills ".$guide."";
 						echo "<tr>";
 						echo "<div class='container1'>";
-						echo "$wordmonth1<div class=' skills g".$wordmonth1." '>".$point."%</div>";						
+						echo "$wordmonth1<div class=' skills g".$wordmonth1." '></div>";						
 						echo "</div>";
 											
 						//echo " <style>.$guide{width: $point %; background-color: orange;} </style>";
 											
 											
-						echo " <style>.g$wordmonth1{width: $point%; background-color: #a04;} </style>";
+						echo " <style>.g$wordmonth1{width: $point%; background-color: #08f;} </style>";
 						echo "<br /></tr>";
 					}
 				}

@@ -1,21 +1,92 @@
 <?php
-	$path='../../public/images/hotel/';
-	$ex='.jpg';
-	$sql="select DISTINCT h.hid, h.name, a.singlerooms, h.singleroomprice, a.doublerooms, h.doubleroomprice,
-	a.familyrooms, h.familyroomprice from hotel h, hotelavailability a where h.hid=a.hid and 
-	((a.singlerooms>0) or (a.doublerooms>0) or (a.familyrooms)>0)";
+	$username=$_SESSION['username'];
+	$password=$_SESSION['pwd'];
+	$aid=$_SESSION['aid'];
+	
+	$sql="select * from account where aid='".$aid."'";
 	//echo $sql;
-	$result=$connection->query($sql);
+	$result=mysqli_query($connection,$sql);
 	while($row=$result->fetch_assoc()){
-		echo "<tr>";
-		echo "<td>".$row['hid']."</td>";
-		echo "<td>".$row['name']."</td>";
-		echo "<td>".$row['singlerooms']."</td>";
-		echo "<td>".$row['singleroomprice']."</td>";
-		echo "<td>".$row['doublerooms']."</td>";
-		echo "<td>".$row['doubleroomprice']."</td>";
-		echo "<td>".$row['familyrooms']."</td>";
-		echo "<td>".$row['familyroomprice']."</td>";
-		echo "</tr>";
+        $uid=$row['uid'];
+    }
+	
+?>
+<?php
+	if(isset($_POST['check'])){
+		$date=$_POST['date'];		
+		echo"
+			<tr class='subtitle'>
+				<td>ID</td>
+				<td>Name</td>
+				<td>No of Available Single Rooms</td>
+				<td>Price of Single Room</td>
+				<td>No of Available Double Rooms</td> 
+				<td>Price of Double Room</td>
+				<td>No of Available Family Rooms</td>
+				<td>Price of Family Room</td>
+				
+			</tr>
+		";
+		$path='../../public/images/hotel/';
+		$ex='.jpg';
+	
+		$sql3="select * from hotel WHERE hid NOT IN (select hid from hotelavailability where availability_date = '".$date."')";
+		//echo $sql2;
+		$result3=$connection->query($sql3);
+		while($row3=$result3->fetch_assoc()){	
+			echo "<tr>";
+			echo "<td>".$row3['hid']."</td>";
+			echo "<td>".$row3['name']."</td>";
+			echo "<td>".$row3['singlerooms']."</td>";
+			echo "<td>".$row3['singleroomprice']."</td>";
+			echo "<td>".$row3['doublerooms']."</td>";
+			echo "<td>".$row3['doubleroomprice']."</td>";
+			echo "<td>".$row3['familyrooms']."</td>";
+			echo "<td>".$row3['familyroomprice']."</td>";
+			echo "</tr>";
+		}
+	
+		
+		$sql1="select * from hotelavailability where availability_date = '".$date."'";
+		//echo $sql1;
+		$result1=$connection->query($sql1);
+		while($row1=$result1->fetch_assoc()){				
+			$hid=$row1['hid'];			
+			$unavailsingle=$row1['singlerooms'];
+			$unavaildouble=$row1['doublerooms'];
+			$unavailfamily=$row1['familyrooms'];
+			//echo $unavailsingle;
+		
+			$sql2="select * from hotel where hid = '".$hid."' ";
+			//echo $sql2;
+			$result2=$connection->query($sql2);
+			while($row2=$result2->fetch_assoc()){
+				$name=$row2['name'];
+				$totsingle=$row2['singlerooms'];
+				$totdouble=$row2['doublerooms'];
+				$totfamily=$row2['familyrooms'];
+				$sprice=$row2['singleroomprice'];
+				$dprice=$row2['doubleroomprice'];
+				$fprice=$row2['familyroomprice'];
+						
+				$rsingle=$totsingle-$unavailsingle;
+				$rdouble=$totdouble-$unavaildouble;
+				$rfamily=$totfamily-$unavailfamily;
+				
+				//echo $rsingle;
+				
+				echo "<tr>";
+				echo "<td>".$hid."</td>";
+				echo "<td>".$name."</td>";
+				echo "<td>".$rsingle."</td>";
+				echo "<td>".$sprice."</td>";
+				echo "<td>".$rdouble."</td>";
+				echo "<td>".$dprice."</td>";
+				echo "<td>".$rfamily."</td>";
+				echo "<td>".$fprice."</td>";
+				echo "</tr>";
+			}
+			
+		}
 	}
 ?>
