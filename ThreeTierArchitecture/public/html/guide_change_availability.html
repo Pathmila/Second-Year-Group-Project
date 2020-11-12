@@ -4,34 +4,52 @@
         <title>EasyTravels.com</title>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
     </head>
     <body>     
         
 		<div class="container">
         <form method="post" action="../../src/php/guide_change_availability.php">
-			<h2 class="title"><label>Change Your Availability</label></h2>
+			<h2 class="title"><label>Enter Not Availabile Dates</label></h2>
 
             <div class="row">
-            <div class="col-25">
-                
-            </div>
-            <div class="col-75">			
-			<?php
-				if($av=="1"){
-					echo "<h3><INPUT type='radio' name='availability' Value='1' checked>&nbsp Yes</h3>";
-					echo "<h3><INPUT type='radio' name='availability' Value='0'>&nbsp No</h3>";
-				}else{
-					echo "<h3><INPUT type='radio' name='availability' Value='1'>&nbsp Yes</h3>";
-					echo "<h3><INPUT type='radio' name='availability' Value='0' checked>&nbsp No</h3>";
-				}
-			?>                
-            </div>
-            </div>			
-			<div class="row">
-                <br /><input type="submit" name="formsubmit" value="Update" class="formbtn">
-            </div>
+				<div class="col-25">
+					<label>Date:</label>
+				</div>
+				<div class="col-50">			
+					<input name="date" id="date" type="date" required>
+				</div>
+				<div class="col-25">	
+					<input type="submit" name="formsubmit" value="Update" class="formbtn">
+				</div>
+			</div>
             </form>
         </div>
+		
+		<div class="container">
+        <form method="post" action="../../src/php/guide_change_availability.php">
+			<h2 class="title"><label>Delete Not Availabile Dates</label></h2>
+
+            <div class="row">
+				<div class="col-25">
+					<label>Date:</label>
+				</div>
+				<div class="col-50">			
+					<input name="deletedate" id="deletedate" type="date" required>
+				</div>
+				<div class="col-25">	
+					<input type="submit" name="formdelete" value="Delete" class="formbtn">
+				</div>
+			</div>
+            </form>
+        </div>
+		
+		<div class="container">
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+					<?php include('../../src/php/guide_change_availability-dates.php')?>
+            </table>
+			</div>
+		</div>
     </body>
 </html>

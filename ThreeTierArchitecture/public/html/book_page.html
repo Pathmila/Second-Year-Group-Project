@@ -78,7 +78,7 @@
                 <label for="fname">Name:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="cname" placeholder="Enter Your Name.." value="<?=(isset($cname) ? $cname : "")?>" required>
+                <input type="text" name="cname" placeholder="Enter Your Name.." value="<?php echo $pname?>" required>
             </div>
             </div>
 			
@@ -87,7 +87,7 @@
                 <label for="fname">Email:</label>
             </div>
             <div class="col-75">
-                <input type="email" name="email" placeholder="Enter Your Email.." value="<?=(isset($email) ? $email : "")?>" required>
+                <input type="email" name="email" placeholder="Enter Your Email.." value="<?php echo $paddress?>" required>
             </div>
             </div>
 			
@@ -96,7 +96,7 @@
                 <label for="fname">Telephone:</label>
             </div>
             <div class="col-75">
-                <input type="tel" name="phone" placeholder="Enter Your Telephone No.." value="<?=(isset($phone) ? $phone : "")?>" required>
+                <input type="tel" name="phone" placeholder="Enter Your Telephone No.." value="<?php echo $pemail?>" required>
             </div>
             </div>
 			
@@ -105,7 +105,7 @@
                 <label for="fname">Address:</label>
             </div>
             <div class="col-75">
-                <input type="text" name="address" placeholder="Enter Your Address.." value="<?=(isset($address) ? $address : "")?>" required>
+                <input type="text" name="address" placeholder="Enter Your Address.."  value="0<?php echo $ptelephone?>" required>
             </div>
             </div>
 			
