@@ -33,7 +33,6 @@
             $description = $_POST['description'];
             $email= $_POST['email'];
             $telephone =$_POST['telephone'];
-            $availability=$_POST['availability'];
 			$photo=$nextid;
 			
 			$hash = md5($cpassword);
@@ -67,15 +66,7 @@
 				}
             
 
- //insert in to account availabilty table
-				$insertguideavailability = "INSERT INTO guideavailability(gid,availability) values ('".$maxgid."','".$availability."')";
-				$result=$connection->query($insertguideavailability);
-				if($result){
-					$_GLOBAL['guideavailability']=1;
-				}else{
-					$_GLOBAL['guideavailability']=0;
-				}
-               if(($_GLOBAL['accountdone']==1) && ($_GLOBAL['guidedone']==1) && ($_GLOBAL['guideavailability']==1)){
+               if(($_GLOBAL['accountdone']==1) && ($_GLOBAL['guidedone']==1) ){
 					echo "<script> alert('Registration is Sucessfull') </script>";
 					header("Location: login_page.php");
                 }else{

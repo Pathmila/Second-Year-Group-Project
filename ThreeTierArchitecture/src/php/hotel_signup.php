@@ -49,9 +49,7 @@
 				$doubleroomprice=$_POST['dprice'];
 				$familyrooms=$_POST['frooms'];
 				$familyroomprice=$_POST['fprice'];
-				$saroomno=$_POST['sarooms'];
-				$daroomno=$_POST['darooms'];
-				$faroomno=$_POST['farooms'];
+
 
 				$hash = md5($cpassword);
 				
@@ -87,15 +85,8 @@
 						$_GLOBAL['accountdone']=0;
 					}
 
-					$inserthotelavailability = "INSERT INTO hotelavailability(hid,singlerooms,doublerooms,familyrooms)values('".$maxhid."','".$saroomno."','".$daroomno."','".$faroomno."')";
-					$result2=$connection->query($inserthotelavailability);
-					if($result2){
-						$_GLOBAL['hotelavailabilitydone']=1;
-					}else{
-						$_GLOBAL['hotelavailabilitydone']=0;
-					}
 					
-					if( ($_GLOBAL['accountdone']==1) && ($_GLOBAL['hoteldone']==1) && ($_GLOBAL['hotelavailabilitydone']==1) ){
+					if( ($_GLOBAL['accountdone']==1) && ($_GLOBAL['hoteldone']==1) ){
 						//echo $_GLOBAL['accountdone'];
 						//echo $_GLOBAL['hoteldone'];
 						//echo $_GLOBAL['hotelavailabilitydone'];

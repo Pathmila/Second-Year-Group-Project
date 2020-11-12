@@ -44,14 +44,6 @@
 		$familyroomprice=$row1['familyroomprice'];
 		
     }
-	$sql2="select * from hotelavailability where hid='".$uid."'";
-	//echo $sql1;
-	$result2=mysqli_query($connection,$sql2);
-	while($row2=$result2->fetch_assoc()){
-        $saroomno=$row2['singlerooms'];
-		$daroomno=$row2['doublerooms'];
-		$faroomno=$row2['familyrooms'];		
-	}
 ?>
 
 <?php include('../../public/html/hotel_viewprofile.html')?>	

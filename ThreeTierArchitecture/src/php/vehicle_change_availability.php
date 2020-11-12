@@ -14,19 +14,14 @@
 	while($row=$result->fetch_assoc()){
         $uid=(string)$row['uid'];
     }
-	$sql2="select * from vehicleavailability where vid='".$uid."'";
-	//echo $sql1;
-	$result2=mysqli_query($connection,$sql2);
-	while($row2=$result2->fetch_assoc()){
-        $av=(string)$row2['availability'];
-	}
 ?>
 
 <?php
 	if(isset($_POST['formsubmit'])){
-		$availability=$_POST['availability'];
-		$sql = "Update vehicleavailability set availability='".$availability."' where vid='".$uid."' ";
-		echo $sql;
+		$day=$_POST['date'];
+		//echo $day;
+		$sql = "Insert into vehicleavailability(vid,availability_date) values ('".$uid."' , '".$day."') ";
+		//echo $sql;
 		$result=$connection->query($sql);
 		if($result){
 			echo "<script> alert('Update is Sucessfull') </script>";
@@ -34,6 +29,39 @@
 		}else{
 			//echo "failed";
 			echo "<script> alert('Update is Failed') </script>";
+		}
+	}
+?>
+<?php
+	if(isset($_POST['formdelete'])){
+		$day=$_POST['deletedate'];
+		
+		$_GLOBAL['ddone']=0;
+		$sql2="select * from vehicleavailability where vid='".$uid."' and availability_date='".$date."'";
+		//echo $sql2;
+		$result2=mysqli_query($connection,$sql2);
+		while($row2=$result2->fetch_assoc()){
+			$hid=$row2['hid'];			
+			if($hid != null){
+				$_GLOBAL['ddone']=1;
+			}else{
+				$_GLOBAL['ddone']=0;
+			}
+		}
+		if($_GLOBAL['ddone']==1){
+			//echo $day;
+			$sql3 = "delete from vehicleavailability where vid='".$uid."' and availability_date='".$day."' ";
+			//echo $sql;
+			$result3=$connection->query($sql3);
+			if($result3){
+				echo "<script> alert('Deletion is Sucessfull') </script>";
+				header("Location: vehicle_home_page.php");
+			}else{
+				//echo "failed";
+				echo "<script> alert('Deletion is Failed') </script>";
+			}
+		}else{
+			echo "<script> alert('Invalid Date.') </script>";
 		}
 	}
 ?>

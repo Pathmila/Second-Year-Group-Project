@@ -33,19 +33,6 @@
 		$photo1=(string)$row1['photo'];
 		//echo $photo1;
     }
-	$sql2="select * from guideavailability where gid='".$uid."'";
-	//echo $sql1;
-	$result2=mysqli_query($connection,$sql2);
-	while($row2=$result2->fetch_assoc()){
-        $av=(string)$row2['availability'];
-		//echo $av;
-		if($av=="1"){
-			$avail="Yes";
-		}else if($av == "0"){
-			$avail="No";
-		}else{
-		}
-	}
 ?>
 
 <?php include('../../public/html/guide_view_profile.html')?>

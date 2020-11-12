@@ -8,7 +8,7 @@
     $nextid=$maxid+1;
 ?>
 <?php require_once('user_navigation.php')?> 
-<?php require_once('user_view_profile_navigation.php')?>
+
 
 <?php
     if(isset($_POST['submit'])){

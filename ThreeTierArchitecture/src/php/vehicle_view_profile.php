@@ -40,19 +40,6 @@
 			$photo=$row['photo'];
 			$details=$row['details'];
         }
-		$sql2="select * from vehicleavailability where vid='".$uid."'";
-		//echo $sql1;
-		$result2=mysqli_query($connection,$sql2);
-		while($row2=$result2->fetch_assoc()){
-			$av=(string)$row2['availability'];
-			//echo $av;
-			if($av=="1"){
-				$avail="Yes";
-			}else if($av == "0"){
-				$avail="No";
-			}else{
-			}
-		}
     }
 ?> 
 <?php require_once('vehicle_view_navigation.php')?>
