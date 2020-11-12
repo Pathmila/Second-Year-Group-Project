@@ -1,6 +1,5 @@
 <?php require_once('../../config/connect.php');
     session_start();
-	
 ?>
 <?php require_once('user_navigation.php')?> 
 
@@ -19,6 +18,30 @@
 	
 	$today=(String)($month.'/'.$day.'/'.$year);
 	//echo $today;
+	
+	$uname=$_SESSION['username'];
+	$password=$_SESSION['pwd'];
+	$aid=$_SESSION['aid'];
+	//echo $aid;	
+	$sql="select * from account where aid='".$aid."' ";
+	//echo $sql;
+	$result=mysqli_query($connection,$sql);
+	while($row=$result->fetch_assoc()){
+		$id=(string)$row['uid'];
+		//echo $id;	
+		$uname=(string)$row['username'];
+	}
+	
+	$sql1="select * from user where uid='".$id."'";
+	//echo $sql1;
+	$result1=mysqli_query($connection,$sql1);
+	while($row1=$result1->fetch_assoc()){       
+        $pname=$row1['name'];
+        $paddress=$row1['address'];
+        $pemail=$row1['email'];
+        $ptelephone=$row1['telephone'];
+    }
+	
 ?>
 <?php
 	if(isset($_GET['submit'])){
