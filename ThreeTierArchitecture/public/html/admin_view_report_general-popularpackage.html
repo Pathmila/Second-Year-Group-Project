@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/chart.css">  	
+    </head>
+    <body> 
+		<div class="container">			
+
+			<h2 class="title" align="center"><label>Most Popoular Packages</label></h2>
+			
+			<div style="overflow-x:auto;">
+			<table id="tablePack" border=1 padding=50px align="center" class="viewtable">
+			<tr class="subtitle">
+				<td>ID</td>
+				<td>Name</td>
+				<td>No of Bookings</td>
+				
+			</tr>
+				<?php include('../../src/php/admin_view_report_general-popularpackage-table.php')?>
+					
+            </table>
+			</div>
+        </div>
+    </body>
+</html>

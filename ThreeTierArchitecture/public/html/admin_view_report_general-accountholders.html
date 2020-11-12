@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/chart.css">  
+	
+	</head>
+	<body>
+		<style> 
+	
+			#pieSlice1 .pie{
+				background-color: yellow;
+				transform: rotate(<?php echo $_SESSION['pu'];?>deg);
+			}
+			
+			#pieSlice2 {
+			  transform: rotate(<?php echo $_SESSION['pu'];?>deg);
+			}
+			
+			#pieSlice2 .pie{	
+				background-color: #035FF9;
+				transform: rotate(<?php echo $_SESSION['pg'];?>deg);
+			}
+			
+			#pieSlice3 {		
+				transform: rotate(<?php echo ($_SESSION['pu']+$_SESSION['pg']);?>deg);
+			}
+			
+			#pieSlice3 .pie{
+				background-color: lawngreen;
+				transform: rotate(<?php echo $_SESSION['ph'];?>deg);
+			}
+			
+			#pieSlice4 {
+			  transform: rotate(<?php echo ($_SESSION['pu']+$_SESSION['pg']+$_SESSION['ph']);?>deg);
+			}
+			
+			#pieSlice4 .pie{
+				background-color: #FF1950;
+				transform: rotate(<?php echo $_SESSION['pv'];?>deg);
+			}
+    
+		</style>
+		<div class="container">	
+		<form align="center">	
+			<div class="row">
+            <div class="col-75">
+				<h2 class="title"><label>Pie Chart for Account Details</label></h2>
+			</div>
+			<div class="col-25">
+				<div class="pieContainer">
+					<div class="pieBackground"></div>
+					<div id="pieSlice1" class="hold"><div class="pie"></div></div>
+					<div id="pieSlice2" class="hold"><div class="pie"></div></div>
+					<div id="pieSlice3" class="hold"><div class="pie"></div></div>
+					<div id="pieSlice4" class="hold"><div class="pie"></div></div>
+				</div>
+			</div>
+			</div>
+			
+			<div class="row">
+				<h2 class="title"><label>Account Details</label></h2>
+				<div style="overflow-x:auto;">
+				<table border=1 padding=50px align="center" class="viewtable">
+					<tr class="subtitle">
+						<td class="pieword" bgcolor="yellow">No of Users</td>
+						<td class="pieword" bgcolor="#035FF9">No of Guides</td>
+						<td class="pieword" bgcolor="lawngreen">No of Hotels</td>
+						<td class="pieword" bgcolor="#FF1950">No of Vehicles</td>
+					</tr>
+			
+					<?php include('../../src/php/admin_view_report_general-accountholders-chart.php')?>
+					
+					<td class="pieword" bgcolor="yellow" align="center"><?php echo $_SESSION['u']?></td>
+					<td class="pieword" bgcolor="#035FF9" align="center"><?php echo $_SESSION['g'] ?></td>
+					<td class="pieword" bgcolor="lawngreen" align="center"><?php echo $_SESSION['h'] ?></td>
+					<td class="pieword" bgcolor="#FF1950" align="center"><?php echo $_SESSION['v'] ?></td>
+					<tr>
+				</table>
+			</div>
+			</div>
+		</form>
+        </div>			
+	</body>
+</html>

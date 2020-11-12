@@ -4,27 +4,279 @@
         <title>EasyTravels.com</title>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../../public/css/report.css">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
     </head>
     <body> 
-		<div class="login">
-            <div class="login-form">
-                <form>               
-                    <p class="para">Select Your Report</p>
-					<img src="../../public/images/report1.png" width="250px"><br />
-                    <br />
-                    <a href="../../src/php/admin_view_report_general1.php"><input type="button" value="No of Account Holders" class="packbtn"></a>
-                    <br />
-                    <a href="../../src/php/admin_view_report_general2.php"><input type="button" value="Packages & Destination" class="packbtn"></a>
-                    <br />
-					<a href="../../src/php/admin_view_report_general3.php"><input type="button" value="Most Popular Packages" class="packbtn"></a>
-                    <br />
-					<a href="../../src/php/admin_view_report_general4.php"><input type="button" value="User Comments" class="packbtn"></a>
-                    <br />
-					<a href="../../src/php/admin_view_report_general5.php"><input type="button" value="User Messages" class="packbtn"></a>
-                    <br />
-                </form>
-            </div>
+		<div class="container">
+            <form style="padding:10px;margin:10px; border:1px solid aqua; border-radius:30px; background-image:url(../../public/images/gradient-green-blue-hd-wallpaper.jpg);"> 
+				<h2 class="title" align="center" style="color:navy;"><label>Management Reports</label></h2>
+				<div class="row">
+					<div class="col-33">
+						<div style="padding:16px;margin:10px; border:1px solid aqua; border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>Account Holders</label></h2>	
+							<?php include('../../src/php/admin_view_report_general1.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>Users</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="users" name="users" value="<?php echo $_SESSION['u']?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Guides</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="guides" name="guides" value="<?php echo $_SESSION['g']?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Hotels</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?php echo $_SESSION['h']?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Vehicles</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vehicles" name="vehicles" value="<?php echo $_SESSION['v']?>" readonly><br />
+							</div>
+							</div>
+							
+							<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general-accountholders.php"><input type="button" value="View More" style="width:90%;" class="formbtn"></a>
+							</div>
+						</form>
+						</div>
+					</div>
+					<div class="col-33">
+						<div style="padding:8px;margin:10px;border:1px solid aqua;border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>Best Package</label></h2>
+							<?php include('../../src/php/admin_view_report_general3.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="pid" name="pid" value="<?php echo $_GLOBAL['packid']?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="name" name="name" value="<?php echo $_GLOBAL['name']?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Bookings</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="bookings" name="bookings" value="<?php echo $_GLOBAL['max']?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Price</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="price" name="price" value="<?php echo $_GLOBAL['price']?>" readonly><br />
+							</div>
+							</div>
+							
+							<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general-popularpackage.php"><input type="button" style="width:90%;" value="View More" class="formbtn"></a>
+							</div>
+						</form>
+						</div>
+					</div>
+					<div class="col-33">
+						<div style="padding:8px;margin:10px;border:1px solid aqua; border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>The Best User</label></h2>
+							<?php include('../../src/php/admin_view_report_financial3.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="uid" name="uid" value="<?php echo $_GLOBAL['ID'] ?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="uname" name="uname" value="<?php echo $_GLOBAL['name'] ?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?php echo $_GLOBAL['email'] ?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Booings</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?php echo $_GLOBAL['max'] ?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general-bestuser.php"><input type="button" value="View More" style="width:90%;" class="formbtn"></a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</form>
+			<form>
+				<div class="row">
+					<div class="col-33">
+						<div style="padding:16px;margin:10px; border:1px solid aqua; border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>The Best Guide</label></h2>
+							<?php include('../../src/php/admin_view_report_financial4.php')?>
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="gid" name="gid" value="<?php echo $_GLOBAL['ID'] ?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="gname" name="gname" value="<?php echo $_GLOBAL['name'] ?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Points</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="gpoints" name="gpoints" value="<?php echo $_GLOBAL['max'] ?>" readonly>
+							</div>
+							</div>
+							<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general_bestguide.php"><input type="button" value="View More" style="width:90%;" class="formbtn"></a>
+							</div>
+						</form>
+						</div>
+					</div>
+					<div class="col-33">
+						<div style="padding:8px;margin:10px; border:1px solid aqua; border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>The Best Hotel</label></h2>
+							<?php include('../../src/php/admin_view_report_financial5.php')?>
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hid" name="hid" value="<?php echo $_GLOBAL['ID'] ?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hname" name="hname" value="<?php echo $_GLOBAL['name'] ?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Points</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hpoints" name="hpoints" value="<?php echo $_GLOBAL['max'] ?>" readonly>
+							</div>
+							</div>
+							<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general_besthotel.php"><input type="button" value="View More" style="width:90%;" class="formbtn"></a>
+							</div>
+						</form>
+						</div>
+					</div>
+					<div class="col-33">
+						<div style="padding:8px;margin:10px; border:1px solid aqua; border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>The Best Vehicle</label></h2>
+							<?php include('../../src/php/admin_view_report_financial6.php')?>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="gid" name="gid" value="<?php echo $_GLOBAL['ID'] ?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Owner</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vname" name="vname" value="<?php echo $_GLOBAL['name'] ?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Points</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vpoints" name="vpoints" value="<?php echo $_GLOBAL['max'] ?>" readonly>
+							</div>
+							</div>
+							<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general_bestvehicle.php"><input type="button" value="View More" style="width:90%;" class="formbtn"></a>
+							</div>
+						</form>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<form align="center"> 
+						<a href="../../src/php/admin_view_report_general2.php"><input type="button" value="Location-Packages" class="packbtn"></a>
+						<a href="../../src/php/admin_view_report_general4.php"><input type="button" value="User Comments" class="packbtn"></a>
+						<a href="../../src/php/admin_view_report_general5.php"><input type="button" value="User Messages" class="packbtn"></a>
+					</form>
+				</div>
+			</form>
+		</div>	
         </div>
 	</body>
 </html>

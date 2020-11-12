@@ -8,6 +8,64 @@
     </head>
     <body> 
 		<div class="container">			
+			<form method="POST">			
+			<h2 class="title"><label>Search Comment</label></h2>
+				<div class="row">
+				<div class="col-25">
+					<label>Guide Rating:</label>
+				</div>
+				<div class="col-75">
+					<select name="guide" id="guide" required>
+						<option value=="5">Best</option>
+						<option value=="4">Good</option>
+						<option value=="3">Moderate</option>
+						<option value=="2">Bad</option>
+						<option value=="1">Worst</option>
+					</select> 
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-25">
+					<label>Hotel Rating:</label>
+				</div>
+				<div class="col-75">
+					<select name="hotel" id="hotel" required>
+						<option value=="5">Best</option>
+						<option value=="4">Good</option>
+						<option value=="3">Moderate</option>
+						<option value=="2">Bad</option>
+						<option value=="1">Worst</option>
+					</select> 
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-25">
+					<label>Vehicle Rating:</label>
+				</div>
+				<div class="col-75">
+					<select name="vehicle" id="vehicle" required>
+						<option value=="5">Best</option>
+						<option value=="4">Good</option>
+						<option value=="3">Moderate</option>
+						<option value=="2">Bad</option>
+						<option value=="1">Worst</option>
+					</select> 
+				</div>
+				</div>
+				
+				<div class="row">
+					<br /><input type="submit" name="formsubmit" value="SUBMIT" class="formbtn">
+				</div>
+				
+				<div style="overflow-x:auto;">
+				<table border=1 padding=50px align="center" class="viewtable">
+						<?php include('../../src/php/admin_view_report_general4-search.php')?>
+				</table>
+				</div>
+			</form>
+		</div>	
+		
+		<div class="container">			
 			<form align="center" method="POST" action='../../src/php/admin_view_report_general4.php'>			
 			<h2 class="title"><label>View Comment</label></h2>
 				<div class="row">

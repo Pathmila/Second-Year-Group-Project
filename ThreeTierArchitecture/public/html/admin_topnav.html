@@ -3,14 +3,20 @@
         <title>EasyTravels.com</title>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../../public/css/admin_topnav.css">
+        <!--<link rel="stylesheet" type="text/css" href="../../public/css/admin_topnav.css">-->
+		<link rel="stylesheet" type="text/css" href="../../public/css/user_nonnavigation.css">
     </head>
     <body>
         <div class="navbar">  
+        <div id="myDIV"> 
             <a><img src="../../public/images/logo-web.jpg" class="fakeimg"></a>
             <a href="../../src/php/admin_home_page.php"><div class="txt"><Button class="btn active">Home</button></div></a>
             <a href="../../src/php/user_nonhome_page.php"><div class="txt"><Button class="btn">Preview Website</button></div></a>
             <a href="../../src/php/logout.php" class="right"><div class="txt"><Button class="btn">LOG OUT</button></div></a>
         </div>
+		<div class="rightdate">
+			<?php include('../../src/php/date.php')?>
+        </div> 
+		</div>
     </body>
 </html>

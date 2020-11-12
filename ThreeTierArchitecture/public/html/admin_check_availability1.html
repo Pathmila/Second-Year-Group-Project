@@ -6,7 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
     </head>
-    <body> 
+    <body> 		
+        <div class="container">
+			<form align="center" method="POST" action='../../src/php/admin_check_availability1.php'>			
+			<h2 align="center" class="title"><label>Check Available Guides</label></h2>
+			<div class="row">
+				<div class="col-25">
+					<label>Select the Date:</label>
+				</div>
+				<div class="col-50">
+					<input name="date" id="date" type="date" required>   
+				</div>
+				<div class="col-25">
+					&nbsp
+					<input type="submit" name="check" value="Search" class="formbtn">
+				</div>
+				</div>
+			</form>
+			
+			<div style="overflow-x:auto;">
+			<table id="table_not_available_guides" border=1 padding=50px align="center" class="viewtable">			
+				<?php include('../../src/php/admin_check_availability1-table.php')?>
+            </table>
+			</div>
+        </div>
+		
+		
 		<div class="container">			
 			<form align="center" method="POST" action='../../src/php/admin_check_availability1.php'>			
 			<h2 class="title"><label>Search More Guide Details</label></h2>
@@ -26,23 +51,5 @@
 				</div>
 			</form>
 		</div>	
-		
-        <div class="container">
-			<h2 align="center" class="title"><label>Available Guides</label></h2>
-			<table border=1 padding=50px align="center" class="viewtable">
-			<tr class="subtitle">
-				<td>ID</td>
-				<td>Name</td>
-				<td>Birthday</td>
-				<td>Address</td>
-				<td>Email</td>
-				<td>Telephone</td>
-				<td>Details</td>
-				<td>Photo</td>
-				
-			</tr>
-			<?php include('../../src/php/admin_check_availability1-table.php')?>
-            </table>
-        </div>
     </body>
 </html>
