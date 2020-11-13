@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body>     
+        
+		<div class="container">
+        <form method="post" action="../../src/php/guide_update_profile.php" enctype="multipart/form-data">
+			<h2 class="title"><label>Update Profile</label></h2>
+            <div class="row">
+            <div class="col-25">
+                <label>Name:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="name" value="<?php echo $name?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Username:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="uname" value="<?php echo $uname?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Birthday:</label>
+            </div>
+            <div class="col-75">
+				<input name="birthday" id="birthday" type="date" value="<?php echo $dob?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Address:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="address" value="<?php echo $address?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Email:</label>
+            </div>
+            <div class="col-75">
+                <input type="email" name="email" value="<?php echo $email?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Telephone:</label>
+            </div>
+            <div class="col-75">
+                <input type="tel" name="telephone" value="0<?php echo $telephone?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Description:</label>
+            </div>
+            <div class="col-75">
+                <input type="tel" name="description" value="<?php echo $description?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Guide Image:</label>
+            </div>
+            <div class="col-75">
+                <?php echo "<img class='image' width='150px'  src='".$path.$photo1.$ex."'>";?>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="lname">Upload a photo</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="image" id="image" required>
+            </div>
+            </div>
+			
+			 <div class="row">
+				<br /><input type="submit" name="updatebtn" value="Update" class="formbtn">
+            </div>         
+			
+			<div class="row">
+				<a href="../../src/php/guide_delete_profile.php"><input type="button" name="updatebtn" value="Delete Account" class="formbtn"><br />
+			</div>
+            </form>
+        </div>
+    </body>
+</html>
