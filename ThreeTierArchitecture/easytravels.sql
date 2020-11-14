@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 12, 2020 at 07:59 PM
+-- Generation Time: Nov 14, 2020 at 09:54 AM
 -- Server version: 5.7.11-log
 -- PHP Version: 7.3.12
 
@@ -44,21 +44,21 @@ CREATE TABLE IF NOT EXISTS `account` (
 
 INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
 (1, '0', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1),
-(2, '1', 'asini', '8e4ad8be5b37252e4b9d5bb47b647382', 0),
-(3, '2', 'ruwanthi', 'b5e174fc0ed2e20e7fc238f76d043164', 0),
-(4, '3', 'sachini', '21220f324537cc5af6d8b9fcb8ab5c7c', 0),
-(5, '4', 'hansaka', '437659a8f9d6d091e74342e67c542079', 0),
-(6, '1', 'devon', 'e50da88aa796637e5e634006d6db525e', 3),
-(7, '1', 'guide', 'a0c391dc49c440fc9962168353cedde3', 2),
-(8, '2', 'guide1', 'f510e23d073d307697b845e84f4398f1', 2),
-(9, '3', 'guide2', 'f6ea0da319e7c2192998a8b48edc5024', 2),
-(10, '2', 'hotel', 'e919c49d5f0cd737285367810a3394d0', 3),
-(11, 'PE-7108', 'vehicle', '5a76e813d6a0a40548b91acc11557bd2', 4),
-(12, 'CAB-1234', 'vehicle1 ', '1be1fc3ef6f0d8596e31fee95bdb8a0e', 4),
-(13, '4', 'guide3', '59d0828e70d1b042a3828dc380a9f756', 2),
-(14, 'CAB-5555', 'vehicle2', '59d0828e70d1b042a3828dc380a9f756', 4),
-(15, '3', 'hotel2', '59d0828e70d1b042a3828dc380a9f756', 3),
-(16, '5', 'user1', '2b04927a48b1a3a928f843c0696109b8', 0);
+(2, '1', 'user', '2b04927a48b1a3a928f843c0696109b8', 0),
+(3, '2', 'user1', '2b04927a48b1a3a928f843c0696109b8', 0),
+(4, '3', 'user2', '2b04927a48b1a3a928f843c0696109b8', 0),
+(5, '4', 'user3', '2b04927a48b1a3a928f843c0696109b8', 0),
+(6, '5', 'user4', '2b04927a48b1a3a928f843c0696109b8', 0),
+(7, '6', 'user5', '2b04927a48b1a3a928f843c0696109b8', 0),
+(8, '7', 'user6', '2b04927a48b1a3a928f843c0696109b8', 0),
+(9, '8', 'user7', '2b04927a48b1a3a928f843c0696109b8', 0),
+(10, '9', 'user8', '2b04927a48b1a3a928f843c0696109b8', 0),
+(11, '10', 'user9', '2b04927a48b1a3a928f843c0696109b8', 0),
+(12, '11', 'user11', '2b04927a48b1a3a928f843c0696109b8', 0),
+(13, '12', 'user12', '2b04927a48b1a3a928f843c0696109b8', 0),
+(14, '13', 'user13', '2b04927a48b1a3a928f843c0696109b8', 0),
+(15, '14', 'user14', '2b04927a48b1a3a928f843c0696109b8', 0),
+(16, '15', 'user15', '2b04927a48b1a3a928f843c0696109b8', 0);
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `name` varchar(20) NOT NULL,
   `photo` int(20) NOT NULL,
   PRIMARY KEY (`catid`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `category`
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `categorysubcategory` (
   `catid` int(11) NOT NULL,
   `subcatid` int(11) NOT NULL,
   PRIMARY KEY (`cat-subcatid`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `categorysubcategory`
@@ -133,18 +133,6 @@ CREATE TABLE IF NOT EXISTS `comment` (
   PRIMARY KEY (`cid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `comment`
---
-
-INSERT INTO `comment` (`cid`, `uid`, `details`, `photo1`, `photo2`, `photo3`, `hotel`, `hotelrating`, `guide`, `guiderating`, `vehicle`, `vehiclerating`) VALUES
-(1, 1, 'Best journey.', 1, 2, 3, '1', 4, '2', 4, 'PE-7108', 3),
-(2, 1, 'The best trip ever.', 4, 5, 6, '2', 4, '2', 3, 'PE-7108', 4),
-(3, 2, 'Well experienced.', 7, 8, 9, '1', 5, '3', 4, 'PE-7108', 3),
-(4, 4, 'Joyfull weekend with easytravels.', 10, 11, 12, '1', 4, '1', 4, 'CAB-1234', 4),
-(5, 3, 'Greate work easytravels!!', 13, 14, 15, '2', 3, '2', 4, 'CAB-1234', 3),
-(6, 3, 'good.', 16, 17, 18, '1', 3, '1', 4, 'PE-7108', 4);
-
 -- --------------------------------------------------------
 
 --
@@ -158,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `destination` (
   `description` text NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`destid`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `destination`
@@ -199,7 +187,20 @@ INSERT INTO `destination` (`destid`, `name`, `description`, `photo`) VALUES
 (32, 'Jaffna', 'JAFFNA 411 KM (255 Miles) From Colombo\r\n<br /><br />\r\n\r\nAlso known as Yaalpanam among Tamils. Located on the northern-most part of Sri Lanka. One of the oldest places of inhabition in South-east Asia. Mostly populated by Tamils along with a handful of Sri Lankan Muslims. However it is one of the most populated cities of Sri Lanka. Sri Lankan Tamil is the main language spoken in Jaffna along with a little bit of sinhala , however english is widely understood and spoken.\r\n<br /><br />\r\n\r\nJaffna Fort\r\n<br /><br />\r\n\r\nBuilt during the late 1600s by the Dutch. Close to the fort is a British-period house, in which Virginia Woolf\'s husband Leonard Woolf lived for sometime it was mentioned in his memoir \'Growing\'.\r\n<br /><br />\r\n\r\nTemples\r\n<br /><br />\r\n\r\nHindu Kiovels or temples are one of the major attractions in Jaffna, the most famous kovil is the Nallur Kovil, which reflects the Dravidian architecture and style beautifully. The Kandaswamy Kovil is also mostly visited by tourists which is one of the oldest kovils in Sri Lanka. The kovil was built during the 10th century. However the original Kovil was demolished by the Portugese during the colonial era.\r\n<br /><br />\r\n\r\nFestivals\r\n<br /><br />\r\n\r\nJaffna is a very cultural place due to the fact that Tamils belong to the Darvidian culture. Colourful festivals are a huge part of the culture Deepawali, Navarathri and Shivarathri are the few among the many festivals.\r\n<br /><br />\r\n\r\n', 58),
 (33, 'Nagadeepa', 'NAGADEEPA 441 KM (274 Miles) From Colombo\r\n<br /><br />\r\n\r\nNagadeepa or Nainativu is one of the smallest island in the Gulf of mannar. The only way to the island is via a boat. It is both a place of religious significance and beauty. It is one of the places in Sri Lanka that they Buddha was said to have visited by the Great Chronicle of Mahavamsa. The island is sandy and flat and is home to a lot of palm trees. The island is located abt 30 km away from Jaffna. There are two main jetties in order to enter the island , one leads to a hindu temple and the other to the Nagadeepa Vihara.\r\n<br /><br />\r\n\r\nHistory\r\n<br /><br />\r\n\r\nThe island was earlier visited by mechants who wanted to buy conch shells. However the major historical event was the Buddha\'s visit to Nagadeepa to settle a dispute between the two kings of the Nagas Chulodara and Mahodara. Since the Buddha advocated non-violence and compassion somehow he was able to make the kings settle the dispute. The Kings later presented a throne to the Buddha who kindly refused and is now enshrined in the Nagadeepa Stupa and thus makes it one of main places of travel for Buddhist pilgrims.\r\n<br /><br />\r\n\r\nTemples\r\n<br /><br />\r\n\r\nOne of the most visited holy places for Buddhists. The Vihara houses two very ancient artefacts which are placed strategically at the entrance on either side. A large ancient anchor and a big stone with an inscription written by King Parakramabahu I. The stupa of the vihara enshrines a throne that was built by the two kings who wanted to express their gratitude to the Buddha who refused the token of appreciation. The Hindu Temple is also a major attractions with its distinctive red and white walls.\r\n<br /><br />', 59),
 (34, 'Negombo', 'NEGOMBO 40 KM (25 Miles) From Colombo\r\n<br /><br />\r\n\r\nNegombo (Migamuwa) is a town of about 40 km north of Colombo. It has a small port and its economy is based on centuries old fishing industries and tourism. During the Dutch and Portuguese invasion it was used as a trading port.\r\n<br /><br />\r\n\r\nBeach\r\n<br /><br />\r\n\r\nThe beaches of Negombo are most of the time less crowded and unexplored which means that the beach is mostly to yourself. Recreational sports such as Diving and surfing are famous among tourists. The Muthurajawela Marsh off Negombo lagoon just south of the town is a unique wetland habitat and the largest marsh in Sri Lanka popular with eco enthusiasts.\r\n<br /><br />\r\n\r\nKite Surfing\r\n<br /><br />\r\n\r\nThe latest exhilarating extreme sport in Sri Lanka, it is a fusion of Kite flying , Wind Surfing , Wave boarding and Surfing. It is a bit difficult to master however, well qualified trainers are available at your disposal so that within a week you will be able to kite-surf like a pro.\r\n<br /><br />\r\n\r\nChurches\r\n<br /><br />\r\n\r\nNegombo has a majority of Roman Catholics since the European Colonization. Negombo is also known as Little Rome due to Portugese Era Churches.\r\n<br /><br />', 60),
-(35, 'Haputale', 'HAPUTALE 173 KM (107 Miles) From Colombo\r\n<br /><br />\r\n\r\nLocated in the Badulla District, and is 4695 ft high above the sea level. It is one of the places with a very rich biodiversity and allows a very beautiful view of the Southern Plains. It is approximately 193 km away from Colombo. The town is no doubt one of the spectacular places in Sri Lanka. Haputale is makes hiking and trekking a great exhilarating exercise. The major attraction of Haputale is the Liptons seat, Adisham Bungalow and the famous Dambatenna tea factory.\r\n<br /><br />\r\n\r\nThe Climate\r\n<br /><br />\r\n\r\nDue to its elevation the temperature is significantly lower than other parts of the country, running a temperature of approximately less than 25 degrees.\r\n<br /><br />\r\n\r\nAdisham\'s Bungalow\r\n<br /><br />\r\n\r\nOne of the few remnants of the British Colonial, during which a Kentish gentleman built this magnificent mansion which is also influenced by post victorian architecture. Right next to it is the Tangalamalai Bird Santuary where paradise flycatchers and many more birds of the such can be seen.\r\n<br /><br />\r\n\r\nLipton\'s Seat\r\n<br /><br />\r\n\r\nThe Lipton tea factory founder was said to have bought the estate on which the factory built because he fell in love with the breath-taking panoramic view, which today is known as the Lipton\'s seat, however the mist tends to set in during the evening so the journey up the lipton\'s seat should be made early in the morning.\r\n\r\nDambatenna Tea Factory\r\n<br /><br />\r\n\r\n10 km along the road, east of Haputale the famous Tea factory built by Sir Thomas Lipton. The factory is open for visitors where you can also get a taste of the best tea in the whole world.\r\n<br /><br />\r\n<br /><br />', 61);
+(35, 'Haputale', 'HAPUTALE 173 KM (107 Miles) From Colombo\r\n<br /><br />\r\n\r\nLocated in the Badulla District, and is 4695 ft high above the sea level. It is one of the places with a very rich biodiversity and allows a very beautiful view of the Southern Plains. It is approximately 193 km away from Colombo. The town is no doubt one of the spectacular places in Sri Lanka. Haputale is makes hiking and trekking a great exhilarating exercise. The major attraction of Haputale is the Liptons seat, Adisham Bungalow and the famous Dambatenna tea factory.\r\n<br /><br />\r\n\r\nThe Climate\r\n<br /><br />\r\n\r\nDue to its elevation the temperature is significantly lower than other parts of the country, running a temperature of approximately less than 25 degrees.\r\n<br /><br />\r\n\r\nAdisham\'s Bungalow\r\n<br /><br />\r\n\r\nOne of the few remnants of the British Colonial, during which a Kentish gentleman built this magnificent mansion which is also influenced by post victorian architecture. Right next to it is the Tangalamalai Bird Santuary where paradise flycatchers and many more birds of the such can be seen.\r\n<br /><br />\r\n\r\nLipton\'s Seat\r\n<br /><br />\r\n\r\nThe Lipton tea factory founder was said to have bought the estate on which the factory built because he fell in love with the breath-taking panoramic view, which today is known as the Lipton\'s seat, however the mist tends to set in during the evening so the journey up the lipton\'s seat should be made early in the morning.\r\n\r\nDambatenna Tea Factory\r\n<br /><br />\r\n\r\n10 km along the road, east of Haputale the famous Tea factory built by Sir Thomas Lipton. The factory is open for visitors where you can also get a taste of the best tea in the whole world.\r\n<br /><br />\r\n<br /><br />', 61),
+(36, 'Pinnawala Elephant Orphanage', 'The Pinnawala Elephant Orphanage is situated northwest of the town of Kegalle, halfway between the present capital Colombo and the ancient royal residence Kandy. It was established in 1975 by the Sri Lanka Wildlife Department in a 25 acre coconut property adjoining the Maha Oya River. The orphanage was originally founded in order to afford care and protection to the many orphaned Elephants found in the jungles of Sri Lanka.<br /> <br />\r\nLocation:<br />\r\nPinnawala (Pinnawela) Elephant Orphanage is located in the village Pinnawala in the district of Kegalle at a distance of 90km from Colombo.\r\n\r\n', 62),
+(37, ' Horton Plains National Park', 'Horton National Park is a ‘food for the soul’ kind of mesmerizing locale. The park is perched in the shadows of the country’s 2nd and 3rd highest mountains, Kirigalpota and Totapola. The place is also termed as world’s end due to its undaunting mysterious views of waterfalls, misted lakes and earthy species of flora and fauna. The national park is actually a plateau and is 2000m high. It is better to start early in the morning to witness this heavenly place.<br /> <br />\r\n\r\nLocation: 11 kms approx from Ohiya.<br /> <br />\r\n\r\nHighlights: An array of wildlife such as Samba deers, leopards, wild boars, purple faced langoor; an ideal site for birdwatchers as you may encounter a variety of flying wonders such as bulbul,                                Ceylon blackbird, Ceylon white eyed arrenga, mountain hawk etc; the epic walk to world’s end(4kms) and Farr Inn hunting lodge.<br /> <br />\r\n\r\nPrice: Adult – 1895 Child: 1011.<br /> <br />\r\n\r\nTimings: 6 am to 6 pm', 63),
+(38, 'Sinharaja Forest Reserve', 'Declared as a World Heritage Site by UNESCO, Sinharaja Forest Reserve (kingdom of the lion), is a paradise for nature and wildlife lovers. It is home to a vast number of endemic species of birds and mammals of Sri Lanka. About 95 per cent of Sri Lankan endemic birds and more than 50 per cent of endemic mammals are known to have their habitats in this Forest Reserve.<br /> <br />\r\n\r\nYear round, the forest is covered by plenty of rain clouds. It is one of the famous places to visit in Galle. You can experience the leisurely pace of wildlife and the splendour of dense and copious evergreen rainforests. <br /> <br />\r\n\r\n\r\n\r\nLocation: Sinharaja Forest Reserve, Southern Province <br /> <br />\r\n\r\nTimings: Opens daily from 6:30 AM to 6 PM<br /> <br />\r\n\r\nPrice: Approximate price ranges from INR 260 to INR460 (664 LKR to 1160 LKR)', 64),
+(39, 'Attidiya Bird Sanctuary', 'This is probably the only place in Colombo that provides shelter to at least 50 different species of birds (both local and migratory). \r\n\r\nHighlights: A large number of water monitors, butterflies, insects and other birds tend to catch your attention as you walk through the muddy paths of the sanctuary. The biodiversity of this place is highly commendable, as you cannot help but feel awe-struck at the diverse species of birds here. As the place is replete with mosquitoes, you need to be fully covered while visiting the park.<br /> <br /> \r\n\r\nLocation: The sanctuary is located at Boralesgamuwa in Colombo.<br /> <br /> \r\n\r\nTimings: The sanctuary is open all through the day; however early mornings and evenings are best to visit migratory birds.<br /> <br /> \r\n\r\nBest Season to Visit: You must visit this place during the months between December and January, as this is the peak season for migratory birds to seek protection here.<br /> <br /> \r\n\r\nPrice: Entry to the place is free of cost.', 65),
+(40, 'Perandeniya Botanical Gardens', 'Peradeniya Gardens is a spacious 147 acre of natural extravaganza consisting of more than 4000 species of plants, and 10,000 varied kinds of trees, incidentally serves as the largest garden of Sri Lanka.<br />\r\n\r\nThe unique and rarest collection in these gardens is the Giant Bamboo of Burma which grows 12 inches each day to a height of 40 meters. Apart from this other amazing collections include Javan fig tree, Cannonball tree, Double Coconut Palm and about 200 other varieties of palm trees and versatile collection of flora.<br /> <br />\r\n\r\nThe Peradeniya Botanical Garden is one prime tourist attraction of hill country and remains quite flooded with tourists every weekend. One can pack some food to enjoy an open air picnic here or can relish the cafeteria inside serving local and western cuisine.<br /> <br />\r\n\r\nLocation: 5.5km from Kandy <br /> <br />\r\n\r\nBest Time: 7:30am to 5:00pm ', 66),
+(41, 'Nilaveli Beach ', 'Nilaveli Beach is a stretch of beach which is situated approximately 16 kilometres North of Trincomalle, passing a thriving lagoon on either side and lush coconut palm groves and hordes of cattle, note that the people in the area are predominantly Hindu and consider the cows sacred. Arriving at the hamlet of “Errakkandy”, a sharp right turn will take you down a gravel road to Nilaweli beach, almost a kilometre of in lenght, white sandy beach with gentle surf. Across the beach about two kilometres into the ocean you will see the famous pigeon island, named due to rock pigeons roosting on it by the hundreds and crystal clear water around it to snorkel on to the clear depths of a reef. Further up North you will see a cluster of reddish rocks which are referred to as the red rock beach.', 67),
+(42, 'Vedda Village Tours to Dambana', 'Sri Lanka’s Aborigines’, or the Veddha’s meaning “people of the forest” of Sri Lanka has a history much older than prince Vijaya’s landing in 5th century BC and the origins of the Sinhala race. Archaeological evidence suggest that modern Veddha’s Neolithic ancestors inhabited this island as far back as 10,000 BC with. Once roaming the Great Plains’ of the north central region to the central mountains, today the remaining Veddha population are confined to Dambana which is close to Maduru oya sanctuary.<br /> <br />\r\n\r\nThey are essentially hunter gatherer forest dwellers without much change in their life style from Stone Age to modern times. The language used by them is an ancient dialect of Sinhala, staple diet being venison, Veddha’s are allowed to hunt legally to sustain themselves within certain areas, are also expert fisherman. Veddha’s also collect bee’s honey and exchange it with the locals for axe blades and cloth.', 68),
+(43, 'Batadombalena Cave', 'A hike from the nearest township of Sudugala, and then a climb of about 50m will bring you to the mouth of this fairly large cave, is a very important archaeological site since it contains evidence of human habitation from 32,000 BC and the 10 skeletal remains of the oldest human remains of Sri Lanka were also excavated from this cave, the “Homo sapiens balangodensis”, the Balangoda man may also have been responsible for the creation of Horton plains for agriculture.', 69),
+(44, 'Mahalenama Cave', 'Located between Kumana & Lahugala-Kithulana National parks this ancient Buddhist monastery is also believed to be the place where according to preserved Vedda legend for us a recollection of a lost race known as the Nittevo. There has been much controversy as to the identity of this folk. Some hold that the Nittevo are a lost tribe of Negritoes while others believe them to have been some kind of ape-man. Yet others identify them with an extinct species of bear known as rahu valaha. <br /> <br />\r\n\r\nThe Nittevo are said to have been a dwarfish race of men who lived in the Mahalenama region now within the Yala East Intermediate Zone and the Tamankaduva area. These folk are believed to have been exterminated by the Veddas about 250 years ago.', 70),
+(45, 'Birds park Hambantota', 'Bird park is one of the very few destinations for bird and nature lovers looking for a calm and relaxed experience, yet with ample time to view, study and enjoy the beasts of the air.<br />\r\n\r\nMost visitors who enjoy our park would like to collect a memento or share their experiences with their loved ones when they get back home. You can do your souvenir shopping right within our own gift shop.<br />\r\n\r\nWith over 35 acres of land the park gives visitors the opportunity to meet and interact with our feathered residents. We invite you to come and enjoy!<br />\r\n\r\nIf you are coming from Colombo take Southern Highway to Matara and come to Hambanthota Town.Then come to Katuwewa Junction and turn left. 7km From Katuwewa junction you will find our Birds Research Center & Resort.<br /> <br />\r\n\r\n\r\nPrice :<br />\r\nRates for Locals: LKR 250.00<br />\r\nRates for Foreigners:  LKR 1000.00', 71),
+(46, 'Sabaragamuwa Maha Saman Devalaya', 'The Sabaragamuwa Maha Saman Devalaya is considered the main Devalaya of deity Saman except for the Shrine at top of Sri Pada.<br />\r\n\r\nThe history speaks of a temple at Ratnapura area since the time of king Dutugemunu of Anuradhapura Kingdom, But the recent history starts from Dambadeniya period.<br />\r\n\r\n\r\n A court Minister called Aryakamadeva had come over to Ratnapura to make a vow for gemming, and if lucky to build a Devalaya to keep God Sumana Saman’s statue. After a sucessful gem mining expedition, he is said to have built the first devalaya dedicated to God Saman at Ratnapura. Although the devalaya was highly influenced by Hindu culture, it remained a Buddhist place of worship throughout the years.', 72),
+(47, 'Mihinthalaya ', 'In the 3rd century BC, area of Mihintale (mihinthalaya) was a thick jungle area inhibited by wild animals and was a hunting ground reserved for the royals. All this changed in 250 BC when the son of the Indian Emperor Asoka, Mahinda Maha Thero arrived at the Missaka Pauwa to meet king Devamnampiyatissa for the first time and asked the famous questions to decide whether he is intelligent enough to understand the philosophy of the Buddha. Initially Mahinda Maha Thero’s residence, but later Mihintale (mihinthalaya) became a main center for Theravada Buddhism and is considered the cradle of Buddhism in Sri Lanka.<br /> <br />\r\n\r\nMihinthale is a collection of four mountains each about 1000 feet in height.<br />\r\n\r\nThey are<br />\r\n\r\nMihinthalawa<br />\r\nAth Vehera mountain<br />\r\nAnaikutti mountain<br />\r\nRajagiri Lena mountain<br />\r\nMihinthalawa is the main mountain and where the Aradhana gala (The rock of invitation) and the main Mahaseya stupa is situated.<br /><br />\r\n\r\nalternate names : mihinthalawa, Mihinthalaya, mihinthale', 73),
+(49, 'Elephant Rock - ATHUGALA TEMPLE', 'This rock overlooking Kurunegala and cutting the city in two offers a unique panorama on the city, its lake and surrounding area. It is a very popular place of visit. It was he who gave his name to the city. In Sinhala, kurune means elephant defense and gala means rock. You can reach its summit by a road about 1,5 km from Wathhimi Road. There is a Buddhist temple (Athugala Temple), a communication tower from Sri Lanka Telecom and a huge statue of Buddha, the main point of interest on the site. This statue, inaugurated in 2003 after 27 months of work, is metres high, including the base. You can penetrate inside. An information panel placed in the approach of the statue recalls the history of the city which was the capital of the kingdom from 1341 to 1293 under the name Hasthiasailapura. Near the access road, you can see a former royal basin dug in the rock.\r\n\r\n', 74);
 
 -- --------------------------------------------------------
 
@@ -211,6 +212,7 @@ DROP TABLE IF EXISTS `guide`;
 CREATE TABLE IF NOT EXISTS `guide` (
   `gid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) NOT NULL,
+  `charge` int(11) NOT NULL,
   `birthday` date NOT NULL,
   `address` varchar(500) NOT NULL,
   `telephone` int(11) NOT NULL,
@@ -218,17 +220,7 @@ CREATE TABLE IF NOT EXISTS `guide` (
   `description` text NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`gid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `guide`
---
-
-INSERT INTO `guide` (`gid`, `name`, `birthday`, `address`, `telephone`, `email`, `description`, `photo`) VALUES
-(1, 'K. S. Sumedha De Silva', '1985-11-21', 'No. 45, main road, Kalaniya', 774567823, 'guidesumedha@gmail.com', 'Best experiences in this field.', 1),
-(2, 'S. L. Perera', '1995-07-07', 'No. 45, main road, Colombo', 774567890, 'slperera@gmail.com', 'Best experiences in this field.', 2),
-(3, 'K.T. Priyasad', '1992-03-07', 'No. 45, main road, Kaluthara', 774567823, 'pryasad@gmail.com', 'Best experiences in this field.', 3),
-(4, 'guide3', '1997-06-12', 'guide3', 774567823, 'guide3@v.v', 'guide3', 4);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -242,18 +234,7 @@ CREATE TABLE IF NOT EXISTS `guideavailability` (
   `gid` int(11) NOT NULL,
   `availability_date` varchar(50) NOT NULL,
   PRIMARY KEY (`gaid`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `guideavailability`
---
-
-INSERT INTO `guideavailability` (`gaid`, `gid`, `availability_date`) VALUES
-(7, 1, '2020-11-25'),
-(8, 1, '2020-11-28'),
-(10, 2, '2020-11-26'),
-(11, 2, '2020-11-28'),
-(13, 1, '2020-11-24');
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -277,16 +258,7 @@ CREATE TABLE IF NOT EXISTS `hotel` (
   `description` varchar(500) NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`hid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `hotel`
---
-
-INSERT INTO `hotel` (`hid`, `name`, `address`, `telephone`, `email`, `singleroomprice`, `doubleroomprice`, `familyroomprice`, `singlerooms`, `doublerooms`, `familyrooms`, `description`, `photo`) VALUES
-(1, 'Devon Hotel', '51 Ampitiya Rd, Kandy 20160', 812235164, 'hoteldevon@gmail.com', 1500, 2500, 3500, 5, 5, 5, 'Located in Kandy. Best conditions with best facilities.', 1),
-(2, 'Amari', 'No. 45, main road, Galle', 774567823, 'amari@gmail.com', 2000, 4000, 6000, 15, 15, 15, 'Best experiences with good Conditions.', 2),
-(3, 'Hotel2', 'Hotel2', 774567823, 'Hotel2@v.v', 2000, 4000, 6000, 10, 5, 6, 'Hotel2', 3);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -303,18 +275,7 @@ CREATE TABLE IF NOT EXISTS `hotelavailability` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`haid`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `hotelavailability`
---
-
-INSERT INTO `hotelavailability` (`haid`, `hid`, `availability_date`, `singlerooms`, `doublerooms`, `familyrooms`) VALUES
-(3, 2, '2020-11-25', 4, 8, 8),
-(13, 2, '2020-11-20', 2, 0, 0),
-(10, 2, '2020-11-18', 7, 7, 7),
-(11, 2, '2020-11-28', 7, 7, 7),
-(12, 1, '2020-11-27', 1, 1, 1);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -330,14 +291,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `telephone` int(11) NOT NULL,
   `details` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `messages`
---
-
-INSERT INTO `messages` (`id`, `name`, `email`, `telephone`, `details`) VALUES
-(1, 'R. Hemachandra', 'ruwanthi@gmail.com', 774567890, 'I need to create a travel package regarding three days in Jaffna area.');
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -358,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `package` (
   `photo2` int(11) NOT NULL,
   `photo3` int(11) NOT NULL,
   PRIMARY KEY (`packid`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `package`
@@ -384,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `packdestination` (
   `packid` int(11) NOT NULL,
   `destid` int(11) NOT NULL,
   PRIMARY KEY (`packdesid`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `packdestination`
@@ -424,21 +378,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `telephone` int(11) NOT NULL,
   `address` varchar(500) NOT NULL,
   PRIMARY KEY (`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `payment`
---
-
-INSERT INTO `payment` (`pid`, `resvid`, `amount`, `date`, `name`, `email`, `telephone`, `address`) VALUES
-(1, 1, 16000, '08/08/2020', 'Asini', 'asinipathmila@gmail.com', 773123456, 'No. 45, main road, Ambalangoda'),
-(2, 2, 5000, '08/10/2020', 'Sumith', 'sumith@gmail.com', 773123456, 'No. 45, main road, Ambalangoda'),
-(3, 3, 12000, '08/10/2020', 'Lekha', 'lekha@gmail.com', 773123456, 'No. 45, main road, Ambalangoda'),
-(4, 4, 12000, '08/11/2020', 'Ruwanthi', 'ruwanthi@gmail.com', 773123456, 'Rathnapura'),
-(5, 5, 18000, '08/11/2020', 'Sachini', 'sachini@gmail.com', 773123456, 'Matara'),
-(6, 6, 24000, '08/11/2020', 'Hansaka', 'hansaka@gmail.com', 773123456, 'No. 45, main road, Kaluthara'),
-(7, 7, 6000, '10/11/2020', 'Asini', 'asinipathmila@gmail.com', 773123456, 'Ambalangoda'),
-(8, 8, 15000, '10/11/2020', 'Asini', 'asinipathmila@gmail.com', 773123456, 'Ambalangoda');
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -457,21 +397,7 @@ CREATE TABLE IF NOT EXISTS `resavation` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`resvid`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `resavation`
---
-
-INSERT INTO `resavation` (`resvid`, `packid`, `uid`, `date`, `travelers`, `singlerooms`, `doublerooms`, `familyrooms`) VALUES
-(1, 2, 1, '2020-11-18', 4, 0, 0, 1),
-(2, 6, 1, '2020-11-28', 5, 1, 2, 0),
-(3, 8, 1, '2020-12-11', 4, 0, 0, 1),
-(4, 4, 2, '2020-11-11', 4, 4, 0, 0),
-(5, 4, 3, '2020-12-03', 6, 2, 2, 0),
-(6, 4, 4, '2020-12-09', 8, 0, 4, 0),
-(7, 5, 1, '2020-11-27', 3, 1, 1, 0),
-(8, 4, 1, '2020-11-26', 5, 2, 2, 0);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -511,18 +437,28 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(200) NOT NULL,
   `telephone` int(11) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`uid`, `name`, `address`, `email`, `telephone`) VALUES
-(1, 'Asini Pathmila Silva', 'No.73, Maha Ambalangoda, Ambalangoda', 'asinipathmila@gmail.com', 774567823),
-(2, 'Ruwan Hemachandra', 'No. 45, main road, Rathnapura', 'ruwanthi@gmail.com', 774567823),
-(3, 'Sachini Maneesha', 'No. 35, main road, Matara', 'sachini@gmail.com', 774567823),
-(4, 'Hansaka Sadaruwan ', 'No. 25, main road, Kaluthara', 'hansaka@gmail.com', 774567823),
-(5, 'user1', 'user1', 'user1@d.c', 774567823);
+(1, 'Asini Pathmila Silva', 'No. 45, main road, Ambalangoda', 'asinipathmila@gmail.com', 774567823),
+(2, 'Ruwan Hemachandra', 'No. 25, main road, Rathnapura', 'ruwanthi@gmail.com', 774567823),
+(3, 'Hansaka Sadaruwan ', 'No. 45, main road, Kaluthara', 'hansaka@gmail.com', 774567823),
+(4, 'Sachini Maneesha', 'No. 45, main road, Matara', 'sachini@gmail.com', 774567823),
+(5, 'Medani Gunathilaka', 'No. 45, main road,  Kagalle', 'medani@gamil.com', 774567823),
+(6, 'Uvini De Silva', 'No. 45, main road, Piliyandara', 'uvini@gmail.com', 774567823),
+(7, 'Sandeepa Ranathunga', 'No. 45, main road, Galle', 'sandeepa@gmail.com', 774567823),
+(8, 'Chanaka Prasad', 'No. 45, main road, Matara', 'chanaka@gmail.com', 774567823),
+(9, 'Shifna Shafeek', 'No. 45, main road, Colombo', 'shifna@gmail.com', 774567823),
+(10, 'Anushka Dharshana', 'No. 45, main road, Badulla', 'anushka@gmail.com', 774567823),
+(11, 'Nuwan Fernando', 'No. 45, main road, Moratuwa', 'nuwan@gmail.com', 774567823),
+(12, 'Ayomal Praveen', 'No. 45, main road, Dankotuwa', 'ayomal@gmail.com', 774567823),
+(13, 'Chanaka Wickramasinghe', 'No. 45, main road, Kandy', 'chanakawic@gmail.com', 774567823),
+(14, 'Hirusha Chamod', 'No. 55, main road, Ambalangoda', 'hirusha@gmail.com', 774567890),
+(15, 'Aveesha Jayawardhana', 'No. 45, main road, Gampaha', 'aveesha@gmail.com', 774567890);
 
 -- --------------------------------------------------------
 
@@ -534,6 +470,7 @@ DROP TABLE IF EXISTS `vehicle`;
 CREATE TABLE IF NOT EXISTS `vehicle` (
   `vid` varchar(11) NOT NULL,
   `name` varchar(500) NOT NULL,
+  `charge` int(11) NOT NULL,
   `email` varchar(200) NOT NULL,
   `address` varchar(500) NOT NULL,
   `telephone` int(11) NOT NULL,
@@ -542,15 +479,6 @@ CREATE TABLE IF NOT EXISTS `vehicle` (
   `photo` varchar(20) NOT NULL,
   PRIMARY KEY (`vid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `vehicle`
---
-
-INSERT INTO `vehicle` (`vid`, `name`, `email`, `address`, `telephone`, `type`, `details`, `photo`) VALUES
-('CAB-1234', 'W. S. Silva', 'wssilva@gmial.com', 'No. 45, main road, Colombo', 774567890, 'car - 04 seats', 'With good conditions and best service.', '2'),
-('PE-7108', 'F. G. Perera', 'fgperera@gmail.com', 'No. 45, main road, Matara', 774567823, 'van - 10 seats', 'With good conditions and best service.', '1'),
-('CAB-5555', 'Kamal Silva', 'kavini@gamail.com', 'Polonnaruwa', 774567823, 'car - 04 seats', 'CAB-5555', '3');
 
 -- --------------------------------------------------------
 
@@ -564,16 +492,7 @@ CREATE TABLE IF NOT EXISTS `vehicleavailability` (
   `vid` varchar(20) NOT NULL,
   `availability_date` varchar(50) NOT NULL,
   PRIMARY KEY (`vaid`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `vehicleavailability`
---
-
-INSERT INTO `vehicleavailability` (`vaid`, `vid`, `availability_date`) VALUES
-(3, 'CAB-5555', '2020-11-14'),
-(4, 'PE-7108', '2020-11-28'),
-(6, 'PE-7108', '2020-11-24');
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
