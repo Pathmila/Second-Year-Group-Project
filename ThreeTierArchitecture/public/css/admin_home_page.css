@@ -1,10 +1,22 @@
 body{
-    background-color: #262626;
-    
+	background-image: url(../../public/images/gradient-green-blue-hd-wallpaper.jpg);
 }
 
-.container{
-    width: 100%;
+.container {
+  border-radius: 10px;
+  background-color:black;
+  padding: 40px;
+  opacity:0.8;
+  width:75%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  box-shadow:0px 0px 20px #000;
 }
 
 .wallpaper{
@@ -13,7 +25,7 @@ body{
 
 @media screen and (max-width: 400px) {
     .container{
-        width: 100%;
+        display: none;
     }
     .wallpaper{
         display: none;

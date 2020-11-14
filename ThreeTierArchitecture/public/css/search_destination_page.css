@@ -1,3 +1,6 @@
+body{
+    background-image: url(../../public/images/gradient-green-blue-hd-wallpaper.jpg);
+}
 .container{
     color: black;
 }
@@ -19,13 +22,13 @@ input[type="text"]{
 
 td{
     text-align: center;
-    font-size: 1vw;;
+    font-size: 1vw;
 }
 
 .table{
     padding: 5px 5px;
     background-color: black;
-	opacity: 0.9;
+	opacity: 0.8;
     color: white;
 }
 
@@ -140,9 +143,6 @@ select{
     td{
         text-align: center;
         font-size:4vw;
-    }
-    body{
-        background-image: url(../../public/images/gradient-green-blue-hd-wallpaper.jpg);
     } 
     .container td{
         width: 33.33%;
