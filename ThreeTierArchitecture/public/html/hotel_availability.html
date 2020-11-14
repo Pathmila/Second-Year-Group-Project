@@ -11,7 +11,7 @@
 	<div class="container">
 		<form  method="post"  action="../../src/php/hotel_availability.php">  
 			
-			<h2 class="title"><label>Not Available Room Details</label></h2>
+			<h2 class="title"><label>Insert Unavailable Rooms</label></h2>
 			<div class="row">
 				<div class="col-25">
 					<label>Date:</label>
@@ -23,28 +23,28 @@
 			
             <div class="row">
             <div class="col-25">
-                <label>No of available single rooms</label>
+                <label>No of unavailable single rooms</label>
             </div>
             <div class="col-75">
-                <input name="sarooms" id="sarooms"  value="<?=(isset($sarooms) ? $sarooms : "")?>" placeholder="Enter the no of not available single rooms for the selected date." type="number" min="0" max="800" step="1" required >
+                <input name="sarooms" id="sarooms"  value="<?=(isset($sarooms) ? $sarooms : "")?>" placeholder="Enter the no of unavailable single rooms for the selected date." type="number" min="0" max="800" step="1" required >
             </div>
             </div>
 			
 			<div class="row">
             <div class="col-25">
-                <label>No of available double rooms</label>
+                <label>No of unavailable double rooms</label>
             </div>
             <div class="col-75">
-                <input name="darooms" id="darooms" value="<?=(isset($darooms) ? $darooms : "")?>" placeholder="Enter the no of not available double rooms for the selected date." type="number" min="0" max="800" step="1" required >
+                <input name="darooms" id="darooms" value="<?=(isset($darooms) ? $darooms : "")?>" placeholder="Enter the no of unavailable double rooms for the selected date." type="number" min="0" max="800" step="1" required >
             </div>
             </div>
 			
 			<div class="row">
             <div class="col-25">
-                <label>No of available family rooms</label>
+                <label>No of unavailable family rooms</label>
             </div>
             <div class="col-75">
-                <input name="farooms" id="farooms" value="<?=(isset($farooms) ? $farooms : "")?>" placeholder="Enter the no of not available family rooms for the selected date." type="number" min="0" max="800" step="1" required >
+                <input name="farooms" id="farooms" value="<?=(isset($farooms) ? $farooms : "")?>" placeholder="Enter the no of unavailable family rooms for the selected date." type="number" min="0" max="800" step="1" required >
             </div>
             </div>
 			
@@ -54,7 +54,7 @@
 		</form>		
 	</div>	
 	<div class="container">
-		<h2 class="title" align="center"><label>Not Available Dates & Room Details</label></h2>
+		<h2 class="title" align="center"><label>Unavailable Dates & Room Details</label></h2>
 		<div style="overflow-x:auto;">
 		<table border=1 padding=50px align="center" class="viewtable">
 			<?php include('../../src/php/hotel_availability-table.php')?>

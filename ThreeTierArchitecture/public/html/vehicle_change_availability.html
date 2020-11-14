@@ -6,11 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
     </head>
-    <body>     
-        
+    <body>            
 		<div class="container">
         <form method="post" action="../../src/php/vehicle_change_availability.php">
-			<h2 class="title"><label>Enter Not Availabile Dates</label></h2>
+			<h2 class="title"><label>Enter Unavailable Dates</label></h2>
             <div class="row">
 				<div class="col-25">
 					<label>Date:</label>
@@ -24,32 +23,20 @@
 			</div>
             </form>
 		</div>
-		<div class="container">
-			<form method="post" action="../../src/php/vehicle_change_availability.php">
-				<h2 class="title"><label>Delete Not Availabile Dates</label></h2>
-
-				<div class="row">
-					<div class="col-25">
-						<label>Date:</label>
-					</div>
-					<div class="col-50">			
-						<input name="deletedate" id="deletedate" type="date" required>
-					</div>
-					<div class="col-25">	
-						<input type="submit" name="formdelete" value="Delete" class="formbtn">
-					</div>
-				</div>
-			</form>
-        </div>
+		
 		
 		<div class="container">
 			<div style="overflow-x:auto;">
+			<h2 class="title" align="center"><label>Unavailable Dates</label></h2>
 			<table border=1 padding=50px align="center" class="viewtable">
 				<tr class="subtitle">
-					<td>Not Availabile Dates</td>
+					<td>Unavailable Dates</td>
 				</tr>
 					<?php include('../../src/php/vehicle_change_availability-dates.php')?>
             </table>	
+			</div>
+			<div class="row">
+				<br /><a href="../../src/php/vehicle_change_availability-delete.php"><input type="button" value="Delete" class="formbtn"></a>
 			</div>
 		</div>
     </body>
