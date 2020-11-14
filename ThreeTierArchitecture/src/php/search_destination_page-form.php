@@ -13,11 +13,11 @@
 		echo"
 		<form method='GET' action='packages_for_destination_page.php' class='table' align='center'>
 			<div class='row'>
-				<br /><input type='text' name='name' style='font-size:35px; font-weight:bold; color:white; background-color:transparent; height:50px; text-align:center;'  value='".$row['name']."' readonly>
+				<br /><input type='text' style=' text-align:center;'  value='".$row['name']."' readonly>
 			</div>
 			</div><br/>
 			<div class='row'>
-				<input type='submit' class='packbtn' name='destsubmit' value='View Travel Packages in ".$row['name']."'>
+				<h2><input type='submit' class='packbtn' name='destsubmit' value='View Travel Packages in ".$row['name']."'></h2>
 			</div>
 			</div><br/>
 			<div class='row'>
@@ -28,6 +28,7 @@
 			<div class='row'>
 				<text area name=destription readonly>".$row['description']."</textarea>
 			</div>
+			<br /><br />
 		</form><br /><br />";
 	}
 ?>		

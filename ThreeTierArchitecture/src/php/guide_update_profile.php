@@ -30,6 +30,7 @@
 	$result1=mysqli_query($connection,$sql1);
 	while($row1=$result1->fetch_assoc()){
         $name=(string)$row1['name'];
+		$charge=$row1['charge'];
 		$dob=(string)$row1['birthday'];
 		$address=(string)$row1['address'];
 		$telephone=(string)$row1['telephone'];
@@ -56,6 +57,7 @@
 
         if(isset($_POST['updatebtn'])){
 			$name=$_POST['name'];
+			$charge=$_POST['charge'];
 			$username=$_POST['uname'];
             $address=$_POST['address'];
             $birthday=$_POST['birthday'];
@@ -66,8 +68,9 @@
 			$photo=$nextid;
 
 //update data to guide  table
-			$insertguide = "update guide set name='".$name."', birthday='".$birthday."',address='".$address."',telephone='".$telephone."',email='".$email."',description='".$description."',photo='".$photo."' where gid='".$uid."'";
-            $result2=$connection->query($insertguide);
+			$insertguide = "update guide set name='".$name."', charge='".$charge."', birthday='".$birthday."',address='".$address."',telephone='".$telephone."',email='".$email."',description='".$description."',photo='".$photo."' where gid='".$uid."'";
+			//echo $insertguide;
+			$result2=$connection->query($insertguide);
 			//echo $insertguide ;
 		    	
 		    if($result2){
@@ -91,10 +94,9 @@
                 echo "<script> alert('Update is Sucessfull') </script>";
 				header("Location: guide_view_profile.php");
 			}else{
-                    //echo "failed";
-					echo "<script> alert('Update is Failed') </script>";
-					
-                }
+                //echo "failed";
+				echo "<script> alert('Update is Failed') </script>";	
+            }
         }        
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 	echo"
 		<tr class='subtitle'>
-			<td>Not Availabile Dates</td>
+			<td>Unavailable Dates</td>
 		</tr>
 	";
 	$username=$_SESSION['username'];

@@ -1,10 +1,10 @@
 <?php
 	echo"
 		<tr class='subtitle'>
-			<td>Not Available Date</td>
-			<td>Not Available Single Rooms</td>
-			<td>Not Available Double Rooms</td>
-			<td>Not Available Family Rooms</td>
+			<td>Unavailable Date</td>
+			<td>Unavailable Single Rooms</td>
+			<td>Unavailable Double Rooms</td>
+			<td>Unavailable Family Rooms</td>
 		</tr>
 	";
 	$username=$_SESSION['username'];

@@ -27,6 +27,7 @@
     if(isset($_POST['formsubmit'])){
 		$vid=$_POST['vid'];
 		$owner=$_POST['owner'];
+		$charge=$_POST['charge'];
 		$uname=$_POST['uname'];
 		$pass=$_POST['password'];
         $cpassword=$_POST['cpassword'];
@@ -45,7 +46,7 @@
 			
 			//insert data to guide  table
 
-			$insertguide = "INSERT INTO vehicle(vid,name,email,address,telephone,type,details,photo) values ('".$vid."','".$owner."','".$email."','".$address."','".$telephone."','".$type."','".$description."','".$photo."')";
+			$insertguide = "INSERT INTO vehicle(vid,name,charge,email,address,telephone,type,details,photo) values ('".$vid."','".$owner."','".$charge."','".$email."','".$address."','".$telephone."','".$type."','".$description."','".$photo."')";
 			$result2=$connection->query($insertguide);
 					
 			if($result2){

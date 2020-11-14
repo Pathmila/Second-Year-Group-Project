@@ -25,6 +25,7 @@
 	$result1=mysqli_query($connection,$sql1);
 	while($row1=$result1->fetch_assoc()){
         $name=(string)$row1['name'];
+		$charge=$row1['charge'];
 		$dob=(string)$row1['birthday'];
 		$address=(string)$row1['address'];
 		$telephone=(string)$row1['telephone'];

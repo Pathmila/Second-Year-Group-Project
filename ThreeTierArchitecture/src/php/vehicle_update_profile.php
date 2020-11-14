@@ -39,6 +39,7 @@
 			//echo $uid;
 			$type=$row['type'];
             $name=$row['name'];
+			$charge=$row['charge'];
             $address=$row['address'];
             $email=$row['email'];
             $telephone=$row['telephone'];
@@ -64,6 +65,7 @@
 
         if(isset($_POST['updatebtn'])){
 			$name=$_POST['name'];
+			$charge=$_POST['charge'];
 			$username=$_POST['uname'];
             $address=$_POST['address'];
             $description = $_POST['description'];
@@ -72,7 +74,7 @@
 			$photo=$nextid;
 
 //update data to vehicle  table
-			$insertguide = "update vehicle set name='".$name."',address='".$address."',telephone='".$telephone."',email='".$email."',details='".$description."',photo='".$photo."' where vid='".$uid."'";
+			$insertguide = "update vehicle set name='".$name."',charge='".$charge."',address='".$address."',telephone='".$telephone."',email='".$email."',details='".$description."',photo='".$photo."' where vid='".$uid."'";
             $result2=$connection->query($insertguide);
 			echo $insertguide ;
 		    	
