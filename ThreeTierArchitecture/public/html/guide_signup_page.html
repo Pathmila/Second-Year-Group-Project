@@ -18,16 +18,25 @@
                 <label>Name:</label>
             </div>
             <div class="col-75">
-                <input name="name" id="name" placeholder="Enter Name" type="text" value="<?=(isset($name) ? $name : "")?>" required >
+                <input name="name" id="name" placeholder="Enter your name." type="text" value="<?=(isset($name) ? $name : "")?>" required >
             </div>
-            </div>		
+            </div>	
+
+			<div class="row">
+            <div class="col-25">
+                <label>Charge for a day&nbsp(Rs.):</label>
+            </div>
+            <div class="col-75">
+                <input name="charge" id="charge" placeholder="Enter the charge for a day." type="text" value="<?=(isset($charge) ? $charge : "")?>" required >
+            </div>
+            </div>	
 			
 			<div class="row">
             <div class="col-25">
                 <label>Address:</label>
             </div>
             <div class="col-75">
-                <input name="address" id="address" placeholder="Enter Address" type="text" value="<?=(isset($address) ? $address : "")?>" required >
+                <input name="address" id="address" placeholder="Enter your address." type="text" value="<?=(isset($address) ? $address : "")?>" required >
             </div>
             </div>
 			
@@ -36,7 +45,7 @@
                 <label>Email:</label>
             </div>
             <div class="col-75">
-                <input name="email" id="email" placeholder="Enter Email" type="email" value="<?=(isset($email) ? $email : "")?>" required >
+                <input name="email" id="email" placeholder="Enter yuor email." type="email" value="<?=(isset($email) ? $email : "")?>" required >
             </div>
             </div>
 			
@@ -45,7 +54,7 @@
                 <label>Telephone No:</label>
             </div>
             <div class="col-75">
-                <input name="telephone" id="telephone" placeholder="Enter Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : "")?>" required >
+                <input name="telephone" id="telephone" placeholder="Enter your telephone number." type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : "")?>" required >
             </div>
             </div>
 			
@@ -72,7 +81,7 @@
                 <label>User Name:</label>
             </div>
             <div class="col-75">
-                <input name="uname" id="uname" placeholder="Enter User Name" type="text" value="<?=(isset($uname) ? $uname : "")?>" required >
+                <input name="uname" id="uname" placeholder="Enter the user name." type="text" value="<?=(isset($uname) ? $uname : "")?>" required >
             </div>
             </div>
 			
@@ -90,7 +99,7 @@
                 <label>Confirm Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm The Password" value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Enter the password again." value="<?=(isset($cpassword) ? $cpassword : "")?>" onblur="cpassword_validation()" required>
             </div>
             </div>
 			

@@ -10,7 +10,7 @@
         
 		<div class="container">
         <form method="post" action="../../src/php/guide_change_availability.php">
-			<h2 class="title"><label>Enter Not Availabile Dates</label></h2>
+			<h2 class="title"><label>Enter Unavailable Dates</label></h2>
 
             <div class="row">
 				<div class="col-25">
@@ -27,29 +27,17 @@
         </div>
 		
 		<div class="container">
-        <form method="post" action="../../src/php/guide_change_availability.php">
-			<h2 class="title"><label>Delete Not Availabile Dates</label></h2>
-
-            <div class="row">
-				<div class="col-25">
-					<label>Date:</label>
-				</div>
-				<div class="col-50">			
-					<input name="deletedate" id="deletedate" type="date" required>
-				</div>
-				<div class="col-25">	
-					<input type="submit" name="formdelete" value="Delete" class="formbtn">
-				</div>
-			</div>
-            </form>
-        </div>
-		
-		<div class="container">
+			<h2 class="title" align="center"><label>Unavailable Dates</label></h2>
 			<div style="overflow-x:auto;">
 			<table border=1 padding=50px align="center" class="viewtable">
 					<?php include('../../src/php/guide_change_availability-dates.php')?>
             </table>
 			</div>
+			<form>
+			<div class="row">
+				<br /><a href="../../src/php/guide_availability-delete.php"><input type="button" value="Delete" class="formbtn"></a>
+			</div>
+		</form>
 		</div>
     </body>
 </html>
