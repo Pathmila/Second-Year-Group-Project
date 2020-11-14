@@ -5,6 +5,7 @@
 			<tr class='subtitle'>
 				<th>ID</th>
 				<th>Name</th>
+				<th>Charge Per Day</th>
 				<th>Birthday</th>
 				<th>Address</th>
 				<th>Email</th>
@@ -23,6 +24,7 @@
 			echo "<tr>";
 			echo "<td>".$row2['gid']."</td>";
 			echo "<td>".$row2['name']."</td>";
+			echo "<td>".$row2['charge']."</td>";
 			echo "<td>".$row2['birthday']."</td>";
 			echo "<td>".$row2['address']."</td>";
 			echo "<td>".$row2['email']."</td>";

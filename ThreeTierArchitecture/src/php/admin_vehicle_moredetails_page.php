@@ -19,6 +19,7 @@
 			//echo $uid;
 			$type=$row['type'];
             $name=$row['name'];
+			$charge=$row['charge'];
             $address=$row['address'];
             $email=$row['email'];
             $telephone=$row['telephone'];

@@ -8,6 +8,7 @@
 	$_GLOBAL['package']=0;
 	$_GLOBAL['packdestination']=0;
 	$_GLOBAL['categorysubcategory']=0;
+	$_GLOBAL['resavation']=0;
     if(isset($_POST['submit'])){
 		$pack=$_POST['name'];
 		$sql1="select * from package where name='".$pack."'"; 
@@ -58,7 +59,16 @@
 			$_GLOBAL['packdestination']=0;
 		}
 		
-        if(($_GLOBAL['package']==1) && ($_GLOBAL['packdestination']==1) && ($_GLOBAL['categorysubcategory']==1)){
+		$sql4="Delete from resavation where packid='".$packid."'"; 
+		//echo $sql;
+		$result4 = mysqli_query($connection,$sql4);
+		if($result4){
+			$_GLOBAL['resavation']=1;
+		}else{
+			$_GLOBAL['resavation']=0;
+		}
+		
+        if(($_GLOBAL['package']==1) && ($_GLOBAL['packdestination']==1) && ($_GLOBAL['categorysubcategory']==1) && ($_GLOBAL['resavation']==1)){
 			//echo "<script> confirm() </script>";				
 			echo "<script> alert('Delete is Sucessfull') </script>";				
 			header("Location: admin_home_page.php");

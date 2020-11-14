@@ -8,6 +8,7 @@
 		echo "<tr>";
 		echo "<td>".$row['gid']."</td>";
 		echo "<td>".$row['name']."</td>";
+		echo "<td>".$row['charge']."</td>";
 		echo "<td>".$row['birthday']."</td>";
 		echo "<td>".$row['address']."</td>";
 		echo "<td>".$row['email']."</td>";

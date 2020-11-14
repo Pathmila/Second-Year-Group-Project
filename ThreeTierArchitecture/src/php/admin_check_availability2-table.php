@@ -5,6 +5,7 @@
 			<tr class='subtitle'>
 				<td>ID</td>
 				<td>Name</td>
+				<td>Charge Per 1km</td>
 				<td>Address</td>
 				<td>Email</td>
 				<td>Telephone</td>
@@ -24,6 +25,7 @@
 			echo "<tr>";
 			echo "<td>".$row['vid']."</td>";
 			echo "<td>".$row['name']."</td>";
+			echo "<td>".$row['charge']."</td>";
 			echo "<td>".$row['address']."</td>";
 			echo "<td>".$row['email']."</td>";
 			echo "<td>0".$row['telephone']."</td>";

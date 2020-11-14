@@ -5,7 +5,7 @@
 	//echo $sql3;
 	$result3=$connection->query($sql3);
 	while($row=$result3->fetch_assoc()){				
-		echo "</tr>";
+		echo "<tr>";
 		echo "<td>".$row['cid']."</td>";		
 		echo "<td>".$row['uid']."</td>";
 		echo "<td>".$row['details']."</td>";
