@@ -25,7 +25,7 @@
 		$result=$connection->query($sql);
 		if($result){
 			echo "<script> alert('Update is Sucessfull') </script>";
-			header("Location: guide_change_availability.php");
+			header("Location: guide_home.php");
 		}else{
 			//echo "failed";
 			echo "<script> alert('Update is Failed') </script>";
@@ -41,7 +41,7 @@
 		//echo $sql2;
 		$result2=mysqli_query($connection,$sql2);
 		while($row2=$result2->fetch_assoc()){
-			$hid=$row2['hid'];			
+			$hid=$row2['hid']=0;			
 			if($hid != null){
 				$_GLOBAL['ddone']=1;
 			}else{
@@ -55,7 +55,7 @@
 			$result3=$connection->query($sql3);
 			if($result3){
 				echo "<script> alert('Deletion is Sucessfull') </script>";
-				header("Location:guide_change_availability.php");
+				header("Location: guide_home.php");
 			}else{
 				//echo "failed";
 				echo "<script> alert('Deletion is Failed') </script>";
