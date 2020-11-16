@@ -9,10 +9,14 @@ body{
     width: 33.33%;
 }
 
+.destext{
+	text-align:center;
+	font-size:35px;
+}
 
 input[type="text"]{
     width: 200px;
-    height: 30px;
+    height: 50px;
     background-color: transparent;
     background-color: white;
     border-radius: 10px;
@@ -79,7 +83,7 @@ select{
   }
   
 
-.packbtn{
+.destbtn{
     border-radius: 4px;
     background-color: green;
     border: none;
@@ -95,14 +99,14 @@ select{
     float: right;
   }
   
-  .packbtn span {
+  .destbtn span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .packbtn span:after {
+  .destbtn span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -111,12 +115,12 @@ select{
     transition: 0.5s;
   }
   
-  .packbtn:hover,.packbtn:hover span {
+  .destbtn:hover,.destbtn:hover span {
     padding-right: 25px;
     background-color: red;
   }
   
-  .packbtn:hover span:after {
+  .destbtn:hover span:after {
     opacity: 1;
     right: 0;
   }
@@ -149,5 +153,9 @@ select{
     }
     input[type="text"]{
         width: 80px;
+		height: 30px;
     }
+	.destext{
+		font-size:20px;
+	}
 }
