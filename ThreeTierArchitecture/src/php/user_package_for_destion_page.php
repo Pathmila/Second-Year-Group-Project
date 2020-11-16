@@ -7,7 +7,7 @@
 <?php require_once('user_navigation.php')?> 
 
 <?php
-    $dname=$_GET['name'];
+    $dname=$_SESSION['dname'];
 ?>
 
 <?php
