@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 14, 2020 at 12:56 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.2.32
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 16, 2020 at 08:20 PM
+-- Server version: 5.7.11-log
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -27,13 +28,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `account`
 --
 
-CREATE TABLE `account` (
-  `aid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `account`;
+CREATE TABLE IF NOT EXISTS `account` (
+  `aid` int(11) NOT NULL AUTO_INCREMENT,
   `uid` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(500) NOT NULL,
-  `admin` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `admin` int(11) NOT NULL,
+  PRIMARY KEY (`aid`)
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `account`
@@ -56,20 +59,54 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
 (14, '13', 'user13', '2b04927a48b1a3a928f843c0696109b8', 0),
 (15, '14', 'user14', '2b04927a48b1a3a928f843c0696109b8', 0),
 (16, '15', 'user15', '2b04927a48b1a3a928f843c0696109b8', 0),
-(17, '1', 'Hotel1', 'a17e81739b06d6fb43159c920d990979', 3),
-(18, '2', 'Hotel2', '39904811f56318ad557392a78c708e9f', 3),
-(19, '3', 'Hotel3', 'a87fd9fdf4667374a09837f5147bee46', 3),
-(20, '4', 'Hotel4', '9ba3fd831b1ab3e0b16adda1752618a8', 3),
-(21, '5', 'Hotel5', 'c2457c5866ec568d3a8cd05b4a2e0a3d', 3),
-(22, '6', 'Hotel6', '69ff1f118559333323b5af5010ddbaed', 3),
-(23, '7', 'Hotel7', '5627188985d75292bb73888b07d51f9b', 3),
-(24, '8', 'Hotel8', '53ca3271ef7f6589761a5ae19c274f93', 3),
-(25, '9', 'Hotel9', 'a251a581738b299ed2f01ad5852532dc', 3),
+(17, '1', 'user', '2b04927a48b1a3a928f843c0696109b8', 3),
+(18, '2', 'Hotel2', '2b04927a48b1a3a928f843c0696109b8', 3),
+(19, '3', 'Hotel3', '2b04927a48b1a3a928f843c0696109b8', 3),
+(20, '4', 'Hotel4', '2b04927a48b1a3a928f843c0696109b8', 3),
+(21, '5', 'Hotel5', '2b04927a48b1a3a928f843c0696109b8', 3),
+(22, '6', 'Hotel6', '2b04927a48b1a3a928f843c0696109b8', 3),
+(23, '7', 'Hotel7', '2b04927a48b1a3a928f843c0696109b8', 3),
+(24, '8', 'Hotel8', '2b04927a48b1a3a928f843c0696109b8', 3),
+(25, '9', 'Hotel9', '2b04927a48b1a3a928f843c0696109b8', 3),
 (26, '10', 'Hotel10', '76744dcba7e6a31f9239e96a451c459a', 3),
 (27, '11', 'Hotel11', '2346deb5d41fce87d2c827e1af15b761', 3),
 (28, '12', 'Hotel12', '9be2be8f81b6baa6876178ddf347a8d2', 3),
 (29, '13', 'Hotel13', 'b7a199792d416869907cb813d0d91e9e', 3),
-(30, '14', 'Hotel14', 'e3b5be4b30d938ff55b0e5f31b6b3bf3', 3);
+(30, '14', 'Hotel14', 'e3b5be4b30d938ff55b0e5f31b6b3bf3', 3),
+(31, '1', 'user', '2b04927a48b1a3a928f843c0696109b8', 2),
+(32, '2', 'guide2', '2b04927a48b1a3a928f843c0696109b8', 2),
+(33, '3', 'guide3', '2b04927a48b1a3a928f843c0696109b8', 2),
+(34, '4', 'guide4', '2b04927a48b1a3a928f843c0696109b8', 2),
+(35, '5', 'guide5', '2b04927a48b1a3a928f843c0696109b8', 2),
+(36, '6', 'guide6', '2b04927a48b1a3a928f843c0696109b8', 2),
+(37, '7', 'guide7', '2b04927a48b1a3a928f843c0696109b8', 2),
+(38, '8', 'guide8', '2b04927a48b1a3a928f843c0696109b8', 2),
+(39, '9', 'guide9', '2b04927a48b1a3a928f843c0696109b8', 2),
+(40, '10', 'guide10', '2b04927a48b1a3a928f843c0696109b8', 2),
+(41, '11', 'guide11', '2b04927a48b1a3a928f843c0696109b8', 2),
+(42, '12', 'guide12', '2b04927a48b1a3a928f843c0696109b8', 2),
+(43, '13', 'guide13', '2b04927a48b1a3a928f843c0696109b8', 2),
+(44, '14', 'guide14', '2b04927a48b1a3a928f843c0696109b8', 2),
+(45, '15', 'guide15', '2b04927a48b1a3a928f843c0696109b8', 2),
+(46, '16', 'guide16', '2b04927a48b1a3a928f843c0696109b8', 2),
+(47, 'BBD-6898', 'vehicle1', '2b04927a48b1a3a928f843c0696109b8', 4),
+(48, 'QC-1234', 'vehicle2', '2b04927a48b1a3a928f843c0696109b8', 4),
+(49, 'BFG-4590', 'vehicle3', '2b04927a48b1a3a928f843c0696109b8', 4),
+(50, 'QBF-2390', 'vehicle4', '2b04927a48b1a3a928f843c0696109b8', 4),
+(51, 'QC-1234', 'vehicle5', '2b04927a48b1a3a928f843c0696109b8', 4),
+(52, 'QC-1234', 'vehicle6', '2b04927a48b1a3a928f843c0696109b8', 4),
+(53, 'ABC-2378', 'vehicle7', '2b04927a48b1a3a928f843c0696109b8', 4),
+(54, 'DFI-6789', 'vehicle8', '2b04927a48b1a3a928f843c0696109b8', 4),
+(55, 'XXB-4578', 'vehicle9', '2b04927a48b1a3a928f843c0696109b8', 4),
+(56, 'ASP-1273', 'vehicle10', '2b04927a48b1a3a928f843c0696109b8', 4),
+(57, 'TOP-4210', 'vehicle11', '2b04927a48b1a3a928f843c0696109b8', 4),
+(58, 'SGH-9034', 'vehicle12', '2b04927a48b1a3a928f843c0696109b8', 4),
+(59, 'AJK-5640', 'vehicle13', '2b04927a48b1a3a928f843c0696109b8', 4),
+(60, 'GHO-8540', 'vehicle14', '2b04927a48b1a3a928f843c0696109b8', 4),
+(61, 'GHO-8540', 'vehicle15', '2b04927a48b1a3a928f843c0696109b8', 4),
+(62, 'JDE-5034', 'vehicle16', '2b04927a48b1a3a928f843c0696109b8', 4),
+(63, 'TYE-7269', 'vehicle17', '2b04927a48b1a3a928f843c0696109b8', 4),
+(64, 'ADC-8543', 'vehicle18', '2b04927a48b1a3a928f843c0696109b8', 4);
 
 -- --------------------------------------------------------
 
@@ -77,11 +114,13 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
 -- Table structure for table `category`
 --
 
-CREATE TABLE `category` (
-  `catid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE IF NOT EXISTS `category` (
+  `catid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
-  `photo` int(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `photo` int(20) NOT NULL,
+  PRIMARY KEY (`catid`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `category`
@@ -99,11 +138,13 @@ INSERT INTO `category` (`catid`, `name`, `photo`) VALUES
 -- Table structure for table `categorysubcategory`
 --
 
-CREATE TABLE `categorysubcategory` (
-  `cat-subcatid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `categorysubcategory`;
+CREATE TABLE IF NOT EXISTS `categorysubcategory` (
+  `cat-subcatid` int(11) NOT NULL AUTO_INCREMENT,
   `catid` int(11) NOT NULL,
-  `subcatid` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `subcatid` int(11) NOT NULL,
+  PRIMARY KEY (`cat-subcatid`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `categorysubcategory`
@@ -115,7 +156,16 @@ INSERT INTO `categorysubcategory` (`cat-subcatid`, `catid`, `subcatid`) VALUES
 (6, 1, 2),
 (12, 1, 3),
 (11, 1, 3),
-(10, 1, 3);
+(10, 1, 3),
+(14, 1, 2),
+(15, 1, 2),
+(16, 1, 2),
+(17, 2, 2),
+(18, 2, 2),
+(19, 2, 2),
+(20, 3, 4),
+(21, 3, 4),
+(22, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -123,8 +173,9 @@ INSERT INTO `categorysubcategory` (`cat-subcatid`, `catid`, `subcatid`) VALUES
 -- Table structure for table `comment`
 --
 
-CREATE TABLE `comment` (
-  `cid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE IF NOT EXISTS `comment` (
+  `cid` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `details` text NOT NULL,
   `photo1` int(11) NOT NULL,
@@ -135,8 +186,23 @@ CREATE TABLE `comment` (
   `guide` varchar(200) NOT NULL,
   `guiderating` int(11) NOT NULL,
   `vehicle` varchar(200) NOT NULL,
-  `vehiclerating` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `vehiclerating` int(11) NOT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`cid`, `uid`, `details`, `photo1`, `photo2`, `photo3`, `hotel`, `hotelrating`, `guide`, `guiderating`, `vehicle`, `vehiclerating`) VALUES
+(7, 1, 'Best Trip Ever!!', 1, 2, 3, '2', 4, '1', 3, 'BBD-6898', 3),
+(8, 2, 'Well enjoyed.', 4, 5, 6, '2', 4, '5', 3, 'ASP-1273', 4),
+(9, 4, 'Wonderfull experience.', 7, 8, 9, '7', 3, '8', 4, 'AJK-5640', 3),
+(10, 4, 'Good!!', 10, 11, 12, '8', 5, '10', 4, 'GHO-8540', 3),
+(11, 4, 'Wonerfull.', 13, 14, 15, '5', 4, '13', 3, 'GHO-8540', 4),
+(12, 3, 'Well Enjoyed.', 16, 17, 18, '4', 3, '11', 3, 'TOP-4210', 3),
+(13, 5, 'Really enjoyed.', 19, 20, 21, '5', 3, '7', 2, 'GHO-8540', 3),
+(14, 6, 'Good.', 22, 23, 24, '10', 4, '14', 4, 'JDE-5034', 4);
 
 -- --------------------------------------------------------
 
@@ -144,12 +210,14 @@ CREATE TABLE `comment` (
 -- Table structure for table `destination`
 --
 
-CREATE TABLE `destination` (
-  `destid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `destination`;
+CREATE TABLE IF NOT EXISTS `destination` (
+  `destid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `description` text NOT NULL,
-  `photo` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `photo` int(11) NOT NULL,
+  PRIMARY KEY (`destid`)
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `destination`
@@ -197,13 +265,13 @@ INSERT INTO `destination` (`destid`, `name`, `description`, `photo`) VALUES
 (39, 'Attidiya Bird Sanctuary', 'This is probably the only place in Colombo that provides shelter to at least 50 different species of birds (both local and migratory). \r\n\r\nHighlights: A large number of water monitors, butterflies, insects and other birds tend to catch your attention as you walk through the muddy paths of the sanctuary. The biodiversity of this place is highly commendable, as you cannot help but feel awe-struck at the diverse species of birds here. As the place is replete with mosquitoes, you need to be fully covered while visiting the park.<br /> <br /> \r\n\r\nLocation: The sanctuary is located at Boralesgamuwa in Colombo.<br /> <br /> \r\n\r\nTimings: The sanctuary is open all through the day; however early mornings and evenings are best to visit migratory birds.<br /> <br /> \r\n\r\nBest Season to Visit: You must visit this place during the months between December and January, as this is the peak season for migratory birds to seek protection here.<br /> <br /> \r\n\r\nPrice: Entry to the place is free of cost.', 65),
 (40, 'Perandeniya Botanical Gardens', 'Peradeniya Gardens is a spacious 147 acre of natural extravaganza consisting of more than 4000 species of plants, and 10,000 varied kinds of trees, incidentally serves as the largest garden of Sri Lanka.<br />\r\n\r\nThe unique and rarest collection in these gardens is the Giant Bamboo of Burma which grows 12 inches each day to a height of 40 meters. Apart from this other amazing collections include Javan fig tree, Cannonball tree, Double Coconut Palm and about 200 other varieties of palm trees and versatile collection of flora.<br /> <br />\r\n\r\nThe Peradeniya Botanical Garden is one prime tourist attraction of hill country and remains quite flooded with tourists every weekend. One can pack some food to enjoy an open air picnic here or can relish the cafeteria inside serving local and western cuisine.<br /> <br />\r\n\r\nLocation: 5.5km from Kandy <br /> <br />\r\n\r\nBest Time: 7:30am to 5:00pm ', 66),
 (41, 'Nilaveli Beach ', 'Nilaveli Beach is a stretch of beach which is situated approximately 16 kilometres North of Trincomalle, passing a thriving lagoon on either side and lush coconut palm groves and hordes of cattle, note that the people in the area are predominantly Hindu and consider the cows sacred. Arriving at the hamlet of “Errakkandy”, a sharp right turn will take you down a gravel road to Nilaweli beach, almost a kilometre of in lenght, white sandy beach with gentle surf. Across the beach about two kilometres into the ocean you will see the famous pigeon island, named due to rock pigeons roosting on it by the hundreds and crystal clear water around it to snorkel on to the clear depths of a reef. Further up North you will see a cluster of reddish rocks which are referred to as the red rock beach.', 67),
-(42, 'Vedda Village Tours to Dambana', 'Sri Lanka’s Aborigines’, or the Veddha’s meaning “people of the forest” of Sri Lanka has a history much older than prince Vijaya’s landing in 5th century BC and the origins of the Sinhala race. Archaeological evidence suggest that modern Veddha’s Neolithic ancestors inhabited this island as far back as 10,000 BC with. Once roaming the Great Plains’ of the north central region to the central mountains, today the remaining Veddha population are confined to Dambana which is close to Maduru oya sanctuary.<br /> <br />\r\n\r\nThey are essentially hunter gatherer forest dwellers without much change in their life style from Stone Age to modern times. The language used by them is an ancient dialect of Sinhala, staple diet being venison, Veddha’s are allowed to hunt legally to sustain themselves within certain areas, are also expert fisherman. Veddha’s also collect bee’s honey and exchange it with the locals for axe blades and cloth.', 68),
+(42, 'Dambana', 'Sri Lanka’s Aborigines’, or the Veddha’s meaning “people of the forest” of Sri Lanka has a history much older than prince Vijaya’s landing in 5th century BC and the origins of the Sinhala race. Archaeological evidence suggest that modern Veddha’s Neolithic ancestors inhabited this island as far back as 10,000 BC with. Once roaming the Great Plains’ of the north central region to the central mountains, today the remaining Veddha population are confined to Dambana which is close to Maduru oya sanctuary.<br /> <br />\r\n\r\nThey are essentially hunter gatherer forest dwellers without much change in their life style from Stone Age to modern times. The language used by them is an ancient dialect of Sinhala, staple diet being venison, Veddha’s are allowed to hunt legally to sustain themselves within certain areas, are also expert fisherman. Veddha’s also collect bee’s honey and exchange it with the locals for axe blades and cloth.', 68),
 (43, 'Batadombalena Cave', 'A hike from the nearest township of Sudugala, and then a climb of about 50m will bring you to the mouth of this fairly large cave, is a very important archaeological site since it contains evidence of human habitation from 32,000 BC and the 10 skeletal remains of the oldest human remains of Sri Lanka were also excavated from this cave, the “Homo sapiens balangodensis”, the Balangoda man may also have been responsible for the creation of Horton plains for agriculture.', 69),
 (44, 'Mahalenama Cave', 'Located between Kumana & Lahugala-Kithulana National parks this ancient Buddhist monastery is also believed to be the place where according to preserved Vedda legend for us a recollection of a lost race known as the Nittevo. There has been much controversy as to the identity of this folk. Some hold that the Nittevo are a lost tribe of Negritoes while others believe them to have been some kind of ape-man. Yet others identify them with an extinct species of bear known as rahu valaha. <br /> <br />\r\n\r\nThe Nittevo are said to have been a dwarfish race of men who lived in the Mahalenama region now within the Yala East Intermediate Zone and the Tamankaduva area. These folk are believed to have been exterminated by the Veddas about 250 years ago.', 70),
 (45, 'Birds park Hambantota', 'Bird park is one of the very few destinations for bird and nature lovers looking for a calm and relaxed experience, yet with ample time to view, study and enjoy the beasts of the air.<br />\r\n\r\nMost visitors who enjoy our park would like to collect a memento or share their experiences with their loved ones when they get back home. You can do your souvenir shopping right within our own gift shop.<br />\r\n\r\nWith over 35 acres of land the park gives visitors the opportunity to meet and interact with our feathered residents. We invite you to come and enjoy!<br />\r\n\r\nIf you are coming from Colombo take Southern Highway to Matara and come to Hambanthota Town.Then come to Katuwewa Junction and turn left. 7km From Katuwewa junction you will find our Birds Research Center & Resort.<br /> <br />\r\n\r\n\r\nPrice :<br />\r\nRates for Locals: LKR 250.00<br />\r\nRates for Foreigners:  LKR 1000.00', 71),
-(46, 'Sabaragamuwa Maha Saman Devalaya', 'The Sabaragamuwa Maha Saman Devalaya is considered the main Devalaya of deity Saman except for the Shrine at top of Sri Pada.<br />\r\n\r\nThe history speaks of a temple at Ratnapura area since the time of king Dutugemunu of Anuradhapura Kingdom, But the recent history starts from Dambadeniya period.<br />\r\n\r\n\r\n A court Minister called Aryakamadeva had come over to Ratnapura to make a vow for gemming, and if lucky to build a Devalaya to keep God Sumana Saman’s statue. After a sucessful gem mining expedition, he is said to have built the first devalaya dedicated to God Saman at Ratnapura. Although the devalaya was highly influenced by Hindu culture, it remained a Buddhist place of worship throughout the years.', 72),
+(46, 'Saman Devalaya', 'The Sabaragamuwa Maha Saman Devalaya is considered the main Devalaya of deity Saman except for the Shrine at top of Sri Pada.<br />\r\n\r\nThe history speaks of a temple at Ratnapura area since the time of king Dutugemunu of Anuradhapura Kingdom, But the recent history starts from Dambadeniya period.<br />\r\n\r\n\r\n A court Minister called Aryakamadeva had come over to Ratnapura to make a vow for gemming, and if lucky to build a Devalaya to keep God Sumana Saman’s statue. After a sucessful gem mining expedition, he is said to have built the first devalaya dedicated to God Saman at Ratnapura. Although the devalaya was highly influenced by Hindu culture, it remained a Buddhist place of worship throughout the years.', 72),
 (47, 'Mihinthalaya ', 'In the 3rd century BC, area of Mihintale (mihinthalaya) was a thick jungle area inhibited by wild animals and was a hunting ground reserved for the royals. All this changed in 250 BC when the son of the Indian Emperor Asoka, Mahinda Maha Thero arrived at the Missaka Pauwa to meet king Devamnampiyatissa for the first time and asked the famous questions to decide whether he is intelligent enough to understand the philosophy of the Buddha. Initially Mahinda Maha Thero’s residence, but later Mihintale (mihinthalaya) became a main center for Theravada Buddhism and is considered the cradle of Buddhism in Sri Lanka.<br /> <br />\r\n\r\nMihinthale is a collection of four mountains each about 1000 feet in height.<br />\r\n\r\nThey are<br />\r\n\r\nMihinthalawa<br />\r\nAth Vehera mountain<br />\r\nAnaikutti mountain<br />\r\nRajagiri Lena mountain<br />\r\nMihinthalawa is the main mountain and where the Aradhana gala (The rock of invitation) and the main Mahaseya stupa is situated.<br /><br />\r\n\r\nalternate names : mihinthalawa, Mihinthalaya, mihinthale', 73),
-(49, 'Elephant Rock - ATHUGALA TEMPLE', 'This rock overlooking Kurunegala and cutting the city in two offers a unique panorama on the city, its lake and surrounding area. It is a very popular place of visit. It was he who gave his name to the city. In Sinhala, kurune means elephant defense and gala means rock. You can reach its summit by a road about 1,5 km from Wathhimi Road. There is a Buddhist temple (Athugala Temple), a communication tower from Sri Lanka Telecom and a huge statue of Buddha, the main point of interest on the site. This statue, inaugurated in 2003 after 27 months of work, is metres high, including the base. You can penetrate inside. An information panel placed in the approach of the statue recalls the history of the city which was the capital of the kingdom from 1341 to 1293 under the name Hasthiasailapura. Near the access road, you can see a former royal basin dug in the rock.\r\n\r\n', 74);
+(49, 'Elephant Rock ', 'This rock overlooking Kurunegala and cutting the city in two offers a unique panorama on the city, its lake and surrounding area. It is a very popular place of visit. It was he who gave his name to the city. In Sinhala, kurune means elephant defense and gala means rock. You can reach its summit by a road about 1,5 km from Wathhimi Road. There is a Buddhist temple (Athugala Temple), a communication tower from Sri Lanka Telecom and a huge statue of Buddha, the main point of interest on the site. This statue, inaugurated in 2003 after 27 months of work, is metres high, including the base. You can penetrate inside. An information panel placed in the approach of the statue recalls the history of the city which was the capital of the kingdom from 1341 to 1293 under the name Hasthiasailapura. Near the access road, you can see a former royal basin dug in the rock.\r\n\r\n', 74);
 
 -- --------------------------------------------------------
 
@@ -211,8 +279,9 @@ INSERT INTO `destination` (`destid`, `name`, `description`, `photo`) VALUES
 -- Table structure for table `guide`
 --
 
-CREATE TABLE `guide` (
-  `gid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `guide`;
+CREATE TABLE IF NOT EXISTS `guide` (
+  `gid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) NOT NULL,
   `charge` int(11) NOT NULL,
   `birthday` date NOT NULL,
@@ -220,8 +289,31 @@ CREATE TABLE `guide` (
   `telephone` int(11) NOT NULL,
   `email` varchar(200) NOT NULL,
   `description` text NOT NULL,
-  `photo` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `photo` int(11) NOT NULL,
+  PRIMARY KEY (`gid`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `guide`
+--
+
+INSERT INTO `guide` (`gid`, `name`, `charge`, `birthday`, `address`, `telephone`, `email`, `description`, `photo`) VALUES
+(1, 'Hansaka Sandaruwan', 2000, '1997-04-14', 'siripura road', 757070756, 'desinfinix@gmail.com', ' my hometown is Mathugama', 1),
+(2, 'sudesh bandara', 1500, '1996-04-11', 'no:12 Mathale town', 751552663, 'sudhesh@gmail.com', 'my home town matale', 2),
+(3, 'dimuthu lakmal', 1000, '1998-01-01', 'anuradhapura ,eppawala', 715632469, 'dimuth@gmail.com', 'my home town eppawala', 3),
+(4, 'amal perera', 3000, '1998-04-01', 'gonapinuwala,hikkaduwa', 715824662, 'amal@gmail.com', 'my home town galla', 4),
+(5, 'pravin himantha', 2500, '1997-10-04', 'pinnawala,kandy', 715468456, 'prvin@gmail.com', 'my home town kandy', 5),
+(6, 'aravinda nimantha', 200, '1998-04-01', 'alapatha,awissawella', 705135243, 'aravi2@gmail.com', 'my home town rathnapura', 6),
+(7, 'pasidu podikumara', 3100, '1998-02-28', 'No:90,ingiriya ', 787541565, 'pasi@gmail.com', 'my home town rathnapura', 7),
+(8, 'nimal galagama', 4000, '1967-05-13', 'belihuloya,balangoda', 757070756, 'nimal@gmail.com', 'my home town rathnapura', 8),
+(9, 'uvindhu sndeepa', 2100, '1988-10-10', 'unawatuna ', 715415256, 'uvindhu@gmai.com', 'my home town peduruthudaw', 9),
+(10, 'milan  malshika', 2300, '1998-04-01', 'payagala,beruwala ', 756165416, 'milan@gmail.com', 'my home town beruwala', 10),
+(11, 'kalpa sandharuwan', 4000, '1996-11-14', 'alawwa,boywalana', 715463566, 'kalpa@gmail.com', 'my home town kurunagala', 11),
+(12, 'parasad sampath', 3100, '1996-04-01', 'no29, panthiya mathugama', 751564366, 'prasad@gmail.com', 'my home town mathugama', 12),
+(13, 'Gagath vithana', 1000, '1968-02-12', 'kalthota balangoda', 799251551, 'gagath@Gmail.com', 'my home town rathnapura', 13),
+(14, 'samira sandharuwan', 2400, '1995-12-25', 'no89;anuradhapura', 758555145, 'sameera@gmail.com', 'my home town Anuradhapura', 14),
+(15, 'saman kumara', 1150, '1972-01-31', 'yapanata handiya,yapanaya.', 791565425, 'Saman@gmail.com', 'my home town Jaffana', 15),
+(16, 'charith sanjaya', 3100, '1996-02-23', 'pasikuda .', 785545622, 'charith@gmail.com', 'my home town pasikuda', 16);
 
 -- --------------------------------------------------------
 
@@ -229,11 +321,51 @@ CREATE TABLE `guide` (
 -- Table structure for table `guideavailability`
 --
 
-CREATE TABLE `guideavailability` (
-  `gaid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `guideavailability`;
+CREATE TABLE IF NOT EXISTS `guideavailability` (
+  `gaid` int(11) NOT NULL AUTO_INCREMENT,
   `gid` int(11) NOT NULL,
-  `availability_date` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `availability_date` varchar(50) NOT NULL,
+  PRIMARY KEY (`gaid`)
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `guideavailability`
+--
+
+INSERT INTO `guideavailability` (`gaid`, `gid`, `availability_date`) VALUES
+(1, 1, '2021-04-04'),
+(2, 1, '2021-01-04'),
+(4, 1, '2020-12-11'),
+(5, 2, '2021-04-04'),
+(6, 3, '2020-12-01'),
+(7, 3, '2021-04-01'),
+(8, 3, '2021-01-20'),
+(9, 4, '2020-12-13'),
+(10, 4, '2020-12-22'),
+(11, 4, '2021-01-14'),
+(12, 5, '2021-02-11'),
+(13, 5, '2021-01-30'),
+(14, 5, '2021-10-10'),
+(15, 6, '2020-12-31'),
+(16, 6, '2021-06-26'),
+(17, 6, '2021-01-21'),
+(18, 7, '2021-12-22'),
+(19, 7, '2020-12-13'),
+(20, 8, '2021-01-22'),
+(21, 8, '2020-12-21'),
+(22, 9, '2020-12-27'),
+(23, 9, '2020-12-28'),
+(24, 9, '2020-12-29'),
+(25, 10, '2020-12-12'),
+(26, 10, '2021-10-04'),
+(27, 11, '2020-12-22'),
+(28, 12, '2021-02-20'),
+(29, 12, '2021-02-21'),
+(30, 13, '2021-04-04'),
+(31, 14, '2021-12-11'),
+(33, 15, '2020-12-31'),
+(34, 16, '2021-01-04');
 
 -- --------------------------------------------------------
 
@@ -241,8 +373,9 @@ CREATE TABLE `guideavailability` (
 -- Table structure for table `hotel`
 --
 
-CREATE TABLE `hotel` (
-  `hid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `hotel`;
+CREATE TABLE IF NOT EXISTS `hotel` (
+  `hid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) NOT NULL,
   `address` varchar(500) NOT NULL,
   `telephone` int(11) NOT NULL,
@@ -254,27 +387,28 @@ CREATE TABLE `hotel` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   `description` varchar(500) NOT NULL,
-  `photo` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `photo` int(11) NOT NULL,
+  PRIMARY KEY (`hid`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hotel`
 --
 
 INSERT INTO `hotel` (`hid`, `name`, `address`, `telephone`, `email`, `singleroomprice`, `doubleroomprice`, `familyroomprice`, `singlerooms`, `doublerooms`, `familyrooms`, `description`, `photo`) VALUES
-(1, 'Water Garden Sigiriya', 'Indigaswewa, Sigiriya ', 664933067, 'watergarden@gami.com', 13000, 23000, 41000, 10, 15, 8, 'High-end villas, some with plunge pools, in a hotel offering gourmet dining, a spa & butler service', 1),
-(2, 'Amari Hotel Galle', 'Galle Main Rd, Galle', 912030500, 'amari@gmail.com', 14000, 25000, 45000, 20, 25, 10, 'Set on a beach along the Indian Ocean, this upscale hotel is 4 km from Galle Dutch Fort.', 2),
-(3, 'Heritance Kandalam', 'Heritance Kandalama 11, Dambulla', 667834125, 'kandalam@gmail.com', 15500, 29000, 41000, 15, 20, 10, 'Sleek rooms & suites with reservoir views, plus a fusion restaurant, a spa & 3 outdoor pools.', 3),
-(4, 'EKHO Ella', 'Sandungama Rd, Ella', 572228655, 'ekho@gmail.com', 17000, 27000, 48000, 8, 15, 8, 'One of the newest additions to Ella, Ekho Ella is a mountainous holiday resort amidst eternal overlooking the popular \"Ella Gap View\".', 4),
-(5, 'Heritage Hotel, Anuradhapura', 'Galwala Rd, Pothanegama', 252237806, 'heritageh@gmail.com', 9000, 19000, 36500, 12, 15, 15, 'Surrounded by trees and overlooking Tissa Wewa reservoir.', 5),
-(6, 'Pelwehera Village Resort', 'Bulagala Junction, Habarana Road, Dambulla', 662284280, 'pvr@gmai.com', 7500, 18000, 34000, 16, 18, 20, 'A great place to stay while traveling to Dambulla.', 6),
-(7, 'Elements Beach & Nature Resort, Kalpitiya', 'Elements Beach & Nature Resort Kappalady, Talawila Kalpitiya, Puttalam District Sri Lanka', 775066468, 'beachhotel@gmail.com', 11000, 21000, 39000, 12, 15, 15, 'eenergize with the rhythm of the Indian Ocean and the Kappalady Lagoon', 7),
-(8, 'The Queens Wood Cottage', '110 PBC Hwy, Nuwara Eliya', 523456789, 'qwc@gmail.com', 13000, 28000, 45000, 8, 18, 15, 'experience the nature with full facilities', 8),
-(9, 'Grand Camellia hotel', '14, 35 Gajabapura Road, Nuwara Eliya', 529876567, 'gch@gmail.com', 12000, 26000, 45000, 5, 15, 10, 'Airy quarters in a laid-back hotel offering 2 restaurants, plus a lounge with a pool table.', 9),
-(10, 'Sasvi cabana', 'Unnamed Road, EP, Trincomalee', 773429749, 'Sasvi@gmail.com', 5000, 11000, 31000, 5, 8, 15, '3-star hotel with full facikities', 10),
-(11, 'Le Grand Galle', '30 Park Rd, Galle', 912228555, 'legrand@gmail.com', 6000, 17000, 31000, 6, 10, 15, 'New, contemporary hotel perfectly positioned on a promontory overlooking the historic Fort and the Indian Ocean', 11),
-(12, 'CocoBay Unawatuna', '10/4, Roomassala Road, Unawatuna', 867478341, 'coco@gmail.com', 8000, 20000, 37000, 8, 15, 15, 'Flanked by trees, this upscale hotel on a secluded part of Unawatuna Beach is 1 km from Katugoda train station.', 12),
-(13, 'Turtle Eco Hotel', 'Beach Road, Madiha,Matara, Matara', 412223377, 'tch@gmail.com', 7500, 20000, 39000, 6, 16, 10, 'Turtle Eco Beach is a newly refurbished resort just 2.5 mi away from Mirissa city. This elegant property features an outdoor swimming pool and offers snorkeling', 13),
+(1, 'Water Garden Sigiriya', 'Indigaswewa, Sigiriya ', 664933067, 'watergarden@gami.com', 1300, 2300, 4100, 10, 15, 8, 'High-end villas, some with plunge pools, in a hotel offering gourmet dining, a spa & butler service', 1),
+(2, 'Amari Hotel Galle', 'Galle Main Rd, Galle', 912030500, 'amari@gmail.com', 1400, 2500, 4500, 20, 25, 10, 'Set on a beach along the Indian Ocean, this upscale hotel is 4 km from Galle Dutch Fort.', 2),
+(3, 'Heritance Kandalam', 'Heritance Kandalama 11, Dambulla', 667834125, 'kandalam@gmail.com', 1550, 2900, 4100, 15, 20, 10, 'Sleek rooms & suites with reservoir views, plus a fusion restaurant, a spa & 3 outdoor pools.', 3),
+(4, 'EKHO Ella', 'Sandungama Rd, Ella', 572228655, 'ekho@gmail.com', 1700, 2700, 4800, 8, 15, 8, 'One of the newest additions to Ella, Ekho Ella is a mountainous holiday resort amidst eternal overlooking the popular \"Ella Gap View\".', 4),
+(5, 'Heritage Hotel, Anuradhapura', 'Galwala Rd, Pothanegama', 252237806, 'heritageh@gmail.com', 1800, 2900, 4500, 12, 15, 15, 'Surrounded by trees and overlooking Tissa Wewa reservoir.', 5),
+(6, 'Pelwehera Village Resort', 'Bulagala Junction, Habarana Road, Dambulla', 662284280, 'pvr@gmai.com', 1750, 2800, 3400, 16, 18, 20, 'A great place to stay while traveling to Dambulla.', 6),
+(7, 'Elements Beach & Nature Resort, Kalpitiya', 'Elements Beach & Nature Resort Kappalady, Talawila Kalpitiya, Puttalam District Sri Lanka', 775066468, 'beachhotel@gmail.com', 1100, 2100, 3900, 12, 15, 15, 'eenergize with the rhythm of the Indian Ocean and the Kappalady Lagoon', 7),
+(8, 'The Queens Wood Cottage', '110 PBC Hwy, Nuwara Eliya', 523456789, 'qwc@gmail.com', 1800, 2800, 4500, 8, 18, 15, 'experience the nature with full facilities', 8),
+(9, 'Grand Camellia hotel', '14, 35 Gajabapura Road, Nuwara Eliya', 529876567, 'gch@gmail.com', 1200, 2600, 4500, 5, 15, 10, 'Airy quarters in a laid-back hotel offering 2 restaurants, plus a lounge with a pool table.', 9),
+(10, 'Sasvi cabana', 'Unnamed Road, EP, Trincomalee', 773429749, 'Sasvi@gmail.com', 2500, 3100, 4100, 5, 8, 15, '3-star hotel with full facikities', 10),
+(11, 'Le Grand Galle', '30 Park Rd, Galle', 912228555, 'legrand@gmail.com', 2000, 2700, 3700, 6, 10, 15, 'New, contemporary hotel perfectly positioned on a promontory overlooking the historic Fort and the Indian Ocean', 11),
+(12, 'CocoBay Unawatuna', '10/4, Roomassala Road, Unawatuna', 867478341, 'coco@gmail.com', 1800, 3000, 4700, 8, 15, 15, 'Flanked by trees, this upscale hotel on a secluded part of Unawatuna Beach is 1 km from Katugoda train station.', 12),
+(13, 'Turtle Eco Hotel', 'Beach Road, Madiha,Matara, Matara', 412223377, 'tch@gmail.com', 1750, 2400, 3900, 6, 16, 10, 'Turtle Eco Beach is a newly refurbished resort just 2.5 mi away from Mirissa city. This elegant property features an outdoor swimming pool and offers snorkeling', 13),
 (14, 'Cinnamon Lakeside Colombo', '115, Sir Chittampalam A Gardiner Mawatha', 112491000, 'clc@gmail.com', 17000, 29000, 48000, 10, 15, 15, 'polished lodging with elegant Rooms.', 14);
 
 -- --------------------------------------------------------
@@ -283,14 +417,16 @@ INSERT INTO `hotel` (`hid`, `name`, `address`, `telephone`, `email`, `singleroom
 -- Table structure for table `hotelavailability`
 --
 
-CREATE TABLE `hotelavailability` (
-  `haid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `hotelavailability`;
+CREATE TABLE IF NOT EXISTS `hotelavailability` (
+  `haid` int(11) NOT NULL AUTO_INCREMENT,
   `hid` int(11) NOT NULL,
   `availability_date` varchar(50) NOT NULL,
   `singlerooms` int(11) NOT NULL,
   `doublerooms` int(11) NOT NULL,
-  `familyrooms` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `familyrooms` int(11) NOT NULL,
+  PRIMARY KEY (`haid`)
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hotelavailability`
@@ -346,13 +482,23 @@ INSERT INTO `hotelavailability` (`haid`, `hid`, `availability_date`, `singleroom
 -- Table structure for table `messages`
 --
 
-CREATE TABLE `messages` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) NOT NULL,
   `email` varchar(200) NOT NULL,
   `telephone` int(11) NOT NULL,
-  `details` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `details` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `email`, `telephone`, `details`) VALUES
+(1, 'Asini ', 'asinipathmila@gmail.com', 774567823, 'I want to arrange one trip to Kandy.'),
+(2, 'Sandeepa Ranathunga', 'sandeepa@gmail.com', 774567456, 'I want to arrange a trip to Jaffna for three days.');
 
 -- --------------------------------------------------------
 
@@ -360,8 +506,9 @@ CREATE TABLE `messages` (
 -- Table structure for table `package`
 --
 
-CREATE TABLE `package` (
-  `packid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `package`;
+CREATE TABLE IF NOT EXISTS `package` (
+  `packid` int(11) NOT NULL AUTO_INCREMENT,
   `catname` varchar(20) NOT NULL,
   `subcatname` varchar(20) NOT NULL,
   `name` varchar(20) NOT NULL,
@@ -370,8 +517,9 @@ CREATE TABLE `package` (
   `details` text NOT NULL,
   `photo1` int(11) NOT NULL,
   `photo2` int(11) NOT NULL,
-  `photo3` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `photo3` int(11) NOT NULL,
+  PRIMARY KEY (`packid`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `package`
@@ -383,7 +531,16 @@ INSERT INTO `package` (`packid`, `catname`, `subcatname`, `name`, `days`, `price
 (5, 'Family Tours', 'Two Days Packages', 'Package 2 (Silver)', 2, 2000, 'Package 2 (Silver) will cover Galle and Hikkaduwa cities with moderate facilities.', 13, 14, 15),
 (6, 'Family Tours', 'Two Days Packages', 'Package 2 (Bronze)', 2, 1000, 'Package 2 (Bronze) will cover Galle and Hikkaduwa cities with average facilities.', 16, 17, 18),
 (8, 'Family Tours', 'Three Days Packages', 'Package 1 (Silver)', 3, 2500, 'This is the three days (Silver) travel package which covers Nuwara Eliya, Haputale and Colombo.\r\n', 22, 23, 24),
-(7, 'Family Tours', 'Three Days Packages', 'Package 1 (Gold)', 3, 3500, 'This is the three days (Gold) travel package which covers Nuwara Eliya, Haputale and Colombo.\r\n', 19, 20, 21);
+(7, 'Family Tours', 'Three Days Packages', 'Package 1 (Gold)', 3, 3500, 'This is the three days (Gold) travel package which covers Nuwara Eliya, Haputale and Colombo.\r\n', 19, 20, 21),
+(10, 'Family Tours', 'Two Days Packages', 'Package 3 (Gold)', 2, 4000, 'This is two days family package (Gold) which covers, Kandy and Pinnawala', 28, 29, 30),
+(11, 'Family Tours', 'Two Days Packages', 'Package 3 (Silver)', 2, 3000, 'This is two days family package (Silver) which covers, Kandy and Pinnawala', 31, 32, 33),
+(12, 'Family Tours', 'Two Days Packages', 'Package 3 (Bronze)', 2, 2000, 'This is two days family package (Bronze) which covers, Kandy and Pinnawala', 34, 35, 36),
+(13, 'Religious Tours', 'Two Days Packages', 'Package 4 (Gold)', 2, 5000, 'This is two days religious tour (Gold) which covers Anuradhapura.', 37, 38, 39),
+(14, 'Religious Tours', 'Two Days Packages', 'Package 4 (Silver)', 2, 4000, 'This is two days religious tour (Silver) which covers Anuradhapura.', 40, 41, 42),
+(15, 'Religious Tours', 'Two Days Packages', 'Package 4 (Bronze)', 2, 3000, 'This is two days religious tour (Bronze) which covers Anuradhapura.', 43, 44, 45),
+(16, 'Adventure Tours', 'Four Days Packages', 'Package 5 (Gold)', 4, 8000, 'This is an adventure tour (Gold) for four days.', 46, 47, 48),
+(17, 'Adventure Tours', 'Four Days Packages', 'Package 5 (Silver)', 4, 7000, 'This is an adventure tour (Silver) for four days.', 49, 50, 51),
+(18, 'Adventure Tours', 'Four Days Packages', 'Package 5 (Bronze)', 4, 6000, 'This is an adventure tour (Bronze) for four days.', 52, 53, 54);
 
 -- --------------------------------------------------------
 
@@ -391,11 +548,13 @@ INSERT INTO `package` (`packid`, `catname`, `subcatname`, `name`, `days`, `price
 -- Table structure for table `packdestination`
 --
 
-CREATE TABLE `packdestination` (
-  `packdesid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `packdestination`;
+CREATE TABLE IF NOT EXISTS `packdestination` (
+  `packdesid` int(11) NOT NULL AUTO_INCREMENT,
   `packid` int(11) NOT NULL,
-  `destid` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `destid` int(11) NOT NULL,
+  PRIMARY KEY (`packdesid`)
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `packdestination`
@@ -416,7 +575,25 @@ INSERT INTO `packdestination` (`packdesid`, `packid`, `destid`) VALUES
 (13, 7, 25),
 (19, 9, 25),
 (20, 9, 35),
-(21, 9, 30);
+(21, 9, 30),
+(24, 10, 1),
+(25, 10, 36),
+(26, 11, 1),
+(27, 11, 36),
+(28, 12, 1),
+(29, 12, 36),
+(30, 13, 27),
+(31, 14, 27),
+(32, 15, 27),
+(33, 16, 37),
+(34, 16, 25),
+(35, 16, 35),
+(36, 17, 37),
+(37, 17, 25),
+(38, 17, 35),
+(39, 18, 37),
+(40, 18, 25),
+(41, 18, 35);
 
 -- --------------------------------------------------------
 
@@ -424,16 +601,31 @@ INSERT INTO `packdestination` (`packdesid`, `packid`, `destid`) VALUES
 -- Table structure for table `payment`
 --
 
-CREATE TABLE `payment` (
-  `pid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `payment`;
+CREATE TABLE IF NOT EXISTS `payment` (
+  `pid` int(11) NOT NULL AUTO_INCREMENT,
   `resvid` int(11) NOT NULL,
   `amount` int(11) NOT NULL,
   `date` varchar(50) NOT NULL,
   `name` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `telephone` int(11) NOT NULL,
-  `address` varchar(500) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `address` varchar(500) NOT NULL,
+  PRIMARY KEY (`pid`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payment`
+--
+
+INSERT INTO `payment` (`pid`, `resvid`, `amount`, `date`, `name`, `email`, `telephone`, `address`) VALUES
+(1, 2, 16000, '15/02/2020', 'Asini Pathmila Silva', 'asinipathmila@gmail.com', 774567823, '0No. 45, main road, Ambalangoda'),
+(2, 3, 16000, '15/04/2020', 'Asini Pathmila Silva', 'asinipathmila@gmail.com', 774567823, '0No. 45, main road, Ambalangoda'),
+(3, 4, 14000, '15/04/2020', 'Asini Pathmila Silva', 'asinipathmila@gmail.com', 774567823, '0No. 45, main road, Ambalangoda'),
+(4, 5, 4000, '15/05/2020', 'Asini Pathmila Silva', 'asinipathmila@gmail.com', 774567823, '0No. 45, main road, Ambalangoda'),
+(5, 6, 10000, '15/06/2020', 'Sachini Maneesha', 'sachini@gmail.com', 774567823, '0No. 45, main road, Matara'),
+(6, 7, 7000, '15/07/2020', 'Sachini Maneesha', 'sachini@gmail.com', 774567823, '0No. 45, main road, Matara'),
+(7, 8, 6000, '15/08/2020', 'Sachini Maneesha', 'sachini@gmail.com', 774567823, '0No. 45, main road, Matara');
 
 -- --------------------------------------------------------
 
@@ -441,16 +633,31 @@ CREATE TABLE `payment` (
 -- Table structure for table `resavation`
 --
 
-CREATE TABLE `resavation` (
-  `resvid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `resavation`;
+CREATE TABLE IF NOT EXISTS `resavation` (
+  `resvid` int(11) NOT NULL AUTO_INCREMENT,
   `packid` int(11) NOT NULL,
   `uid` int(11) NOT NULL,
   `date` varchar(50) NOT NULL,
   `travelers` int(11) NOT NULL,
   `singlerooms` int(11) NOT NULL,
   `doublerooms` int(11) NOT NULL,
-  `familyrooms` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `familyrooms` int(11) NOT NULL,
+  PRIMARY KEY (`resvid`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resavation`
+--
+
+INSERT INTO `resavation` (`resvid`, `packid`, `uid`, `date`, `travelers`, `singlerooms`, `doublerooms`, `familyrooms`) VALUES
+(2, 10, 1, '2020-12-12', 4, 0, 2, 0),
+(3, 10, 1, '2020-12-12', 4, 0, 2, 0),
+(4, 7, 1, '2020-12-31', 4, 0, 0, 1),
+(5, 5, 1, '2020-12-04', 2, 2, 0, 0),
+(6, 13, 4, '2020-12-11', 2, 0, 1, 0),
+(7, 7, 4, '2020-12-31', 2, 0, 1, 0),
+(8, 12, 4, '2020-11-21', 3, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -458,11 +665,13 @@ CREATE TABLE `resavation` (
 -- Table structure for table `subcategory`
 --
 
-CREATE TABLE `subcategory` (
-  `subcatid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `subcategory`;
+CREATE TABLE IF NOT EXISTS `subcategory` (
+  `subcatid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `description` text NOT NULL,
+  PRIMARY KEY (`subcatid`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `subcategory`
@@ -471,8 +680,7 @@ CREATE TABLE `subcategory` (
 INSERT INTO `subcategory` (`subcatid`, `name`, `description`) VALUES
 (2, 'Two Days Packages', 'This is two days tour package. To find the travel packages please Click here!!'),
 (3, 'Three Days Packages', 'This is three days tour package. To find the packages please Click here!!'),
-(4, 'Four Days Packages', 'This is four days tour package. To find the packages please Click here!!'),
-(5, 'Five Days Packages', 'This is five days tour package. To find the packages please Click here!!');
+(4, 'Four Days Packages', 'This is four days tour package. To find the packages please Click here!!');
 
 -- --------------------------------------------------------
 
@@ -480,13 +688,15 @@ INSERT INTO `subcategory` (`subcatid`, `name`, `description`) VALUES
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
-  `uid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `address` varchar(400) NOT NULL,
   `email` varchar(200) NOT NULL,
-  `telephone` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `telephone` int(11) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -515,7 +725,8 @@ INSERT INTO `user` (`uid`, `name`, `address`, `email`, `telephone`) VALUES
 -- Table structure for table `vehicle`
 --
 
-CREATE TABLE `vehicle` (
+DROP TABLE IF EXISTS `vehicle`;
+CREATE TABLE IF NOT EXISTS `vehicle` (
   `vid` varchar(11) NOT NULL,
   `name` varchar(500) NOT NULL,
   `charge` int(11) NOT NULL,
@@ -524,8 +735,30 @@ CREATE TABLE `vehicle` (
   `telephone` int(11) NOT NULL,
   `type` varchar(200) NOT NULL,
   `details` text NOT NULL,
-  `photo` varchar(20) NOT NULL
+  `photo` varchar(20) NOT NULL,
+  PRIMARY KEY (`vid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vehicle`
+--
+
+INSERT INTO `vehicle` (`vid`, `name`, `charge`, `email`, `address`, `telephone`, `type`, `details`, `photo`) VALUES
+('BBD-6898', 'Sumith Jayasuriya', 100, 'sumithJ@gmail.com', 'Weherahena Road, Kakanadura', 751245432, 'van - 06 seats', 'Fully comfortable conditions with all facilities', '17'),
+('QC-1234', 'Janith Ishara', 165, 'janith@gmail.com', 'Girahenawaththa, Hakmana Road,  Walasmulla', 785678234, 'car - 02 seats', 'Fully comfortable conditions with all facilities', '28'),
+('BFG-4590', 'Prabath Chathuranga', 125, 'prabath@gmail.com', 'No: 122,  Matara Road, Thudawa', 775680135, 'bus - 35 seats', 'Fully comfortable conditions with all facilities', '18'),
+('QBF-2390', 'Aruna Kumara', 145, 'aruna@gmail.com', 'No. 45A/75, main road, Matara', 783456177, 'bus - 54 seats', 'Fully comfortable conditions with all facilities', '30'),
+('ABC-2378', 'Chamidu Udesh', 150, 'chamidu@gmail.com', 'No:45, Isadin Town, Matara', 752345987, 'car - 02 seats', 'Fully comfortable conditions with all facilities', '29'),
+('DFI-6789', 'Chandana Siribaddana', 200, 'chandana@gmail.com', 'No:23, Kamburupitiya Road, Makadura', 777890145, 'van - 15 seats', 'Fully comfortable conditions with all facilities', '19'),
+('XXB-4578', 'Jagath Bandara', 148, 'jagath@gmail.com', 'Kapudahena, Mivanapalana, Horana', 708934567, 'bus - 54 seats', 'Fully comfortable conditions with all facilities', '20'),
+('ASP-1273', 'Manjula Prasad', 150, 'manjula@gmail.com', 'No:56, Galle Road, Weligama', 754389675, 'bus - 54 seats', 'Fully comfortable conditions with all facilities', '21'),
+('TOP-4210', 'Lahiru Harshana', 122, 'lahiru@gmail.com', 'Wasana, Pahala Aparekka, Kakanadura', 713201633, 'van - 15 seats', 'Fully comfortable conditions with all facilities', '22'),
+('SGH-9034', 'Rumesh Jayamanna', 120, 'rumesh@gmail.com', 'N0:122A/89, Galle Road, Kaburugamuwa', 726512897, 'car - 04 seats', 'Fully comfortable conditions with all facilities', '23'),
+('AJK-5640', 'Kushan Manahara', 100, 'kushan@gmail.com', 'No:80, Galle Road, Ambalangoda', 763478145, 'van - 06 seats', 'Fully comfortable conditions with all facilities', '24'),
+('GHO-8540', 'Vajira Krishantha', 120, 'vajira@gmail.com', 'No:12/3, Wijerama Road, Alpitiya', 703489632, 'van - 10 seats', 'Fully comfortable conditions with all facilities', '25'),
+('JDE-5034', 'Pasindu Vindula', 150, 'pasindu@gmail.com', 'No:45, Wijerama Road, Nugegoda', 784512398, 'van - 06 seats', 'Fully comfortable conditions with all facilities', '26'),
+('TYE-7269', 'Pahan Darmasiri', 130, 'pahan@gmail.com', 'No:145, Sunethradevi Road, Kohuwala', 715690164, 'bus - 35 seats', 'Fully comfortable conditions with all facilities', '31'),
+('ADC-8543', 'Gayan Jayalath', 150, 'gayan@gmail.com', 'No:156, Wilson Road, Moratuwa', 750417455, 'bus - 54 seats', 'Fully comfortable conditions with all facilities', '27');
 
 -- --------------------------------------------------------
 
@@ -533,229 +766,83 @@ CREATE TABLE `vehicle` (
 -- Table structure for table `vehicleavailability`
 --
 
-CREATE TABLE `vehicleavailability` (
-  `vaid` int(11) NOT NULL,
+DROP TABLE IF EXISTS `vehicleavailability`;
+CREATE TABLE IF NOT EXISTS `vehicleavailability` (
+  `vaid` int(11) NOT NULL AUTO_INCREMENT,
   `vid` varchar(20) NOT NULL,
-  `availability_date` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `availability_date` varchar(50) NOT NULL,
+  PRIMARY KEY (`vaid`)
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `vehicleavailability`
 --
 
---
--- Indexes for table `account`
---
-ALTER TABLE `account`
-  ADD PRIMARY KEY (`aid`);
-
---
--- Indexes for table `category`
---
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`catid`);
-
---
--- Indexes for table `categorysubcategory`
---
-ALTER TABLE `categorysubcategory`
-  ADD PRIMARY KEY (`cat-subcatid`);
-
---
--- Indexes for table `comment`
---
-ALTER TABLE `comment`
-  ADD PRIMARY KEY (`cid`);
-
---
--- Indexes for table `destination`
---
-ALTER TABLE `destination`
-  ADD PRIMARY KEY (`destid`);
-
---
--- Indexes for table `guide`
---
-ALTER TABLE `guide`
-  ADD PRIMARY KEY (`gid`);
-
---
--- Indexes for table `guideavailability`
---
-ALTER TABLE `guideavailability`
-  ADD PRIMARY KEY (`gaid`);
-
---
--- Indexes for table `hotel`
---
-ALTER TABLE `hotel`
-  ADD PRIMARY KEY (`hid`);
-
---
--- Indexes for table `hotelavailability`
---
-ALTER TABLE `hotelavailability`
-  ADD PRIMARY KEY (`haid`);
-
---
--- Indexes for table `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `package`
---
-ALTER TABLE `package`
-  ADD PRIMARY KEY (`packid`);
-
---
--- Indexes for table `packdestination`
---
-ALTER TABLE `packdestination`
-  ADD PRIMARY KEY (`packdesid`);
-
---
--- Indexes for table `payment`
---
-ALTER TABLE `payment`
-  ADD PRIMARY KEY (`pid`);
-
---
--- Indexes for table `resavation`
---
-ALTER TABLE `resavation`
-  ADD PRIMARY KEY (`resvid`);
-
---
--- Indexes for table `subcategory`
---
-ALTER TABLE `subcategory`
-  ADD PRIMARY KEY (`subcatid`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`uid`);
-
---
--- Indexes for table `vehicle`
---
-ALTER TABLE `vehicle`
-  ADD PRIMARY KEY (`vid`);
-
---
--- Indexes for table `vehicleavailability`
---
-ALTER TABLE `vehicleavailability`
-  ADD PRIMARY KEY (`vaid`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `account`
---
-ALTER TABLE `account`
-  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `catid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `categorysubcategory`
---
-ALTER TABLE `categorysubcategory`
-  MODIFY `cat-subcatid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `comment`
---
-ALTER TABLE `comment`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `destination`
---
-ALTER TABLE `destination`
-  MODIFY `destid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
-
---
--- AUTO_INCREMENT for table `guide`
---
-ALTER TABLE `guide`
-  MODIFY `gid` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `guideavailability`
---
-ALTER TABLE `guideavailability`
-  MODIFY `gaid` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `hotel`
---
-ALTER TABLE `hotel`
-  MODIFY `hid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `hotelavailability`
---
-ALTER TABLE `hotelavailability`
-  MODIFY `haid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
-
---
--- AUTO_INCREMENT for table `messages`
---
-ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `package`
---
-ALTER TABLE `package`
-  MODIFY `packid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `packdestination`
---
-ALTER TABLE `packdestination`
-  MODIFY `packdesid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
-
---
--- AUTO_INCREMENT for table `payment`
---
-ALTER TABLE `payment`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `resavation`
---
-ALTER TABLE `resavation`
-  MODIFY `resvid` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `subcategory`
---
-ALTER TABLE `subcategory`
-  MODIFY `subcatid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `vehicleavailability`
---
-ALTER TABLE `vehicleavailability`
-  MODIFY `vaid` int(11) NOT NULL AUTO_INCREMENT;
+INSERT INTO `vehicleavailability` (`vaid`, `vid`, `availability_date`) VALUES
+(1, 'BBD-6898', '2020-12-12'),
+(2, 'BBD-6898', '2020-12-31'),
+(3, 'BBD-6898', '2020-11-18'),
+(4, 'BBD-6898', '2021-01-05'),
+(5, 'BBD-6898', '2020-12-26'),
+(6, 'QC-1234', '2020-12-14'),
+(7, 'QC-1234', '2020-12-26'),
+(8, 'QC-1234', '2020-11-23'),
+(9, 'QC-1234', '2020-11-16'),
+(10, 'QC-1234', '2021-02-17'),
+(11, 'BFG-4590', '2020-11-27'),
+(12, 'BFG-4590', '2020-11-30'),
+(13, 'BFG-4590', '2020-12-10'),
+(14, 'BFG-4590', '2020-12-29'),
+(15, 'BFG-4590', '2021-02-01'),
+(16, 'QBF-2390', '2020-12-13'),
+(17, 'QBF-2390', '2020-12-07'),
+(18, 'QBF-2390', '2021-02-14'),
+(19, 'QBF-2390', '2020-11-26'),
+(20, 'QBF-2390', '2020-11-30'),
+(21, 'ABC-2378', '2020-12-18'),
+(22, 'ABC-2378', '2020-11-25'),
+(23, 'ABC-2378', '2021-01-18'),
+(24, 'ABC-2378', '2020-12-19'),
+(25, 'DFI-6789', '2020-12-03'),
+(26, 'DFI-6789', '2020-12-02'),
+(27, 'DFI-6789', '2021-01-18'),
+(28, 'DFI-6789', '2020-11-22'),
+(29, 'XXB-4578', '2020-11-20'),
+(30, 'XXB-4578', '2020-11-21'),
+(31, 'XXB-4578', '2020-12-09'),
+(32, 'XXB-4578', '2021-01-15'),
+(33, 'ASP-1273', '2020-12-30'),
+(34, 'ASP-1273', '2020-11-29'),
+(35, 'ASP-1273', '2020-11-15'),
+(36, 'ASP-1273', '2020-12-14'),
+(37, 'TOP-4210', '2021-01-10'),
+(38, 'TOP-4210', '2021-02-04'),
+(39, 'TOP-4210', '2020-11-27'),
+(40, 'TOP-4210', '2020-12-24'),
+(41, 'SGH-9034', '2020-11-19'),
+(42, 'SGH-9034', '2020-11-26'),
+(43, 'SGH-9034', '2020-12-13'),
+(44, 'SGH-9034', '2021-01-01'),
+(45, 'AJK-5640', '2020-12-11'),
+(46, 'AJK-5640', '2020-12-23'),
+(47, 'AJK-5640', '2021-01-07'),
+(48, 'GHO-8540', '2020-12-16'),
+(49, 'GHO-8540', '2021-01-13'),
+(50, 'GHO-8540', '2020-12-27'),
+(51, 'GHO-8540', '2020-12-02'),
+(52, 'JDE-5034', '2020-12-11'),
+(53, 'JDE-5034', '2020-11-24'),
+(54, 'JDE-5034', '2020-12-25'),
+(55, 'JDE-5034', '2021-01-19'),
+(56, 'TYE-7269', '2020-12-13'),
+(57, 'TYE-7269', '2020-12-14'),
+(58, 'TYE-7269', '2021-01-06'),
+(59, 'TYE-7269', '2021-02-17'),
+(60, 'ADC-8543', '2020-12-18'),
+(61, 'ADC-8543', '2021-01-03'),
+(62, 'ADC-8543', '2020-11-16'),
+(63, 'ADC-8543', '2021-02-18'),
+(64, 'ADC-8543', '2020-12-21');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
