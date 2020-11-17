@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 16, 2020 at 08:20 PM
+-- Generation Time: Nov 17, 2020 at 09:40 PM
 -- Server version: 5.7.11-log
 -- PHP Version: 7.3.12
 
@@ -60,31 +60,28 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
 (15, '14', 'user14', '2b04927a48b1a3a928f843c0696109b8', 0),
 (16, '15', 'user15', '2b04927a48b1a3a928f843c0696109b8', 0),
 (17, '1', 'user', '2b04927a48b1a3a928f843c0696109b8', 3),
-(18, '2', 'Hotel2', '2b04927a48b1a3a928f843c0696109b8', 3),
-(19, '3', 'Hotel3', '2b04927a48b1a3a928f843c0696109b8', 3),
-(20, '4', 'Hotel4', '2b04927a48b1a3a928f843c0696109b8', 3),
-(21, '5', 'Hotel5', '2b04927a48b1a3a928f843c0696109b8', 3),
-(22, '6', 'Hotel6', '2b04927a48b1a3a928f843c0696109b8', 3),
-(23, '7', 'Hotel7', '2b04927a48b1a3a928f843c0696109b8', 3),
-(24, '8', 'Hotel8', '2b04927a48b1a3a928f843c0696109b8', 3),
-(25, '9', 'Hotel9', '2b04927a48b1a3a928f843c0696109b8', 3),
-(26, '10', 'Hotel10', '76744dcba7e6a31f9239e96a451c459a', 3),
-(27, '11', 'Hotel11', '2346deb5d41fce87d2c827e1af15b761', 3),
-(28, '12', 'Hotel12', '9be2be8f81b6baa6876178ddf347a8d2', 3),
-(29, '13', 'Hotel13', 'b7a199792d416869907cb813d0d91e9e', 3),
-(30, '14', 'Hotel14', 'e3b5be4b30d938ff55b0e5f31b6b3bf3', 3),
+(18, '2', 'hotel2', '2b04927a48b1a3a928f843c0696109b8', 3),
+(19, '3', 'hotel3', '2b04927a48b1a3a928f843c0696109b8', 3),
+(20, '4', 'hotel4', '2b04927a48b1a3a928f843c0696109b8', 3),
+(21, '5', 'hotel5', '2b04927a48b1a3a928f843c0696109b8', 3),
+(22, '6', 'hotel6', '2b04927a48b1a3a928f843c0696109b8', 3),
+(23, '7', 'hotel7', '2b04927a48b1a3a928f843c0696109b8', 3),
+(24, '8', 'hotel8', '2b04927a48b1a3a928f843c0696109b8', 3),
+(25, '9', 'hotel9', '2b04927a48b1a3a928f843c0696109b8', 3),
+(26, '10', 'hotel10', '76744dcba7e6a31f9239e96a451c459a', 3),
+(27, '11', 'hotel11', '2346deb5d41fce87d2c827e1af15b761', 3),
+(28, '12', 'hotel12', '9be2be8f81b6baa6876178ddf347a8d2', 3),
+(29, '13', 'hotel13', 'b7a199792d416869907cb813d0d91e9e', 3),
+(30, '14', 'hotel14', 'e3b5be4b30d938ff55b0e5f31b6b3bf3', 3),
 (31, '1', 'user', '2b04927a48b1a3a928f843c0696109b8', 2),
 (32, '2', 'guide2', '2b04927a48b1a3a928f843c0696109b8', 2),
 (33, '3', 'guide3', '2b04927a48b1a3a928f843c0696109b8', 2),
 (34, '4', 'guide4', '2b04927a48b1a3a928f843c0696109b8', 2),
-(35, '5', 'guide5', '2b04927a48b1a3a928f843c0696109b8', 2),
 (36, '6', 'guide6', '2b04927a48b1a3a928f843c0696109b8', 2),
 (37, '7', 'guide7', '2b04927a48b1a3a928f843c0696109b8', 2),
 (38, '8', 'guide8', '2b04927a48b1a3a928f843c0696109b8', 2),
 (39, '9', 'guide9', '2b04927a48b1a3a928f843c0696109b8', 2),
 (40, '10', 'guide10', '2b04927a48b1a3a928f843c0696109b8', 2),
-(41, '11', 'guide11', '2b04927a48b1a3a928f843c0696109b8', 2),
-(42, '12', 'guide12', '2b04927a48b1a3a928f843c0696109b8', 2),
 (43, '13', 'guide13', '2b04927a48b1a3a928f843c0696109b8', 2),
 (44, '14', 'guide14', '2b04927a48b1a3a928f843c0696109b8', 2),
 (45, '15', 'guide15', '2b04927a48b1a3a928f843c0696109b8', 2),
@@ -107,6 +104,37 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `admin`) VALUES
 (62, 'JDE-5034', 'vehicle16', '2b04927a48b1a3a928f843c0696109b8', 4),
 (63, 'TYE-7269', 'vehicle17', '2b04927a48b1a3a928f843c0696109b8', 4),
 (64, 'ADC-8543', 'vehicle18', '2b04927a48b1a3a928f843c0696109b8', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assign`
+--
+
+DROP TABLE IF EXISTS `assign`;
+CREATE TABLE IF NOT EXISTS `assign` (
+  `asid` int(11) NOT NULL AUTO_INCREMENT,
+  `hotel` int(11) NOT NULL,
+  `guide` int(11) NOT NULL,
+  `vehicle` varchar(500) NOT NULL,
+  `package` varchar(500) NOT NULL,
+  `price` int(11) NOT NULL,
+  `date` varchar(500) NOT NULL,
+  `name` varchar(500) NOT NULL,
+  `address` varchar(500) NOT NULL,
+  `email` varchar(500) NOT NULL,
+  `telephone` int(11) NOT NULL,
+  PRIMARY KEY (`asid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `assign`
+--
+
+INSERT INTO `assign` (`asid`, `hotel`, `guide`, `vehicle`, `package`, `price`, `date`, `name`, `address`, `email`, `telephone`) VALUES
+(1, 2, 9, 'ASP-1273', 'Package 3 (Gold)', 4000, '2020-12-12', 'Asini Pathmila Silva', 'No. 45, main road, Ambalangoda', 'asinipathmila@gmail.com', 774567823),
+(2, 9, 15, 'QC-1234', 'Package 3 (Gold)', 4000, '2020-12-12', 'Asini Pathmila Silva', 'No. 45, main road, Ambalangoda', 'asinipathmila@gmail.com', 774567823),
+(3, 5, 9, 'TOP-4210', 'Package 3 (Gold)', 4000, '2020-12-12', 'Asini Pathmila Silva', 'No. 45, main road, Ambalangoda', 'asinipathmila@gmail.com', 774567823);
 
 -- --------------------------------------------------------
 
@@ -217,7 +245,7 @@ CREATE TABLE IF NOT EXISTS `destination` (
   `description` text NOT NULL,
   `photo` int(11) NOT NULL,
   PRIMARY KEY (`destid`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `destination`
@@ -271,7 +299,8 @@ INSERT INTO `destination` (`destid`, `name`, `description`, `photo`) VALUES
 (45, 'Birds park Hambantota', 'Bird park is one of the very few destinations for bird and nature lovers looking for a calm and relaxed experience, yet with ample time to view, study and enjoy the beasts of the air.<br />\r\n\r\nMost visitors who enjoy our park would like to collect a memento or share their experiences with their loved ones when they get back home. You can do your souvenir shopping right within our own gift shop.<br />\r\n\r\nWith over 35 acres of land the park gives visitors the opportunity to meet and interact with our feathered residents. We invite you to come and enjoy!<br />\r\n\r\nIf you are coming from Colombo take Southern Highway to Matara and come to Hambanthota Town.Then come to Katuwewa Junction and turn left. 7km From Katuwewa junction you will find our Birds Research Center & Resort.<br /> <br />\r\n\r\n\r\nPrice :<br />\r\nRates for Locals: LKR 250.00<br />\r\nRates for Foreigners:  LKR 1000.00', 71),
 (46, 'Saman Devalaya', 'The Sabaragamuwa Maha Saman Devalaya is considered the main Devalaya of deity Saman except for the Shrine at top of Sri Pada.<br />\r\n\r\nThe history speaks of a temple at Ratnapura area since the time of king Dutugemunu of Anuradhapura Kingdom, But the recent history starts from Dambadeniya period.<br />\r\n\r\n\r\n A court Minister called Aryakamadeva had come over to Ratnapura to make a vow for gemming, and if lucky to build a Devalaya to keep God Sumana Saman’s statue. After a sucessful gem mining expedition, he is said to have built the first devalaya dedicated to God Saman at Ratnapura. Although the devalaya was highly influenced by Hindu culture, it remained a Buddhist place of worship throughout the years.', 72),
 (47, 'Mihinthalaya ', 'In the 3rd century BC, area of Mihintale (mihinthalaya) was a thick jungle area inhibited by wild animals and was a hunting ground reserved for the royals. All this changed in 250 BC when the son of the Indian Emperor Asoka, Mahinda Maha Thero arrived at the Missaka Pauwa to meet king Devamnampiyatissa for the first time and asked the famous questions to decide whether he is intelligent enough to understand the philosophy of the Buddha. Initially Mahinda Maha Thero’s residence, but later Mihintale (mihinthalaya) became a main center for Theravada Buddhism and is considered the cradle of Buddhism in Sri Lanka.<br /> <br />\r\n\r\nMihinthale is a collection of four mountains each about 1000 feet in height.<br />\r\n\r\nThey are<br />\r\n\r\nMihinthalawa<br />\r\nAth Vehera mountain<br />\r\nAnaikutti mountain<br />\r\nRajagiri Lena mountain<br />\r\nMihinthalawa is the main mountain and where the Aradhana gala (The rock of invitation) and the main Mahaseya stupa is situated.<br /><br />\r\n\r\nalternate names : mihinthalawa, Mihinthalaya, mihinthale', 73),
-(49, 'Elephant Rock ', 'This rock overlooking Kurunegala and cutting the city in two offers a unique panorama on the city, its lake and surrounding area. It is a very popular place of visit. It was he who gave his name to the city. In Sinhala, kurune means elephant defense and gala means rock. You can reach its summit by a road about 1,5 km from Wathhimi Road. There is a Buddhist temple (Athugala Temple), a communication tower from Sri Lanka Telecom and a huge statue of Buddha, the main point of interest on the site. This statue, inaugurated in 2003 after 27 months of work, is metres high, including the base. You can penetrate inside. An information panel placed in the approach of the statue recalls the history of the city which was the capital of the kingdom from 1341 to 1293 under the name Hasthiasailapura. Near the access road, you can see a former royal basin dug in the rock.\r\n\r\n', 74);
+(49, 'Elephant Rock ', 'This rock overlooking Kurunegala and cutting the city in two offers a unique panorama on the city, its lake and surrounding area. It is a very popular place of visit. It was he who gave his name to the city. In Sinhala, kurune means elephant defense and gala means rock. You can reach its summit by a road about 1,5 km from Wathhimi Road. There is a Buddhist temple (Athugala Temple), a communication tower from Sri Lanka Telecom and a huge statue of Buddha, the main point of interest on the site. This statue, inaugurated in 2003 after 27 months of work, is metres high, including the base. You can penetrate inside. An information panel placed in the approach of the statue recalls the history of the city which was the capital of the kingdom from 1341 to 1293 under the name Hasthiasailapura. Near the access road, you can see a former royal basin dug in the rock.\r\n\r\n', 74),
+(50, 'Kurunagala', 'aaa', 75);
 
 -- --------------------------------------------------------
 
@@ -302,14 +331,11 @@ INSERT INTO `guide` (`gid`, `name`, `charge`, `birthday`, `address`, `telephone`
 (2, 'sudesh bandara', 1500, '1996-04-11', 'no:12 Mathale town', 751552663, 'sudhesh@gmail.com', 'my home town matale', 2),
 (3, 'dimuthu lakmal', 1000, '1998-01-01', 'anuradhapura ,eppawala', 715632469, 'dimuth@gmail.com', 'my home town eppawala', 3),
 (4, 'amal perera', 3000, '1998-04-01', 'gonapinuwala,hikkaduwa', 715824662, 'amal@gmail.com', 'my home town galla', 4),
-(5, 'pravin himantha', 2500, '1997-10-04', 'pinnawala,kandy', 715468456, 'prvin@gmail.com', 'my home town kandy', 5),
 (6, 'aravinda nimantha', 200, '1998-04-01', 'alapatha,awissawella', 705135243, 'aravi2@gmail.com', 'my home town rathnapura', 6),
 (7, 'pasidu podikumara', 3100, '1998-02-28', 'No:90,ingiriya ', 787541565, 'pasi@gmail.com', 'my home town rathnapura', 7),
 (8, 'nimal galagama', 4000, '1967-05-13', 'belihuloya,balangoda', 757070756, 'nimal@gmail.com', 'my home town rathnapura', 8),
 (9, 'uvindhu sndeepa', 2100, '1988-10-10', 'unawatuna ', 715415256, 'uvindhu@gmai.com', 'my home town peduruthudaw', 9),
 (10, 'milan  malshika', 2300, '1998-04-01', 'payagala,beruwala ', 756165416, 'milan@gmail.com', 'my home town beruwala', 10),
-(11, 'kalpa sandharuwan', 4000, '1996-11-14', 'alawwa,boywalana', 715463566, 'kalpa@gmail.com', 'my home town kurunagala', 11),
-(12, 'parasad sampath', 3100, '1996-04-01', 'no29, panthiya mathugama', 751564366, 'prasad@gmail.com', 'my home town mathugama', 12),
 (13, 'Gagath vithana', 1000, '1968-02-12', 'kalthota balangoda', 799251551, 'gagath@Gmail.com', 'my home town rathnapura', 13),
 (14, 'samira sandharuwan', 2400, '1995-12-25', 'no89;anuradhapura', 758555145, 'sameera@gmail.com', 'my home town Anuradhapura', 14),
 (15, 'saman kumara', 1150, '1972-01-31', 'yapanata handiya,yapanaya.', 791565425, 'Saman@gmail.com', 'my home town Jaffana', 15),
@@ -344,9 +370,6 @@ INSERT INTO `guideavailability` (`gaid`, `gid`, `availability_date`) VALUES
 (9, 4, '2020-12-13'),
 (10, 4, '2020-12-22'),
 (11, 4, '2021-01-14'),
-(12, 5, '2021-02-11'),
-(13, 5, '2021-01-30'),
-(14, 5, '2021-10-10'),
 (15, 6, '2020-12-31'),
 (16, 6, '2021-06-26'),
 (17, 6, '2021-01-21'),
@@ -359,9 +382,6 @@ INSERT INTO `guideavailability` (`gaid`, `gid`, `availability_date`) VALUES
 (24, 9, '2020-12-29'),
 (25, 10, '2020-12-12'),
 (26, 10, '2021-10-04'),
-(27, 11, '2020-12-22'),
-(28, 12, '2021-02-20'),
-(29, 12, '2021-02-21'),
 (30, 13, '2021-04-04'),
 (31, 14, '2021-12-11'),
 (33, 15, '2020-12-31'),
@@ -426,7 +446,7 @@ CREATE TABLE IF NOT EXISTS `hotelavailability` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`haid`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hotelavailability`
@@ -474,7 +494,8 @@ INSERT INTO `hotelavailability` (`haid`, `hid`, `availability_date`, `singleroom
 (39, 13, '2020-11-28', 1, 12, 9),
 (40, 14, '2020-11-20', 9, 13, 11),
 (41, 14, '2020-11-21', 8, 11, 8),
-(42, 14, '2020-11-22', 5, 9, 6);
+(42, 14, '2020-11-22', 5, 9, 6),
+(43, 2, '2020-11-28', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -612,7 +633,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `telephone` int(11) NOT NULL,
   `address` varchar(500) NOT NULL,
   PRIMARY KEY (`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payment`
@@ -625,7 +646,10 @@ INSERT INTO `payment` (`pid`, `resvid`, `amount`, `date`, `name`, `email`, `tele
 (4, 5, 4000, '15/05/2020', 'Asini Pathmila Silva', 'asinipathmila@gmail.com', 774567823, '0No. 45, main road, Ambalangoda'),
 (5, 6, 10000, '15/06/2020', 'Sachini Maneesha', 'sachini@gmail.com', 774567823, '0No. 45, main road, Matara'),
 (6, 7, 7000, '15/07/2020', 'Sachini Maneesha', 'sachini@gmail.com', 774567823, '0No. 45, main road, Matara'),
-(7, 8, 6000, '15/08/2020', 'Sachini Maneesha', 'sachini@gmail.com', 774567823, '0No. 45, main road, Matara');
+(7, 8, 6000, '15/08/2020', 'Sachini Maneesha', 'sachini@gmail.com', 774567823, '0No. 45, main road, Matara'),
+(8, 9, 6000, '17/11/2020', 'Ruwan Hemachandra', 'ruwanthi@gmail.com', 774567823, 'No. 25, main road, Rathnapura'),
+(9, 10, 6000, '17/11/2020', 'Ruwan Hemachandra', 'ruwanthi@gmail.com', 774567823, 'No. 25, main road, Rathnapura'),
+(10, 11, 6000, '17/11/2020', 'Ruwan Hemachandra', 'ruwanthi@gmail.com', 774567823, 'No. 25, main road, Rathnapura');
 
 -- --------------------------------------------------------
 
@@ -644,7 +668,7 @@ CREATE TABLE IF NOT EXISTS `resavation` (
   `doublerooms` int(11) NOT NULL,
   `familyrooms` int(11) NOT NULL,
   PRIMARY KEY (`resvid`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `resavation`
@@ -657,7 +681,10 @@ INSERT INTO `resavation` (`resvid`, `packid`, `uid`, `date`, `travelers`, `singl
 (5, 5, 1, '2020-12-04', 2, 2, 0, 0),
 (6, 13, 4, '2020-12-11', 2, 0, 1, 0),
 (7, 7, 4, '2020-12-31', 2, 0, 1, 0),
-(8, 12, 4, '2020-11-21', 3, 1, 1, 0);
+(8, 12, 4, '2020-11-21', 3, 1, 1, 0),
+(9, 4, 2, '2020-11-28', 2, 2, 0, 0),
+(10, 4, 2, '2020-11-20', 2, 2, 0, 0),
+(11, 4, 2, '2020-11-25', 2, 2, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -772,14 +799,13 @@ CREATE TABLE IF NOT EXISTS `vehicleavailability` (
   `vid` varchar(20) NOT NULL,
   `availability_date` varchar(50) NOT NULL,
   PRIMARY KEY (`vaid`)
-) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `vehicleavailability`
 --
 
 INSERT INTO `vehicleavailability` (`vaid`, `vid`, `availability_date`) VALUES
-(1, 'BBD-6898', '2020-12-12'),
 (2, 'BBD-6898', '2020-12-31'),
 (3, 'BBD-6898', '2020-11-18'),
 (4, 'BBD-6898', '2021-01-05'),
