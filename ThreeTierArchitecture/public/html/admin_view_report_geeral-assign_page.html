@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body> 
+		<div class="container">
+            <form style="padding:10px;margin:10px; border:1px solid aqua; border-radius:30px; background-image:url(../../public/images/gradient-green-blue-hd-wallpaper.jpg);"> 
+				<h2 class="title" align="center" style="color:navy;"><label>Booking Assigned Details</label></h2>
+				<div class="row">
+					<div class="col-33">
+						<div style="padding:16px;margin:10px; border:1px solid aqua; border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>Most Assigned Guide</label></h2>	
+							<?php include('../../src/php/admin_view_report_general-assign-1.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="users" name="users" value="<?php echo $maxgid?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="guides" name="guides" value="<?php echo $name?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Assigns</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?php echo $max?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vehicles" name="vehicles" value="<?php echo $email?>" readonly><br />
+							</div>
+							</div>
+							
+							<!--<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general-accountholders.php"><input type="button" value="View More" style="width:90%;" class="formbtn"></a>
+							</div>-->
+						</form>
+						<br />
+						</div>
+					</div>
+					<div class="col-33">
+						<div style="padding:10px;margin:10px;border:1px solid aqua;border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>Most Assigned Hotel</label></h2>	
+							<?php include('../../src/php/admin_view_report_general-assign-2.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="users" name="users" value="<?php echo $maxhid?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="guides" name="guides" value="<?php echo $name?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Assigns</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?php echo $max?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vehicles" name="vehicles" value="<?php echo $email?>" readonly><br />
+							</div>
+							</div>
+						</form>
+						<br />
+						</div>
+					</div>
+					<div class="col-33">
+						<div style="padding:10px;margin:10px;border:1px solid aqua; border-radius:30px; background-color:#000050;">
+						<form> 
+							<h2 align="center"><label>Most Assigned Vehicle</label></h2>	
+							<?php include('../../src/php/admin_view_report_general-assign-3.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="users" name="users" value="<?php echo $maxvid?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="guides" name="guides" value="<?php echo $name?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Assigns</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?php echo $max?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vehicles" name="vehicles" value="<?php echo $email?>" readonly><br />
+							</div>
+							</div>
+						</form>
+						<br />
+					</div>
+				</div>
+			</form>
+			<form>
+				<div class="row">
+					<form align="center"> 
+						<div class="row">
+							<p align="center"><a href="../../src/php/admin_assign_page-viewall.php"><input type="button" value="View All" class="packbtn"></a></p>
+						</div>
+					</form>
+				</div>
+			</form>
+		</div>	
+        </div>
+	</body>
+</html>

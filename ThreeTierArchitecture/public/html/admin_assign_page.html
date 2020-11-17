@@ -9,7 +9,42 @@
     <body>     
         
 		<div class="container">
-        <form method="GET" action="../../src/php/admin_view_booking_moredetails_page.php">
+        <form method="POST" action="../../src/php/admin_assign_page.php">
+            <h2 class="title"><label>Assign Reservation No&nbsp&nbsp<?php echo $resvid?></label></h2>
+						
+			<div class="row">
+            <div class="col-25">
+                <label>Hotel:</label>
+            </div>
+            <div class="col-75">
+                <select name="hotel" id="hotel" required>
+                    <?php include('../../src/php/admin_assign_page-hotel_dropdown.php')?>
+                </select>               
+            </div>
+			</div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Guide:</label>
+            </div>
+            <div class="col-75">
+                <select name="guide" id="guide" required>
+                    <?php include('../../src/php/admin_assign_page-guide_dropdown.php')?>
+                </select>               
+            </div>
+			</div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Vehicle:</label>
+            </div>
+            <div class="col-75">
+                <select name="vehicle" id="vehicle" required>
+                    <?php include('../../src/php/admin_assign_page-vehicle_dropdown.php')?>
+                </select>               
+            </div>
+			</div>
+			
             <h2 class="title"><label>Reservation No&nbsp&nbsp<?php echo $resvid?>&nbsp&nbspDetails</label></h2>
 			
 			<div class="row">
@@ -36,42 +71,6 @@
             </div>
             <div class="col-75">
                 <input type="text" name="date" value="<?php echo $date?>" readonly>
-            </div>
-            </div>
-			
-			<div class="row">
-            <div class="col-25">
-                <label>No of Travelers:</label>
-            </div>
-            <div class="col-75">
-                <input type="text" name="travelers" value="<?php echo $travelers?>" readonly>
-            </div>
-            </div>
-			
-			<div class="row">
-            <div class="col-25">
-                <label>No of Singlerooms:</label>
-            </div>
-            <div class="col-75">
-                <input type="text" name="travelers" value="<?php echo $singlerooms?>" readonly>
-            </div>
-            </div>
-			
-			<div class="row">
-            <div class="col-25">
-                <label>No of Doublerooms:</label>
-            </div>
-            <div class="col-75">
-                <input type="text" name="travelers" value="<?php echo $doublerooms?>" readonly>
-            </div>
-            </div>
-			
-			<div class="row">
-            <div class="col-25">
-                <label>No of Familyrooms:</label>
-            </div>
-            <div class="col-75">
-                <input type="text" name="travelers" value="<?php echo $familyrooms?>" readonly>
             </div>
             </div>
 			
@@ -113,7 +112,7 @@
             </div>
 			
 			<div class="row">
-				<br /><input type="submit" name="submit" value="Assign" class="formbtn">
+				<br /><input type="submit" name="submit" value="Submit" class="formbtn">
 			</div>
 			
             </form>
