@@ -4,7 +4,7 @@
 <?php require_once('user_nonnavigation.php')?> 
 
 <?php
-    $dname=$_GET['name'];
+    $dname=$_SESSION['dname'];
 ?>
 
 <?php
