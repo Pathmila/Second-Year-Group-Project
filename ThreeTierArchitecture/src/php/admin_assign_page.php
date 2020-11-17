@@ -5,7 +5,7 @@
 	$userid=$_SESSION['userid'];
 ?> 
 
-<?php 	
+<?php	
 	$sql1="select * from user where uid='".$userid."'";
 	//echo $sql1;
 	$result1=mysqli_query($connection,$sql1);
@@ -23,10 +23,6 @@
 		$resvid=$row['resvid'];
 		$packid=$row['packid'];
 		$date=$row['date'];
-		$travelers=$row['travelers'];
-		$singlerooms=$row['singlerooms'];
-		$doublerooms=$row['doublerooms'];
-		$familyrooms=$row['familyrooms'];
 	}
 	
 	$sql3="select * from package where packid='".$packid."'";
@@ -35,13 +31,28 @@
 		$pack=(string)$row['name'];
 		$price=(string)$row['price'];
 	}
+	
 ?>
 
 <?php
-	if(isset($_GET['submit'])){
-		header("Location: admin_assign_page.php");
+	if(isset($_POST['submit'])){
+		$hotel=$_POST['hotel'];
+		$guide=$_POST['guide'];
+		$vehicle=$_POST['vehicle'];
+		
+		$sql4="Insert into assign(hotel,guide,vehicle,package,price,date,name,address,email,telephone)
+		values ('".$hotel."','".$guide."','".$vehicle."','".$pack."','".$price."','".$date."','".$name."','".$address."','".$email."','".$telephone."')";
+		//echo $sql4;
+		$result4=$connection->query($sql4);
+		if($result4){
+			echo "<script> alert('Assign is Sucessfull') </script>";
+			header("Location: admin_home_page.php");
+		}else{
+			//echo "failed";
+			echo "<script> alert('Assign is Failed') </script>";
+		}
 	}
 ?>
 
-<?php include('../../public/html/admin_view_booking_moredetails_page.html')?>
+<?php include('../../public/html/admin_assign_page.html')?>
 <?php require_once('footer.php')?>
