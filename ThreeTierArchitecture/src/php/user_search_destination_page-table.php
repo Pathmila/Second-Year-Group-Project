@@ -12,10 +12,10 @@
 		echo"
 		<form method='GET' action='user_package	_for_destion_page.php' class='table' align='center'>
 			<div class='row'>
-				<br /><input type='text' name='name' style='font-size:35px; font-weight:bold; color:white; background-color:transparent; height:50px; text-align:center;'  value='".$row['name']."' readonly>
+				<br /><input type='text' class='destext'  value='".$row['name']."' readonly>
 			</div><br/>
 			<div class='row'>
-				<input type='submit' class='packbtn' name='destsubmit' value='View Travel Packages in ".$row['name']."'>
+				<input type='submit' class='destbtn' name='destsubmit' value='View Travel Packages in ".$row['name']."'>
 			</div>
 			</div><br/>
 			<div class='row'>
