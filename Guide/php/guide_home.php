@@ -30,4 +30,4 @@
     }
 ?>
 <?php include('../../public/html/guide_home.html')?>
-<?php require_once('footer.php')?>
+<?php require_once('guide_footer.php')?>
