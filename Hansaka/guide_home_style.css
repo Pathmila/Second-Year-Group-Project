@@ -1,0 +1,204 @@
+body{
+    background-size:100%; 
+    
+  background-image: url(../../public/images/tomas-malik-Oph_Fs9bWwg-unsplash.jpg);
+  background-size: cover;
+ } 
+ 
+ .ref_img{
+     position:absolute;
+     top:40%;
+     left:15%;
+     width:324px;
+     height:324px;
+     border-radius:100%;
+     border: 5px solid white;
+     
+ 
+ }
+ .brake{
+     height: 10px;
+ }
+ .col-25 {
+   float: right;
+   width: 25%;
+   margin-top: 6px;
+   padding:30px;
+ }
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ .welcome_cover{
+    margin: 20px;
+     width:97%;
+     height:95%;
+     background-size: cover;
+     border-radius:20px;
+  
+ }
+ .welcome{
+   width: 0px;
+   margin-left:auto;
+   margin-right:auto;
+   padding: 0px 0px 0px 0px;
+  
+ }
+ 
+ .title{
+   position:absolute;
+     top:55%;
+     left:40%;
+     font-size:3.2rem; 
+     color:rgb(21, 21, 21);
+     font-weight:bold;
+    margin-bottom: 200px;
+    text-transform: capitalize;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   
+   label {
+     padding: 5px 12px 2px 0;
+     display: inline-block;
+   }
+ 
+ @media screen and (max-width: 1024px) {
+   input[type=submit], input[type=button] {
+     width: 100%;
+     margin-top: 0;
+     font-size:15px;
+ }
+ .col-25 {
+   float: left;
+   width: 33%;
+   margin-top: 6px;
+   padding:30px;
+ }
+ 
+ 
+ .title{
+   top58%;
+   left:17%;
+   font-size:5rem; 
+   color:black;
+   font-weight:bold;
+   }
+ 
+ .ref_img{
+   display: block;
+   top:13%;
+   left:19%;
+   width:600px;
+   height:600px;
+   border-radius:150px;
+   border-style: double;
+   border-radius:100%;
+   color:rgb(252, 247, 247);
+ }
+ .welcome_cover{
+   ;
+ }
+ .brake{
+   height:600px;
+ }
+ .welcome{
+   width: 0%;
+   padding: 0px 0px 0px 0px;
+   
+ }
+ 
+ }
+ 
+ @media screen and (max-width: 768px) {
+ input[type=submit], input[type=button] {
+     width: 100%;
+     margin-top: 0;
+     font-size:15px;
+ }
+ .col-25 {
+   float: left;
+   width: 33%;
+   margin-top: 6px;
+   padding:30px;
+ }
+ .ref_img{
+     margin-top: 2rem;
+     display: block;
+     position:absolute;
+     top:40%;
+     left:25%;
+     width:250px;
+     margin-bottom: 20px;
+     height:250px;
+ }
+ .brake{
+    height: 120px;
+}
+ 
+ .welcome{
+     width: 0%;
+     padding: 0px 0px 0px 0px;   
+ }
+ .title{
+   top:75%;
+   left: 20%;
+   font-size:2.4rem; 
+   color: aliceblue;
+   
+   }
+ }
+ @media screen and (max-width: 600px) {
+   input[type=submit], input[type=button] {
+       width: 100%;
+       margin-top: 0;
+       font-size:15px;
+   }
+  
+   .ref_img{
+       margin-top: 2rem;
+       display: block;
+       position:relative;
+       left:21%;
+       top:94%;
+       width:200px;
+       height:200px;
+       
+   }
+   .welcome_cover{
+    opacity: 0%;
+    height: 1px;
+   }
+   .col-25 {
+     float: left;
+     width: 100%;
+     margin-top: 6px;
+     padding:20px;
+   }
+   
+   .title{
+     display: block;
+     position:relative;
+     font-size:1.8rem; 
+     margin-top: 2rem;
+     left:0%;
+     color: rgb(0, 0, 0);
+     margin-bottom: 10px;
+     border-style: none;
+     padding: 0px 10px 0px 10px;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     text-transform: capitalize;
+     }
+     .cover{
+         background-color: rgba(209, 209, 209, 0.421);
+       margin: 20px;
+         width: 90%;
+        height: 100%;
+        border-radius: 5px;
+     }
+      
+   }
+ 
+ 
+ 
+ 
