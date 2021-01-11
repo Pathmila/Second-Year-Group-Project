@@ -78,7 +78,7 @@ body{
  
  
  .title{
-   top:64%;
+   top58%;
    left:17%;
    font-size:5rem; 
    color:black;
@@ -88,9 +88,9 @@ body{
  .ref_img{
    display: block;
    top:13%;
-   left:17%;
-   width:650px;
-   height:650px;
+   left:19%;
+   width:600px;
+   height:600px;
    border-radius:150px;
    border-style: double;
    border-radius:100%;
