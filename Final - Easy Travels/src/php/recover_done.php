@@ -1,0 +1,7 @@
+<?php require_once('../../config/connect.php');
+    session_start();
+?>
+<?php require_once('user_nonnavigation.php')?> 
+
+<?php include('../../public/html/recover_done.html')?>
+<?php require_once('footer.php')?>
