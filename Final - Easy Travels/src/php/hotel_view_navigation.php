@@ -1,0 +1,1 @@
+<?php include('../../public/html/hotel_view_navigation.html')?>

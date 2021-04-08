@@ -1,0 +1,1 @@
+<?php include('../../public/html/footer_hotel.html')?>

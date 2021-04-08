@@ -1,0 +1,1 @@
+<?php include('../../public/html/guide_view_navigation.html')?>
