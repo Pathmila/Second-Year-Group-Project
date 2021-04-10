@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("../../public/images/hback.jpg" );
+  background-size:cover;
+}
+
+input[type=text],input[type=number], textarea,input[type=date],input[type=month],input[type=tel],input[type=email],input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+input[type=file]{
+  color: white;
+}
+
+select, option{
+  color: white;
+}
+
+select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+.title{
+  font-size:30px; 
+  color:white;
+  font-weight:bold;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.formbtn {
+  border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+    border: 2px solid white;
+    border-radius:50px;
+    color: white;
+}
+
+.container {
+  border-radius: 10px;
+  background-color: rgb(0,0,32,0.8);
+  padding: 40px;
+  width:550px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+}
+
+.formbtn:hover{
+  background-color: #1E90FF;
+  color: black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.middle{
+  float: right;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  input[type=submit], input[type=button] {
+  width: 100%;
+  margin-top: 0;
+  font-size:15px;
+  }
+  
+  .container{
+  width: 100%;  
+  padding: 40px;
+  }
+  
+}

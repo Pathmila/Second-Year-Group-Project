@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background-image: url(../../public/images/adminback9.jpg);
+  background-size:cover;
+  font-family: 'Arial';
+}
+
+.graph {
+	margin-bottom:1em;
+  font:normal 100%/150% arial,helvetica,sans-serif;
+}
+
+.graph caption {
+	font:bold 150%/120% arial,helvetica,sans-serif;
+	padding-bottom:0.33em;
+	color: black;
+}
+
+.graph tbody th {
+	text-align:center;
+}
+
+.graph thead {
+	text-align:center;
+}
+
+@supports (display:grid) {
+
+	@media (min-width:82em) {
+
+		.graph {
+			display:block;
+      width:1000px;
+      height:150px;
+	  margin-bottom:100px;
+		}
+
+		.graph caption {
+			display:block;
+			color:black;
+		}
+
+		.graph thead {
+			display:none;
+		}
+
+		.graph tbody {
+			position:relative;
+			display:grid;
+			grid-template-columns:repeat(auto-fit, minmax(2em, 1fr));
+			column-gap:2.5%;
+			align-items:end;
+			height:100%;
+			margin:3em 0 1em 2.8em;
+			padding:0 1em;
+			border-bottom:2px solid rgba(0,0,0,0.5);
+			background:repeating-linear-gradient(
+				180deg,
+				rgba(170,170,170,0.7) 0,
+				rgba(170,170,170,0.7) 1px,
+				transparent 1px,
+				transparent 20%
+			);
+			color:black;
+		}
+
+		.graph tbody:before,
+		.graph tbody:after {
+			position:absolute;
+			left:-3.2em;
+			width:2.8em;
+			text-align:right;
+			font:bold 80%/120% arial,helvetica,sans-serif;
+			color:black;
+		}
+
+		.graph tbody:before {
+			
+			top:-0.6em;
+		}
+
+		.graph tbody:after {
+			
+			bottom:-0.6em;
+		}
+
+		.graph tr {
+			position:relative;
+			display:block;
+		}
+
+		.graph tr:hover {
+			z-index:999;
+		}
+
+		.graph th,
+		.graph td {
+			display:block;
+			text-align:center;
+		}
+
+		.graph tbody th {
+			position:absolute;
+			top:-3em;
+			left:0;
+			width:100%;
+			font-weight:normal;
+			text-align:center;
+			white-space:nowrap;
+			text-indent:0;
+			transform:rotate(-45deg);
+			color:black;
+		}
+
+		.graph tbody th:after {
+			content:"";
+		}
+
+		.graph td {
+			width:100%;
+			height:100%;
+			background:rgb(1,1,1,0.8);
+			border-radius:0.5em 0.5em 0 0;
+			transition:background 0.5s;
+			color:white;
+		}
+
+		.graph td span {			
+			position:absolute;
+			left:50%;
+			top:50%;
+			width:0;
+			padding:0.5em 0;
+			margin:-1em 0 0;
+			font:normal 85%/120% arial,helvetica,sans-serif;
+			background-color:white; 
+ 			box-shadow:0 0 0.25em rgba(0,0,0,0.6); 
+			font-weight:bold;
+			color:white;
+			text-align: center;
+			transition:opacity 0.5s;
+		}
+
+		.toggleGraph:checked + table td span,
+		.graph tr:hover td span {
+			width:4em;
+			text-align: center;
+			opacity:1;
+			color:black;
+		}
+
+
+	} /* min-width:32em */
+	
+} /* grid only */

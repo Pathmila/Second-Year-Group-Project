@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  background-image: url(../../public/images/adminback9.jpg);
+  background-size:cover;
+  font-family: 'Arial';
+}
+
+.sidebar {
+  margin: -6px;
+  padding: 0;
+  width: 250px;
+  color:white;
+  position: fixed;
+  height: 83%;
+  overflow: auto;
+  background-color: rgb(0,0,0,0.8);
+  position:absolute;
+}
+
+.sidebar a {
+  display: block;
+  color:white;
+  padding: 16px;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.sidebar a:hover:not(.active) {
+  /*background-color: #3090C7;*/
+  background-color:rgb(220,220,220);
+  color: black;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+.limg{
+	width:200px;
+}
+
+.text{
+	color:white;
+}
+
+.col-16 {
+  float: left;
+  width: 16%;
+  margin-top: 6px;
+}
+
+.col-20 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-84 {
+  float: left;
+  width: 84%;
+  margin:0px;
+  background-color: rgb(0,0,0,0.4);
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 10px;
+}
+
+.col-35 {
+  float: left;
+  width: 35%;
+  margin-top: 0px;
+}
+
+.col-65 {
+  float: left;
+  width: 65%;
+  margin: 0px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container1 {
+	padding:10px;
+	box-shadow:0px 0px 5px black;
+	font-size:15px;
+	font-weight:bold;
+	width:80%;
+	height:250px;
+	margin-top:25px;
+	border-radius: 5px;
+	color:white;
+	background-color:white;
+  border: 2px solid black;
+}
+
+.container2 {
+	padding:10px;
+	font-size:15px;
+	font-weight:bold;
+	width:80%;
+	height:250px;
+	margin-top:25px;
+	border-radius: 5px;
+	color:white;
+	background-color:rgb(255,255,255,0.4);
+  border: 3px solid white;
+}
+
+.container4 {
+  border-radius: 10px;
+  background-color: rgb(0,0,0,0.8);
+  padding: 40px;
+  width:600px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:40px;
+  margin-bottom:20px;
+  color:white;
+  border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+}
+
+.box{		
+	padding:10px;
+	
+	font-size:15px;
+	font-weight:bold;
+	width:80%;
+	height:80px;
+	margin: 12px;
+	border-radius: 5px;
+	color:black;
+	background-color:rgb(255,255,255,0.4);
+  border: 3px solid white;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .col-16,.col-84,.col-25, .col-75, .col-50,.col-20,.col-35,.col-65, input[type=submit], input[type=button] {
+	width: 100%;
+	margin-top: 0;
+	font-size:15px;
+  }
+   .container1,.container2{
+	width: 65%;  
+	padding: 40px;
+  }
+   .container2{
+	height: 450px;
+  }
+  .sidebar {
+	margin: 0px;
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+	font-size:18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 800px) {
+  .col-16,.col-84,.col-25, .col-75, .col-50,.col-20,.col-35,.col-65, input[type=submit], input[type=button] {
+    width: 100%;
+    margin-top:0;
+    font-size:15px;
+  }
+   .container1,.container2{
+    width: 72%;  
+    padding: 40px;
+  }
+   .container2{
+      height: 100%;
+  }
+  .sidebar {
+  margin: 0px;
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+    font-size:18px;
+  }
+
+  .sidebar {
+    margin: -6px;
+    padding: 0;
+    width: 101%;
+    color:white;
+    height: 83%;
+    overflow: auto;
+    background-color: rgb(0,0,0,0.8);
+    
+  }
+}

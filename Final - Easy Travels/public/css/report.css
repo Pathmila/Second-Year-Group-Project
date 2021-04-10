@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-image: url(../../public/images/adminback9.jpg);
+  background-size:cover;
+  font-family: 'Arial';
+}
+
+  .para{
+    font-size: 30px; 
+    font-weight: bold;
+    padding: 10px;
+    color : white;
+  }
+  
+  .login {
+    /*background-image: repeating-linear-gradient(to top, dodgerblue, navy ,dodgerblue);*/
+    margin:10px auto;
+    max-width:400px;
+    padding: 10px;
+  }
+  
+  .login-form {
+    border-radius:20px;
+    box-shadow:0px 0px 20px #000;
+    top: 40px;
+    padding: 20px 0px;
+    background-color: rgb(0,0,0,0.8);
+    border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+  }
+  
+  .login-form h3 {
+    text-align:left;
+    margin-left:40px;
+    color : white;
+  }
+  
+  .login-form {
+    box-sizing:border-box;
+    padding-top:15px;
+    margin:5% auto;
+    text-align:center;
+  }
+  
+  .packbtn {
+    border-radius: 4px;
+    background-color:green;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+	  border: 2px solid white;
+	  border-radius:50px;
+  }
+  
+  .packbtn:hover {
+      background-color: red;
+  }
+
+  /*Second style*/
+.packbtn{
+  box-shadow: 1px 1px 2px 1px #1c1b18;
+  background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+  background-color:#eae0c2;
+  border-radius:15px;
+  border:1px solid #fffdd0;
+  display:inline-block;
+  cursor:pointer;
+  color:black;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:10px 10px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+
+.packbtn:hover {
+  background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+  background-color:#ccc2a6;
+}
+.packbtn:active {
+  position:relative;
+  top:1px;
+}
+  
+  
+  /*Media Querie*/
+  @media only screen and (min-width : 150px) and (max-width : 530px){
+    .login-form h3 {
+      text-align:center;
+      margin:0;
+    }
+    .sign-up, .no-access {
+      margin:10px 0;
+    }
+    .login-button {
+      margin-bottom:10px;
+    }    
+  }

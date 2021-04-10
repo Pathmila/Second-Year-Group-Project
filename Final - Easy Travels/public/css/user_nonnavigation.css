@@ -1,0 +1,124 @@
+/*User none navigation css*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rightdate{
+	float: right; 
+	color: black;
+	margin-right:10px;
+	font-weight: bold;
+  }
+
+.topnav {
+  overflow: hidden;
+  background-color:black;
+  opacity:0.8;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top:40px;
+  font-weight:bold;
+}
+
+.icon{
+	padding:0;
+	margin-top:1px;
+	margin-right:10px;
+}
+
+.topnav a:hover {
+  border: 2px solid aqua/*#1e90ff*/;
+  color: white;
+  border-radius:20px;
+}
+
+.topnav a.notactive {
+  margin-top:0px;
+}
+
+.topimg{
+	justify-content:center;
+	width:60%;
+}
+
+.topnav a.notactive:hover {
+  background-color: transparent;
+  border:none;
+}
+
+.topnav a.right{
+	float: right;
+}
+
+.limg{
+	padding: 10px;
+	width:300px;
+	border-radius: 20px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 75px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;	
+  }
+  .topnav a.right{
+		float:none;
+	}
+	.limg{
+		width:100%;
+	}
+	
+}
+
+@media only screen and (max-width:800px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+ .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 75px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center; 
+  }
+  .topnav a.right{
+    float:none;
+  }
+  .limg{
+    width:80%;
+  }
+}

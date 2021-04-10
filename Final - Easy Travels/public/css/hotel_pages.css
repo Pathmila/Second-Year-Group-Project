@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(../../public/images/hback.jpg);
+  background-size:cover;
+}
+
+input[type=text],input[type=number], textarea,input[type=date],input[type=month],input[type=tel],input[type=email],input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+input[type=file]{
+  color: white;
+}
+
+select, option{
+  color: white;
+}
+
+.hbtn{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+.viewtable{
+  color:white;
+  border: 1px solid white;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;  
+}
+
+.longviewtable{
+  color:white;
+  border: 1px solid white;
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;  
+}
+
+.theads{
+  background-color:#82CAFA;
+  text-align:center;
+  color:black;
+  font-weight:bold;
+  height:40px;
+}
+
+.ttext{
+  height:40px;
+  color:black;
+}
+
+.title{
+  font-size:30px; 
+  color:white;
+  font-weight:bold;
+}
+
+.subtitle{
+  font-size:20px; 
+  font-weight:bold
+}
+
+.banner{
+  width: 750px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.formbtn {
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+    border: 2px solid white;
+    border-radius:50px;
+}
+
+.searchbtn{
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+  border: 2px solid white;
+  border-radius:50px;
+  
+}
+
+.rsearchbtn{
+  border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 6px;
+  border: 2px solid white;
+  border-radius:50px;
+  
+}
+
+.packbtn {
+    border-radius: 4px;
+    background-color:blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  border-radius:20px;
+  /*text-transform: uppercase;*/
+  border: 2px solid white;
+  border-radius:50px;
+  }
+
+input[type=submit]:hover {
+  background-color: #1E90FF;
+  color: black;
+}
+
+input[type=button]:hover {
+  background-color: #1E90FF;
+  color: black;
+}
+
+.container {
+  border-radius: 10px;
+  background-color: rgb(0, 0, 32,0.8);
+  padding: 40px;
+  width:550px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+}
+
+.container1 {
+  border-radius: 10px;
+  background-color: rgb(0,0,32,0.8);
+  padding: 20px;
+  width:85%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  font-weight:bold;
+  border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+}
+
+.container2 {
+  border-radius: 10px;
+  background-color: rgb(0,0,32,0.8);
+  padding: 20px;
+  width:100%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:black;
+  text-align:center;
+  border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+}
+
+.container3 {
+  border-radius: 10px;
+  background-color:transparent;
+  padding: 20px;
+  opacity:0.9;
+  width:100%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  border: 2px solid white;
+  box-shadow:0px 0px 20px white;
+}
+
+.container4 {
+  border-radius: 10px;
+  background-color: rgb(0,0,0,0.8);
+  padding: 30px;
+  width:550px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:90px;
+  margin-bottom:20px;
+  color:white;
+  font-weight:bold;
+  border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+}
+
+.container5 {
+  border-radius: 10px;
+  background-color:transparent;
+  padding: 0px;
+  opacity:0.9;
+  width:100%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  border: 2px solid white;
+  box-shadow:0px 0px 20px white;
+}
+
+.container6 {
+  border-radius: 10px;
+  background-image:url('../../public/images/gback.jpg');
+  padding: 20px;
+  opacity:0.9;
+  width:550px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  border: 2px solid white;
+  box-shadow:0px 0px 20px white;
+}
+
+.container7 {
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 30px;
+  opacity:0.9;
+  width:500px;
+  height:400px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:black;
+}
+
+.container8 {
+  border-radius: 10px;
+  background-image:url('../../public/images/gback.jpg');
+  padding: 30px;
+  opacity:0.9;
+  width:1000px;
+  height:400px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+}
+
+.updatetxt{
+  color:navy;
+  font-size:30px;
+  font-weight:bold;
+}
+
+.rbox{
+  padding:40px;
+  margin:10px; 
+  opacity:0.9;
+  border: 2px solid white;
+  box-shadow:0px 0px 20px white;
+  border-radius:30px; 
+  color: white;
+  background-image:url('../../public/images/gback.jpg');
+}
+
+.col-35 {
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+}
+
+.col-65 {
+  float: left;
+  width: 65%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.col-33 {
+  float: left;
+  width: 33.3%;
+  margin-top: 6px;
+  padding:40px;
+}
+
+.col-30 {
+  float: left;
+  width: 30%;
+  margin-top: 6px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.middle{
+  float: right;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,.col-35,.col-30,.col-65, .col-75, .col-50,.col-33, input[type=submit], input[type=button] {
+  width: 100%;
+  margin-top: 0;
+  font-size:15px;
+  }
+  .banner{
+  width: 100%;
+  }
+  .container6{
+    height:450px;
+  }
+  .container, .container1, .container2,.container3,.container4,.container5,.container6,.container7,.container8{
+  width: 100%;  
+  padding: 40px;
+  }
+  .container3{
+  width: 100%;  
+  padding: 20px;
+  }
+  .viewtable{
+  table-layout:auto;
+  }
+  .theads{
+  text-align:left;
+  color:black;
+  }
+  .col-33 {
+  padding:10px;
+  }
+}

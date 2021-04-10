@@ -1,0 +1,83 @@
+body {
+    /*background-image: url(../../public/images/gradient-green-blue-hd-wallpaper.jpg);*/
+	background-image: url(../../public/images/userback3.jpeg);
+	background-size:cover;
+    margin:0px;
+    font-family: 'Arial';
+  }
+
+  .para{
+    font-size: 30px; 
+    font-weight: bold;
+    padding: 10px;
+    color : white;
+  }
+  
+  .login {
+    /*background-image: repeating-linear-gradient(to top, dodgerblue, navy ,dodgerblue);*/
+    margin:0px auto;
+    max-width:400px;
+    padding: 10px;
+  }
+  
+  .login-form {
+    border-radius:20px;
+    box-shadow:0px 0px 20px #000;
+    top: 40px;
+    padding: 20px 0px;
+    background-color:rgb(0,0,0,0.8);
+    box-shadow:0px 0px 20px #000;
+  border:2px solid black;
+  }
+  
+  .login-form h3 {
+    text-align:left;
+    margin-left:40px;
+    color : white;
+  }
+  
+  .login-form {
+    box-sizing:border-box;
+    padding-top:15px;
+    margin:5% auto;
+    text-align:center;
+  }
+  
+  .packbtn {
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+	  border-radius:50px;
+    background-color: #1E70FF;
+    padding: 8px;
+    border: 1px solid white;
+    width: 160px;
+    font-size: 18px;
+  }
+  
+  .packbtn:hover {
+      background-color:rgb(0,201,255);
+      color: black;
+  }
+  
+  
+  /*Media Querie*/
+  @media only screen and (min-width : 150px) and (max-width : 530px){
+    .login-form h3 {
+      text-align:center;
+      margin:0;
+    }
+    .sign-up, .no-access {
+      margin:10px 0;
+    }
+    .login-button {
+      margin-bottom:10px;
+	}
+    
+  }

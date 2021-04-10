@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(../../public/images/userback10.jpg);
+  background-size:cover;
+}
+
+input[type=text],input[type=number], textarea,input[type=date],input[type=month],input[type=tel],input[type=email],input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid white;
+  border-color:white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: black;
+  color: white;
+  font-weight: bold;
+}
+
+select, option{
+  color: black;
+}
+
+select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-color:white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+.container2 {
+  border-radius: 10px;
+  background-color:rgb(32,23,13,0.9);
+  padding: 30px;
+  width:850px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  box-shadow:0px 0px 20px #000;
+  border:2px solid black;
+}
+
+.viewtable{
+  color:white;
+  border: 1px solid white;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%; 
+}
+
+.longviewtable{
+  color:white;
+  border: 1px solid white;
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;  
+}
+
+.theads{
+  background-color:#FFFDD0;
+  text-align:center;
+  color:black;
+  font-weight:bold;
+  height:40px;
+  border: 1px solid black;
+}
+
+.hbtn{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.title{
+  font-size:30px; 
+  color:white;
+  font-weight:bold;
+}
+
+.subtitle{
+  font-size:20px; 
+  font-weight:bold
+}
+
+.banner{
+  width: 750px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.formbtn {
+    border-radius: 4px;
+    background-image: linear-gradient(rgb(224, 102, 0), rgb(27, 1, 1));
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border-radius:20px;
+    border: 1px solid rgb(27, 1, 1);
+    border-radius:50px;
+}
+
+.packbtn {
+    border-radius: 4px;
+    background-image: linear-gradient(rgb(224, 102, 0), rgb(27, 1, 1));
+    padding: 8px;
+    border: 1px solid rgb(27, 1, 1);
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border-radius:50px;
+    transition: all 0.5s;
+  }
+
+input[type=submit]:hover {
+  /*background-color: red;*/
+  background-image: linear-gradient(rgb(244,165,32),rgb(75,16,16));   
+}
+
+.formbtn:hover{
+  background-image: linear-gradient(rgb(244,165,32),rgb(75,16,16));   
+}
+
+input[type=button] {
+  border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border-radius:20px;
+    border-radius:50px;
+    background-image: linear-gradient(rgb(224, 102, 0), rgb(27, 1, 1));
+    padding: 8px;
+    border: 1px solid rgb(27, 1, 1);
+    width: 200px;
+    font-size: 18px;
+}
+
+input[type=button]:hover {
+  background-image: linear-gradient(rgb(244,165,32),rgb(75,16,16)); 
+}
+
+.container {
+  border-radius: 10px;
+  background-color:rgb(32,23,13,0.9);
+  padding: 30px;
+  width:550px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  box-shadow:0px 0px 20px #000;
+  border:2px solid black;
+}
+
+.container1{
+  border-radius: 10px;
+  background-color:rgb(32,23,13,0.9);
+  padding: 20px;
+  width:80%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  
+  border: 2px solid black;
+  box-shadow:0px 0px 20px black;
+}
+
+.col-25 {
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 65%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.col-33 {
+  float: left;
+  width: 33.3%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.middle{
+  float: right;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .col-25, .col-75, .col-50,.col-33, input[type=submit], input[type=button] {
+  width: 100%;
+  margin-top: 0;
+  font-size:15px;
+  }
+  .banner{
+  width: 100%;
+  }
+  .container{
+  width: 100%;  
+  }
+  .container, .container1, .container2,.container3,.container4,.container5,.container6,.container7,.container8{
+  width: 100%;  
+  padding: 40px;
+  }
+  .viewtable{
+  table-layout:auto;
+  }
+  .theads{
+  text-align:left;
+  color:black;
+  }
+  .col-33 {
+  padding:10px;
+  }
+}

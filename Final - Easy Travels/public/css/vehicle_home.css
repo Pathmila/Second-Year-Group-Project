@@ -1,0 +1,69 @@
+body{
+  background-color: #FFFDD0;
+}
+
+.topimg{
+	width: 100%;
+	background-size: cover;
+	margin-top:-500px;
+}
+
+.vtext{
+  margin-top: 0px;
+  color: #20170d;
+  font-weight: bold;
+  font-size: 60px;
+  font-family: arial;
+}
+
+.vimg{
+    margin-top: -150px;
+    left:6.5%;
+    width:424px;
+    height:324px;
+    border-radius:100%;
+    border: 10px solid white;
+}
+
+
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+ @media screen and (max-width: 400px) {
+
+  .vimg{
+    width: 200px;
+    height: 200px;
+    margin-top:10px;
+    border: 2px solid #20170d;
+  }
+  .vtext{
+    font-size: 30px;
+  }
+  .topimg{
+    margin-top: 0px;
+  }
+
+}
+  
+  /*
+  width:100%;
+		height: 30vh;
+		background-size: cover;
+		*/
+
+ @media screen and (max-width: 800px) {
+
+  .vimg{
+    width: 200px;
+    height: 200px;
+    margin-top:10px;
+    border: 2px solid #20170d;
+  }
+  .vtext{
+    font-size: 30px;
+  }
+  .topimg{
+    margin-top: -150px;
+  }
+
+}

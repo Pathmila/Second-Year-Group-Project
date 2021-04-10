@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(../../public/images/signup.jpg);
+  background-size: cover;
+}
+
+
+input[type=text],input[type=number], textarea,input[type=date],input[type=tel],input[type=email],input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-color:white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: white;
+  background-color: transparent;
+  color: black;
+  color: white;
+  font-weight: bold;
+}
+
+select, option{
+  color: black;
+}
+
+select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-color:white;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+.banner{
+  width: 750px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  
+}
+
+.formbtn {
+  border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border-radius:20px;
+    background-color: #1E70FF;
+    padding: 8px;
+    border: 1px solid white;
+    width: 160px;
+    font-size: 18px;
+}
+
+input[type=submit]:hover {
+  background-color:rgb(0,201,255);
+  color: black;
+}
+
+
+.container {
+  border-radius: 10px;
+  background-color:rgb(1,1,1,0.8);
+  padding: 20px;
+  width:550px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  center-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:white;
+  box-shadow:0px 0px 20px #000;
+  border:2px solid black;
+}
+
+.col-25 {
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 65%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.middle{
+  float: right;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+  width: 100%;
+  margin-top: 0;
+  font-size:15px;
+  }
+  .banner{
+  width: 100%;
+  }
+  .container{
+  width: 100%;  
+  }
+}

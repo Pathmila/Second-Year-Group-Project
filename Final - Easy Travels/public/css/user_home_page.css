@@ -1,0 +1,263 @@
+.topimg{
+	width: 100%;
+	background-size: cover;
+	margin-top:-250px;
+}
+
+.content{
+	padding:40px;
+	font-size:1rem;
+}
+
+
+.cardcontainer{
+	width:80%;
+	position:relative;
+	height: 300px;
+	justify-content:center;
+}
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+  justify-content:center;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background-color:#A0A0AA;
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+  font-size: 14px;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .front {
+  background-image:url('../../public/images/ella.jpg');
+  background-size:cover;
+}
+
+.cardBox:nth-child(2) .card .front {
+  background-image:url('../../public/images/arugambay.jpg');
+  background-size:cover;
+}
+
+.cardBox:nth-child(3) .card .front {
+  background-image:url('../../public/images/hikkaduwa.jpg');
+  background-size:cover;
+}
+
+.cardBox:nth-child(4) .card .front {
+  background-image:url('../../public/images/kitulgala.jpg');
+  background-size:cover;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+
+.cardBox:nth-child(1) .card .back {
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+.banner{
+	width:700px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  padding:30px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+
+	
+  }
+
+/*Tab version*/
+  @media screen and (max-width: 800px) {
+  .col-25{
+    width: 100%;
+    margin-top: 0;
+    font-size:15px;
+  }
+  .topimg{
+    margin-top:0px;
+  }
+  .cardcontainer{
+    height:1050px;
+  }
+  .cardBox {
+    width: 94.5%;
+  }
+  .card {
+    height: 260px;
+  }
+  .card .back p{
+    font-size:18px;
+  }
+  .banner{
+    width:600px;
+  }
+  }
+  
+/*Mobile version*/  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+	.col-25{
+		width: 100%;
+		margin-top: 0;
+		font-size:15px;
+	}
+	.topimg{
+		margin-top:0px;
+	}
+	.cardcontainer{
+		height:1050px;
+	}
+	.cardBox {
+		width: 94.5%;
+	}
+	.card {
+		height: 260px;
+	}
+  .card .back p{
+    font-size:12px;
+  }
+	.banner{
+		width:300px;
+	}
+  }
+  
+  /*
+  width:100%;
+		height: 30vh;
+		background-size: cover;
+		*/
