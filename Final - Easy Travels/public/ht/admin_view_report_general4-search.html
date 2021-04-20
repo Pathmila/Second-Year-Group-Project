@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/report-tables.css">
+    </head>
+    <body> 		
+    	<div class="container1">			
+			<form method="POST">			
+			<h2 class="title" align="center"><label>Search Comment</label></h2>
+				<div class="row">
+				<div class="col-25"></div>
+				<div class="col-25">
+					<label>Guide Rating</label>
+				</div>
+				<div class="col-25">
+					<select name="guide" id="guide" required>
+						<option value=5>Best</option>
+						<option value=4>Good</option>
+						<option value=3>Moderate</option>
+						<option value=2>Bad</option>
+						<option value=1>Worst</option>
+					</select> 
+				</div>
+				<div class="col-25"></div>
+				</div>
+				<div class="row">
+				<div class="col-25"></div>
+				<div class="col-25">
+					<label>Hotel Rating</label>
+				</div>
+				<div class="col-25">
+					<select name="hotel" id="hotel" required>
+						<option value=5>Best</option>
+						<option value=4>Good</option>
+						<option value=3>Moderate</option>
+						<option value=2>Bad</option>
+						<option value=1>Worst</option>
+					</select> 
+				</div>
+				<div class="col-25"></div>
+				</div>
+				<div class="row">
+				<div class="col-25"></div>
+				<div class="col-25">
+					<label>Vehicle Rating</label>
+				</div>
+				<div class="col-25">
+					<select name="vehicle" id="vehicle" required>
+						<option value=5>Best</option>
+						<option value=4>Good</option>
+						<option value=3>Moderate</option>
+						<option value=2>Bad</option>
+						<option value=1>Worst</option>
+					</select> 
+				</div>
+				<div class="col-25"></div>
+				</div>
+				
+				<div class="row">
+					<center><br /><input type="submit" name="formsubmit" value="Submit" class="formbtn"></center>
+				</div>
+			</form>
+		</div>
+		<br /><?php include('../../src/php/admin_view_report_general4-search.php')?>
+		
+	</body>
+</html>

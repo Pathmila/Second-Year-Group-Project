@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">   
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>    
+		<link rel="stylesheet" type="text/css" href="../../public/css/guide_other.css">
+		<script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>
+		
+        
+        <div class="container">
+            <form mthod=GET action="../../src/php/contact_guide_page.php"> 		
+				<h2 class="title" align="center"><label>Plan Your Trip.<br /> Our Travel Experts Can Help You.</label></h2>		
+				<div class="row">
+				<div class="col-35">
+					<label for="fname">Name:</label>
+				</div>
+				<div class="col-65">
+					<input name="name" id="name" placeholder="Name" pattern="^[^\s]+[-a-zA-Z\s]+([-a-zA-Z])" type="text" required>
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="col-35">
+					<label for="lname">Telephone No:</label>
+				</div>
+				<div class="col-65">
+					<input name="telephone" id="telephone" placeholder="Telephone" type="tel" pattern="[0-9]{10}" required >
+				</div>
+				</div>
+				
+				<div class="row">
+				<div class="col-35">
+					<label for="lname">Email:</label>
+				</div>
+				<div class="col-65">
+					<input name="email" id="email" placeholder="Email" type="email" required>
+				</div>
+				</div>
+				
+				<div class="row">
+				<div class="col-35">
+					<label for="lname">Message:</label>
+				</div>
+				<div class="col-65">
+					<textarea id="details" name="details" placeholder="Write the message.." style="height:200px;font-family:Arial;" required></textarea>
+				</div>
+				</div>
+				
+				<div class="row">
+					<p align="center"><input type="submit" name="submit" value="Submit" class="formbtn"></p><br />
+				</div>
+			</form>
+        </div>
+    </body>
+</html>

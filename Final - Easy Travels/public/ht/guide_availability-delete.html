@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/guide_other.css">
+    </head>
+    <body>   
+		<div class="container">
+        <form method="post" action="../../src/php/guide_availability-delete.php">
+			<center><h2 class="title"><label>Delete Unavailable Dates</label></h2></center>
+
+            <div class="row">
+				<div class="col-35">
+					<label>Date:</label>
+				</div>
+				<div class="col-65">			
+					<input name="deletedate" id="deletedate" type="text" value="<?php echo $_SESSION['bdate'] ?>"  readonly>
+				</div>
+				</div>
+			<div class="row">	
+				<br /><center><input type="submit" name="formdelete" value="Delete" class="formbtn"></center>
+			</div>
+            </form>
+        </div>
+	</body>
+</html>

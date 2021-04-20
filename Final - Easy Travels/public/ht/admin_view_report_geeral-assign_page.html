@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/report-tables.css">
+    </head>
+    <body> 
+		<h2 class="updatetxt" align="center" ><label>Assigned Details</label></h2>
+		<form>
+			<div class="container11">
+			<div class="row">
+				<form align="center"> 
+					<div class="row">
+						<p align="center"><a href="../../src/php/admin_assign_page-viewall.php"><input type="button" value="View All" class="formbtn"></a></p>
+					</div>
+				</form>
+			</div>
+			</div>
+		</form>
+		
+				<div class="row">
+					<div class="col-33">
+						<div class="rbox">
+						<form> 
+							<h2 align="center"><label>Most Assigned Guide</label></h2>	
+							<?php include('../../src/php/admin_view_report_general-assign-1.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="users" name="users" value="<?=(isset($maxgid) ? $maxgid : '')?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="guides" name="guides" value="<?=(isset($name) ? $name : '-')?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Assigns</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?=(isset($max) ? $max : '')?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vehicles" name="vehicles" value="<?=(isset($email) ? $email : '-')?>" readonly><br />
+							</div>
+							</div>
+							
+							<!--<div class="row">
+								<br /><a href="../../src/php/admin_view_report_general-accountholders.php"><input type="button" value="View More" style="width:90%;" class="formbtn"></a>
+							</div>-->
+						</form>
+						<br />
+						</div>
+					</div>
+					<div class="col-33">
+						<div class="rbox">
+						<form> 
+							<h2 align="center"><label>Most Assigned Hotel</label></h2>	
+							<?php include('../../src/php/admin_view_report_general-assign-2.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="users" name="users" value="<?=(isset($maxhid) ? $maxhid : '')?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="guides" name="guides" value="<?=(isset($name) ? $name : '-')?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Assigns</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?=(isset($max) ? $max : '')?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vehicles" name="vehicles" value="<?=(isset($email) ? $email : '-')?>" readonly><br />
+							</div>
+							</div>
+						</form>
+						<br />
+						</div>
+					</div>
+					<div class="col-33">
+						<div class="rbox">
+						<form> 
+							<h2 align="center"><label>Most Assigned Vehicle</label></h2>	
+							<?php include('../../src/php/admin_view_report_general-assign-3.php')?>	
+							<div class="row">
+							<div class="col-25">
+								<label>ID</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="users" name="users" value="<?=(isset($maxvid) ? $maxvid : '')?>" readonly>
+							</div>
+							</div>
+						
+							<div class="row">
+							<div class="col-25">
+								<label>Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="guides" name="guides" value="<?=(isset($name) ? $name : '-')?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Assigns</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="hotels" name="hotels" value="<?=(isset($max) ? $max : '')?>" readonly>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-25">
+								<label>Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="vehicles" name="vehicles" value="<?=(isset($email) ? $email : '-')?>" readonly><br />
+							</div>
+							</div>
+						</form>
+						<br />
+					</div>
+				</div>
+			</form>
+			
+		
+        </div>
+	</body>
+</html>

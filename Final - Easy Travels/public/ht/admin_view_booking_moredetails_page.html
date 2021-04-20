@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body>     
+        
+		<div class="container">
+        <form method="GET" action="../../src/php/admin_view_booking_moredetails_page.php">
+            <h2 class="title" align="center"><label>Reservation No&nbsp&nbsp<?php echo $_SESSION['reservation'];?>&nbsp&nbspDetails</label></h2>
+			
+			<div class="row">
+            <div class="col-35">
+                <label>Package Name:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="pack" value="<?php echo $pack?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-35">
+                <label>Price of the Package:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="price" value="<?php echo $price?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-35">
+                <label>Date:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="date" value="<?php echo $date?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-35">
+                <label>No of Travelers:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="travelers" value="<?php echo $travelers?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-35">
+                <label>No of Singlerooms:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="travelers" value="<?php echo $singlerooms?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-35">
+                <label>No of Doublerooms:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="travelers" value="<?php echo $doublerooms?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-35">
+                <label>No of Familyrooms:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="travelers" value="<?php echo $familyrooms?>" readonly>
+            </div>
+            </div>
+			
+			<h2 class="title" align="center"><label>Customer Details</label></h2>
+            <div class="row">
+            <div class="col-35">
+                <label>Name:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="name" value="<?php echo $name?>" readonly>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-35">
+                <label>Address:</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="address" value="<?php echo $address?>" readonly>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-35">
+                <label>Email:</label>
+            </div>
+            <div class="col-65">
+                <input type="email" name="email" value="<?php echo $email?>" readonly>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-35">
+                <label>Telephone:</label>
+            </div>
+            <div class="col-65">
+                <input type="tel" name="telephone" value="0<?php echo $telephone?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+				<center><br /><input type="submit" name="submit" value="Assign" class="formbtn"></center>
+			</div>
+			
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">   
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <!-- LINKS TO CSS AND JS --->
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+        <script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+	
+    <body>
+        <div class="container4">
+        <form method='POST' action="../../src/php/admin_adddestination_page.php" enctype="multipart/form-data">
+			<h2 class="title" align="center"><label>Add Destination</label></h2>
+            <div class="row">
+            <div class="col-35">
+                <label for="fname">Destination</label>
+            </div>
+            <div class="col-65">
+                <input type="text" name="name" id="name" placeholder="Destination name.." onblur="required_name()"  required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-35">
+                <label for="fname">Details</label>
+            </div>
+            <div class="col-65">
+                <textarea id="subject" name="subject"  placeholder="Write something.." style="height:200px" required></textarea>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-35">
+                <label for="lname">Upload a photo</label>
+            </div>
+            <div class="col-65">
+                <br /><input type="file" name="image" id="image" onchange="file_validate()" required>
+            </div>
+            </div>
+
+            <div class="row">
+               <center><br /><input type="submit" name="submit" value="Submit" class="formbtn"></center>
+            </div>
+
+            <div class="row">
+                <center><br /><a class="sign-up" href="../../src/php/admin_view_destination.php">View All Destinations</a></center>
+            </div>
+        </form>
+        </div>   
+<!--        <center><br /><br /><a href="../../src/php/admin_view_destination.php"><input type="button" name="viewall" value="View All Destinations" class="rsearchbtn1"></a></center><br /><br />
+-->
+    </body>
+</html>

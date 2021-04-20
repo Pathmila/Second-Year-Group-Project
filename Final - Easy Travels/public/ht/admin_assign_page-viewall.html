@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/report-tables.css"> 	
+	</head>
+	<body>
+		<h2 class="updatetxt" align="center"><label>Booking Assign Details</label></h2>
+		<div class="container2">	
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="theads">
+				<td>Reservation ID</td>
+				<td>Customer ID</td>
+				<td>Customer</td>
+				<td>Hotel ID</td>
+				<td>Hotel Name</td>
+				<td>Guide ID</td>
+				<td>Guide Name</td>
+				<td>Vehicle</td>
+				<td>Package</td>
+				<td>Price</td>
+				<td>Date</td>
+				
+			</tr>
+				<?php include('../../src/php/admin_assign_page-viewall-table.php')?>
+            </table>
+			</div>
+		</div>
+	</body>
+</html>
