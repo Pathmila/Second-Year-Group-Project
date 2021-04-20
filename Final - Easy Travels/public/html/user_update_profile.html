@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/user_style.css">
+        <script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>     
+        
+		<div class="container">
+        <form method="GET" action="../../src/php/user_update_profile.php">
+         
+			<h2 class="title" align="center"><label>Update Profile</label></h2>
+			
+            <div class="row">
+            <div class="col-25">
+                <label>Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="name" id="name" value="<?php echo $name?>" placeholder="Name" onblur="required_name()" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Address</label>
+            </div>
+            <div class="col-75">
+                <input type="text" onblur="required_address()" name="address" id="address" value="<?php echo $address?>" >
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Email</label>
+            </div>
+            <div class="col-75">
+                <input type="email" name="email" value="<?php echo $email?>" >
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Telephone(+94)</label>
+            </div>
+            <div class="col-75">
+                <input type="tel" name="telephone" pattern="[0-9]{9}" value="<?php echo $telephone?>" >
+            </div>
+            </div>
+            <div class="row">
+				<br /><center><input type="submit" name="updatebtn" value="Update Account" class="formbtn">
+
+				<a href="../../src/php/user_delete_profile.php"><input type="button" name="deletebtn" value="Delete Account" class="formbtn"></center><br />
+			</div>
+			</div>
+            </form>
+        </div>
+    </body>
+</html>

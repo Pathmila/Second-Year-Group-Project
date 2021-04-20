@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/hotel_viewprofile.css">
+    </head>
+    <body>
+		<div class="container">
+        <form method="post" action="../../src/php/hotel_viewprofile.php" enctype="multipart/form-data">
+            
+			<h2 align='center' class="title"><label><?php echo $name?></label></h2>
+			
+			<div class="row">
+                <center>User Name &nbsp - &nbsp <?php echo $uname?></center>
+            </div>
+
+			<div class="row">
+                <?php echo "<p align='center'><img class='image' width='250px'  src='".$path.$photo.$ex."'></p>";?>
+            </div>	
+			
+			<div class="row">
+                <center><?php echo $address?></center><br />
+            </div>
+			
+			<div class="row">
+                <center><?php echo $email?></center><br />
+            </div>
+			
+			<div class="row">
+                <center>0<?php echo $telephone?></center><br />
+            </div>
+			
+			<div class="row">
+                <center><?php echo $description?></center><br />
+            </div>		
+			
+			
+			<div class="row">
+                <center>No of single rooms &nbsp-&nbsp <?php echo $singlerooms?> </center><br />
+            </div>
+			
+			<div class="row">
+                <center>Price of a single room &nbsp-&nbsp Rs.<?php echo $singleroomprice?> </center><br />
+            </div>
+			
+			<div class="row">
+                <center>No of double rooms &nbsp-&nbsp <?php echo $doublerooms?> </center><br />
+            </div>
+			
+			<div class="row">
+                <center>Price of a double room &nbsp-&nbsp Rs.<?php echo $doubleroomprice?> </center><br />
+            </div>
+
+			<div class="row">
+                <center>No of family rooms &nbsp-&nbsp <?php echo $familyrooms?></center><br />
+            </div>
+			
+			<div class="row">
+                <center>Price of a family room &nbsp-&nbsp Rs.<?php echo $familyroomprice?> </center><br />
+            </div>
+			
+			<div class="row">
+				<center><a href="../../src/php/hotel_view_bookings.php"><input type="button" value="Booking Details" class="formbtn"></a></center>
+			</div>
+            </div>			
+        </form>
+        </div>		
+	</body>
+</html>

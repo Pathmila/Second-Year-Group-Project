@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+		<script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <form method="post" action="../../src/php/hotel_signup.php" enctype="multipart/form-data">
+			<h2 class="title" align="center"><label>Hotel SignUp</label></h2>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Name</label>
+            </div>
+            <div class="col-75">
+                <input name="name" id="name" placeholder="Name" value="<?=(isset($name) ? $name : '')?>" type="text" onblur="required_name()" required >
+            </div>
+            </div>		
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Address</label>
+            </div>
+            <div class="col-75">
+                <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" onblur="required_address()" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Email</label>
+            </div>
+            <div class="col-75">
+                <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($email) ? $email : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Telephone No</label>
+            </div>
+            <div class="col-75">
+                <input name="telephone" id="telephone" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Details</label>
+            </div>
+            <div class="col-75">
+                <textarea name="description" placeholder="Enter details" required><?=(isset($description) ? $description : '')?></textarea>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>User Name</label>
+            </div>
+            <div class="col-75">
+                <input name="uname" id="uname" placeholder="User Name" value="<?=(isset($uname) ? $uname : '')?>" type="text" onblur="required_username()" required >
+            </div>
+            <label><i style="font-size:9px;">**Use at least one lowercase, uppercase and digit. Minimum length is 6 characters.</i></label>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Password</label>
+            </div>
+            <div class="col-75">
+                <input type="password" name="password" id="password" value="<?=(isset($pass) ? $pass : '')?>" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Confirm Password</label>
+            </div>
+            <div class="col-75">
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" value="<?=(isset($cpassword) ? $cpassword : '')?>" onblur="cpassword_validation()" required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of single rooms</label>
+            </div>
+            <div class="col-75">
+                <input name="srooms" id="srooms" placeholder="No of single rooms in your hotel" type="number" min="0" max="800" step="1" value="<?=(isset($singlerooms) ? $singlerooms : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Price of a single room</label>
+            </div>
+            <div class="col-75">
+                <input name="sprice" id="sprice" placeholder="Price of a single room" type="number" min="500" step="50" value="<?=(isset($singleroomprice) ? $singleroomprice : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of double rooms</label>
+            </div>
+            <div class="col-75">
+                <input name="drooms" id="drooms" placeholder="No of double rooms in your hotel" type="number" min="0" max="800" step="1" value="<?=(isset($doublerooms) ? $doublerooms : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Price of a double room</label>
+            </div>
+            <div class="col-75">
+                <input name="dprice" id="dprice" placeholder="Price of a double room" type="number" min="500" step="50" value="<?=(isset($doubleroomprice) ? $doubleroomprice : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>No of family rooms</label>
+            </div>
+            <div class="col-75">
+                <input name="frooms" id="frooms" placeholder="No of family rooms in your hotel" type="number" min="0" max="800" step="1" value="<?=(isset($familyrooms) ? $familyrooms : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Price of a family room</label>
+            </div>
+            <div class="col-75">
+                <input name="fprice" id="fprice" placeholder="Price of a family room" type="number" min="500" step="50" value="<?=(isset($familyroomprice) ? $familyroomprice : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="lname">Upload a photo</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="image" id="image" onchange="file_validate()" required>
+            </div>
+            </div>
+			
+			<div class="row">
+			<div align="center">
+				<br />
+				<input type="checkbox" id="check" name="check" required>
+                <label for="check" ><a href="Easy Travels Terms & Conditions.pdf" class="sign-up">I Agree To The Terms And Conditions</a></label><br />
+			</div>
+			</div>
+			
+            <div class="row">
+                <p align="center"><input type="submit" name="formsubmit" value="Sign Up" class="formbtn"></p>
+            </div>
+        </form>
+        </div>
+    </body>
+		
+</html>

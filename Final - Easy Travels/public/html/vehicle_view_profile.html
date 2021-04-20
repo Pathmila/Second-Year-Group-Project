@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/vehice_others.css">
+    </head>
+    <body>     
+		<div class="container">
+        <form method="GET" action="../../src/php/vehicle_view_profile.php">
+			
+			<h2 align='center' class="title"><label><?php echo $vid?></label></h2>
+			
+            <div class="row">
+                <?php echo "<p align='center'><img class='image' width='250px'  src='".$path.$photo.$ex."'></p>";?>
+            </div>
+
+            <div class="row">
+                <center><label>Charge for 1km&nbsp Rs.<?php echo $charge ?></label></center>
+            </div>
+            
+            <div class="row">
+                <center><label>Type - <?php echo $type?></label></center>
+            </div>
+            
+            <div class="row">
+                <center><label>Username - <?php echo $uname?></label></center>
+            </div>
+			
+			<div class="row">
+                <center><label>Owner's Name - <?php echo $oname?></label></center>
+            </div>
+
+            <div class="row">
+                <center><label>Email - <?php echo $email?></label></center>
+            </div>
+
+             <div class="row">
+                <center><label>Address - <?php echo $address?></label></center>
+            </div>
+			
+            <div class="row">
+                <center><label>Telephone - 0<?php echo $telephone?></label></center>
+            </div>
+
+            <div class="row">
+                <center><label><?php echo $details?></label></center>
+            </div>  
+
+			<div class="row">
+				<br /><center><a href="../../src/php/vehicle_view_bookings.php"><input type="button" value="Booking Details" class="formbtn"></a></center>
+			</div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+		<title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/user_style.css">
+    </head>
+    <body>
+		<div class="container">
+			<form method="post" action="https://sandbox.payhere.lk/pay/checkout">   
+				<input type="hidden" name="merchant_id" value="1214795">    <!-- Replace your Merchant ID -->
+				<input type="hidden" name="return_url" value="http://localhost/Second%20Year%20Project/src/php/user_thank_page.php">
+				<input type="hidden" name="cancel_url" value="http://localhost/Second%20Year%20Project/src/php/user_home_page.php">
+				<input type="hidden" name="notify_url" value="http://localhost/Second%20Year%20Project/src/php/user_home_page.php"> 
+				
+				<div class="row"><h1 align="center">Package Details</h1><br></div>
+				
+				<input type="hidden" name="order_id"  value="<?php ?>">
+				
+				<div class="row"><div class="col-25">Package Name </div><div class="col-75"><input type="text" name="items"   value="<?php echo $_SESSION['name']?> "readonly><br /></div></div><br />
+				
+				<input type="hidden" name="currency"  value="LKR">
+				
+				<div class="row"><div class="col-25">Total Amount(Rs)</div><div class="col-75"><input type="text" name="amount"  value="<?php echo $_SESSION['amount']?>"readonly></div></div>
+
+				
+				
+				<input type="hidden" name="first_name" placeholder="Enter Your Name.." >
+				
+				<input type="hidden" name="last_name" placeholder="Enter Your Last Name.." >
+				
+				<input type="hidden" name="email" placeholder="Enter Your Email.." >
+				
+				<input type="hidden" name="phone" placeholder="Enter Your Telephone No.." >
+				
+				<input type="hidden" name="address" placeholder="Enter Your Address.." >
+				
+				<input type="hidden" name="city"  placeholder="Enter Your City..">
+				<input type="hidden" name="country"  placeholder="Enter Your Country.."><br/>
+				
+				<div class="row"><p align="center"><input type="submit" value="Buy Now" class="formbtn"></p></div>
+			</form> 
+		</div>
+    </body>
+</html>

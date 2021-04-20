@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/user_style.css">
+    </head>
+    <body> 
+		<div class="container2">
+			<h2 class="title" align="center"><label>Booking Details</label></h2>
+			<div style="overflow-x:auto;">
+			<table border=1 padding=50px align="center" class="viewtable">
+			<tr class="theads">
+				<td>Package</td>
+				<td>Price</td>
+				<td>No Of Days</td>
+				<td>Date</td>
+				<td>Hotel</td>
+				<td>Guide</td>
+				<td>Vehicle</td>
+			</tr>
+				<?php include('../../src/php/user_view_booking_page-table.php')?>
+            </table>
+			</div>
+		</div>
+	</body>
+</html>

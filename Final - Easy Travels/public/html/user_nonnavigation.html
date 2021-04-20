@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/user_nonnavigation.css">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+    </head>
+    <body>
+
+   <body>
+		<div class="topnav" id="myTopnav">
+			<a href="../../src/php/user_nonhome_page.php" class="notactive"><img class="limg" src="../../public/images/logo-web.png" ></a>
+			<a href="../../src/php/user_nonhome_page.php">Home</a>
+			<a href="../../src/php/category_page.php">Packages</a>
+			<a href="../../src/php/destination_page.php">Destinations</a>
+			<a href="../../src/php/about.php">About</a>
+			<a href="../../src/php/contact_page.php">Contact</a>
+			<a href="../../src/php/login_page.php" class="right">Login</a>
+			<a href="../../src/php/account_page.php" class="right">Signup</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<img src="../../public/images/bars.png" style="width:13px; height:13px;">
+			</a>
+		</div>
+		<script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+		</script>
+
+    </body>
+</html>

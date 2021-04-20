@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/login_page.css">
+    </head>
+    <body>
+        <div class="login">
+            <div class="login-form">
+                <form method="post" action="../../src/php/login_page.php">               
+                    <img src="../../public/images/avatar.jpg" class="image" width="120px" height="120px">
+                    <p class="title">Welcome!</p>
+					
+                    <input type="text" name="username" placeholder="Username" required><br>
+                    
+                    <input type="password" name="password" placeholder="Password" required>
+                    <br /><br />
+                    <input type="submit" name="submit" value="Login" class="packbtn">
+                    <br /><br />
+                    <a class="sign-up" href="../../src/php/account_page.php">Don't have an account?</a>
+                    <br />
+					<a class="sign-up" href="../../src/php/password_recovery_account_page.php">Forget Password?</a>
+					<br />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

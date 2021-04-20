@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/user_style.css">
+    </head>
+    <body>     
+        
+		<div class="container">
+        <form method="GET" action="../../src/php/user_destination_book_page.php">
+			<h2 class="title" align="center"><label>Booking Details</label></h2>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Package Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="pname" value="<?php echo $name?>" readonly>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Price For A Person(Rs.)</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="price" value="<?php echo $price?>" readonly>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Select The Date</label>
+            </div>
+            <div class="col-75">
+                <input type="date" name="date" value="<?=(isset($selectday) ? $selectday : '')?>" required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Select No Of Travellers</label>
+            </div>
+            <div class="col-75">
+                <input type="number" name="no" min="1" max="100" step="1" value="<?=(isset($no) ? $no : '0')?>" non-editable required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Single Rooms<br />(Max. 1 pax)</label>
+            </div>
+            <div class="col-75">
+                <input type="number" name="single" min="0" max="10" step="1" value="<?=(isset($single) ? $single : '0')?>" required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Double Rooms<br />(Max. 2 pax)</label>
+            </div>
+            <div class="col-75">
+                <input type="number" name="double" min="0" max="10" step="1" value="<?=(isset($double) ? $double : '0')?>" required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="fname">Family Rooms<br />(Max. 5 pax)</label>
+            </div>
+            <div class="col-75">
+                <input type="number" name="family" min="0" max="10" step="1" value="<?=(isset($family) ? $family : '0')?>" required>
+            </div>
+            </div>
+			
+			
+			<div class="row">
+                <h1 align="center">Customer Details</h1>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="cname" placeholder="Enter Your Name.." value="<?php echo $pname?>"  required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Email</label>
+            </div>
+            <div class="col-75">
+                <input type="email" name="email" placeholder="Enter Your Email.." value="<?php echo $pemail?>" required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Address</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="address" placeholder="Enter Your Address.."  value="<?php echo $paddress?>" required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Telephone</label>
+            </div>
+            <div class="col-75">
+				<input type="tel" pattern="[0-9]{10}" name="phone" placeholder="Enter Your Telephone No.." value="0<?php echo $ptelephone?>" required>
+            </div>
+            </div>
+			
+            <div class="row">
+				<p align="center"><input type="submit" name="submit" value="View Amount" class="formbtn"></p>
+            </div>
+        </form>
+        </div>
+    </body>
+	
+</html>

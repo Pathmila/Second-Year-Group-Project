@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/user_style.css">
+		<script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>     
+        
+		<div class="container">
+        <form method="POST" action="../../src/php/user_addcomment_page.php" enctype="multipart/form-data">
+          
+			<h2 class="title" align="center"><label>Feedback</label></h2>
+            <div class="row">
+            <div class="col-25">
+                <label>Description</label>
+            </div>
+            <div class="col-75">
+                <textarea id="description" name="description" pattern="^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$" placeholder="Write your Feedback here.." style="height:200px;font-family:Arial;" required></textarea>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Upload photo 1</label>
+            </div>
+            <div class="col-75">
+                <input type="file" name="file1" id="file1" onchange="file1_validate()" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Upload photo 2</label>
+            </div>
+            <div class="col-75">
+                <input type="file" name="file2" id="file2" onchange="file2_validate()" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Upload photo 3</label>
+            </div>
+            <div class="col-75">
+                <input type="file" name="file3" id="file3" onchange="file3_validate()" required>
+            </div>
+            </div>
+            <br />
+            <center><label style="font-size:30px" align="center">Ratings</label></center>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Hotel</label>
+            </div>
+            <div class="col-50">
+                <select name="hotel" id="hotel" required>
+                    <?php include('../../src/php/user_addcomment_page-hotel_dropdown.php')?>
+                </select>               
+            </div>
+            <div class="col-25">
+            </div>
+            </div>
+
+            <center>
+            <div class="row">
+				<input type="radio" id="star5" name="rate" value="5" >
+				<label for="star5" title="text">Best</label>&nbsp
+				<input type="radio" id="star4" name="rate" value="4" required>
+				<label for="star4" title="text">Good</label>&nbsp
+				<input type="radio" id="star3" name="rate" value="3" required>
+				<label for="star3" title="text">Moderate</label>&nbsp
+				<input type="radio" id="star2" name="rate" value="2" required>
+				<label for="star2" title="text">Bad</label>&nbsp
+				<input type="radio" id="star1" name="rate" value="1" required>
+				<label for="star1" title="text">Worst</label>&nbsp
+            </div>
+            </center>
+            
+
+            <div class="row">
+            <div class="col-25">
+                <label>Guide</label>
+            </div>
+            <div class="col-50">
+                <select name="guide" id="guide" required>
+                    <?php include('../../src/php/user_addcomment_page-guide_dropdown.php')?>
+                </select>               
+            </div>
+            <div class="col-25">
+            </div>
+            </div>
+
+            <center>
+            <div class="row">
+                <input type="radio" id="star5" name="rate2" value="5" required>
+				<label for="star5" title="text">Best</label>&nbsp
+				<input type="radio" id="star4" name="rate2" value="4" required>
+				<label for="star4" title="text">Good</label>&nbsp
+				<input type="radio" id="star3" name="rate2" value="3" required>
+				<label for="star3" title="text">Moderate</label>&nbsp
+				<input type="radio" id="star2" name="rate2" value="2" required>
+				<label for="star2" title="text">Bad</label>&nbsp
+				<input type="radio" id="star1" name="rate2" value="1" required>
+				<label for="star1" title="text">Worst</label>&nbsp
+            </div>
+            </center>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Vehicle</label>
+            </div>
+            <div class="col-50">
+                <select name="vehicle" id="vehicle" required>
+                    <?php include('../../src/php/user_addcomment_page-vehicle_dropdown.php')?>
+                </select>               
+            </div>
+            <div class="row">
+            </div>
+            </div>
+
+            <center>
+            <div class="row">
+				<input type="radio" id="star5" name="rate3" value="5" required>
+				<label for="star5" title="text">Best</label>&nbsp
+				<input type="radio" id="star4" name="rate3" value="4" required>
+				<label for="star4" title="text">Good</label>&nbsp
+				<input type="radio" id="star3" name="rate3" value="3" required>
+				<label for="star3" title="text">Moderate</label>&nbsp
+				<input type="radio" id="star2" name="rate3" value="2" required>
+				<label for="star2" title="text">Bad</label>&nbsp
+				<input type="radio" id="star1" name="rate3" value="1" required>
+				<label for="star1" title="text">Worst</label>&nbsp
+            </div>
+            </center>
+            
+
+            <div class="row">
+				<p align="center"><input type="submit" name="submit" value="Submit" class="formbtn"></p>
+            </div>
+            </form>
+        </div>
+    </body>
+</html>

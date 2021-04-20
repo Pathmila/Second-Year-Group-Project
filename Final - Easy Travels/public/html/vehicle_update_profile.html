@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/vehice_others.css">
+        <script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>     
+		<div class="container">
+        <form method="post" action="../../src/php/vehicle_update_profile.php" enctype="multipart/form-data">
+           
+		    <center><h2 class="title"><label>Update Profile</label></h2></center>
+			<div class="row">
+            <div class="col-25">
+                <label>Owner's Name:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="owner" id="owner"  value="<?php echo $name?>" required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Charge for 1km&nbsp(Rs.):</label>
+            </div>
+            <div class="col-75">
+                <input name="charge" id="charge" type="number" min="50" step="5" value="<?php echo $charge ?>" required >
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Address:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="address" value="<?php echo $address?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Email:</label>
+            </div>
+            <div class="col-75">
+                <input type="email" name="email" value="<?php echo $email?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Telephone:</label>
+            </div>
+            <div class="col-75">
+                <input type="tel" name="telephone" pattern="[0-9]{10}" value="0<?php echo $telephone?>" required>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Description:</label>
+            </div>
+            <div class="col-75">
+                <textarea name="description" style="height:80px;font-family:Arial;" required><?php echo $details?></textarea>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Image of the Vehicle:</label>
+            </div>
+            <div class="col-75">
+                <?php echo "<img class='image' width='150px'  src='".$path.$photo.$ex."'>";?>
+            </div>
+            </div>
+
+			<div class="row">
+            <div class="col-25">
+                <label for="lname">Upload a photo</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="image" id="image" onchange="file_validate()" required>
+            </div>
+            </div>
+			
+			 <div class="row">
+				<br /><center><input type="submit" name="updatebtn" value="Update Account" class="packbtn">
+				<a href="../../src/php/vehicle_delete_profile.php"><input type="button" name="updatebtn" value="Delete Account" class="formbtn"></a></center>
+			</div>
+		   
+            </form>
+        </div>
+    </body>
+</html>
