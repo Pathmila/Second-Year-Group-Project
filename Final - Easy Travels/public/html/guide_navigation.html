@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/guide_nav.css">
+    </head>
+    <body>        
+        <div class="topnav" id="myTopnav">
+            <a href="../../src/php/guide_home.php" class="notactive"><img class="limg" src="../../public/images/logo-web.png" ></a>
+            <a href="../../src/php/guide_home.php">Home</a>
+            <a href="../../src/php/aboutus_guide.php">About</a>
+            <a href="../../src/php/contact_guide_page.php">Contact</a>
+            <a href="../../src/php/guide_view_profile.php">View Profile</a>
+            <a href="../../src/php/guide_change_availability.php">Change Availability</a> 
+            <a href="../../src/php/logout.php" class="right">Log Out</a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+		<script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+		</script>
+    </body>
+</html>

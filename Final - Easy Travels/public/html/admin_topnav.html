@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_topnav.css">
+    </head>
+    <body>
+
+   <body>
+		<div class="topnav" id="myTopnav">
+			<a href="../../src/php/admin_home_page.php" class="notactive"><img class="limg" style="width:300px;" src="../../public/images/logo-web.png" ></a>
+			<a href="../../src/php/admin_home_page.php">Home</a>
+			<a href="../../src/php/user_nonhome_page.php">Preview Website</a>
+			<a href="../../src/php/admin_chage_password.php">Settings</a>
+			<a href="../../src/php/logout.php" class="right">Log out</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<img src="../../public/images/bars.png" style="width:13px; height:13px;">
+			</a>
+		</div>
+		<script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+		</script>
+    </body>
+</html>

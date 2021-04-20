@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/destination_page.css">
+		
+	</head>
+	<body>	
+		<img class="topimg" src="../../public/images/11114.jpg">
+		<div class="container2">
+			
+			<form name="select" method="get" action="../../src/php/destination_page.php">
+				<div class="row">
+				<div class="col-25">
+					<label>Destination</label>
+				</div>	
+				<div class="col-25">
+					<select name="destination" id="destination">
+						<?php include('../../src/php/destination_page-destination_dropdown.php')?>
+					</select>
+				</div>
+				<div class="col-25">
+					<br />
+				</div>
+				<div class="col-25">
+					<input type="submit" name="dropsubmit" value="Search" class="formbtn">				
+				</div>
+				</div>
+			</form>
+		</div>
+		<div class="container1">
+		<div class="row">
+			<?php include('../../src/php/destination_page-form.php')?>
+		</div>
+		</div>			
+	</body>
+</html>

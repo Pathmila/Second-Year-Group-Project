@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/guide_signup.css">
+		<script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <form method="post" action="../../src/php/guide_signup_page.php" enctype="multipart/form-data">
+         
+			<h2 class="title" align="center"><label>Guide SignUp</label></h2>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Name</label>
+            </div>
+            <div class="col-75">
+                <input name="name" id="name" placeholder="Name" type="text" value="<?=(isset($name) ? $name : '')?>" onblur="required_name()" required >
+            </div>
+            </div>	
+
+			<div class="row">
+            <div class="col-25">
+                <label>Charge for a day&nbsp(Rs.)</label>
+            </div>
+            <div class="col-75">
+                <input name="charge" id="charge" placeholder="Charge for a day" value="0" type="number" min="500" step="50" value="<?=(isset($charge) ? $charge : '')?>" required >
+            </div>
+            </div>	
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Address</label>
+            </div>
+            <div class="col-75">
+                <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" onblur="required_address()" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Email</label>
+            </div>
+            <div class="col-75">
+                <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($email) ? $email : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Telephone No</label>
+            </div>
+            <div class="col-75">
+                <input name="telephone" id="telephone" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($telephone) ? $telephone : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Birthday</label>
+            </div>
+            <div class="col-75">
+                <input name="birthday" id="birthday" type="date" value="<?=(isset($birthday) ? $birthday : '')?>" required >
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label for="fname">Details</label>
+            </div>
+            <div class="col-75">
+                <textarea name="description" placeholder="Enter details" required><?=(isset($description) ? $description : '')?></textarea>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>User Name</label>
+            </div>
+            <div class="col-75">
+                <input name="uname" id="uname" placeholder="Username" type="text" value="<?=(isset($uname) ? $uname : '')?>" required >
+            </div>
+            <label><i style="font-size:9px;">**Use at least one lowercase, uppercase and digit. Minimum length is 6 characters.</i></label>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Password</label>
+            </div>
+            <div class="col-75">
+                <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" value="<?=(isset($pass) ? $pass : '')?>" required>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Confirm Password</label>
+            </div>
+            <div class="col-75">
+                <input type="password" name="cpassword" id="cpassword" placeholder="Comfirm Password" value="<?=(isset($cpassword) ? $cpassword : '')?>" onblur="cpassword_validation()" required>
+            </div>
+            </div>
+			
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Upload a photo</label>
+            </div>
+            <div class="col-75">
+                <br /><input type="file" name="image" id="image" onchange="file_validate()" required>
+            </div>
+            </div>
+			
+			<div class="row">
+			<div align="center">
+				<br />
+				<input type="checkbox" id="check" name="check" required>
+                <label for="check" ><a href="Easy Travels Terms & Conditions.pdf" class="sign-up">I Agree To The Terms And Conditions</a></label><br />
+			</div>
+			</div>
+			
+            <div class="row">
+                <p align="center"><input type="submit" name="formsubmit" value="Sign Up" class="formbtn"></p>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

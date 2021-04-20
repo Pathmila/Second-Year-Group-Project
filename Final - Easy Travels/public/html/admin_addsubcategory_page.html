@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">   
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <!-- LINKS TO CSS AND JS --->
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+        <script type="text/javascript" src="../../public/js/script.js"></script>
+    </head>
+    <body>
+		<div class="container4">
+		<form method='POST' action='../../src/php/admin_addsubcategory_page.php'>
+			<h2 class="title"align="center"><label>Add Subcategory</label></h2>
+
+			<div class="row">
+			<div class="col-35">
+				<label for="fname">Subcategory</label>
+			</div>
+			<div class="col-65">
+				<input type="text" name="name" id="name" placeholder="Subcategory name.." onblur="required_name()"  required>
+			</div>
+			</div>
+
+			<div class="row">
+			<div class="col-35">
+				<label for="lname">Description</label>
+			</div>
+			<div class="col-65">
+				<input type="text" name="description" id="description" placeholder="Description.."  onblur="required_description()" required>
+			</div>
+			</div>
+			<div class="row">
+				<br /><center><br /><input type="submit" name="addsbucat" value="Submit" class="formbtn"></center>
+			</div>
+			<div class="row">
+				<center><br /><a class="sign-up" href="../../src/php/admin_view_subcategory.php">View All Subcategory</a></center>
+			</div>
+		</form>
+		</div>    
+<!--		<center><br /><br /><a href="../../src/php/admin_view_subcategory.php"><input type="button" name="viewall" value="View All Subcategory" class="rsearchbtn1"></a></center>  
+-->
+    </body>
+</html>

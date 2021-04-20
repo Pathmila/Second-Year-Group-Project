@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/report-tables.css">
+    </head>
+    <body> 
+		<h2 class='updatetxt' align='center'><label>Destination & Packages</label></h2>
+		<div class="container1">	
+			
+			<form align="center" method="POST" action="../../src/php/admin_view_report_general2.php">			
+				<div class="row">
+				<div class="col-25">
+					<label>Destination:</label>
+				</div>
+				<div class="col-25">
+					<select name="destination" id="destination" required>
+						<?php include('../../src/php/admin_view_report_general2-destination_dropdown.php')?>
+					</select>    
+				</div>
+				<div class="col-25">
+				<br />
+				</div>
+				<div class="col-25">
+					<input type="submit" name="submit" value="Search" class="searchbtn">
+				</div>
+				</div>
+			</form>
+				<?php include('../../src/php/admin_view_report_general2-table.php')?>          
+        </div>
+    </body>
+</html>

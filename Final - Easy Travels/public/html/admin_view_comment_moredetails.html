@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyTravels.com</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="shortcut icon" type="image/jpg" href="http://localhost/Second%20Year%20Project/public/images/logo.jpg"/>
+        <link rel="stylesheet" type="text/css" href="../../public/css/admin_addcategory_page.css">
+    </head>
+    <body>     
+		<div class="container">
+        <form method="GET" action="../../src/php/view_profile_page.php">
+            <h2 align="center" class="title"><label>Comment</label></h2>
+			
+			 <div class="row">
+				<p align='center'><img class='image' width='150px' src="<?php echo $path.$photo1.$ex?>" >
+				<img class='image' width='150px' src="<?php echo $path.$photo2.$ex?>">
+				<img class='image' width='150px' src="<?php echo $path.$photo3.$ex?>"></p>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>User ID:</label>
+            </div>
+            <div class="col-75">
+				<input type="text" name="hotel" value="<?php echo $uid?>" readonly>
+            </div>
+            </div>
+			
+            <div class="row">
+            <div class="col-25">
+                <label>Details:</label>
+            </div>
+            <div class="col-75">
+                <textarea name="details" readonly><?php echo $details?></textarea>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-25">
+                <label>Hotel ID:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="hotel" value="<?php echo $hotel?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Hotel Rating:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="HRating" value="<?php echo $HRating?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Guide ID:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="guide" value="<?php echo $guide?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Guide Rating:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="GRating" value="<?php echo $GRating?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Vehicle:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="guide" value="<?php echo $vehicle?>" readonly>
+            </div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+                <label>Vehicle Rating:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="VRating" value="<?php echo $VRating?>" readonly>
+            </div>
+            </div>
+			
+            </form>
+        </div>
+    </body>
+</html>
